@@ -6,9 +6,16 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        manope: ['Manope', 'sans-serif'],
+      },
       colors: {
         "darkBlue": "#131e57",
         "lightBlue": "#245ec1",
+        "darkText": "#19243b",
+        "grayText": "#475062",
+        "lightgrayText": "#6c7381",
+        "hoverText": "#245ec1"
 
       },
     },
