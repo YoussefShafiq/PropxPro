@@ -4,11 +4,41 @@ import Home from './components/Homepage/Home'
 import Notfound from './components/Notfound'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import Layout from './components/Layout/Layout'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react'
 
 function App() {
 
 
+  useEffect(() => {
+    AOS.init({
+      initClassName: 'aos-init',
+      animatedClassName: 'aos-animate',
+
+      // Settings to prevent early triggering
+      offset: 100,    // Trigger point (px from element bottom)
+      delay: 0,       // Delay animation (ms)
+      duration: 600,  // Animation duration (ms)
+      easing: 'ease', // Easing type
+      once: false,    // Only animate once
+      mirror: true,   // Animate out while scrolling past
+
+      // Important for scroll-only triggering
+      startEvent: 'load', // Wait for full page load
+      disableMutationObserver: true, // Disable auto-detection
+    });
+
+    // Refresh on route changes (if using React Router)
+    return () => {
+      AOS.refresh();
+    };
+
+  }, []);
+
+  useEffect(() => {
+    AOS.refresh();
+  }, [location.pathname]);
 
   let routers = createBrowserRouter([
     {

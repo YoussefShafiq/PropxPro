@@ -128,7 +128,7 @@ export default function Navbar() {
 
 
     return <>
-        <div className="fixed top-0 left-0 right-0 bg-white flex justify-between items-center h-[84px] px-20 py-3 shadow">
+        <div className="fixed z-50 top-0 left-0 right-0 bg-white flex justify-between items-center h-[84px] px-20 py-3 shadow">
             <div className="w-36">
                 <img src={logo} className='w-full' alt="logo" />
             </div>
@@ -151,7 +151,7 @@ export default function Navbar() {
         <AnimatePresence>
             {ResourcesDropdown && (
                 <motion.div
-                    className="fixed top-[84px] left-0 right-0 px-20 py-8 bg-white flex justify-between items-start shadow-lg gap-20"
+                    className="fixed z-50 top-[84px] left-0 right-0 px-20 py-8 bg-white flex justify-between items-start shadow-lg gap-20"
                     initial="closed"
                     animate="open"
                     exit="closed"
@@ -203,7 +203,7 @@ export default function Navbar() {
         <AnimatePresence>
             {FeaturesDropdown && (
                 <motion.div
-                    className="fixed top-[84px] left-0 right-0 px-20 py-8 bg-white flex justify-between items-start shadow-lg gap-20"
+                    className="fixed z-50 top-[84px] left-0 right-0 px-20 py-8 bg-white flex justify-between items-start shadow-lg gap-20"
                     initial="closed"
                     animate="open"
                     exit="closed"
