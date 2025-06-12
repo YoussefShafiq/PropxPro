@@ -1,6 +1,6 @@
 import './App.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Home from './components/Homepage/Home'
+import Home from './components/pages/Homepage/Home'
 import Notfound from './components/Notfound'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import Layout from './components/Layout/Layout'
@@ -17,16 +17,16 @@ function App() {
       animatedClassName: 'aos-animate',
 
       // Settings to prevent early triggering
-      offset: 100,    // Trigger point (px from element bottom)
-      delay: 0,       // Delay animation (ms)
-      duration: 600,  // Animation duration (ms)
-      easing: 'ease', // Easing type
+      // offset: 100,    // Trigger point (px from element bottom)
+      delay: 100,       // Delay animation (ms)
+      duration: 500,  // Animation duration (ms)
+      easing: 'ease-in-out', // Easing type
       once: false,    // Only animate once
-      mirror: true,   // Animate out while scrolling past
+      mirror: false,   // Animate out while scrolling past
 
       // Important for scroll-only triggering
       startEvent: 'load', // Wait for full page load
-      disableMutationObserver: true, // Disable auto-detection
+      // disableMutationObserver: true, // Disable auto-detection
     });
 
     // Refresh on route changes (if using React Router)
