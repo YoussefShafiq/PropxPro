@@ -17,7 +17,7 @@ function App() {
       animatedClassName: 'aos-animate',
 
       // Settings to prevent early triggering
-      // offset: 100,    // Trigger point (px from element bottom)
+      offset: 100,    // Trigger point (px from element bottom)
       delay: 100,       // Delay animation (ms)
       duration: 500,  // Animation duration (ms)
       easing: 'ease-in-out', // Easing type

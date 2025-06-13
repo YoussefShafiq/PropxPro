@@ -5,7 +5,7 @@ import Footer from './Footer'
 
 export default function Layout() {
     return (
-        <div className="text-darkText pt-[84px] font-manope overflow-hidden">
+        <div className="text-darkText lg:pt-[84px] pt-[81px] font-manope overflow-hidden">
             <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>

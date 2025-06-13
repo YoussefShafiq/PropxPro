@@ -6,7 +6,7 @@ import logo from '../../assets/images/Logo.png'
 
 export default function Footer() {
     return <>
-        <div className="bg-white py-8 px-20 flex flex-col items-center">
+        <div className="bg-white py-8 px-8 lg:px-20 flex flex-col items-center">
             <div className="flex w-full justify-between gap-36">
                 <div className="w-1/4 hidden md:flex flex-col gap-6 ">
                     <div className="w-[170px]">
@@ -15,9 +15,9 @@ export default function Footer() {
                     <p className='font-medium text-lightgrayText'>Join the ranks of Top Real Estate Professionals—Start closing more deals with confidence! </p>
                 </div>
 
-                <div className="w-3/4 ">
-                    <div className="flex justify-end gap-10 font-medium text-grayText">
-                        <div className="flex flex-col gap-3 w-1/3">
+                <div className="lg:w-3/4 ">
+                    <div className="flex flex-col lg:flex-row justify-end gap-10 font-medium text-grayText">
+                        <div className="flex flex-col gap-3 lg:w-1/3">
                             <h4 className="font-bold text-darkText">Features</h4>
                             <p>User - freindly dashboard</p>
                             <p>Lead management system</p>
@@ -28,7 +28,7 @@ export default function Footer() {
                             <p>Action assignment</p>
                             <p>Real time communication</p>
                         </div>
-                        <div className="flex flex-col gap-3 w-1/3">
+                        <div className="flex flex-col gap-3 lg:w-1/3">
                             <h4 className="font-bold text-darkText">Resources</h4>
                             <p>Help center</p>
                             <p>Demo</p>
@@ -49,7 +49,14 @@ export default function Footer() {
 
             <div className="w-full h-[1px] bg-gray-200 mb-8 mt-20"></div>
 
-            <div className="flex justify-between items-center w-full text-lightgrayText">
+            <div className="w-full flex lg:hidden flex-col gap-2 text-center items-center mb-8 ">
+                <div className="w-[170px]">
+                    <img src={logo} alt="logo" loading='lazy' />
+                </div>
+                <p className='font-medium text-lightgrayText'>Join the ranks of Top Real Estate Professionals—Start closing more deals with confidence! </p>
+            </div>
+
+            <div className="flex flex-col-reverse lg:flex-row gap-3 justify-between items-center w-full text-lightgrayText">
                 <p className="font-medium ">©2024 PropxPro All Rights Reserved.</p>
                 <div className="flex gap-7 text-xl ">
                     <FaSquareFacebook />
