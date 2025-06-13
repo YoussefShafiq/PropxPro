@@ -108,7 +108,7 @@ export function ChatsAndCalling() {
             </div>
 
             <div className="bg-[#fef5f5] rounded-xl flex flex-col pt-14 px-5 lg:px-14 gap-10 overflow-hidden" >
-                <div className="w-5/6">
+                <div className="lg:w-5/6">
                     <div className="text-3xl font-bold text-darkText ">Calling and messaging</div>
                     <div className="text-xl text-grayText font-medium mt-3 ">Transform your team’s connectivity with PropXPro's advanced calls, group chats, real-time messaging with multimedia file-sharing and more—discover communication that truly connects!</div>
                 </div>
