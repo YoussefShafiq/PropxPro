@@ -18,7 +18,7 @@ import { LuMessageSquareMore } from 'react-icons/lu';
 export function HeroSection() {
     return <>
         <div className="container !pt-0 flex flex-wrap lg:flex-nowrap gap-5 justify-between items-center">
-            <div className="lg:w-1/2 py-8 flex flex-col gap-5 text-center">
+            <div className="lg:w-1/2 py-8 flex flex-col gap-5 text-center lg:text-left">
                 <h1 className='text-4xl lg:text-7xl font-extrabold leading-[139%] lg:leading-[117%] text-darkBlue'>User-friendly dashbaord</h1>
                 <p className='lg:text-2xl  font-medium leading-9 text-darkText text-opacity-80 lg:pe-16'>Get all your KPIs at a glance—track weekly, monthly, and yearly opportunities. Make confident, winning decisions and more!
                 </p>
@@ -57,7 +57,7 @@ export function DashboardAndStats() {
                 </div>
             </div>
 
-            <div className="bg-[#fef5f5] rounded-xl flex flex-col lg:pt-14 p-5 lg:px-14 gap-10 overflow-hidden" >
+            <div className="bg-[#fef5f5] rounded-xl flex flex-col lg:pt-14 p-5 pb-0 lg:px-14 gap-10 overflow-hidden" >
                 <div className="lg:w-5/6">
                     <div className="lg:text-3xl font-bold text-darkText ">Statistics metrics—Your performance boosters</div>
                     <div className="text-sm lg:text-xl text-grayText font-medium mt-3 ">Track your victories with Propxpro for unstoppable growth!
@@ -173,7 +173,7 @@ export function OptimizedBusinessManagement() {
                             data-aos-offset="200"
                             data-aos-delay={i.id * 100}
                         >
-                            <div className="w-20 text-hoverText text-sm lg:text-xl">{i.icon}</div>
+                            <div className="w-24 lg:w-16 text-hoverText text-2xl">{i.icon}</div>
                             <div className="flex flex-col">
                                 <div className="text-sm lg:text-xl text-white font-bold">{i.title}</div>
                                 <div className="text-base text-white font-medium mt-2">

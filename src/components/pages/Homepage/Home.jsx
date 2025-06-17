@@ -100,7 +100,7 @@ export function ChatsAndCalling() {
                 </div>
             </div>
 
-            <div className="bg-[#fef5f5] rounded-xl flex flex-col lg:pt-14 p-5 lg:px-14 gap-10 overflow-hidden" >
+            <div className="bg-[#fef5f5] rounded-xl flex flex-col lg:pt-14 p-5 pb-0 lg:pb-5 lg:px-14 gap-10 overflow-hidden" >
                 <div className="lg:w-5/6">
                     <div className="text-3xl font-bold text-darkText ">Calling and messaging</div>
                     <div className="text-xl text-grayText font-medium mt-3 ">Transform your team’s connectivity with PropXPro's advanced calls, group chats, real-time messaging with multimedia file-sharing and more—discover communication that truly connects!</div>
@@ -260,7 +260,7 @@ export default function Home() {
         <RealTimeCommunication />
         <ChatsAndCalling />
         <GettingStarted />
-        <div className="p-8 lg:p-28 lg:px-48 space-y-4" data-aos="fade-up" data-aos-offset="200">
+        <div className="p-10 py-20 pb-10 lg:p-28 lg:px-48 space-y-4" data-aos="fade-up" data-aos-offset="200">
             <div className="text-2xl lg:text-5xl text-darkText text-center font-extrabold leading-[115%]">Simplify every step of your real estate success with PropXPro</div>
         </div>
         <EmpowerYourTeamAndActionAssignment />
