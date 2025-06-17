@@ -97,7 +97,8 @@ export default function Navbar() {
         {
             icon: <HiOutlineHome size={30} strokeWidth={1} />,
             title: "User - friendly dashboard ",
-            desc: "Experience seamless navigation & intuitive designs"
+            desc: "Experience seamless navigation & intuitive designs",
+            link: "/features/dashboard",
         }, {
             icon: <HiOutlineHome size={30} strokeWidth={1} />,
             title: "Lead management system",
@@ -160,15 +161,15 @@ export default function Navbar() {
     return (
         <>
             {/* Desktop Navbar */}
-            <div className="fixed z-50 top-0 left-0 right-0 bg-white hidden lg:flex justify-between items-center h-[84px] px-20 py-3 shadow">
+            <div className=" fixed z-50 top-0 left-0 right-0 bg-white hidden lg:flex justify-between items-center h-[84px] px-28 py-3 shadow">
                 <div className="w-36">
-                    <img src={logo} className='w-full' alt="logo" />
+                    <NavLink to={"/"}><img src={logo} className='w-full' alt="logo" /></NavLink>
                 </div>
 
                 <div className="flex items-center gap-x-4 h-full select-none">
-                    <div className="font-semibold transition-all cursor-pointer hover:underline hover:text-hoverText">Pricing</div>
+                    <NavLink to="/pricing" className="font-semibold transition-all cursor-pointer hover:underline hover:text-hoverText">Pricing</NavLink>
                     <div className={`font-semibold flex items-end gap-1 transition-all cursor-pointer hover:underline hover:text-hoverText ${FeaturesDropdown && 'underline text-hoverText'}`} onClick={() => { setFeaturesDropdown(!FeaturesDropdown); setResourcesDropdown(false) }}>Features <div className={`transition-all ${FeaturesDropdown && 'rotate-180'}`}><IoIosArrowDown size={18} /></div></div>
-                    <div className="font-semibold transition-all cursor-pointer hover:underline hover:text-hoverText">Integrations</div>
+                    <NavLink to={"/integrations"} className="font-semibold transition-all cursor-pointer hover:underline hover:text-hoverText">Integrations</NavLink>
                     <div className={`font-semibold flex items-end gap-1 transition-all cursor-pointer hover:underline hover:text-hoverText ${ResourcesDropdown && 'underline text-hoverText'}`} onClick={() => { setResourcesDropdown(!ResourcesDropdown); setFeaturesDropdown(false) }}>Resources<div className={`transition-all ${ResourcesDropdown && 'rotate-180'}`}><IoIosArrowDown size={18} /></div></div>
                 </div>
 
@@ -249,11 +250,13 @@ export default function Navbar() {
                                         className="px-3 py-2 flex gap-2 w-1/3 h-fit"
                                         variants={featureItemVariants}
                                     >
-                                        <div>{f.icon}</div>
-                                        <div>
-                                            <h2 className='font-bold'>{f.title}</h2>
-                                            <p className='text-grayText text-sm font-medium'>{f.desc}</p>
-                                        </div>
+                                        <NavLink to={f.link} onClick={() => { setFeaturesDropdown(!FeaturesDropdown); }}>
+                                            <div>{f.icon}</div>
+                                            <div>
+                                                <h2 className='font-bold'>{f.title}</h2>
+                                                <p className='text-grayText text-sm font-medium'>{f.desc}</p>
+                                            </div>
+                                        </NavLink>
                                     </motion.div>
                                 ))}
                             </div>
@@ -278,7 +281,7 @@ export default function Navbar() {
             {/* Mobile Navbar */}
             <div className="w-full h-[81px] fixed top-0 left-0 right-0 z-50 lg:hidden flex items-center justify-between px-8 bg-white select-none">
                 <div className="w-36">
-                    <img src={logo} className='w-full' alt="logo" />
+                    <NavLink to="/"><img src={logo} className='w-full' alt="logo" /></NavLink>
                 </div>
 
                 <motion.div
@@ -330,7 +333,7 @@ export default function Navbar() {
                                                             className="flex gap-2"
                                                             onClick={() => setphoneNavbar(false)}
                                                         >
-                                                            <NavLink>{f.title}</NavLink>
+                                                            <NavLink to={f.link}>{f.title}</NavLink>
                                                         </div>
                                                     ))}
                                                 </div>

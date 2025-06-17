@@ -7,6 +7,7 @@ import Layout from './components/Layout/Layout'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react'
+import Dashbaord from './components/pages/Features/Dashboard'
 
 function App() {
 
@@ -45,6 +46,11 @@ function App() {
       path: '', element: <Layout />, children: [
         { index: true, element: <Home /> },
         { path: 'home', element: <Home /> },
+        {
+          path: 'features', children: [
+            { path: 'dashboard', element: <Dashbaord /> }
+          ]
+        },
         { path: '*', element: <Notfound /> },
       ]
     },
