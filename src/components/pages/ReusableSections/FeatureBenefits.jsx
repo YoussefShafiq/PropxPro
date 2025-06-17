@@ -12,7 +12,7 @@ export default function FeatureBenefits({ items, title }) {
                             className="w-full lg:w-[calc(50%-10px)] bg-[#1d2861] rounded-2xl p-5 pb-12 flex"
                             data-aos="fade-up"
                             data-aos-offset="200"
-                            data-aos-delay={i.id * 100}
+                            data-aos-delay={i.id * 50}
                         >
                             <div className="w-24 lg:w-16 text-hoverText text-2xl">{i.icon}</div>
                             <div className="flex flex-col">

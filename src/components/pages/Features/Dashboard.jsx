@@ -15,7 +15,7 @@ import { ImStatsDots } from 'react-icons/im';
 import { RxDashboard } from 'react-icons/rx';
 import { LuMessageSquareMore } from 'react-icons/lu';
 import ReadyToTransform from '../ReusableSections/ReadyToTransform';
-import FeatureBenefits from './FeatureBenefits';
+import FeatureBenefits from '../ReusableSections/FeatureBenefits';
 
 export function HeroSection() {
     return <>

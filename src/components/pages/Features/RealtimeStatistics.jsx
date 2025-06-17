@@ -8,14 +8,12 @@ import personalizedViews from '../../../assets/images/Real-time-statistics-&-KPI
 import operations from '../../../assets/images/Real-time-statistics-&-KPIs-fetaure/operations.png'
 import DiscoverFeatures from '../ReusableSections/DiscoverFeatures'
 import ReadyToTransform from '../ReusableSections/ReadyToTransform'
-import { FiWifi } from 'react-icons/fi'
-import { PiMedalLight, PiTagSimpleLight } from 'react-icons/pi'
-import { CiFilter } from 'react-icons/ci'
+import { PiMedalLight } from 'react-icons/pi'
 import { LuMessageSquareMore } from 'react-icons/lu'
 import { useAOSObserver } from '../../../hooks/useAOSObserver'
 import { IoStatsChart } from 'react-icons/io5'
 import { TfiStatsUp } from 'react-icons/tfi'
-import FeatureBenefits from './FeatureBenefits'
+import FeatureBenefits from '../ReusableSections/FeatureBenefits'
 
 
 export function HeroSection() {

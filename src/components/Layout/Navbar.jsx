@@ -112,7 +112,8 @@ export default function Navbar() {
         }, {
             icon: <HiOutlineHome size={30} strokeWidth={1} />,
             title: "Campaigns & opportunities",
-            desc: "Drive growth with strategic campaigns and new opportunities"
+            desc: "Drive growth with strategic campaigns and new opportunities",
+            link: '/features/campaigns-and-opportunities'
         }, {
             icon: <HiOutlineHome size={30} strokeWidth={1} />,
             title: "User management",

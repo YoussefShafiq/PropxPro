@@ -14,7 +14,7 @@ import { PiTagSimpleLight } from 'react-icons/pi'
 import { CiFilter } from 'react-icons/ci'
 import { LuMessageSquareMore } from 'react-icons/lu'
 import { useAOSObserver } from '../../../hooks/useAOSObserver'
-import FeatureBenefits from './FeatureBenefits'
+import FeatureBenefits from '../ReusableSections/FeatureBenefits'
 
 
 export function HeroSection() {
