@@ -21,7 +21,8 @@ export default function DiscoverFeatures() {
         {
             id: 2,
             title: 'Lead management',
-            img: leadManagement
+            img: leadManagement,
+            link: '/features/lead-management-system'
         },
         {
             id: 3,

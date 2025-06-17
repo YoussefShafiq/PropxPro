@@ -8,6 +8,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react'
 import Dashbaord from './components/pages/Features/Dashboard'
+import LeadManagement from './components/pages/Features/LeadManagement'
+import RealtimeStatistics from './components/pages/Features/RealtimeStatistics'
 
 function App() {
 
@@ -48,7 +50,9 @@ function App() {
         { path: 'home', element: <Home /> },
         {
           path: 'features', children: [
-            { path: 'dashboard', element: <Dashbaord /> }
+            { path: 'dashboard', element: <Dashbaord /> },
+            { path: 'lead-management-system', element: <LeadManagement /> },
+            { path: 'realtime-statistics', element: <RealtimeStatistics /> },
           ]
         },
         { path: '*', element: <Notfound /> },

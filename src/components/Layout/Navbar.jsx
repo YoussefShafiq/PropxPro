@@ -102,11 +102,13 @@ export default function Navbar() {
         }, {
             icon: <HiOutlineHome size={30} strokeWidth={1} />,
             title: "Lead management system",
-            desc: "Efficiently track, manage, and nurture your leads"
+            desc: "Efficiently track, manage, and nurture your leads",
+            link: "/features/lead-management-system",
         }, {
             icon: <HiOutlineHome size={30} strokeWidth={1} />,
             title: "Detailed statistics",
-            desc: "Get comprehensive insights and data-driven analysis"
+            desc: "Get comprehensive insights and data-driven analysis",
+            link: '/features/realtime-statistics'
         }, {
             icon: <HiOutlineHome size={30} strokeWidth={1} />,
             title: "Campaigns & opportunities",

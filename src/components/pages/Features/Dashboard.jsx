@@ -14,11 +14,12 @@ import { FiWifi } from 'react-icons/fi';
 import { ImStatsDots } from 'react-icons/im';
 import { RxDashboard } from 'react-icons/rx';
 import { LuMessageSquareMore } from 'react-icons/lu';
+import ReadyToTransform from '../ReusableSections/ReadyToTransform';
 
 export function HeroSection() {
     return <>
         <div className="container !pt-0 flex flex-wrap lg:flex-nowrap gap-5 justify-between items-center">
-            <div className="lg:w-1/2 py-8 flex flex-col gap-5 text-center lg:text-left">
+            <div className="lg:w-3/5 py-8 flex flex-col gap-5 text-center lg:text-left">
                 <h1 className='text-4xl lg:text-7xl font-extrabold leading-[139%] lg:leading-[117%] text-darkBlue'>User-friendly dashbaord</h1>
                 <p className='lg:text-2xl  font-medium leading-9 text-darkText text-opacity-80 lg:pe-16'>Get all your KPIs at a glance—track weekly, monthly, and yearly opportunities. Make confident, winning decisions and more!
                 </p>
@@ -200,5 +201,6 @@ export default function Dashbaord() {
         <ChatTeamsManagement />
         <OptimizedBusinessManagement />
         <DiscoverFeatures />
+        <ReadyToTransform />
     </>
 }
