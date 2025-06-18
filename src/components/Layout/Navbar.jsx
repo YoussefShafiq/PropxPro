@@ -117,11 +117,13 @@ export default function Navbar() {
         }, {
             icon: <HiOutlineHome size={30} strokeWidth={1} />,
             title: "User management",
-            desc: "Seamlessly onboard users with a streamlined registration process"
+            desc: "Seamlessly onboard users with a streamlined registration process",
+            link: '/features/user-management'
         }, {
             icon: <HiOutlineHome size={30} strokeWidth={1} />,
             title: "Activity tracking",
-            desc: "Effortlessly monitor and analyze user actions for valuable insights"
+            desc: "Effortlessly monitor and analyze user actions for valuable insights",
+            link: '/features/activity-tracking'
         }, {
             icon: <HiOutlineHome size={30} strokeWidth={1} />,
             title: "Action assignment",

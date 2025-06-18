@@ -14,21 +14,12 @@ import { useAOSObserver } from '../../../hooks/useAOSObserver'
 import { IoStatsChart } from 'react-icons/io5'
 import { TfiStatsUp } from 'react-icons/tfi'
 import FeatureBenefits from '../ReusableSections/FeatureBenefits'
+import FeaturesHeroSection from '../ReusableSections/FeaturesHeroSection'
 
 
 export function HeroSection() {
     return <>
-        <div className="container !pt-0 flex flex-wrap lg:flex-nowrap gap-5 justify-between items-center">
-            <div className="lg:w-3/5 py-8 flex flex-col gap-5 text-center lg:text-left">
-                <h1 className='text-4xl lg:text-7xl font-extrabold leading-[139%] lg:leading-[117%] text-darkBlue'>Real-time statistics & KPIs</h1>
-                <p className='lg:text-2xl  font-medium leading-9 text-darkText text-opacity-80 lg:pe-16'>Track everything from weekly opportunities to yearly trends—Make confident, data-driven decisions every time!
-                </p>
-                <GetStarted />
-            </div>
-            <div className="lg:w-1/2 lg:ps-16 rounded-xl overflow-hidden">
-                <img src={heroImg} className=' h-full' alt="User Friendly Dashboard" />
-            </div>
-        </div>
+        <FeaturesHeroSection heroImg={heroImg} headline="Real-time statistics & KPIs" description="Track everything from weekly opportunities to yearly trends—Make confident, data-driven decisions every time!" />
     </>
 }
 
@@ -38,8 +29,8 @@ export function SubFeatures() {
             <div className="flex lg:flex-row flex-col gap-10">
                 <div className="lg:w-7/12 bg-[#fefaf5] rounded-xl flex flex-col gap-5 pb-10 overflow-hidden">
                     <div className="flex flex-col gap-4 p-10">
-                        <h2 className='text-3xl font-bold leading-[100%]'>Opportunity tracking</h2>
-                        <p className='text-xl font-medium leading-9 text-opacity-80'>Spot trends and patterns with interactive graphs showing
+                        <h2 className='lg:text-3xl font-bold leading-[100%]'>Opportunity tracking</h2>
+                        <p className='text-sm lg:text-xl font-medium leading-9 text-opacity-80'>Spot trends and patterns with interactive graphs showing
                             real-time progress of your opportunities—see your growth!
                         </p>
                     </div>
@@ -49,8 +40,8 @@ export function SubFeatures() {
                 </div>
                 <div className="lg:w-5/12 bg-[#f6f5fe] rounded-xl flex flex-col gap-5 pb-10 overflow-hidden">
                     <div className="flex flex-col gap-4 p-10">
-                        <h2 className='text-3xl font-bold leading-[100%]'>Personalized views</h2>
-                        <p className='text-xl font-medium leading-9 text-opacity-80'>Easily view—weekly, monthly, yearly, or custom data with our exciting filtering data tool!</p>
+                        <h2 className='lg:text-3xl font-bold leading-[100%]'>Personalized views</h2>
+                        <p className='text-sm lg:text-xl font-medium leading-9 text-opacity-80'>Easily view—weekly, monthly, yearly, or custom data with our exciting filtering data tool!</p>
                     </div>
                     <div className="flex flex-col -space-y-10">
                         <div className="pe-28 relative z-10" data-aos="slide-right" data-aos-offset="200">
@@ -65,8 +56,8 @@ export function SubFeatures() {
             <div className="flex lg:flex-row flex-col gap-10">
                 <div className="lg:w-7/12 bg-[#fef5f5] rounded-xl flex flex-col justify-between gap-5 overflow-hidden">
                     <div className="flex flex-col gap-4 p-10">
-                        <h2 className='text-3xl font-bold leading-[100%]'>Instant view</h2>
-                        <p className='text-xl font-medium leading-9 text-opacity-80'>Hover over any point to see detailed insights instantly—experience real-time data power!</p>
+                        <h2 className='lg:text-3xl font-bold leading-[100%]'>Instant view</h2>
+                        <p className='text-sm lg:text-xl font-medium leading-9 text-opacity-80'>Hover over any point to see detailed insights instantly—experience real-time data power!</p>
                     </div>
                     <div className="pe-24" data-aos="slide-right" data-aos-offset="200">
                         <img src={operations} alt="Instant view" loading='lazy' />
@@ -74,8 +65,8 @@ export function SubFeatures() {
                 </div>
                 <div className="lg:w-5/12 bg-[#eff9f2] rounded-xl flex flex-col gap-5 pb-10 overflow-hidden">
                     <div className="flex flex-col gap-4 p-10">
-                        <h2 className='text-3xl font-bold leading-[100%]'>Comprehensive statistics</h2>
-                        <p className='text-xl font-medium leading-9 text-opacity-80'>Track all your key metrics in one spot—Watch your business grow with actionable, real-time data!</p>
+                        <h2 className='lg:text-3xl font-bold leading-[100%]'>Comprehensive statistics</h2>
+                        <p className='text-sm lg:text-xl font-medium leading-9 text-opacity-80'>Track all your key metrics in one spot—Watch your business grow with actionable, real-time data!</p>
                     </div>
                     <div className="flex flex-col -space-y-5">
                         <div className="" data-aos="slide-left" data-aos-offset="200">

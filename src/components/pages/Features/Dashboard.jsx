@@ -16,24 +16,15 @@ import { RxDashboard } from 'react-icons/rx';
 import { LuMessageSquareMore } from 'react-icons/lu';
 import ReadyToTransform from '../ReusableSections/ReadyToTransform';
 import FeatureBenefits from '../ReusableSections/FeatureBenefits';
+import FeaturesHeroSection from '../ReusableSections/FeaturesHeroSection'
 
 export function HeroSection() {
     return <>
-        <div className="container !pt-0 flex flex-wrap lg:flex-nowrap gap-5 justify-between items-center">
-            <div className="lg:w-3/5 py-8 flex flex-col gap-5 text-center lg:text-left">
-                <h1 className='text-4xl lg:text-7xl font-extrabold leading-[139%] lg:leading-[117%] text-darkBlue'>User-friendly dashbaord</h1>
-                <p className='lg:text-2xl  font-medium leading-9 text-darkText text-opacity-80 lg:pe-16'>Get all your KPIs at a glance—track weekly, monthly, and yearly opportunities. Make confident, winning decisions and more!
-                </p>
-                <GetStarted />
-            </div>
-            <div className="lg:w-1/2 lg:ps-16 rounded-xl overflow-hidden">
-                <img src={heroImg} className=' h-full' alt="User Friendly Dashboard" />
-            </div>
-        </div>
+        <FeaturesHeroSection heroImg={heroImg} headline="User-friendly dashbaord" description="Get all your KPIs at a glance—track weekly, monthly, and yearly opportunities. Make confident, winning decisions and more!" />
     </>
 }
 
-export function DashboardAndStats() {
+export function SubFeatures() {
     return <>
         <div className="container lg:!px-0 flex flex-col gap-10">
             <div className="flex flex-col lg:flex-row gap-10">
@@ -170,7 +161,7 @@ export default function Dashbaord() {
     useAOSObserver();
     return <>
         <HeroSection />
-        <DashboardAndStats />
+        <SubFeatures />
         <ActivityTracking />
         <AssignTask />
         <TwilioIntegration />

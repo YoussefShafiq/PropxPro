@@ -11,6 +11,8 @@ import Dashbaord from './components/pages/Features/Dashboard'
 import LeadManagement from './components/pages/Features/LeadManagement'
 import RealtimeStatistics from './components/pages/Features/RealtimeStatistics'
 import CampaignsAndOpportunities from './components/pages/Features/CampaignsAndOpportunities'
+import UserManagement from './components/pages/Features/UserManagement'
+import ActivityTracking from './components/pages/Features/ActivityTracking'
 
 function App() {
 
@@ -55,6 +57,8 @@ function App() {
             { path: 'lead-management-system', element: <LeadManagement /> },
             { path: 'realtime-statistics', element: <RealtimeStatistics /> },
             { path: 'campaigns-and-opportunities', element: <CampaignsAndOpportunities /> },
+            { path: 'user-management', element: <UserManagement /> },
+            { path: 'activity-tracking', element: <ActivityTracking /> },
           ]
         },
         { path: '*', element: <Notfound /> },

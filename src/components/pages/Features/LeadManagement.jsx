@@ -15,22 +15,12 @@ import { CiFilter } from 'react-icons/ci'
 import { LuMessageSquareMore } from 'react-icons/lu'
 import { useAOSObserver } from '../../../hooks/useAOSObserver'
 import FeatureBenefits from '../ReusableSections/FeatureBenefits'
+import FeaturesHeroSection from '../ReusableSections/FeaturesHeroSection'
 
 
 export function HeroSection() {
     return <>
-        <div className="container !pt-0 flex flex-wrap lg:flex-nowrap gap-5 justify-between items-center">
-            <div className="lg:w-3/5 py-8 flex flex-col gap-5 text-center lg:text-left">
-                <h1 className='text-4xl lg:text-7xl font-extrabold leading-[139%] lg:leading-[117%] text-darkBlue'>Lead management
-                    system </h1>
-                <p className='lg:text-2xl  font-medium leading-9 text-darkText text-opacity-80 lg:pe-16'>Get all your leads in one place with—Easily assign and manage them for maximum productivity and success!
-                </p>
-                <GetStarted />
-            </div>
-            <div className="lg:w-1/2 lg:ps-16 rounded-xl overflow-hidden">
-                <img src={heroImg} className=' h-full' alt="User Friendly Dashboard" />
-            </div>
-        </div>
+        <FeaturesHeroSection heroImg={heroImg} headline="Lead management system" description="Get all your leads in one place with—Easily assign and manage them for maximum productivity and success!" />
     </>
 }
 
@@ -40,8 +30,8 @@ export function SubFeatures() {
             <div className="flex lg:flex-row flex-col gap-10">
                 <div className="lg:w-7/12 bg-[#fefaf5] rounded-xl flex flex-col gap-5 pb-10 overflow-hidden">
                     <div className="flex flex-col gap-4 p-10">
-                        <h2 className='text-3xl font-bold leading-[100%]'>Lead your team</h2>
-                        <p className='text-xl font-medium leading-9 text-opacity-80'>Assign leads with ease, keeping everyone on track and productive!</p>
+                        <h2 className='lg:text-3xl font-bold leading-[100%]'>Lead your team</h2>
+                        <p className='text-sm lg:text-xl font-medium leading-9 text-opacity-80'>Assign leads with ease, keeping everyone on track and productive!</p>
                     </div>
                     <div className="ps-10" data-aos="slide-left" data-aos-offset="200">
                         <img src={lead} alt="Lead your team" loading='lazy' />
@@ -49,8 +39,8 @@ export function SubFeatures() {
                 </div>
                 <div className="lg:w-5/12 bg-[#f6f5fe] rounded-xl flex flex-col gap-5 pb-10 overflow-hidden">
                     <div className="flex flex-col gap-4 p-10">
-                        <h2 className='text-3xl font-bold leading-[100%]'>Centralized database</h2>
-                        <p className='text-xl font-medium leading-9 text-opacity-80'>Access and manage all your leads from one place, regardless of the source!</p>
+                        <h2 className='lg:text-3xl font-bold leading-[100%]'>Centralized database</h2>
+                        <p className='text-sm lg:text-xl font-medium leading-9 text-opacity-80'>Access and manage all your leads from one place, regardless of the source!</p>
                     </div>
                     <div className="flex flex-col gap-5">
                         <div className="ps-28" data-aos="slide-left" data-aos-offset="200">
@@ -65,8 +55,8 @@ export function SubFeatures() {
             <div className="flex lg:flex-row flex-col gap-10">
                 <div className="lg:w-7/12 bg-[#fef5f5] rounded-xl flex flex-col gap-5 pb-10 overflow-hidden">
                     <div className="flex flex-col gap-4 p-10">
-                        <h2 className='text-3xl font-bold leading-[100%]'>Smart assignments</h2>
-                        <p className='text-xl font-medium leading-9 text-opacity-80'>Assign leads using round-robin, individual, or campaign strategies for fair distribution and efficient follow-up!
+                        <h2 className='lg:text-3xl font-bold leading-[100%]'>Smart assignments</h2>
+                        <p className='text-sm lg:text-xl font-medium leading-9 text-opacity-80'>Assign leads using round-robin, individual, or campaign strategies for fair distribution and efficient follow-up!
 
                         </p>
                     </div>
@@ -76,8 +66,8 @@ export function SubFeatures() {
                 </div>
                 <div className="lg:w-5/12 bg-[#eff9f2] rounded-xl flex flex-col gap-5 pb-10 overflow-hidden">
                     <div className="flex flex-col gap-4 p-10">
-                        <h2 className='text-3xl font-bold leading-[100%]'>Real-time tracking</h2>
-                        <p className='text-xl font-medium leading-9 text-opacity-80'>Track lead progress in real-time, from first contact to closing deals!</p>
+                        <h2 className='lg:text-3xl font-bold leading-[100%]'>Real-time tracking</h2>
+                        <p className='text-sm lg:text-xl font-medium leading-9 text-opacity-80'>Track lead progress in real-time, from first contact to closing deals!</p>
                     </div>
                     <div className="flex flex-col -space-y-5">
                         <div className="ps-28" data-aos="slide-left" data-aos-offset="200">
