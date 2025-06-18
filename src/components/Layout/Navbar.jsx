@@ -127,11 +127,14 @@ export default function Navbar() {
         }, {
             icon: <HiOutlineHome size={30} strokeWidth={1} />,
             title: "Action assignment",
-            desc: "Efficiently delegate tasks and track progress seamlessly"
+            desc: "Efficiently delegate tasks and track progress seamlessly",
+            link: '/features/action-assignment'
         }, {
             icon: <HiOutlineHome size={30} strokeWidth={1} />,
             title: "Real time communication",
-            desc: "Instantly connect and collaborate in real-time"
+            desc: "Instantly connect and collaborate in real-time",
+            link: '/features/realtime-communication'
+
         }
     ];
 

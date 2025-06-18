@@ -13,6 +13,7 @@ import RealtimeStatistics from './components/pages/Features/RealtimeStatistics'
 import CampaignsAndOpportunities from './components/pages/Features/CampaignsAndOpportunities'
 import UserManagement from './components/pages/Features/UserManagement'
 import ActivityTracking from './components/pages/Features/ActivityTracking'
+import RealtimeCommunication from './components/pages/Features/RealtimeCommunication'
 
 function App() {
 
@@ -59,6 +60,7 @@ function App() {
             { path: 'campaigns-and-opportunities', element: <CampaignsAndOpportunities /> },
             { path: 'user-management', element: <UserManagement /> },
             { path: 'activity-tracking', element: <ActivityTracking /> },
+            { path: 'realtime-communication', element: <RealtimeCommunication /> },
           ]
         },
         { path: '*', element: <Notfound /> },
