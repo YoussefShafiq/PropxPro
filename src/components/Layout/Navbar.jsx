@@ -134,7 +134,6 @@ export default function Navbar() {
             title: "Real time communication",
             desc: "Instantly connect and collaborate in real-time",
             link: '/features/realtime-communication'
-
         }
     ];
 

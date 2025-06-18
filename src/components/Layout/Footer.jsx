@@ -3,8 +3,38 @@ import { AiFillInstagram } from 'react-icons/ai'
 import { FaSquareFacebook, FaYoutube } from 'react-icons/fa6'
 import { TbBrandLinkedinFilled } from 'react-icons/tb'
 import logo from '../../assets/images/Logo.png'
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
+    const features = [
+        {
+            title: "User - friendly dashboard ",
+            link: "/features/dashboard",
+        }, {
+            title: "Lead management system",
+            link: "/features/lead-management-system",
+        }, {
+            title: "Detailed statistics",
+            link: '/features/realtime-statistics'
+        }, {
+            title: "Campaigns & opportunities",
+            link: '/features/campaigns-and-opportunities'
+        }, {
+            title: "User management",
+            link: '/features/user-management'
+        }, {
+            title: "Activity tracking",
+            link: '/features/activity-tracking'
+        }, {
+            title: "Action assignment",
+            link: '/features/action-assignment'
+        }, {
+            title: "Real time communication",
+            link: '/features/realtime-communication'
+
+        }
+    ];
+
     return <>
         <div className="container bg-white py-8  flex flex-col items-center">
             <div className="flex w-full justify-between gap-36">
@@ -19,14 +49,7 @@ export default function Footer() {
                     <div className="flex flex-col lg:flex-row justify-end gap-10 font-medium text-grayText">
                         <div className="flex flex-col gap-3 lg:w-1/3">
                             <h4 className="font-bold text-darkText">Features</h4>
-                            <p>User - freindly dashboard</p>
-                            <p>Lead management system</p>
-                            <p>Detailed statistics</p>
-                            <p>Campaigns & opportunities</p>
-                            <p>User management</p>
-                            <p>Activity tracking</p>
-                            <p>Action assignment</p>
-                            <p>Real time communication</p>
+                            {features.map((f, i) => (<Link to={f.link} key={i}>{f.title}</Link>))}
                         </div>
                         <div className="flex flex-col gap-3 lg:w-1/3">
                             <h4 className="font-bold text-darkText">Resources</h4>

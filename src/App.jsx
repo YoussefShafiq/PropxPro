@@ -14,6 +14,7 @@ import CampaignsAndOpportunities from './components/pages/Features/CampaignsAndO
 import UserManagement from './components/pages/Features/UserManagement'
 import ActivityTracking from './components/pages/Features/ActivityTracking'
 import RealtimeCommunication from './components/pages/Features/RealtimeCommunication'
+import ActionAssignment from './components/pages/Features/ActionAssignment'
 
 function App() {
 
@@ -60,6 +61,7 @@ function App() {
             { path: 'campaigns-and-opportunities', element: <CampaignsAndOpportunities /> },
             { path: 'user-management', element: <UserManagement /> },
             { path: 'activity-tracking', element: <ActivityTracking /> },
+            { path: 'action-assignment', element: <ActionAssignment /> },
             { path: 'realtime-communication', element: <RealtimeCommunication /> },
           ]
         },

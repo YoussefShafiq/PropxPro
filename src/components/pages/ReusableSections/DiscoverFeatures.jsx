@@ -27,32 +27,38 @@ export default function DiscoverFeatures() {
         {
             id: 3,
             title: 'Detailed statistics',
-            img: detailedStats
+            img: detailedStats,
+            link: '/features/realtime-statistics'
         },
         {
             id: 4,
             title: 'Campaigns & opportunities',
-            img: campaignsAndOpportunities
+            img: campaignsAndOpportunities,
+            link: '/features/campaigns-and-opportunities'
         },
         {
             id: 5,
             title: 'User management',
-            img: userManagement
+            img: userManagement,
+            link: '/features/user-management'
         },
         {
             id: 6,
             title: 'Activity tracking',
-            img: activityTracking
+            img: activityTracking,
+            link: '/features/activity-tracking'
         },
         {
             id: 7,
             title: 'Action assignments',
-            img: actionAssignment
+            img: actionAssignment,
+            link: '/features/action-assignment'
         },
         {
             id: 8,
             title: 'Real time communication',
-            img: realtimeCommunication
+            img: realtimeCommunication,
+            link: '/features/realtime-communication'
         }
     ]
 

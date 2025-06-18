@@ -27,7 +27,7 @@ export function SubFeatures() {
     return <>
         <div className="container lg:!px-0 flex flex-col gap-10">
             <div className="flex flex-col lg:flex-row gap-10">
-                <div className="lg:w-1/2 bg-[#fefaf5] rounded-xl flex flex-col justify-between lg:pt-14 pb-5 gap-10 overflow-hidden" >
+                <div className="lg:w-1/2 bg-[#fefaf5] rounded-xl flex flex-col justify-between lg:pt-14 gap-10 overflow-hidden" >
                     <div className="p-5 lg:px-14">
                         <h2 className="lg:text-3xl font-bold text-darkText ">Unified team communication</h2>
                         <p className="text-sm lg:text-xl text-grayText font-medium mt-3 ">Call and text from one number—ensuring professional, unified team communication always!</p>
