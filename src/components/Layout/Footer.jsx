@@ -4,6 +4,7 @@ import { FaSquareFacebook, FaYoutube } from 'react-icons/fa6'
 import { TbBrandLinkedinFilled } from 'react-icons/tb'
 import logo from '../../assets/images/Logo.png'
 import { Link } from 'react-router-dom'
+import SocialMedia from '../pages/ReusableSections/SocialMedia'
 
 export default function Footer() {
     const features = [
@@ -62,7 +63,7 @@ export default function Footer() {
                         </div>
                         <div className="flex flex-col gap-3">
                             <h4 className="font-bold text-darkText">Company</h4>
-                            <p>About </p>
+                            <Link to="/about-us">About </Link>
                             <p>Terms of Service</p>
                             <p>Privacy Policy</p>
                         </div>
@@ -81,12 +82,7 @@ export default function Footer() {
 
             <div className="flex flex-col-reverse lg:flex-row gap-3 justify-between items-center w-full text-lightgrayText">
                 <p className="font-medium ">©2024 PropxPro All Rights Reserved.</p>
-                <div className="flex gap-7 text-xl ">
-                    <FaSquareFacebook />
-                    <FaYoutube />
-                    <TbBrandLinkedinFilled />
-                    <AiFillInstagram />
-                </div>
+                <SocialMedia />
             </div>
         </div>
     </>

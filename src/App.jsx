@@ -15,6 +15,7 @@ import UserManagement from './components/pages/Features/UserManagement'
 import ActivityTracking from './components/pages/Features/ActivityTracking'
 import RealtimeCommunication from './components/pages/Features/RealtimeCommunication'
 import ActionAssignment from './components/pages/Features/ActionAssignment'
+import AboutUs from './components/pages/Resources/AboutUs'
 
 function App() {
 
@@ -65,6 +66,7 @@ function App() {
             { path: 'realtime-communication', element: <RealtimeCommunication /> },
           ]
         },
+        { path: 'about-us', element: <AboutUs /> },
         { path: '*', element: <Notfound /> },
       ]
     },

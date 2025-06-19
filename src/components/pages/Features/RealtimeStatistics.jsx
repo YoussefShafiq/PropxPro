@@ -15,6 +15,7 @@ import { IoStatsChart } from 'react-icons/io5'
 import { TfiStatsUp } from 'react-icons/tfi'
 import FeatureBenefits from '../ReusableSections/FeatureBenefits'
 import FeaturesHeroSection from '../ReusableSections/FeaturesHeroSection'
+import { LiaCertificateSolid } from 'react-icons/lia'
 
 
 export function HeroSection() {
@@ -95,7 +96,7 @@ export function LeadSuccessSimplified() {
         },
         {
             id: 3,
-            icon: <PiMedalLight />,
+            icon: <LiaCertificateSolid />,
             title: "Amplify success",
             description: "Use real-time insights to enhance performance and achieve greater business success."
         },

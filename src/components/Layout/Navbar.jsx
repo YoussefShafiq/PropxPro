@@ -200,32 +200,38 @@ export default function Navbar() {
         {
             icon: <HiOutlineInformationCircle size={30} strokeWidth={1} />,
             title: "About us",
-            desc: "Discover our mission and values, driving excellence and innovation"
+            desc: "Discover our mission and values, driving excellence and innovation",
+            link: '/about-us'
         },
         {
             icon: <HiOutlineVideoCamera size={24} strokeWidth={1} />,
             title: "Webinars",
-            desc: "Learn from experts in our interactive sessions"
+            desc: "Learn from experts in our interactive sessions",
+            link: '/webinars'
         },
         {
             icon: <HiOutlineNewspaper size={24} strokeWidth={1} />,
             title: "Blog",
-            desc: "Stay informed with our latest news, tips, and industry insights"
+            desc: "Stay informed with our latest news, tips, and industry insights",
+            link: '/blog'
         },
         {
             icon: <HiOutlineUserAdd size={24} strokeWidth={1} />,
             title: "Carrier registration",
-            desc: "Join our network today to unlock exclusive opportunities"
+            desc: "Join our network today to unlock exclusive opportunities",
+            link: '/carrier-registration'
         },
         {
             icon: <HiOutlineQuestionMarkCircle size={24} strokeWidth={1} />,
             title: "Help center",
-            desc: "Access tailored solutions and assistance."
+            desc: "Access tailored solutions and assistance.",
+            link: '/help-center'
         },
         {
             icon: <HiOutlineSparkles size={24} strokeWidth={1} />,
             title: "What's new",
-            desc: "Effortlessly monitor and analyze user actions for valuable insights"
+            desc: "Effortlessly monitor and analyze user actions for valuable insights",
+            link: '/whats-new'
         }
     ];
 
@@ -263,7 +269,7 @@ export default function Navbar() {
                 </div>
 
                 <div className="flex items-center gap-x-4 font-semibold">
-                    <div className="">Login</div>
+                    <button className="hover:scale-[1.002] transition-all">Login</button>
                     <button className="capitalize bg-lightBlue text-white hover:shadow-lg hover:bg-[#1e4c9d] hover:scale-[1.002] transition-all px-7 py-3 rounded-md">get started</button>
                     <button className="box-border border border-black hover:shadow-lg hover:scale-[1.002] transition-all px-7 py-3 rounded-md">Request a Demo</button>
                 </div>
@@ -288,11 +294,13 @@ export default function Navbar() {
                                         className="px-3 py-2 flex gap-2 w-1/2 h-fit"
                                         variants={featureItemVariants}
                                     >
-                                        <div>{r.icon}</div>
-                                        <div>
-                                            <h2 className='font-bold'>{r.title}</h2>
-                                            <p className='text-grayText text-sm font-medium'>{r.desc}</p>
-                                        </div>
+                                        <NavLink to={r.link} className={'hover:text-hoverText transition-all'} onClick={() => { setResourcesDropdown(!ResourcesDropdown); }}>
+                                            <div>{r.icon}</div>
+                                            <div>
+                                                <h2 className='font-bold'>{r.title}</h2>
+                                                <p className='text-grayText text-sm font-medium'>{r.desc}</p>
+                                            </div>
+                                        </NavLink>
                                     </motion.div>
                                 ))}
                             </div>
@@ -341,7 +349,7 @@ export default function Navbar() {
                                         className="px-3 py-2 flex gap-2 w-1/3 h-fit"
                                         variants={featureItemVariants}
                                     >
-                                        <NavLink to={f.link} onClick={() => { setFeaturesDropdown(!FeaturesDropdown); }}>
+                                        <NavLink to={f.link} className={'hover:text-hoverText transition-all'} onClick={() => { setFeaturesDropdown(!FeaturesDropdown); }}>
                                             <div>{f.icon}</div>
                                             <div>
                                                 <h2 className='font-bold'>{f.title}</h2>
