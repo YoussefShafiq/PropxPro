@@ -4,17 +4,15 @@ import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 import requestDemo from '../../assets/images/navbar/requestDemo.png';
 import getHelpimg from '../../assets/images/navbar/help.png';
 import guideimg from '../../assets/images/navbar/guide.png';
-import { HiOutlineHome, HiOutlineInformationCircle, HiOutlineNewspaper, HiOutlineQuestionMarkCircle, HiOutlineSparkles, HiOutlineUserAdd, HiOutlineVideoCamera } from 'react-icons/hi';
+import { HiOutlineInformationCircle, HiOutlineNewspaper, HiOutlineQuestionMarkCircle, HiOutlineSparkles, HiOutlineUserAdd, HiOutlineVideoCamera } from 'react-icons/hi';
 import { motion, AnimatePresence } from "framer-motion";
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { IoClose, IoStatsChartOutline } from 'react-icons/io5';
 import { NavLink } from 'react-router-dom';
 import GetStarted from '../Buttons/GetStarted';
 import RequestDemo from '../Buttons/RequestDemo';
-import { BiBarChartSquare } from "react-icons/bi";
-import { MdOutlineLeaderboard, MdOutlineManageAccounts, MdOutlineTrackChanges, MdOutlineCampaign } from "react-icons/md";
-import { HiOutlineUserGroup, HiOutlineChatAlt2 } from "react-icons/hi";
-import { FaTasks } from "react-icons/fa";
+import { MdOutlineManageAccounts, MdOutlineTrackChanges, MdOutlineCampaign } from "react-icons/md";
+import { HiOutlineChatAlt2 } from "react-icons/hi";
 import { AiOutlinePieChart } from "react-icons/ai";
 import { TbHomeStats } from 'react-icons/tb';
 import { GoTasklist } from 'react-icons/go';
@@ -32,10 +30,12 @@ export default function Navbar() {
     const mobileMenuRef = useRef(null);
     const mobileMenuButtonRef = useRef(null);
 
-    // Handle click outside for desktop dropdowns
     useEffect(() => {
         const handleClickOutside = (event) => {
-            // Close features dropdown if clicked outside
+            // Don't close if we're on mobile (screen width < 1024px)
+            if (window.innerWidth < 1024) return;
+
+            // Close features dropdown if clicked outside (desktop only)
             if (FeaturesDropdown &&
                 featuresRef.current &&
                 !featuresRef.current.contains(event.target) &&
@@ -44,7 +44,7 @@ export default function Navbar() {
                 setFeaturesDropdown(false);
             }
 
-            // Close resources dropdown if clicked outside
+            // Close resources dropdown if clicked outside (desktop only)
             if (ResourcesDropdown &&
                 resourcesRef.current &&
                 !resourcesRef.current.contains(event.target) &&
@@ -53,7 +53,7 @@ export default function Navbar() {
                 setResourcesDropdown(false);
             }
 
-            // Close mobile menu if clicked outside
+            // Close mobile menu if clicked outside (works for all devices)
             if (phoneNavbar &&
                 mobileMenuRef.current &&
                 !mobileMenuRef.current.contains(event.target) &&
@@ -407,10 +407,10 @@ export default function Navbar() {
                                     <NavLink to="/pricing" onClick={() => setphoneNavbar(false)}>pricing</NavLink>
 
                                     <div className="flex justify-between items-center">
-                                        <NavLink to="/features" onClick={() => setphoneNavbar(false)}>features</NavLink>
+                                        <div>features</div>
                                         <motion.div
                                             className="text-3xl cursor-pointer transition-all"
-                                            onClick={() => { setFeaturesDropdown(!FeaturesDropdown); setResourcesDropdown(false) }}
+                                            onClick={(e) => { e.stopPropagation(); setFeaturesDropdown(!FeaturesDropdown); setResourcesDropdown(false) }}
                                             whileTap={{ scale: 0.9 }}
                                         >
                                             <IoIosArrowUp className={`${!FeaturesDropdown && "rotate-180"} transition-all`} />
@@ -444,10 +444,10 @@ export default function Navbar() {
                                     <NavLink to="/integrations" onClick={() => setphoneNavbar(false)}>integrations</NavLink>
 
                                     <div className="flex justify-between items-center">
-                                        <NavLink to="/resources" onClick={() => setphoneNavbar(false)}>resources</NavLink>
+                                        <div>resources</div>
                                         <motion.div
                                             className="text-3xl cursor-pointer transition-all"
-                                            onClick={() => { setResourcesDropdown(!ResourcesDropdown); setFeaturesDropdown(false) }}
+                                            onClick={(e) => { e.stopPropagation(); setResourcesDropdown(!ResourcesDropdown); setFeaturesDropdown(false) }}
                                             whileTap={{ scale: 0.9 }}
                                         >
                                             <IoIosArrowUp className={`${!ResourcesDropdown && "rotate-180"} transition-all`} />
@@ -464,13 +464,13 @@ export default function Navbar() {
                                                 variants={mobileDropdownVariants}
                                             >
                                                 <div className="flex flex-col gap-y-3 ps-3 py-2">
-                                                    {resources.map((f, index) => (
+                                                    {resources.map((r, index) => (
                                                         <div
                                                             key={index}
                                                             className="flex gap-2"
                                                             onClick={() => setphoneNavbar(false)}
                                                         >
-                                                            <NavLink>{f.title}</NavLink>
+                                                            <NavLink to={r.link} >{r.title}</NavLink>
                                                         </div>
                                                     ))}
                                                 </div>
