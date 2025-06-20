@@ -14,10 +14,12 @@ export default {
         "lightBlue": "#245ec1",
         "darkText": "#19243b",
         "grayText": "#475062",
-        "lightgrayText": "#6c7381",
         "hoverText": "#245ec1"
 
       },
+      backgroundImage: {
+        'zapier': "url('./src/assets/images/integration/Group39990.png')",
+      }
     },
   },
   plugins: [],
