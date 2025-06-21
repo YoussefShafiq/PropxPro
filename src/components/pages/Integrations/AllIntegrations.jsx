@@ -124,13 +124,15 @@ export function Integrations() {
                                                 data-aos-offset="200"
                                                 data-aos-delay={i.id * 50}
                                             >
-                                                <div className="bg-white rounded-2xl p-5 flex flex-col box-border border h-full">
-                                                    <div className="w-24 lg:w-16 text-hoverText text-2xl">
-                                                        <img src={i.logo_url} alt={i.name} />
-                                                    </div>
-                                                    <div className="text-sm lg:text-xl font-bold">{i.name}</div>
-                                                    <div className="text-base font-medium mt-2">
-                                                        {i.description}
+                                                <div className="border rounded-xl h-full">
+                                                    <div className="bg-white p-5 flex flex-col h-full border border-transparent box-border rounded-xl border-e-4 border-b-4 border-t-1 border-s-1 hover:border-black  transition-all cursor-pointer">
+                                                        <div className="w-24 lg:w-16 text-hoverText text-2xl">
+                                                            <img src={i.logo_url} alt={i.name} />
+                                                        </div>
+                                                        <div className="text-sm lg:text-xl font-bold">{i.name}</div>
+                                                        <div className="text-base font-medium mt-2">
+                                                            {i.description}
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
