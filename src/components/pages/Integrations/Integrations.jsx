@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import heroImg from '../../../assets/images/integration/imagecard9.png'
 import zapierlogo from '../../../assets/images/integration/zapierlogo.png'
 import highlight from '../../../assets/images/integration/Highlight_05.png'

@@ -17,6 +17,7 @@ import RealtimeCommunication from './components/pages/Features/RealtimeCommunica
 import ActionAssignment from './components/pages/Features/ActionAssignment'
 import AboutUs from './components/pages/Resources/AboutUs'
 import Integrations from './components/pages/Integrations/Integrations'
+import AllIntegrations from './components/pages/Integrations/AllIntegrations'
 
 function App() {
 
@@ -67,7 +68,12 @@ function App() {
             { path: 'realtime-communication', element: <RealtimeCommunication /> },
           ]
         },
-        { path: 'integrations', element: <Integrations /> },
+        {
+          path: 'integrations', children: [
+            { index: true, element: <Integrations /> },
+            { path: 'all-integrations', element: <AllIntegrations /> },
+          ]
+        },
         { path: 'about-us', element: <AboutUs /> },
         { path: '*', element: <Notfound /> },
       ]
