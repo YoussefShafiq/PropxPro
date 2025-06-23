@@ -1,18 +1,51 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import { FaArrowUp } from 'react-icons/fa6';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Layout() {
     const { pathname } = useLocation();
+    const [showScrollButton, setShowScrollButton] = useState(false);
+    const [isAnimating, setIsAnimating] = useState(false);
 
+    // Initialize AOS
     useEffect(() => {
-        window.scrollTo(0, 0); // Scrolls to the top when path changes
-    }, [pathname]); // Dependency on pathname triggers the effect on route change
+        AOS.init({
+            duration: 300,  // Shorter duration for smoother feel
+            easing: 'ease-in-out',
+            once: false     // Allow animations to trigger multiple times
+        });
+    }, []);
 
-    function scrolltop() {
+    // Handle scroll to top on route change
+    useEffect(() => {
         window.scrollTo(0, 0);
+    }, [pathname]);
+
+    // Show/hide scroll button based on scroll position
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 300 && !showScrollButton) {
+                setIsAnimating(true);
+                setShowScrollButton(true);
+            } else if (window.scrollY <= 300 && showScrollButton) {
+                setIsAnimating(true);
+                setShowScrollButton(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [showScrollButton]);
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     }
 
     return (
@@ -22,9 +55,23 @@ export default function Layout() {
                 <Outlet></Outlet>
                 <Footer></Footer>
             </div>
-            <button className="fixed flex justify-center items-center text-white bottom-4 right-4 h-10 aspect-square bg-lightBlue rounded-full z-50" onClick={scrolltop}>
-                <FaArrowUp />
-            </button>
+
+            {/* Scroll to top button with animated show/hide */}
+            <div
+                className={`fixed bottom-4 right-4 z-50 transition-all duration-300 ${showScrollButton ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                data-aos="fade-up"
+                data-aos-easing="ease-in-out"
+                data-aos-duration="300"
+                onAnimationEnd={() => setIsAnimating(false)}
+            >
+                <button
+                    className="flex justify-center items-center text-white h-10 aspect-square bg-lightBlue rounded-full hover:bg-opacity-90 transition-colors"
+                    onClick={scrollToTop}
+                    aria-label="Scroll to top"
+                >
+                    <FaArrowUp />
+                </button>
+            </div>
         </>
     )
 }
