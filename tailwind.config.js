@@ -5,6 +5,16 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: '2rem', // or your preferred padding
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+      },
+    },
     extend: {
       fontFamily: {
         manope: ['Manope', 'sans-serif'],
@@ -18,7 +28,7 @@ export default {
 
       },
       backgroundImage: {
-        'zapier': "url('./src/assets/images/integration/Group39990.png')",
+        'zapier': "url('/Group39990.png')",
       }
     },
   },
