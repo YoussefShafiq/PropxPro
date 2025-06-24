@@ -224,10 +224,14 @@ export function AgentFeedback() {
                 <div className="lg:w-4/5">
                     <p className='text-xl lg:text-4xl font-extrabold leading-9 lg:leading-[50px] text-darkText' >“ Using PropXPro CRM  has been a game-changer for our business. It has streamlined our processes, making it easy to track sales and manage leads. The intuitive interface and robust features have significantly improved our efficiency ”</p>
                 </div>
-                <div className="lg:w-80">
+                <div className="lg:w-80 flex flex-col justify-center">
                     <div className="relative flex items-center justify-center w-72 h-72 ">
                         <img src={agentimg} className='w-52' alt="user-friendly dashboard" loading='lazy' />
                         <img src={Quoteimage} className='w-24 absolute top-0 right-0' alt="user-friendly dashboard" loading='lazy' data-aos="zoom-in" />
+                    </div>
+                    <div className="text-center">
+                        <h2 className='text-2xl font-bold'>David Thompson</h2>
+                        <p className='font-medium'>Real estate agent</p>
                     </div>
                 </div>
             </div>

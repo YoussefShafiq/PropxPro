@@ -18,6 +18,7 @@ import ActionAssignment from './components/pages/Features/ActionAssignment'
 import AboutUs from './components/pages/Resources/AboutUs'
 import Integrations from './components/pages/Integrations/Integrations'
 import AllIntegrations from './components/pages/Integrations/AllIntegrations'
+import Pricing from './components/pages/Pricing'
 
 function App() {
 
@@ -75,6 +76,7 @@ function App() {
           ]
         },
         { path: 'about-us', element: <AboutUs /> },
+        { path: 'pricing', element: <Pricing /> },
         { path: '*', element: <Notfound /> },
       ]
     },
