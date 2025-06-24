@@ -24,21 +24,21 @@ export function HeroSection() {
 export function PlansCards({ plans, isAnnual, setIsAnnual }) {
 
     return <>
-        <div className="container flex flex-col gap-10 items-center">
+        <div className="container flex flex-col gap-3 lg:gap-10 items-center">
             {/* annual toggle */}
-            <div className=" flex items-center justify-center gap-8">
+            <div className="flex flex-col lg:flex-row items-center justify-center gap-8 w-full">
                 <button onClick={() => setIsAnnual(!isAnnual)} className="flex items-center gap-5 border-2 border-black px-5 py-2 rounded-full relative transition-colors">
                     <div className={`w-16 ${isAnnual ? "text-black" : "text-white"}`}>Monthly</div>
                     <div className={`w-16 ${isAnnual ? "text-white" : "text-black"}`}>Annual</div>
                     <div className={`absolute h-[calc(100%-4px)] w-1/2 -z-10 rounded-full bg-hoverText ease-in-out duration-500 ${isAnnual ? "right-0.5" : "right-[calc(50%-2px)]"}`}></div>
                 </button>
-                <div className={`${isAnnual ? "bg-[#ffe87a]" : "bg-[#d9d9d9] opacity-60"} p-3 rounded-full transition-all text-black font-medium`} aos="fade-up">
+                <div className={`${isAnnual ? "bg-[#ffe87a]" : "bg-[#d9d9d9] opacity-60"} p-3 rounded-full transition-all text-black font-medium w-full lg:w-auto text-center`} aos="fade-up">
                     Save up to 33% now 🎉
                 </div>
             </div>
             <div className="flex flex-col lg:flex-row gap-5 w-full font-medium" aos="fade-up">
                 {plans?.map((p) => (<>
-                    <div className={`w-1/3 ${p.isPopular ? 'bg-[#f5f9fe] border-e-8 border-b-8' : 'mt-10'} relative border-2 rounded-xl border-black py-8 px-5 flex flex-col gap-5 cursor-pointer hover:shadow-xl hover:scale-[1.005] transition-all`}>
+                    <div className={`w-full lg:w-[calc(${100 / plans.length})] ${p.isPopular ? 'bg-[#f5f9fe] border-e-8 border-b-8' : 'mt-10'} relative border-2 rounded-xl border-black py-8 px-5 flex flex-col gap-5 cursor-pointer hover:shadow-xl hover:scale-[1.005] transition-all`}>
                         <div className="absolute top-3 right-3 bg-hoverText px-2 py-1 text-white rounded-lg border border-black" hidden={!p.isPopular}>Most popular</div>
                         <div className="lg:text-5xl font-medium">${isAnnual ? p.annualPrice : p.monthlyPrice}<span className='text-base'>{isAnnual ? '/year' : '/month'}</span></div>
                         <div className="">
