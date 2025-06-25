@@ -140,12 +140,15 @@ export function AgentFeedback() {
 }
 
 export default function Pricing() {
-    const { data, isLoading, isError } = useQuery({
+    const { data, isLoading, isError, error } = useQuery({
         queryKey: ['pricing'],
         queryFn: () => {
-            return axios.get('pricing.json')
+            return axios.get('https://propxpro.run.place/api/plans')
         }
     })
+
+
+
 
     useAOSObserver()
     const [isAnnual, setIsAnnual] = useState(false);
