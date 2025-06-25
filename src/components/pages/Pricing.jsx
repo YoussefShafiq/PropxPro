@@ -143,7 +143,7 @@ export default function Pricing() {
     const { data, isLoading, isError } = useQuery({
         queryKey: ['pricing'],
         queryFn: () => {
-            return axios.get('/public/pricing.json')
+            return axios.get('pricing.json')
         }
     })
 
