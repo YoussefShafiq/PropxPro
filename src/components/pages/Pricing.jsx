@@ -49,7 +49,7 @@ export function PlansCards({ plans, isAnnual, setIsAnnual }) {
                         {p.isPopular ? <GetStarted className='!w-full' /> : <GetStarted className='!w-full' mode='transparent' />}
                         <div className="flex flex-col gap-2">
                             {Object.values(p.features)
-                                .filter(f => f.value !== false)
+                                .filter(f => f.value !== false && f.type == 'boolean')
                                 .map((f) => (
                                     <div key={f.name} className="flex items-center gap-2">
                                         <IoCheckmark />

@@ -19,6 +19,9 @@ import AboutUs from './components/pages/Resources/AboutUs'
 import Integrations from './components/pages/Integrations/Integrations'
 import AllIntegrations from './components/pages/Integrations/AllIntegrations'
 import Pricing from './components/pages/Pricing'
+import Blog from './components/pages/Blog/Blog'
+import Post from './components/pages/Blog/Post'
+import AllPosts from './components/pages/Blog/AllPosts'
 
 function App() {
 
@@ -77,6 +80,13 @@ function App() {
         },
         { path: 'about-us', element: <AboutUs /> },
         { path: 'pricing', element: <Pricing /> },
+        {
+          path: 'blog', children: [
+            { index: true, element: <Blog /> },
+            { path: 'post/:id', element: <Post /> },
+            { path: 'all-posts', element: <AllPosts /> },
+          ]
+        },
         { path: '*', element: <Notfound /> },
       ]
     },
