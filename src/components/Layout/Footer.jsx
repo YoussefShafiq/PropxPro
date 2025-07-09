@@ -64,8 +64,8 @@ export default function Footer() {
                         <div className="flex flex-col gap-3">
                             <h4 className="font-bold text-darkText">Company</h4>
                             <Link to="/about-us">About </Link>
-                            <p>Terms of Service</p>
-                            <p>Privacy Policy</p>
+                            <Link to="/terms-of-services">Terms of Services</Link>
+                            <Link to="/privacy-policy">Privacy Policy</Link>
                         </div>
                     </div>
                 </div>

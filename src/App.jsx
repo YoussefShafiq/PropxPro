@@ -22,6 +22,8 @@ import Pricing from './components/pages/Pricing'
 import Blog from './components/pages/Blog/Blog'
 import Post from './components/pages/Blog/Post'
 import AllPosts from './components/pages/Blog/AllPosts'
+import PrivacyPolicy from './components/pages/LegalDocuments/PrivacyPolicy'
+import TermsOfServices from './components/pages/LegalDocuments/TermsOfServices'
 
 function App() {
 
@@ -87,6 +89,8 @@ function App() {
             { path: 'all-posts', element: <AllPosts /> },
           ]
         },
+        { path: 'privacy-policy', element: <PrivacyPolicy /> },
+        { path: 'terms-of-services', element: <TermsOfServices /> },
         { path: '*', element: <Notfound /> },
       ]
     },
