@@ -1,11 +1,18 @@
 import React from 'react'
 import heroImg from '../../../assets/images/blog/Frame39735.png'
 import postimg from '../../../assets/images/blog/card123.png'
+import startUp from '../../../assets/images/blog/startup.png'
+import topTrendingImg from '../../../assets/images/blog/Group39759.png'
+import topic1 from '../../../assets/images/blog/topic1.png'
+import topic2 from '../../../assets/images/blog/topic2.png'
 import LearnMore from '../../Buttons/LearnMore'
 import axios from 'axios'
 import { IoIosArrowRoundForward } from 'react-icons/io'
 import { useQuery } from '@tanstack/react-query'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
+import { FaArrowRight } from 'react-icons/fa6'
+import ReadyToTransform from '../ReusableSections/ReadyToTransform'
+import StayConnected from '../ReusableSections/StayConnected'
 
 export function HeroSection() {
     const headline = 'Experience how simple real estate management can be'
@@ -106,6 +113,27 @@ export function LatestPosts() {
     </>
 }
 
+export function PowerUpYourProductivity() {
+    return <>
+        <div className="bg-[#fefaf5]">
+            <div className="container !p-0 flex flex-wrap lg:flex-nowrap gap-5 justify-between items-center">
+                <div className="lg:w-3/5 py-8 flex flex-col gap-5 text-left">
+                    <h1 className='text-4xl lg:text-6xl font-extrabold leading-[139%] lg:leading-[117%] text-darkBlue'>Power up your productivity</h1>
+                    <p className='lg:text-2xl  font-medium leading-9 text-darkText text-opacity-80 lg:pe-16'>Maximize your efficiency with PropXpro—Discover our expert tips to simplify operations, automate workflows, and secure more deals with ease and confidence.
+                    </p>
+                    <div className="flex items-center gap-2 font-bold">
+                        <Link to="/blog/all-posts">Browse top posts</Link>
+                        <FaArrowRight />
+                    </div>
+                </div>
+                <div className="lg:w-1/2 lg:ms-16 overflow-hidden flex justify-center items-center p-20 bg-[#ffd7c0] ">
+                    <img src={startUp} className='rounded-b-xl h-1/2' alt='Power up your productivity' />
+                </div>
+            </div>
+        </div>
+    </>
+}
+
 export function TopGuides() {
 
     let { data: integrations, isLoading, isError } = useQuery({
@@ -172,6 +200,54 @@ export function TopGuides() {
     </>
 }
 
+export function TrendingTopics() {
+    const data = {
+        topics: [
+            {
+                img: topic1,
+                headline: 'Implementing technology in property management: A guide to modern tools',
+                type: 'Trending',
+                date: 'June 21, 2024'
+            },
+            {
+                img: topic2,
+                headline: 'The future of property management: predictions for the next decade',
+                type: 'Trending',
+                date: 'June 21, 2024'
+            }
+        ]
+    }
+
+    return <>
+        <div className="bg-[#f5f9fe]">
+            <div className="container !p-0 flex flex-wrap lg:flex-nowrap gap-5 justify-between ">
+                <div className="lg:w-3/5 py-16 flex flex-col gap-5 text-left">
+                    <h2 className='font-bold text-2xl lg:text-3xl'>Trending topics</h2>
+                    {data.topics.map((t, i) => (<>
+                        <div className="flex gap-5 font-bold">
+                            <div className="lg:w-1/2  overflow-hidden">
+                                <img src={t.img} className='rounded-b-xl h-full' alt={t.headline} />
+                            </div>
+                            <div className="lg:w-3/5 flex flex-col gap-2 text-left">
+                                <div className="flex gap-2 text-xs">
+                                    <p className='text-hoverText'>{t.type}</p>
+                                    <div className="h-full w-[1px] bg-gray-400"></div>
+                                    <p>{t.date}</p>
+                                </div>
+                                <h1 className=' font-extrabold leading-[139%] lg:leading-[117%] text-darkBlue'>{t.headline}</h1>
+                            </div>
+                        </div>
+                    </>))}
+                </div>
+                <div className="lg:w-1/2 lg:ms-16 overflow-hidden flex justify-center items-end p-20 pb-0 bg-[#c0ddff] ">
+                    <img src={topTrendingImg} className='rounded-b-xl w-full' alt='Power up your productivity' />
+                </div>
+            </div>
+        </div>
+    </>
+}
+
+
 export default function Blog() {
 
 
@@ -179,7 +255,11 @@ export default function Blog() {
         <>
             <HeroSection />
             <LatestPosts />
+            <PowerUpYourProductivity />
             <TopGuides />
+            <TrendingTopics />
+            <StayConnected />
+            <ReadyToTransform />
         </>
     )
 }

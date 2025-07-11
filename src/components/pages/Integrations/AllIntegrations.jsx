@@ -70,7 +70,7 @@ export function Integrations() {
                 )}
             </div>
         );
-    };
+    }; 
 
     return (
         <div className="bg-[#f6f6f9]">
