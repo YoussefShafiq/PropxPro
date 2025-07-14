@@ -29,6 +29,7 @@ export default {
       },
       backgroundImage: {
         'zapier': "url('/Group39990.png')",
+        'demo': "url('/Frame39787.png')",
       }
     },
   },

@@ -8,7 +8,7 @@ import { HiOutlineInformationCircle, HiOutlineNewspaper, HiOutlineQuestionMarkCi
 import { motion, AnimatePresence } from "framer-motion";
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { IoClose, IoStatsChartOutline } from 'react-icons/io5';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import GetStarted from '../Buttons/GetStarted';
 import RequestDemo from '../Buttons/RequestDemo';
 import { MdOutlineManageAccounts, MdOutlineTrackChanges, MdOutlineCampaign } from "react-icons/md";
@@ -271,7 +271,7 @@ export default function Navbar() {
                 <div className="flex items-center gap-x-4 font-semibold">
                     <button className="hover:scale-[1.002] transition-all">Login</button>
                     <button className="capitalize bg-lightBlue text-white hover:shadow-lg hover:bg-[#1e4c9d] hover:scale-[1.002] transition-all px-7 py-3 rounded-md">get started</button>
-                    <button className="box-border border border-black hover:shadow-lg hover:scale-[1.002] transition-all px-7 py-3 rounded-md">Request a Demo</button>
+                    <Link to={'/request-demo'} className="box-border border border-black hover:shadow-lg hover:scale-[1.002] transition-all px-7 py-3 rounded-md">Request a Demo</Link>
                 </div>
             </div>
 

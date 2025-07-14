@@ -24,6 +24,7 @@ import Post from './components/pages/Blog/Post'
 import AllPosts from './components/pages/Blog/AllPosts'
 import PrivacyPolicy from './components/pages/LegalDocuments/PrivacyPolicy'
 import TermsOfServices from './components/pages/LegalDocuments/TermsOfServices'
+import RequestDemo from './components/pages/RequestDemo'
 
 function App() {
 
@@ -91,6 +92,7 @@ function App() {
         },
         { path: 'privacy-policy', element: <PrivacyPolicy /> },
         { path: 'terms-of-services', element: <TermsOfServices /> },
+        { path: 'request-demo', element: <RequestDemo /> },
         { path: '*', element: <Notfound /> },
       ]
     },

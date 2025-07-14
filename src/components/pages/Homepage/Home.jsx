@@ -23,9 +23,9 @@ import DiscoverFeatures from '../ReusableSections/DiscoverFeatures'
 
 export function HeroSection() {
     return <>
-        <div className="container  lg:px-20 m-auto text-center flex flex-col gap-8 items-center py-8 lg:py-28" >
-            <h1 className='font-extrabold text-4xl leading-[133%] lg:text-7xl'>Experience smart, fast, and user-friendly PropXPro CRM</h1>
-            <p className='font-medium lg:text-2xl lg:w-[65%] text-grayText' >The game-changer sales system—expertly designed to simplify every step of your real estate success!</p>
+        <div className="container  lg:px-20 m-auto text-center flex flex-col gap-8 items-center py-8 lg:pt-28 lg:pb-16" >
+            <h1 className='font-extrabold text-4xl leading-[133%] lg:text-7xl lg:w-[80%]'>Experience smart, fast, and user-friendly PropXPro CRM</h1>
+            <p className='font-medium lg:text-2xl lg:w-[60%] text-grayText' >The game-changer sales system—expertly designed to simplify every step of your real estate success!</p>
             <GetStarted />
         </div>
         <div className="container m-auto" data-aos="fade-up" >
