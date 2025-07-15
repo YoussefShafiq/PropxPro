@@ -13,21 +13,22 @@ import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 import { FaArrowLeftLong, FaArrowRightLong } from 'react-icons/fa6'
 import StayConnected from '../ReusableSections/StayConnected'
+import BlogCard from './BlogCard'
 
 
-export function Integrations() {
+export function Blogs() {
     const [currentSlide, setCurrentSlide] = useState(0);
     const carouselRef = useRef(null);
-    const { data: integrations, isLoading, isError } = useQuery({
-        queryKey: ["integrations"],
+    const { data: blogs, isLoading, isError } = useQuery({
+        queryKey: ["blogs"],
         queryFn: () => {
-            return axios.get('https://propxpro.run.place/api/integrations')
+            return axios.get('https://propxpro.run.place/api/landing/blogs/active')
         }
     });
 
     // Show 6 items per page (2 rows of 3 items each)
     const itemsPerPage = 6;
-    const totalSlides = Math.ceil((integrations?.data?.data?.length || 0) / itemsPerPage);
+    const totalSlides = Math.ceil((blogs?.data?.data?.length || 0) / itemsPerPage);
 
     const nextSlide = () => {
         if (currentSlide < totalSlides - 1) {
@@ -43,9 +44,9 @@ export function Integrations() {
 
     // Group items into pages of 6 items each
     const groupedItems = [];
-    if (integrations?.data?.data) {
-        for (let i = 0; i < integrations.data.data.length; i += itemsPerPage) {
-            groupedItems.push(integrations.data.data.slice(i, i + itemsPerPage));
+    if (blogs?.data?.data) {
+        for (let i = 0; i < blogs.data.data.length; i += itemsPerPage) {
+            groupedItems.push(blogs.data.data.slice(i, i + itemsPerPage));
         }
     }
 
@@ -81,35 +82,17 @@ export function Integrations() {
                 </div>
 
                 {/* Carousel Container */}
-                <div className="relative overflow-hidden">
+                <div className="relative">
                     <div
                         ref={carouselRef}
                         className="flex transition-transform duration-300 ease-in-out"
                         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
                     >
                         {groupedItems.map((page, pageIndex) => (
-                            <div key={pageIndex} className="w-full flex-shrink-0">
-                                <div className="flex flex-wrap -mx-[5px] mb-5 gap-y-5">
-                                    {page.slice(0, 6).map((i) => (
-                                        <div
-                                            key={i.id}
-                                            className="w-full lg:w-1/3 px-[5px] "
-                                            data-aos="fade-up"
-                                            data-aos-offset="200"
-                                            data-aos-delay={i.id * 50}
-                                        >
-                                            <div className="border rounded-xl h-full">
-                                                <div className="bg-white p-5 flex flex-col h-full border border-transparent box-border rounded-xl border-e-4 border-b-4 border-t-1 border-s-1 hover:border-black  transition-all cursor-pointer">
-                                                    <div className="w-24 lg:w-16 text-hoverText text-2xl">
-                                                        <img src={i.logo_url} alt={i.name} />
-                                                    </div>
-                                                    <div className="text-sm lg:text-xl font-bold">{i.name}</div>
-                                                    <div className="text-base font-medium mt-2">
-                                                        {i.description}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                            <div key={pageIndex} className="w-full flex-shrink-0" >
+                                <div className="flex flex-col lg:flex-row flex-wrap gap-5">
+                                    {page.slice(0, 6).map((i, index) => (
+                                        <BlogCard blog={i} />
                                     ))}
                                 </div>
                             </div>
@@ -154,7 +137,7 @@ export function Integrations() {
 
 export default function AllPosts() {
     return <>
-        <Integrations />
+        <Blogs />
         <StayConnected />
         <ReadyToTransform />
     </>
