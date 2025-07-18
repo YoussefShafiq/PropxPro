@@ -82,17 +82,17 @@ export function Blogs() {
                 </div>
 
                 {/* Carousel Container */}
-                <div className="relative">
+                <div className="relative overflow-hidden">
                     <div
                         ref={carouselRef}
                         className="flex transition-transform duration-300 ease-in-out"
                         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
                     >
                         {groupedItems.map((page, pageIndex) => (
-                            <div key={pageIndex} className="w-full flex-shrink-0" >
-                                <div className="flex flex-col lg:flex-row flex-wrap gap-5">
-                                    {page.slice(0, 6).map((i, index) => (
-                                        <BlogCard blog={i} />
+                            <div key={pageIndex} className="w-full flex-shrink-0 px-4">
+                                <div className="flex flex-col lg:flex-row gap-5 flex-wrap">
+                                    {page.map((i, index) => (
+                                        <BlogCard key={i.id} blog={i} grid={false} />
                                     ))}
                                 </div>
                             </div>
@@ -101,17 +101,13 @@ export function Blogs() {
                 </div>
 
                 {/* Custom Pagination Controls */}
-                <div className="flex justify-between items-center gap-4 mt-4">
+                <div className="flex justify-between items-center mt-8">
                     <button
                         onClick={prevSlide}
                         disabled={currentSlide === 0}
-                        className={`w-40 rounded-full flex items-center justify-start transition-colors gap-3 ${currentSlide === 0
-                            ? ' cursor-not-allowed'
-                            : ''
-                            }`}
-                        aria-label="Previous"
+                        className={`flex items-center gap-2 ${currentSlide === 0 ? 'opacity-50' : 'hover:text-primary'}`}
                     >
-                        <FaArrowLeftLong /> <div className="">Previous</div>
+                        <FaArrowLeftLong /> Previous
                     </button>
 
                     {renderPagination()}
@@ -119,13 +115,9 @@ export function Blogs() {
                     <button
                         onClick={nextSlide}
                         disabled={currentSlide === totalSlides - 1}
-                        className={`w-40 h-10 rounded-full flex items-center justify-end transition-colors gap-3 ${currentSlide === totalSlides - 1
-                            ? 'cursor-not-allowed'
-                            : ''
-                            }`}
-                        aria-label="Next"
+                        className={`flex items-center gap-2 ${currentSlide === totalSlides - 1 ? 'opacity-50' : 'hover:text-primary'}`}
                     >
-                        <div className="">Next</div><FaArrowRightLong />
+                        Next <FaArrowRightLong />
                     </button>
                 </div>
             </div>
