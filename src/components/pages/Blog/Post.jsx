@@ -15,7 +15,7 @@ export function HeroSection({ data }) {
   };
 
   function calcTimeToRead(wordsCount) {
-    const WPM = 200
+    const WPM = 100
     const readingTime = wordsCount / WPM
     return Math.max(1, Math.ceil(readingTime));
   }
@@ -26,7 +26,7 @@ export function HeroSection({ data }) {
         <span className='text-hoverText capitalize'>{data?.category}</span>
         <h1 className='lg:text-[54px] text-3xl font-extrabold lg:leading-[67px] '>{data?.title}</h1>
         <div className="flex gap-2 items-center text-sm font-medium mt-3">
-          <p className=''>{calcTimeToRead(document.getElementById('blog-content-container')?.innerText.length)} minutes read</p>
+          <p className=''>{calcTimeToRead(document.getElementById('blog-content-container')?.innerText.split(' ').length)} minutes read</p>
           <div className="h-full w-[1px] bg-gray-400">  <br /> </div>
           <p>{formatDate(data?.updated_at)}</p>
           <div className="h-full w-[1px] bg-gray-400">  <br /> </div>
