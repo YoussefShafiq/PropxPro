@@ -95,7 +95,7 @@ export function TopGuides({ data: TopGuides }) {
 
         <div className="container flex flex-col gap-5" data-aos="fade-up">
             <div className="flex justify-between">
-                <h2 className='font-bold text-2xl lg:text-3xl'>Latest posts</h2>
+                <h2 className='font-bold text-2xl lg:text-3xl'>Top guides</h2>
                 <NavLink to={"/blog/all-posts"} className="flex gap-2 items-center font-bold text-sm">
                     View all <IoIosArrowRoundForward />
                 </NavLink>

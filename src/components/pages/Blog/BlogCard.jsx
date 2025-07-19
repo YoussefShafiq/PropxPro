@@ -5,7 +5,7 @@ export default function BlogCard({ blog: i, grid = false }) {
     const navigate = useNavigate()
 
     return <>
-        <div className={`w-full lg:w-[calc(33%-10px)]  bg-white border rounded-2xl flex flex-col`} onClick={() => navigate(`/blog/post/${i.id}`)} data-aos="fade-up" data-aos-offset="200">
+        <div className={`w-full lg:w-[calc(33%-10px)]  bg-white border rounded-2xl flex flex-col`} onClick={() => navigate(`/blog/post/${i.id}`)} >
             <div className="rounded-xl h-full">
                 <div className="bg-black rounded-[13px] h-full flex flex-col">
                     <div className="relative bg-white min-h-96 flex flex-col gap-3 h-full border rounded-xl transition-all cursor-pointer hover:-translate-x-1.5 hover:-translate-y-1.5">

@@ -25,6 +25,7 @@ import AllPosts from './components/pages/Blog/AllPosts'
 import PrivacyPolicy from './components/pages/LegalDocuments/PrivacyPolicy'
 import TermsOfServices from './components/pages/LegalDocuments/TermsOfServices'
 import RequestDemo from './components/pages/RequestDemo'
+import { Toaster } from 'react-hot-toast'
 
 function App() {
 
@@ -104,6 +105,10 @@ function App() {
     <>
       <QueryClientProvider client={query}>
         <RouterProvider router={routers} />
+        <Toaster
+          position='bottom-right'
+          reverseOrder={false}
+        />
       </QueryClientProvider>
     </>
   )
