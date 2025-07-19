@@ -1,9 +1,11 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { FaBehanceSquare } from 'react-icons/fa';
+import { FaBehanceSquare, FaCaretDown } from 'react-icons/fa';
 import { FaFacebook, FaPinterest, FaTwitter, FaUser } from 'react-icons/fa6';
 import { useParams } from 'react-router-dom';
+import { motion } from "framer-motion";
+
 
 export function HeroSection({ data }) {
 
@@ -19,10 +21,10 @@ export function HeroSection({ data }) {
   }
 
   return <>
-    <div className="container flex gap-8">
-      <div className="w-1/2 font-bold">
+    <div className="flex flex-col lg:flex-row gap-8">
+      <div className="lg:w-1/2 font-bold">
         <span className='text-hoverText capitalize'>{data?.category}</span>
-        <h1 className='text-[54px] font-extrabold leading-[67px]'>{data?.title}</h1>
+        <h1 className='lg:text-[54px] text-3xl font-extrabold lg:leading-[67px] '>{data?.title}</h1>
         <div className="flex gap-2 items-center text-sm font-medium mt-3">
           <p className=''>{calcTimeToRead(document.getElementById('blog-content-container')?.innerText.length)} minutes read</p>
           <div className="h-full w-[1px] bg-gray-400">  <br /> </div>
@@ -31,7 +33,7 @@ export function HeroSection({ data }) {
           <p>{data?.created_by_name}</p>
         </div>
       </div>
-      <div className="w-1/2">
+      <div className="lg:w-1/2">
         <div className="flex justify-center">
           <img src={data?.cover_photo_url} alt={data?.title} className='w-full' />
         </div>
@@ -43,6 +45,7 @@ export function HeroSection({ data }) {
 export default function Post() {
   const { id } = useParams();
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [tableOfContent, setTableOfContent] = useState(false);
 
   const { data: post, isLoading, isError, error } = useQuery({
     queryKey: [`post-${id}`],
@@ -96,8 +99,8 @@ export default function Post() {
   }, [post?.data?.data]);
 
   return <>
-
-    <div className="sticky top-[84px] z-10">
+    {/* progress bar */}
+    <div className="sticky lg:top-[84px] top-[81px] z-10">
       <div className="mb-4">
         <div className="w-full bg-gray-200 rounded-full h-2">
           <div
@@ -113,9 +116,40 @@ export default function Post() {
       {/* Main content wrapper with relative positioning */}
       <div className="relative">
         {/* progress */}
-        <div className="flex justify-between gap-10">
+        <div className="flex flex-col lg:flex-row justify-between gap-4">
+          {/* table of content */}
+          <div className="lg:hidden">
+            <button className="font-semibold text-gray-800  bg-white flex justify-between w-full items-center hover:text-lightBlue" onClick={() => { setTableOfContent(!tableOfContent) }}>
+              Table of Contents
+              <FaCaretDown className={`${tableOfContent ? 'rotate-180' : 'rotate-0'} duration-500`} />
+            </button>
+            <div className="flex flex-col gap-2 max-h-[calc(100vh-150px)] overflow-y-auto">
+              {tableOfContent && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  transition={{ duration: 0.3, ease: "easeOut" }}
+                >
+                  {post?.data?.data?.headings?.map((h, i) => (
+                    <button
+                      key={i}
+                      onClick={(e) => scrollToHeading(h.id, e)}
+                      className={`${h.level == 1
+                        ? 'ps-0 text-base font-bold text-gray-900 hover:text-hoverText'
+                        : h.level == 2
+                          ? 'ps-3 text-sm font-semibold text-gray-700 hover:text-hoverText'
+                          : 'ps-6 text-sm font-normal text-gray-500 hover:text-gray-700'
+                        } transition-colors duration-200 py-1 block border-l-2 border-transparent hover:border-hoverText pl-2 text-left cursor-pointer bg-transparent border-none`}
+                    >
+                      {h.text}
+                    </button>
+                  ))}
+                </motion.div>
+              )}
+            </div>
+          </div>
           {/* content */}
-          <div className="w-3/4">
+          <div className="lg:w-3/4">
             <div className="content-container" id='blog-content-container'>
 
               {isLoading ? (
@@ -124,7 +158,7 @@ export default function Post() {
                 <div className="error-state">Error loading privacy policy: {error.message}</div>
               ) : (
                 <div
-                  className="content "
+                  className="content !p-0"
                   dangerouslySetInnerHTML={{ __html: post?.data?.data?.content || '' }}
                 />
               )}
@@ -141,7 +175,7 @@ export default function Post() {
           </div>
 
           {/* Sticky headings sidebar */}
-          <div className="w-1/4">
+          <div className="w-1/4 lg:block hidden">
             <div className="sticky top-[84px]">
               {/* Headings navigation */}
               <div className="flex flex-col gap-2 max-h-[calc(100vh-150px)] overflow-y-auto">
