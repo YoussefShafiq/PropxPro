@@ -41,7 +41,7 @@ export default function StayConnected() {
     }
 
     return (
-        <div className="bg-[#245ec1] py-10 sticky top-0">
+        <div className="bg-[#245ec1] py-10 ">
             <div className="container flex flex-col gap-10 items-center">
                 <div className="text-center text-3xl lg:text-5xl leading-[133%] font-extrabold text-white lg:px-44">
                     Stay connected
