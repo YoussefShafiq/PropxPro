@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom';
 import { motion } from "framer-motion";
 
 
-export function HeroSection({ data }) {
+export function HeroSection({ data, view }) {
 
   const formatDate = (dateString) => {
     const options = { year: 'numeric', month: 'short', day: 'numeric' };
@@ -21,7 +21,7 @@ export function HeroSection({ data }) {
   }
 
   return <>
-    <div className="flex flex-col lg:flex-row gap-8">
+    {view && <div className="flex flex-col lg:flex-row gap-8">
       <div className="lg:w-1/2 font-bold">
         <span className='text-hoverText capitalize'>{data?.category}</span>
         <h1 className='lg:text-[54px] text-3xl font-extrabold lg:leading-[67px] '>{data?.title}</h1>
@@ -38,7 +38,7 @@ export function HeroSection({ data }) {
           <img src={data?.cover_photo_url} alt={data?.title} className='w-full' />
         </div>
       </div>
-    </div>
+    </div>}
   </>
 }
 
@@ -111,14 +111,14 @@ export default function Post() {
       </div>
     </div>
     <div className="container flex flex-col gap-5">
-      <HeroSection key={post?.data?.data} data={post?.data?.data} />
+      <HeroSection key={post?.data?.data} data={post?.data?.data} view={!isLoading && !isError} />
 
       {/* Main content wrapper with relative positioning */}
       <div className="relative">
         {/* progress */}
         <div className="flex flex-col lg:flex-row justify-between gap-4">
           {/* table of content */}
-          <div className="lg:hidden">
+          {!isLoading && !isError && <div className="lg:hidden">
             <button className="font-semibold text-gray-800  bg-white flex justify-between w-full items-center hover:text-lightBlue" onClick={() => { setTableOfContent(!tableOfContent) }}>
               Table of Contents
               <FaCaretDown className={`${tableOfContent ? 'rotate-180' : 'rotate-0'} duration-500`} />
@@ -147,7 +147,7 @@ export default function Post() {
                 </motion.div>
               )}
             </div>
-          </div>
+          </div>}
           {/* content */}
           <div className="lg:w-3/4">
             <div className="content-container" id='blog-content-container'>
@@ -155,7 +155,7 @@ export default function Post() {
               {isLoading ? (
                 <div className="loading-state"><div className="animate-spin h-5 w-5 rounded-full border-e-2 border-hoverText m-auto" size={18} ></div></div>
               ) : error ? (
-                <div className="error-state">Error loading privacy policy: {error.message}</div>
+                <div className="error-state">Error loading post: {error.message}</div>
               ) : (
                 <div
                   className="content !p-0"
@@ -175,7 +175,7 @@ export default function Post() {
           </div>
 
           {/* Sticky headings sidebar */}
-          <div className="w-1/4 lg:block hidden">
+          {true && <div className="w-1/4 lg:block hidden">
             <div className="sticky top-[84px]">
               {/* Headings navigation */}
               <div className="flex flex-col gap-2 max-h-[calc(100vh-150px)] overflow-y-auto">
@@ -198,24 +198,25 @@ export default function Post() {
                 ))}
               </div>
             </div>
-          </div>
+          </div>}
         </div>
       </div>
 
-      <div className="w-full h-[1px] bg-gray-300 mt-10"></div>
 
       {/* blog footer */}
-      <div className="flex justify-between items-center">
-        <div className="flex flex-col">
-          <h3 className='font-extrabold'>By {post?.data?.data?.created_by_name}</h3>
-        </div>
-        <div className="flex items-center gap-4 text-xl text-gray-700">
-          <FaFacebook />
-          <FaTwitter />
-          <FaPinterest />
-          <FaBehanceSquare />
-        </div>
-      </div>
+      {!isLoading && !isError && <>
+        <div className="w-full h-[1px] bg-gray-300 mt-10"></div>
+        <div className="flex justify-between items-center">
+          <div className="flex flex-col">
+            <h3 className='font-extrabold'>By {post?.data?.data?.created_by_name}</h3>
+          </div>
+          <div className="flex items-center gap-4 text-xl text-gray-700">
+            <FaFacebook />
+            <FaTwitter />
+            <FaPinterest />
+            <FaBehanceSquare />
+          </div>
+        </div></>}
 
     </div>
 
