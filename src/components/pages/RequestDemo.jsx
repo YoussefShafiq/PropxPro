@@ -65,7 +65,7 @@ export function HeroSection() {
     return (
         <div className="bg-gradient-to-br from-blue-50 via-white to-indigo-50 min-h-[60vh] flex items-center">
             <div className="container lg:px-20 m-auto text-center flex flex-col gap-8 items-center py-16 lg:py-28">
-                <h1 className='font-extrabold text-4xl leading-[117%] lg:text-6xl md:w-4/5 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent'>
+                <h1 className='font-extrabold text-4xl leading-[117%] lg:text-6xl py-5 md:w-4/5 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent'>
                     Your gateway to next level real estate management
                 </h1>
                 <p className='font-medium lg:text-2xl text-gray-600 md:w-1/2'>
