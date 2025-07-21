@@ -1,33 +1,10 @@
+import axios from 'axios';
 import React, { useState } from 'react';
+import toast from 'react-hot-toast';
 import { FaCheck, FaCalendar, FaClock } from 'react-icons/fa6';
+import { FiCopy } from 'react-icons/fi';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
-// Simulated API call - replace with actual axios import in your project
-const axios = {
-    post: async (url, data, config) => {
-        // Simulate API delay
-        await new Promise(resolve => setTimeout(resolve, 2000));
-
-        // Simulate successful response
-        return {
-            data: {
-                message: 'Demo request submitted successfully!',
-                data: {
-                    demo_id: 'DEMO-' + Math.random().toString(36).substr(2, 9).toUpperCase(),
-                    event_link: 'https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=example',
-                    meet_link: 'https://meet.google.com/abc-defg-hij'
-                }
-            }
-        };
-    }
-};
-
-// Simulated toast notifications - replace with actual react-hot-toast import in your project
-const toast = {
-    success: (message) => alert(`✅ ${message}`),
-    error: (message) => alert(`❌ ${message}`)
-};
-import { FiCopy } from 'react-icons/fi';
 
 // Custom validation functions
 const validateForm = (formData) => {
@@ -356,7 +333,7 @@ export function DemoForm() {
                         </div>
                     </div>
                 ) : (
-                    <div onSubmit={handleSubmit} className="space-y-6">
+                    <form onSubmit={handleSubmit} className="space-y-6">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="space-y-2">
                                 <input
@@ -516,7 +493,7 @@ export function DemoForm() {
                         </div>
 
                         <button
-                            type="button"
+                            type="submit"
                             onClick={handleSubmit}
                             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold py-4 px-6 rounded-xl hover:from-blue-700 hover:to-indigo-700 transform hover:scale-[1.02] transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg hover:shadow-xl"
                             disabled={loading}
@@ -530,7 +507,7 @@ export function DemoForm() {
                                 'Request Demo'
                             )}
                         </button>
-                    </div>
+                    </form>
                 )}
             </div>
         </div>
