@@ -1,6 +1,7 @@
-// PrivacyPolicy.scss
-
 .content-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 
     h1 {
         font-size: 2rem;
@@ -10,7 +11,6 @@
     }
 
     .content {
-
 
         // Apply all the tiptap styles to the rendered content
         :first-child {
@@ -34,7 +34,23 @@
             margin-bottom: 1rem;
             font-weight: 600;
             color: #1e293b;
-            // scroll-margin-top: 90px;
+            position: relative;
+            scroll-margin-top: 2rem; // For anchor scrolling
+
+            // Anchor link indicator
+            &:hover::before {
+                content: '#';
+                position: absolute;
+                left: -1.25rem;
+                color: #cbd5e1;
+                font-weight: normal;
+                opacity: 0;
+                transition: opacity 0.2s ease;
+            }
+
+            &:hover::before {
+                opacity: 1;
+            }
         }
 
         h1 {
@@ -51,6 +67,29 @@
 
         h4 {
             font-size: 1.1rem;
+        }
+
+        // Link styles
+        a {
+            color: #6366f1;
+            text-decoration: none;
+            border-bottom: 1px solid #c7d2fe;
+            transition: all 0.2s ease;
+            padding-bottom: 1px;
+
+            &:hover {
+                color: #4f46e5;
+                border-bottom-color: #4f46e5;
+            }
+
+            // External link indicator
+            &[target="_blank"]::after {
+                content: "↗";
+                display: inline-block;
+                margin-left: 0.25rem;
+                font-size: 0.8em;
+                line-height: 1;
+            }
         }
 
         ul,
@@ -172,6 +211,15 @@
                 }
             }
         }
+
+        // Image styles
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 1rem 0;
+            border-radius: 0.25rem;
+            border: 1px solid #e2e8f0;
+        }
     }
 
     .loading-state {
@@ -196,6 +244,17 @@
 
         .content {
             padding: 1rem;
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                &:hover::before {
+                    left: -1rem;
+                }
+            }
         }
     }
 }
