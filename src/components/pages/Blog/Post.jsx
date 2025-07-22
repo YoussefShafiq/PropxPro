@@ -7,6 +7,7 @@ import { useParams } from 'react-router-dom';
 import { motion } from "framer-motion";
 
 
+
 export function HeroSection({ data, view }) {
 
   const formatDate = (dateString) => {
@@ -150,7 +151,7 @@ export default function Post() {
           </div>}
           {/* content */}
           <div className="lg:w-3/4">
-            <div className="content-container" id='blog-content-container'>
+            <div className="content-container !ms-0 !ps-0" id='blog-content-container'>
 
               {isLoading ? (
                 <div className="loading-state"><div className="animate-spin h-5 w-5 rounded-full border-e-2 border-hoverText m-auto" size={18} ></div></div>
@@ -158,7 +159,7 @@ export default function Post() {
                 <div className="error-state">Error loading post: {error.message}</div>
               ) : (
                 <div
-                  className="content !p-0"
+                  className="content "
                   dangerouslySetInnerHTML={{ __html: post?.data?.data?.content || '' }}
                 />
               )}
