@@ -180,7 +180,7 @@ export default function Post() {
             <div className="sticky top-[84px]">
               {/* Headings navigation */}
               <div className="flex flex-col gap-2 max-h-[calc(100vh-150px)] overflow-y-auto">
-                <h4 className="font-semibold text-gray-800 mb-2 sticky top-4 bg-white py-2">
+                <h4 className="font-semibold text-gray-800 mb-2 sticky top-0 bg-white pt-5 pb-2">
                   Table of Contents
                 </h4>
                 {post?.data?.data?.headings?.map((h, i) => (
