@@ -9,7 +9,7 @@ import LearnMore from '../../Buttons/LearnMore'
 import axios from 'axios'
 import { IoIosArrowRoundForward } from 'react-icons/io'
 import { useQuery } from '@tanstack/react-query'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { FaArrowRight } from 'react-icons/fa6'
 import ReadyToTransform from '../ReusableSections/ReadyToTransform'
 import StayConnected from '../ReusableSections/StayConnected'
@@ -111,6 +111,7 @@ export function TopGuides({ data: TopGuides }) {
 
 export function TrendingTopics({ data: TrendingTopics }) {
 
+    const navigate = useNavigate()
 
     return <>
         <div className="bg-[#f5f9fe]">
@@ -128,7 +129,7 @@ export function TrendingTopics({ data: TrendingTopics }) {
                                     <div className="h-full w-[1px] bg-gray-400"></div>
                                     <p>{t.updated_at.substring(0, 10)}</p>
                                 </div>
-                                <h1 className=' font-extrabold leading-[139%] lg:leading-[117%] text-darkBlue'>{t.title}</h1>
+                                <h1 className=' font-extrabold leading-[139%] lg:leading-[117%] text-darkBlue' onClick={() => navigate(`/blog/post/${t.id}`)}>{t.title}</h1>
                             </div>
                         </div>
                     </>))}
