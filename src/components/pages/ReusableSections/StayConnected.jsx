@@ -32,7 +32,7 @@ export default function StayConnected() {
             // setMessage({ text: 'Subscription successful!', isError: false });
             setEmail('');
         } catch (error) {
-            toast.success(error.response.data.message)
+            toast.success('Your are already connected to newsletter')
             // const errorMessage = error.response?.data?.message || 'Subscription failed. Please try again.';
             // setMessage({ text: errorMessage, isError: true });
         } finally {
