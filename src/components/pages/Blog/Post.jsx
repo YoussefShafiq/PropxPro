@@ -6,20 +6,50 @@ import { FaFacebook, FaPinterest, FaTwitter, FaUser } from 'react-icons/fa6';
 import { useParams } from 'react-router-dom';
 import { motion } from "framer-motion";
 
-
-
 export function HeroSection({ data, view }) {
+  const [readingTime, setReadingTime] = useState(null);
 
   const formatDate = (dateString) => {
     const options = { year: 'numeric', month: 'short', day: 'numeric' };
     return new Date(dateString).toLocaleDateString(undefined, options);
   };
 
-  function calcTimeToRead(wordsCount) {
-    const WPM = 100
-    const readingTime = wordsCount / WPM
+  function calcTimeToRead(content) {
+    if (!content) return 1;
+
+    // Option 1: Calculate from HTML content (strip HTML tags)
+    const textContent = content.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+    const wordsCount = textContent.split(' ').filter(word => word.length > 0).length;
+
+    const WPM = 200; // Average reading speed
+    const readingTime = wordsCount / WPM;
     return Math.max(1, Math.ceil(readingTime));
   }
+
+  // Calculate reading time when data changes
+  useEffect(() => {
+    if (data?.content) {
+      const time = calcTimeToRead(data.content);
+      setReadingTime(time);
+    }
+  }, [data?.content]);
+
+  // Alternative: Calculate from DOM after content is rendered
+  useEffect(() => {
+    if (view && data) {
+      const timer = setTimeout(() => {
+        const contentElement = document.getElementById('blog-content-container');
+        if (contentElement && contentElement.innerText) {
+          const wordsCount = contentElement.innerText.split(' ').filter(word => word.length > 0).length;
+          const WPM = 200;
+          const time = Math.max(1, Math.ceil(wordsCount / WPM));
+          setReadingTime(time);
+        }
+      }, 100); // Small delay to ensure DOM is ready
+
+      return () => clearTimeout(timer);
+    }
+  }, [view, data]);
 
   return <>
     {view && <div className="flex flex-col lg:flex-row gap-8">
@@ -27,7 +57,9 @@ export function HeroSection({ data, view }) {
         <span className='text-hoverText capitalize'>{data?.category}</span>
         <h1 className='lg:text-[54px] text-3xl font-extrabold lg:leading-[67px] '>{data?.title}</h1>
         <div className="flex gap-2 items-center text-sm font-medium mt-3">
-          <p className=''>{calcTimeToRead(document.getElementById('blog-content-container')?.innerText.split(' ').length)} minutes read</p>
+          <p className=''>
+            {readingTime !== null ? `${readingTime} minutes read` : 'Loading...'}
+          </p>
           <div className="h-full w-[1px] bg-gray-400">  <br /> </div>
           <p>{formatDate(data?.updated_at)}</p>
           <div className="h-full w-[1px] bg-gray-400">  <br /> </div>
@@ -202,7 +234,6 @@ export default function Post() {
           </div>}
         </div>
       </div>
-
 
       {/* blog footer */}
       {!isLoading && !isError && <>
