@@ -1,0 +1,387 @@
+{
+    "status": "success",
+    "message": "Successfully retrieved pricing data",
+    "data": {
+        "features": [
+            {
+                "key": "UnlimitedRecords",
+                "name": "Unlimited Records",
+                "value": true,
+                "type": "boolean"
+            },
+            {
+                "key": "UserAccess",
+                "name": "User Access",
+                "value": "Single",
+                "type": "string"
+            },
+            {
+                "key": "KPIDashboard",
+                "name": "KPI Dashboard",
+                "value": true,
+                "type": "boolean"
+            },
+            {
+                "key": "CallCenterIntegration",
+                "name": "Call Center Integration",
+                "value": true,
+                "type": "boolean"
+            },
+            {
+                "key": "RecordsDatabase",
+                "name": "Records Database",
+                "value": true,
+                "type": "boolean"
+            },
+            {
+                "key": "MarketingCampaigns",
+                "name": "Marketing Campaigns",
+                "value": true,
+                "type": "boolean"
+            },
+            {
+                "key": "GoogleCalendarIntegration",
+                "name": "Google Calendar Integration",
+                "value": true,
+                "type": "boolean"
+            },
+            {
+                "key": "Automations",
+                "name": "Automations",
+                "value": true,
+                "type": "boolean"
+            },
+            {
+                "key": "AdvancedDialer",
+                "name": "Advanced Dialer",
+                "value": false,
+                "type": "boolean"
+            },
+            {
+                "key": "InAppAnswering",
+                "name": "In-App Answering",
+                "value": false,
+                "type": "boolean"
+            },
+            {
+                "key": "ChatTeamsManagement",
+                "name": "Chat Teams Management",
+                "value": false,
+                "type": "boolean"
+            },
+            {
+                "key": "EmailSupport",
+                "name": "Email Support",
+                "value": true,
+                "type": "boolean"
+            }
+        ],
+        "additionalUsageCharges": [
+            {
+                "key": "PhoneNumber",
+                "name": "Phone Number",
+                "value": "$2/Mo",
+                "type": "string"
+            },
+            {
+                "key": "SMSCredit",
+                "name": "SMS Credit",
+                "value": "1 Cent",
+                "type": "string"
+            },
+            {
+                "key": "MMSCredit",
+                "name": "MMS Credit",
+                "value": "2 Cents",
+                "type": "string"
+            },
+            {
+                "key": "CallingMinutes",
+                "name": "Calling Minutes",
+                "value": "2.5 Cents",
+                "type": "string"
+            }
+        ],
+        "plans": [
+            {
+                "name": "started plan",
+                "title": "Elevate Your Game",
+                "description": "Kickstart your real estate ambitions with PropXPro's Starter Plan. Start your journey here and experience the ease of managing real estate deals.",
+                "monthlyPrice": "50",
+                "annualPrice": "500",
+                "annualSavings": "17%",
+                "isPopular": false,
+                "features": {
+                    "UnlimitedRecords": {
+                        "name": "Unlimited Records",
+                        "value": true,
+                        "type": "boolean"
+                    },
+                    "UserAccess": {
+                        "name": "User Access",
+                        "value": "Single",
+                        "type": "string"
+                    },
+                    "KPIDashboard": {
+                        "name": "KPI Dashboard",
+                        "value": true,
+                        "type": "boolean"
+                    },
+                    "CallCenterIntegration": {
+                        "name": "Call Center Integration",
+                        "value": true,
+                        "type": "boolean"
+                    },
+                    "RecordsDatabase": {
+                        "name": "Records Database",
+                        "value": true,
+                        "type": "boolean"
+                    },
+                    "MarketingCampaigns": {
+                        "name": "Marketing Campaigns",
+                        "value": true,
+                        "type": "boolean"
+                    },
+                    "GoogleCalendarIntegration": {
+                        "name": "Google Calendar Integration",
+                        "value": true,
+                        "type": "boolean"
+                    },
+                    "Automations": {
+                        "name": "Automations",
+                        "value": true,
+                        "type": "boolean"
+                    },
+                    "AdvancedDialer": {
+                        "name": "Advanced Dialer",
+                        "value": false,
+                        "type": "boolean"
+                    },
+                    "InAppAnswering": {
+                        "name": "In-App Answering",
+                        "value": false,
+                        "type": "boolean"
+                    },
+                    "ChatTeamsManagement": {
+                        "name": "Chat Teams Management",
+                        "value": false,
+                        "type": "boolean"
+                    },
+                    "EmailSupport": {
+                        "name": "Email Support",
+                        "value": true,
+                        "type": "boolean"
+                    }
+                },
+                "additionalUsageCharges": {
+                    "PhoneNumber": {
+                        "name": "Phone Number",
+                        "value": "$2/Mo",
+                        "type": "string"
+                    },
+                    "SMSCredit": {
+                        "name": "SMS Credit",
+                        "value": "1 Cent",
+                        "type": "string"
+                    },
+                    "MMSCredit": {
+                        "name": "MMS Credit",
+                        "value": "2 Cents",
+                        "type": "string"
+                    },
+                    "CallingMinutes": {
+                        "name": "Calling Minutes",
+                        "value": "2.5 Cents",
+                        "type": "string"
+                    }
+                }
+            },
+            {
+                "name": "growth plan",
+                "title": "Expand Your Horizons",
+                "description": "Designed for the dynamic solopreneur. Empower your solo venture with more tools to close deals confidently.",
+                "monthlyPrice": "80",
+                "annualPrice": "800",
+                "annualSavings": "17%",
+                "isPopular": true,
+                "features": {
+                    "UnlimitedRecords": {
+                        "name": "Unlimited Records",
+                        "value": true,
+                        "type": "boolean"
+                    },
+                    "UserAccess": {
+                        "name": "User Access",
+                        "value": "Up to 5",
+                        "type": "string"
+                    },
+                    "KPIDashboard": {
+                        "name": "KPI Dashboard",
+                        "value": true,
+                        "type": "boolean"
+                    },
+                    "CallCenterIntegration": {
+                        "name": "Call Center Integration",
+                        "value": true,
+                        "type": "boolean"
+                    },
+                    "RecordsDatabase": {
+                        "name": "Records Database",
+                        "value": true,
+                        "type": "boolean"
+                    },
+                    "MarketingCampaigns": {
+                        "name": "Marketing Campaigns",
+                        "value": true,
+                        "type": "boolean"
+                    },
+                    "GoogleCalendarIntegration": {
+                        "name": "Google Calendar Integration",
+                        "value": true,
+                        "type": "boolean"
+                    },
+                    "Automations": {
+                        "name": "Automations",
+                        "value": true,
+                        "type": "boolean"
+                    },
+                    "AdvancedDialer": {
+                        "name": "Advanced Dialer",
+                        "value": true,
+                        "type": "boolean"
+                    },
+                    "InAppAnswering": {
+                        "name": "In-App Answering",
+                        "value": true,
+                        "type": "boolean"
+                    },
+                    "ChatTeamsManagement": {
+                        "name": "Chat Teams Management",
+                        "value": true,
+                        "type": "boolean"
+                    },
+                    "EmailSupport": {
+                        "name": "Email Support",
+                        "value": true,
+                        "type": "boolean"
+                    }
+                },
+                "additionalUsageCharges": {
+                    "PhoneNumber": {
+                        "name": "Phone Number",
+                        "value": "$2/Mo",
+                        "type": "string"
+                    },
+                    "SMSCredit": {
+                        "name": "SMS Credit",
+                        "value": "1 Cent",
+                        "type": "string"
+                    },
+                    "MMSCredit": {
+                        "name": "MMS Credit",
+                        "value": "2 Cents",
+                        "type": "string"
+                    },
+                    "CallingMinutes": {
+                        "name": "Calling Minutes",
+                        "value": "2 Cents",
+                        "type": "string"
+                    }
+                }
+            },
+            {
+                "name": "professional plan",
+                "title": "Full Potential",
+                "description": "Accelerate your business's growth—Take it to new heights. Full-fledged functionality for the high-performing team that demands excellence!",
+                "monthlyPrice": "100",
+                "annualPrice": "1000",
+                "annualSavings": "17%",
+                "isPopular": false,
+                "features": {
+                    "UnlimitedRecords": {
+                        "name": "Unlimited Records",
+                        "value": true,
+                        "type": "boolean"
+                    },
+                    "UserAccess": {
+                        "name": "User Access",
+                        "value": "Unlimited",
+                        "type": "string"
+                    },
+                    "KPIDashboard": {
+                        "name": "KPI Dashboard",
+                        "value": true,
+                        "type": "boolean"
+                    },
+                    "CallCenterIntegration": {
+                        "name": "Call Center Integration",
+                        "value": true,
+                        "type": "boolean"
+                    },
+                    "RecordsDatabase": {
+                        "name": "Records Database",
+                        "value": true,
+                        "type": "boolean"
+                    },
+                    "MarketingCampaigns": {
+                        "name": "Marketing Campaigns",
+                        "value": true,
+                        "type": "boolean"
+                    },
+                    "GoogleCalendarIntegration": {
+                        "name": "Google Calendar Integration",
+                        "value": true,
+                        "type": "boolean"
+                    },
+                    "Automations": {
+                        "name": "Automations",
+                        "value": true,
+                        "type": "boolean"
+                    },
+                    "AdvancedDialer": {
+                        "name": "Advanced Dialer",
+                        "value": true,
+                        "type": "boolean"
+                    },
+                    "InAppAnswering": {
+                        "name": "In-App Answering",
+                        "value": true,
+                        "type": "boolean"
+                    },
+                    "ChatTeamsManagement": {
+                        "name": "Chat Teams Management",
+                        "value": true,
+                        "type": "boolean"
+                    },
+                    "EmailSupport": {
+                        "name": "Email Support",
+                        "value": true,
+                        "type": "boolean"
+                    }
+                },
+                "additionalUsageCharges": {
+                    "PhoneNumber": {
+                        "name": "Phone Number",
+                        "value": "$1.5/Mo",
+                        "type": "string"
+                    },
+                    "SMSCredit": {
+                        "name": "SMS Credit",
+                        "value": "0.8 Cents",
+                        "type": "string"
+                    },
+                    "MMSCredit": {
+                        "name": "MMS Credit",
+                        "value": "1.5 Cents",
+                        "type": "string"
+                    },
+                    "CallingMinutes": {
+                        "name": "Calling Minutes",
+                        "value": "1.5 Cents",
+                        "type": "string"
+                    }
+                }
+            }
+        ]
+    }
+}
