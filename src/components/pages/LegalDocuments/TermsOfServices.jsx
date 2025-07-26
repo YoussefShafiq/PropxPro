@@ -8,7 +8,7 @@ export default function TermsOfServices() {
     const { data, isLoading, error } = useQuery({
         queryKey: ['terms-of-services'],
         queryFn: () => {
-            return axios.get('https://propxpro.run.place/api/legal-documents/terms-of-service')
+            return axios.get('https://api.propxpro.com/api/legal-documents/terms-of-service')
         }
     })
 

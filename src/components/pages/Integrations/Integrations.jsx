@@ -26,7 +26,7 @@ export function Applications() {
     let { data: integrations, isLoading, isError } = useQuery({
         queryKey: ["integrations"],
         queryFn: () => {
-            return axios.get('https://propxpro.run.place/api/integrations')
+            return axios.get('https://api.propxpro.com/api/integrations')
         }
     })
 

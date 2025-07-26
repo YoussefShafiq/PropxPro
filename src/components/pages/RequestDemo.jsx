@@ -172,7 +172,7 @@ export function DemoForm() {
             };
 
             const response = await axios.post(
-                'https://propxpro.run.place/api/request-demo',
+                'https://api.propxpro.com/api/request-demo',
                 requestData,
                 {
                     headers: {

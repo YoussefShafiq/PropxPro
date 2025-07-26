@@ -22,7 +22,7 @@ export function Blogs() {
     const { data: blogs, isLoading, isError } = useQuery({
         queryKey: ["blogs"],
         queryFn: () => {
-            return axios.get('https://propxpro.run.place/api/landing/blogs/active')
+            return axios.get('https://api.propxpro.com/api/landing/blogs/active')
         }
     });
 

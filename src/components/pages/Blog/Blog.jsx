@@ -148,7 +148,7 @@ export default function Blog() {
     const { data: blogs, isLoading, isError, error } = useQuery({
         queryKey: 'blogs',
         queryFn: () => {
-            return axios.get('https://propxpro.run.place/api/landing/blogs')
+            return axios.get('https://api.propxpro.com/api/landing/blogs')
         }
     })
 

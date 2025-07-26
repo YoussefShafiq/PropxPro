@@ -8,7 +8,7 @@ export default function PrivacyPolicy() {
     const { data, isLoading, error } = useQuery({
         queryKey: ['privacy-policy'],
         queryFn: () => {
-            return axios.get('https://propxpro.run.place/api/legal-documents/privacy-policy')
+            return axios.get('https://api.propxpro.com/api/legal-documents/privacy-policy')
         }
     })
 

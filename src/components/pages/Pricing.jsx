@@ -143,7 +143,7 @@ export default function Pricing() {
     const { data, isLoading, isError, error } = useQuery({
         queryKey: ['pricing'],
         queryFn: () => {
-            return axios.get('https://propxpro.run.place/api/plans')
+            return axios.get('https://api.propxpro.com/api/plans')
         }
     })
 

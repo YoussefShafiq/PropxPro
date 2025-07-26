@@ -20,7 +20,7 @@ export default function StayConnected() {
 
         try {
             const response = await axios.post(
-                'https://propxpro.run.place/api/newsletter/subscribe',
+                'https://api.propxpro.com/api/newsletter/subscribe',
                 { email },
                 {
                     headers: {

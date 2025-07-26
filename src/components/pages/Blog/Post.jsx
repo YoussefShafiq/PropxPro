@@ -83,7 +83,7 @@ export default function Post() {
   const { data: post, isLoading, isError, error } = useQuery({
     queryKey: [`post-${id}`],
     queryFn: () => {
-      return axios.get(`https://propxpro.run.place/api/landing/blogs/${id}`)
+      return axios.get(`https://api.propxpro.com/api/landing/blogs/${id}`)
     }
   })
 
