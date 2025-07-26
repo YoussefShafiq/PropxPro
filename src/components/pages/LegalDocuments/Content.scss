@@ -165,12 +165,28 @@
             }
         }
 
+        /* Blockquotes */
         blockquote {
-            border-left: 3px solid #cbd5e1;
-            margin: 1rem 0;
-            padding-left: 1rem;
-            color: #64748b;
-            font-style: italic;
+            background-color: #f4f6ff;
+            padding-right: 8px;
+            padding-top: 8px;
+            padding-bottom: 2px;
+            padding-left: 34px;
+            border-radius: 8px;
+            color: black;
+            // font-style: italic;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: '';
+                left: 12px;
+                top: 12px;
+                width: 16px;
+                height: 16px;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23245ec1' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cline x1='12' y1='16' x2='12' y2='12'%3E%3C/line%3E%3Cline x1='12' y1='8' x2='12.01' y2='8'%3E%3C/line%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+            }
         }
 
         hr {
