@@ -26,6 +26,8 @@ import PrivacyPolicy from './components/pages/LegalDocuments/PrivacyPolicy'
 import TermsOfServices from './components/pages/LegalDocuments/TermsOfServices'
 import RequestDemo from './components/pages/RequestDemo'
 import { Toaster } from 'react-hot-toast'
+import HelpCenter from './components/pages/HelpCenter/HelpCenter'
+import Category from './components/pages/HelpCenter/Category'
 
 function App() {
 
@@ -94,6 +96,8 @@ function App() {
         { path: 'privacy-policy', element: <PrivacyPolicy /> },
         { path: 'terms-of-services', element: <TermsOfServices /> },
         { path: 'request-demo', element: <RequestDemo /> },
+        { path: 'help-center', element: <HelpCenter /> },
+        { path: 'help-center/category/:id', element: <Category /> },
         { path: '*', element: <Notfound /> },
       ]
     },
