@@ -5,10 +5,11 @@ import React, { useState, KeyboardEvent } from 'react';
 import { FiSearch } from 'react-icons/fi';
 import { Link, useNavigate } from 'react-router-dom';
 import ReadyToTransform from '../ReusableSections/ReadyToTransform';
+import { FaChevronRight } from 'react-icons/fa';
 
 export function HeroSection({ onSearchSubmit, searchQuery, setSearchQuery }) {
     const [isSearchFocused, setIsSearchFocused] = useState(false);
-
+    const navigate = useNavigate()
     const { data, isLoading, isError } = useQuery({
         queryKey: ['helpArticles', searchQuery],
         queryFn: () => fetchHelpArticles(searchQuery),
@@ -53,7 +54,7 @@ export function HeroSection({ onSearchSubmit, searchQuery, setSearchQuery }) {
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                         onFocus={() => setIsSearchFocused(true)}
-                        onBlur={() => setTimeout(() => setIsSearchFocused(false), 200)}
+                        onBlur={() => setTimeout(() => setIsSearchFocused(false), 10)}
                         onKeyDown={handleKeyDown}
                         className="w-full py-3 pl-10 pr-4 rounded-lg border border-white focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all"
                     />
@@ -70,19 +71,20 @@ export function HeroSection({ onSearchSubmit, searchQuery, setSearchQuery }) {
                                 <ul>
                                     {floatingResults.map((article) => (
                                         <li key={article.id} className="border-b border-gray-100 last:border-b-0">
-                                            <a
-                                                href={`/help-center/article/${article.slug}`}
-                                                className="block p-4 hover:bg-gray-50 transition-colors"
+                                            <div
+                                                onMouseDown={(e) => { e.stopPropagation(); navigate(`/help-center/article/${article.slug}`) }}
+                                                to={`/help-center/category/${article.id}`}
+                                                className="block p-4 hover:bg-gray-50 transition-colors cursor-pointer"
                                             >
                                                 <h3 className="font-medium text-hoverText">
                                                     {highlightMatch(article.title, searchQuery)}
                                                 </h3>
                                                 <div className="flex items-center gap-2 text-xs text-[#5A6479]">
                                                     <span>PropXpro</span>
-                                                    {article.category && <span>{article.category}</span>}
-                                                    {article.subcategory && <span>{article.subcategory}</span>}
+                                                    {article.category && <><FaChevronRight size={10} /> <span className='hover:text-hoverText hover:underline' onMouseDown={(e) => { e.stopPropagation(); navigate(`/help-center/category/${article.category.id}`) }}> {article.category.name}</span></>}
+                                                    {article.subcategory && <><FaChevronRight size={10} /><span className='hover:text-hoverText hover:underline' onMouseDown={(e) => { e.stopPropagation(); navigate(`/help-center/subcategory/${article.category.id}`) }}>{article.subcategory.name}</span></>}
                                                 </div>
-                                            </a>
+                                            </div>
                                         </li>
                                     ))}
                                 </ul>
@@ -121,13 +123,13 @@ export function Categories({ searchQuery, setSearchQuery }) {
                         <>
                             {searchQuery ? <>
                                 <div key={item.id} className="w-[calc(80%-8px)] m-auto bg-white flex gap-2 p-5 rounded-lg">
-                                    <div className="flex flex-col gap-2">
+                                    <div className="flex flex-col gap-2 cursor-pointer" onClick={() => navigate(`/help-center/category/${item.id}`)}>
                                         <h3 className='font-bold lg:text-xl text-hoverText'>{item.name || item.title}</h3>
                                         <p className='font-medium'>{item.description || item.content?.replace(/<[^>]*>/g, '').substring(0, 100)}</p>
                                         <div className="flex items-center gap-2 text-xs text-[#5A6479]">
                                             <span>PropXpro</span>
-                                            {item.category && <span>{item.category}</span>}
-                                            {item.subcategory && <span>{item.subcategory}</span>}
+                                            {item.category && <><FaChevronRight size={10} /> <span className='hover:text-hoverText hover:underline' onMouseDown={(e) => { e.stopPropagation(); navigate(`/help-center/category/${item.category.id}`) }}> {item.category.name}</span></>}
+                                            {item.subcategory && <><FaChevronRight size={10} /><span className='hover:text-hoverText hover:underline' onMouseDown={(e) => { e.stopPropagation(); navigate(`/help-center/subcategory/${item.category.id}`) }}>{item.subcategory.name}</span></>}
                                         </div>
                                     </div>
                                 </div>
@@ -140,12 +142,12 @@ export function Categories({ searchQuery, setSearchQuery }) {
                                         <h3 className='font-bold lg:text-xl'>{item.name || item.title}</h3>
                                         <p className='font-medium'>{item.description || item.content?.replace(/<[^>]*>/g, '').substring(0, 100)}</p>
                                         {item.slug && (
-                                            <a
-                                                href={`/help-center/article/${item.slug}`}
+                                            <Link
+                                                to={`/help-center/article/${item.slug}`}
                                                 className="text-hoverText text-sm font-medium"
                                             >
                                                 Read more
-                                            </a>
+                                            </Link>
                                         )}
                                     </div>
                                 </div>

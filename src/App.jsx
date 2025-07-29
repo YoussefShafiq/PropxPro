@@ -28,6 +28,7 @@ import RequestDemo from './components/pages/RequestDemo'
 import { Toaster } from 'react-hot-toast'
 import HelpCenter from './components/pages/HelpCenter/HelpCenter'
 import Category from './components/pages/HelpCenter/Category'
+import Article from './components/pages/HelpCenter/Article'
 
 function App() {
 
@@ -98,6 +99,7 @@ function App() {
         { path: 'request-demo', element: <RequestDemo /> },
         { path: 'help-center', element: <HelpCenter /> },
         { path: 'help-center/category/:id', element: <Category /> },
+        { path: 'help-center/article/:slug', element: <Article /> },
         { path: '*', element: <Notfound /> },
       ]
     },
