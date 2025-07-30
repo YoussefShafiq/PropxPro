@@ -70,7 +70,7 @@ export function HeroSection({ data, view }) {
       </div>
       <div className="lg:w-1/2">
         <div className="flex justify-center">
-          <img src={data?.cover_photo} alt={data?.title} className='w-full' />
+          <img src={data?.cover_photo} alt='cover photo' title={data?.title} content={data?.title} className='w-full' />
         </div>
       </div>
     </div>}
