@@ -270,7 +270,7 @@ export default function Post() {
           </div>
         </div></>}
 
-      <RelatedBlogs id={post?.data?.data?.id} title={'Related blogs'} />
+      {post?.data?.data?.id && <RelatedBlogs id={post?.data?.data?.id} title={'Related blogs'} />}
     </div>
 
   </>
