@@ -78,13 +78,7 @@ export function HeroSection({ data, view }) {
 }
 
 
-export function FAQs({ faqs = [
-  { id: 1, question: "What is your return policy?", answer: "We offer a 30-day return policy for all unused items in their original packaging. Simply contact our customer service team to initiate a return." },
-  { id: 2, question: "How long does shipping take?", answer: "Standard shipping takes 3-5 business days, while express shipping takes 1-2 business days. International shipping may take 7-14 business days depending on your location." },
-  { id: 3, question: "Do you offer customer support?", answer: "Yes! Our customer support team is available 24/7 via chat, email, or phone. We're here to help with any questions or concerns you may have." },
-  { id: 4, question: "Can I track my order?", answer: "Absolutely! Once your order ships, you'll receive a tracking number via email. You can use this to monitor your package's progress in real-time." },
-  { id: 5, question: "What payment methods do you accept?", answer: "We accept all major credit cards (Visa, MasterCard, American Express), PayPal, Apple Pay, Google Pay, and bank transfers." }
-] }) {
+export function FAQs({ faqs }) {
   const [openItems, setOpenItems] = useState(new Set());
 
   const toggleItem = (id) => {
@@ -362,9 +356,9 @@ export default function Post() {
           </div>
         </div></>}
 
+      <FAQs faqs={post?.data?.data?.faqs} />
       {post?.data?.data?.id && <RelatedBlogs id={post?.data?.data?.id} title={'Related blogs'} />}
 
-      <FAQs faqs={post?.data?.data?.faqs} />
 
     </div>
 
