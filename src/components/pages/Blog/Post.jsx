@@ -7,14 +7,18 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { motion } from "framer-motion";
 import RelatedBlogs from './RelatedBlogs';
 import { ChevronDown, HelpCircle } from 'lucide-react';
+import RecentBlogs from './RecentBlogs';
+
+
+const formatDate = (dateString) => {
+  const options = { year: 'numeric', month: 'short', day: 'numeric' };
+  return new Date(dateString).toLocaleDateString(undefined, options);
+};
 
 export function HeroSection({ data, view }) {
   const [readingTime, setReadingTime] = useState(null);
 
-  const formatDate = (dateString) => {
-    const options = { year: 'numeric', month: 'short', day: 'numeric' };
-    return new Date(dateString).toLocaleDateString(undefined, options);
-  };
+
 
   function calcTimeToRead(content) {
     if (!content) return 1;
@@ -63,7 +67,7 @@ export function HeroSection({ data, view }) {
             {readingTime !== null ? `${readingTime} minutes read` : 'Loading...'}
           </p>
           <div className="h-full w-[1px] bg-gray-400">  <br /> </div>
-          <p>{formatDate(data?.updated_at)}</p>
+          <p>{formatDate(data?.created_at)}</p>
           <div className="h-full w-[1px] bg-gray-400">  <br /> </div>
           <p>{data?.author.name}</p>
         </div>
@@ -338,6 +342,7 @@ export default function Post() {
       {/* blog footer */}
       {!isLoading && !isError && <>
         <div className="w-full h-[1px] bg-gray-300 mt-10"></div>
+        <p className='text-xs font-semibold'>modified at: {formatDate(post?.data?.data?.created_at)}</p>
         <div className="flex justify-between items-center">
           <div className="flex flex-col">
             <div className="flex items-center gap-2">
@@ -358,6 +363,7 @@ export default function Post() {
 
       {post?.data?.data?.faqs && <FAQs faqs={post?.data?.data?.faqs} />}
       {post?.data?.data?.id && <RelatedBlogs id={post?.data?.data?.id} title={'Related blogs'} />}
+      {post?.data?.data?.id && <RecentBlogs id={post?.data?.data?.id} title={'Recent blogs'} />}
 
 
     </div>
