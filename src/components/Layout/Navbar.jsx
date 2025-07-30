@@ -219,7 +219,7 @@ export default function Navbar() {
             icon: <HiOutlineUserAdd size={24} strokeWidth={1} />,
             title: "Carrier registration",
             desc: "Join our network today to unlock exclusive opportunities",
-            link: '/carrier-registration'
+            link: '/request-demo'
         },
         {
             icon: <HiOutlineQuestionMarkCircle size={24} strokeWidth={1} />,

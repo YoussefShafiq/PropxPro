@@ -72,7 +72,7 @@ export function HeroSection({ onSearchSubmit, searchQuery, setSearchQuery }) {
                                     {floatingResults.map((article) => (
                                         <li key={article.id} className="border-b border-gray-100 last:border-b-0">
                                             <div
-                                                onMouseDown={(e) => { e.stopPropagation(); navigate(`/help-center/article/${article.slug}`) }}
+                                                onMouseDown={(e) => { e.stopPropagation(); navigate(`/help-center/${article.slug}`) }}
                                                 to={`/help-center/category/${article.id}`}
                                                 className="block p-4 hover:bg-gray-50 transition-colors cursor-pointer"
                                             >
@@ -143,7 +143,7 @@ export function Categories({ searchQuery, setSearchQuery }) {
                                         <p className='font-medium'>{item.description || item.content?.replace(/<[^>]*>/g, '').substring(0, 100)}</p>
                                         {item.slug && (
                                             <Link
-                                                to={`/help-center/article/${item.slug}`}
+                                                to={`/help-center/${item.slug}`}
                                                 className="text-hoverText text-sm font-medium"
                                             >
                                                 Read more

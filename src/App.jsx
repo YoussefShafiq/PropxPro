@@ -99,7 +99,7 @@ function App() {
         { path: 'request-demo', element: <RequestDemo /> },
         { path: 'help-center', element: <HelpCenter /> },
         { path: 'help-center/category/:id', element: <Category /> },
-        { path: 'help-center/article/:slug', element: <Article /> },
+        { path: 'help-center/:slug', element: <Article /> },
         { path: '*', element: <Notfound /> },
       ]
     },

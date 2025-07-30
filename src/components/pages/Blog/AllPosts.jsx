@@ -8,12 +8,13 @@ import DiscoverFeatures from '../ReusableSections/DiscoverFeatures'
 import ReadyToTransform from '../ReusableSections/ReadyToTransform'
 import LearnMore from '../../Buttons/LearnMore'
 import { IoIosArrowBack, IoIosArrowForward, IoIosArrowRoundForward } from 'react-icons/io'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 import { FaArrowLeftLong, FaArrowRightLong } from 'react-icons/fa6'
 import StayConnected from '../ReusableSections/StayConnected'
 import BlogCard from './BlogCard'
+import { FaChevronRight } from 'react-icons/fa'
 
 
 export function Blogs() {
@@ -128,7 +129,16 @@ export function Blogs() {
 
 
 export default function AllPosts() {
+    const navigate = useNavigate()
     return <>
+        {/* breedcrumb */}
+        <div className="bg-gray-200">
+            <div className="container !py-5 flex flex-wrap items-center gap-3">
+                <span className='hover:text-hoverText hover:underline cursor-pointer text-grayText text-opacity-80' onMouseDown={(e) => { e.stopPropagation(); navigate(`/blog`) }}> Blogs</span>
+                <FaChevronRight size={10} />
+                <span className='cursor-pointer text-grayText text-opacity-100' > All posts</span>
+            </div>
+        </div>
         <Blogs />
         <StayConnected />
         <ReadyToTransform />

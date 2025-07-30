@@ -20,7 +20,7 @@ export default function Category() {
     useEffect(() => {
         if (categoryData?.data?.data) {
             const originalData = categoryData.data.data;
-            
+
             if (searchTerm.trim() === '') {
                 setFilteredData(originalData);
             } else {
@@ -29,7 +29,7 @@ export default function Category() {
                     ...originalData,
                     subcategories: originalData.subcategories.map(subcategory => ({
                         ...subcategory,
-                        topics: subcategory.topics.filter(topic => 
+                        topics: subcategory.topics.filter(topic =>
                             topic.title.toLowerCase().includes(searchTerm.toLowerCase())
                         )
                     })).filter(subcategory => subcategory.topics.length > 0) // Remove empty subcategories
@@ -57,6 +57,7 @@ export default function Category() {
     if (isError) return <div className="container">Error: {error.message}</div>;
 
     return <>
+        {/* breedcrumb */}
         <div className="bg-gray-200">
             <div className="container !py-5 flex flex-wrap items-center gap-3">
                 <span className='hover:text-hoverText hover:underline cursor-pointer text-grayText text-opacity-80' onMouseDown={(e) => { e.stopPropagation(); navigate(`/help-center`) }}> PropXPro help center</span>
@@ -70,18 +71,18 @@ export default function Category() {
                     <h1 className='font-extrabold text-3xl lg:text-4xl'>{filteredData?.name}</h1>
                     <h1>{filteredData?.description}</h1>
                 </div>
-                <div className="relative">
-                    <input 
-                        type="text" 
-                        placeholder="Search topics..." 
-                        className="pl-10 pr-4 py-2 border rounded-lg w-full md:w-64 bg-gray-50"
+                <div className="relative w-full lg:w-64">
+                    <input
+                        type="text"
+                        placeholder="Search topics..."
+                        className="pl-10 pr-4 py-2 border rounded-lg w-full lg:w-64 bg-gray-50"
                         value={searchTerm}
                         onChange={handleSearch}
                     />
                     <FaSearch className="absolute left-3 top-3 text-gray-400" />
                 </div>
             </div>
-            
+
             {filteredData?.subcategories?.length > 0 ? (
                 <div className="flex flex-wrap">
                     {filteredData.subcategories.map((s, i) => (
@@ -97,8 +98,8 @@ export default function Category() {
                             <ul className='pt-2 flex flex-col gap-2'>
                                 {s.topics.map((t) => (
                                     <li key={t.id}>
-                                        <Link 
-                                            to={`/help-center/article/${t.slug}`} 
+                                        <Link
+                                            to={`/help-center/${t.slug}`}
                                             className='text-hoverText hover:underline cursor-pointer font-semibold'
                                         >
                                             {t.title}

@@ -1,10 +1,11 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { FaBehanceSquare, FaCaretDown } from 'react-icons/fa';
+import { FaBehanceSquare, FaCaretDown, FaChevronRight } from 'react-icons/fa';
 import { FaFacebook, FaPinterest, FaTwitter, FaUser } from 'react-icons/fa6';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { motion } from "framer-motion";
+import RelatedBlogs from './RelatedBlogs';
 
 export function HeroSection({ data, view }) {
   const [readingTime, setReadingTime] = useState(null);
@@ -63,12 +64,12 @@ export function HeroSection({ data, view }) {
           <div className="h-full w-[1px] bg-gray-400">  <br /> </div>
           <p>{formatDate(data?.updated_at)}</p>
           <div className="h-full w-[1px] bg-gray-400">  <br /> </div>
-          <p>{data?.created_by_name}</p>
+          <p>{data?.author.name}</p>
         </div>
       </div>
       <div className="lg:w-1/2">
         <div className="flex justify-center">
-          <img src={data?.cover_photo_url} alt={data?.title} className='w-full' />
+          <img src={data?.cover_photo} alt={data?.title} className='w-full' />
         </div>
       </div>
     </div>}
@@ -79,6 +80,8 @@ export default function Post() {
   const { id } = useParams();
   const [scrollProgress, setScrollProgress] = useState(0);
   const [tableOfContent, setTableOfContent] = useState(false);
+
+  const navigate = useNavigate()
 
   const { data: post, isLoading, isError, error } = useQuery({
     queryKey: [`post-${id}`],
@@ -134,7 +137,7 @@ export default function Post() {
   return <>
     {/* progress bar */}
     <div className="sticky lg:top-[84px] top-[81px] z-10">
-      <div className="mb-4">
+      <div className="">
         <div className="w-full bg-gray-200 rounded-full h-2">
           <div
             className="bg-lightBlue h-2 rounded-full transition-all duration-150 ease-out"
@@ -143,7 +146,18 @@ export default function Post() {
         </div>
       </div>
     </div>
+    {/* breedcrumb */}
+    <div className="bg-gray-200">
+      <div className="container !py-5 flex flex-wrap items-center gap-3">
+        <span className='hover:text-hoverText hover:underline cursor-pointer text-grayText text-opacity-80' onMouseDown={(e) => { e.stopPropagation(); navigate(`/blog`) }}> Blogs</span>
+        <FaChevronRight size={10} />
+        <span className='hover:text-hoverText hover:underline cursor-pointer text-grayText text-opacity-80' onMouseDown={(e) => { e.stopPropagation(); navigate(`/blog/all-posts`) }}> All posts</span>
+        <FaChevronRight size={10} />
+        <span className='cursor-pointer text-grayText text-opacity-100' > {post?.data?.data?.title}</span>
+      </div>
+    </div>
     <div className="container flex flex-col gap-5">
+
       <HeroSection key={post?.data?.data} data={post?.data?.data} view={!isLoading && !isError} />
 
       {/* Main content wrapper with relative positioning */}
@@ -240,7 +254,13 @@ export default function Post() {
         <div className="w-full h-[1px] bg-gray-300 mt-10"></div>
         <div className="flex justify-between items-center">
           <div className="flex flex-col">
-            <h3 className='font-extrabold'>By {post?.data?.data?.created_by_name}</h3>
+            <div className="flex items-center gap-2">
+              <div className="w-12 aspect-square rounded-full">
+                <img src={post?.data?.data?.author?.profile_photo} alt={post?.data?.data?.author?.name} />
+              </div>
+              <h3 className='font-extrabold'>By {post?.data?.data?.author?.name}</h3>
+            </div>
+            <p className='text-xs'> {post?.data?.data?.author?.bio} </p>
           </div>
           <div className="flex items-center gap-4 text-xl text-gray-700">
             <FaFacebook />
@@ -250,6 +270,7 @@ export default function Post() {
           </div>
         </div></>}
 
+      <RelatedBlogs id={post?.data?.data?.id} title={'Related blogs'} />
     </div>
 
   </>
