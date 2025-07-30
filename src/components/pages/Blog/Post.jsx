@@ -356,7 +356,7 @@ export default function Post() {
           </div>
         </div></>}
 
-      <FAQs faqs={post?.data?.data?.faqs} />
+      {post?.data?.data?.faqs && <FAQs faqs={post?.data?.data?.faqs} />}
       {post?.data?.data?.id && <RelatedBlogs id={post?.data?.data?.id} title={'Related blogs'} />}
 
 
