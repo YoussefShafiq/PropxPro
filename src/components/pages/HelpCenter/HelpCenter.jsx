@@ -129,7 +129,7 @@ export function Categories({ searchQuery, setSearchQuery }) {
                                         <div className="flex items-center gap-2 text-xs text-[#5A6479]">
                                             <span>PropXpro</span>
                                             {item.category && <><FaChevronRight size={10} /> <span className='hover:text-hoverText hover:underline' onMouseDown={(e) => { e.stopPropagation(); navigate(`/help-center/category/${item.category.id}`) }}> {item.category.name}</span></>}
-                                            {item.subcategory && <><FaChevronRight size={10} /><span className='hover:text-hoverText hover:underline' onMouseDown={(e) => { e.stopPropagation(); navigate(`/help-center/subcategory/${item.category.id}`) }}>{item.subcategory.name}</span></>}
+                                            {/* {item.subcategory && <><FaChevronRight size={10} /><span className='hover:text-hoverText hover:underline' >{item.subcategory.name}</span></>} */}
                                         </div>
                                     </div>
                                 </div>

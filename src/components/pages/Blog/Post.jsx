@@ -6,6 +6,7 @@ import { FaFacebook, FaPinterest, FaTwitter, FaUser } from 'react-icons/fa6';
 import { useNavigate, useParams } from 'react-router-dom';
 import { motion } from "framer-motion";
 import RelatedBlogs from './RelatedBlogs';
+import { ChevronDown, HelpCircle } from 'lucide-react';
 
 export function HeroSection({ data, view }) {
   const [readingTime, setReadingTime] = useState(null);
@@ -74,6 +75,97 @@ export function HeroSection({ data, view }) {
       </div>
     </div>}
   </>
+}
+
+
+export function FAQs({ faqs = [
+  { id: 1, question: "What is your return policy?", answer: "We offer a 30-day return policy for all unused items in their original packaging. Simply contact our customer service team to initiate a return." },
+  { id: 2, question: "How long does shipping take?", answer: "Standard shipping takes 3-5 business days, while express shipping takes 1-2 business days. International shipping may take 7-14 business days depending on your location." },
+  { id: 3, question: "Do you offer customer support?", answer: "Yes! Our customer support team is available 24/7 via chat, email, or phone. We're here to help with any questions or concerns you may have." },
+  { id: 4, question: "Can I track my order?", answer: "Absolutely! Once your order ships, you'll receive a tracking number via email. You can use this to monitor your package's progress in real-time." },
+  { id: 5, question: "What payment methods do you accept?", answer: "We accept all major credit cards (Visa, MasterCard, American Express), PayPal, Apple Pay, Google Pay, and bank transfers." }
+] }) {
+  const [openItems, setOpenItems] = useState(new Set());
+
+  const toggleItem = (id) => {
+    const newOpenItems = new Set(openItems);
+    if (newOpenItems.has(id)) {
+      newOpenItems.delete(id);
+    } else {
+      newOpenItems.add(id);
+    }
+    setOpenItems(newOpenItems);
+  };
+
+  if (!faqs || faqs.length === 0) {
+    return (
+      <div className="max-w-4xl mx-auto p-8">
+        <div className="text-center py-16">
+          <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full flex items-center justify-center">
+            <HelpCircle className="w-12 h-12 text-blue-500" />
+          </div>
+          <h3 className="text-xl font-semibold text-gray-900 mb-2">No FAQs Available</h3>
+          <p className="text-gray-500">Check back later for frequently asked questions.</p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="max-w-4xl mx-auto p-8">
+      {/* Header */}
+      <div className="text-center mb-12">
+        <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl mb-6">
+          <HelpCircle className="w-8 h-8 text-white" />
+        </div>
+        <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+        <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          Find answers to common questions about our services and policies
+        </p>
+      </div>
+
+      {/* FAQ Items */}
+      <div className="space-y-4">
+        {faqs.map((faq, index) => {
+          const isOpen = openItems.has(faq.id);
+          return (
+            <div
+              key={faq.id}
+              className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden"
+              style={{
+                animationDelay: `${index * 100}ms`
+              }}
+            >
+              <button
+                onClick={() => toggleItem(faq.id)}
+                className="w-full px-8 py-6 text-left focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white transition-all duration-200"
+              >
+                <div className="flex items-center justify-between">
+                  <h3 className="text-lg font-semibold text-gray-900 pr-8 group-hover:text-blue-600 transition-colors duration-200">
+                    {faq.question}
+                  </h3>
+                  <div className={`flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-gradient-to-br from-blue-50 to-purple-50 group-hover:from-blue-100 group-hover:to-purple-100 transition-all duration-300 ${isOpen ? 'rotate-180' : 'rotate-0'}`}>
+                    <ChevronDown className="w-5 h-5 text-blue-600" />
+                  </div>
+                </div>
+              </button>
+
+              <div className={`transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`}>
+                <div className="px-8 pb-6">
+                  <div className="w-12 h-px bg-gradient-to-r from-blue-500 to-purple-500 mb-4"></div>
+                  <p className="text-gray-600 leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+
+    </div>
+  );
 }
 
 export default function Post() {
@@ -271,6 +363,9 @@ export default function Post() {
         </div></>}
 
       {post?.data?.data?.id && <RelatedBlogs id={post?.data?.data?.id} title={'Related blogs'} />}
+
+      <FAQs faqs={post?.data?.data?.faqs} />
+
     </div>
 
   </>
