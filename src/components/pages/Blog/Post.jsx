@@ -62,14 +62,15 @@ export function HeroSection({ data, view }) {
       <div className="lg:w-1/2 font-bold">
         <span className='text-hoverText capitalize'>{data?.category}</span>
         <h1 className='lg:text-[54px] text-3xl font-extrabold lg:leading-[67px] '>{data?.title}</h1>
+        <p>By {data?.author.name}</p>
         <div className="flex gap-2 items-center text-sm font-medium mt-3">
           <p className=''>
             {readingTime !== null ? `${readingTime} minutes read` : 'Loading...'}
           </p>
           <div className="h-full w-[1px] bg-gray-400">  <br /> </div>
-          <p>{formatDate(data?.created_at)}</p>
+          <p>Published {formatDate(data?.created_at)}</p>
           <div className="h-full w-[1px] bg-gray-400">  <br /> </div>
-          <p>{data?.author.name}</p>
+          <p>Updated {formatDate(data?.updated_at)}</p>
         </div>
       </div>
       <div className="lg:w-1/2">
@@ -342,14 +343,14 @@ export default function Post() {
       {/* blog footer */}
       {!isLoading && !isError && <>
         <div className="w-full h-[1px] bg-gray-300 mt-10"></div>
-        <p className='text-xs font-semibold'>modified at: {formatDate(post?.data?.data?.created_at)}</p>
+        {/* <p className='text-xs font-semibold'>modified at: {formatDate(post?.data?.data?.created_at)}</p> */}
         <div className="flex justify-between items-center">
-          <div className="flex flex-col">
-            <div className="flex items-center gap-2">
+          <div className="flex flex-col gap-3">
+            <div className="flex items-center gap-3">
               <div className="w-12 aspect-square rounded-full">
                 <img src={post?.data?.data?.author?.profile_photo} alt={post?.data?.data?.author?.name} />
               </div>
-              <h3 className='font-extrabold'>By {post?.data?.data?.author?.name}</h3>
+              <h3 className='font-extrabold'>{post?.data?.data?.author?.name}</h3>
             </div>
             <p className='text-xs'> {post?.data?.data?.author?.bio} </p>
           </div>
