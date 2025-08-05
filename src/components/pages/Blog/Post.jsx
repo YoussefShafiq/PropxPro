@@ -98,7 +98,7 @@ export function FAQs({ faqs }) {
 
   if (!faqs || faqs.length === 0) {
     return (
-      <div className="max-w-4xl mx-auto p-8">
+      <div className="mx-auto p-8">
         <div className="text-center py-16">
           <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full flex items-center justify-center">
             <HelpCircle className="w-12 h-12 text-blue-500" />
@@ -354,12 +354,12 @@ export default function Post() {
             </div>
             <p className='text-xs'> {post?.data?.data?.author?.bio} </p>
           </div>
-          <div className="flex items-center gap-4 text-xl text-gray-700">
+          {/* <div className="flex items-center gap-4 text-xl text-gray-700">
             <FaFacebook />
             <FaTwitter />
             <FaPinterest />
             <FaBehanceSquare />
-          </div>
+          </div> */}
         </div></>}
 
       {post?.data?.data?.faqs && <FAQs faqs={post?.data?.data?.faqs} />}

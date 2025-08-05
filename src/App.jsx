@@ -29,6 +29,7 @@ import { Toaster } from 'react-hot-toast'
 import HelpCenter from './components/pages/HelpCenter/HelpCenter'
 import Category from './components/pages/HelpCenter/Category'
 import Article from './components/pages/HelpCenter/Article'
+import Webinars from './components/pages/Webinars/Webinars'
 
 function App() {
 
@@ -92,6 +93,13 @@ function App() {
             { index: true, element: <Blog /> },
             { path: 'post/:id', element: <Post /> },
             { path: 'all-posts', element: <AllPosts /> },
+          ]
+        },
+        {
+          path: 'webinars', children: [
+            { index: true, element: <Webinars /> },
+            { path: 'event/:id', element: <Post /> },
+            { path: 'video/:id', element: <Post /> },
           ]
         },
         { path: 'privacy-policy', element: <PrivacyPolicy /> },
