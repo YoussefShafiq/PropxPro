@@ -30,6 +30,8 @@ import HelpCenter from './components/pages/HelpCenter/HelpCenter'
 import Category from './components/pages/HelpCenter/Category'
 import Article from './components/pages/HelpCenter/Article'
 import Webinars from './components/pages/Webinars/Webinars'
+import Event from './components/pages/Webinars/Event'
+import Video from './components/pages/Webinars/Video'
 
 function App() {
 
@@ -98,8 +100,8 @@ function App() {
         {
           path: 'webinars', children: [
             { index: true, element: <Webinars /> },
-            { path: 'event/:id', element: <Post /> },
-            { path: 'video/:id', element: <Post /> },
+            { path: 'event/:slug', element: <Event /> },
+            { path: 'video/:slug', element: <Video /> },
           ]
         },
         { path: 'privacy-policy', element: <PrivacyPolicy /> },

@@ -46,7 +46,7 @@ export function Events({ data: Events }) {
             </div>
             <div className="flex flex-col lg:flex-row flex-wrap gap-5 h-full">
                 {Events?.slice(0, 3).map((i, index) => (<>
-                    <WebinarsCard webinar={i} category={'Events'} />
+                    <WebinarsCard webinar={i} category={'events'} />
                 </>))}
             </div>
         </div>
@@ -67,7 +67,7 @@ export function Videos({ data: Events }) {
             </div>
             <div className="flex flex-col lg:flex-row flex-wrap gap-5 h-full">
                 {Events?.slice(0, 3).map((i, index) => (<>
-                    <WebinarsCard webinar={i} category={'Events'} />
+                    <WebinarsCard webinar={i} category={'videos'} />
                 </>))}
             </div>
         </div>
