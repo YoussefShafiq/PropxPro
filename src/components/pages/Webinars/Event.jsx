@@ -167,7 +167,7 @@ export default function Event() {
                 <div className="bg-[#fff8cf] lg:w-1/2 p-10 flex flex-col gap-3 rounded-xl m-10 me-0">
                     <div className="w-28 rounded-full aspect-square border-2 border-black object-cover overflow-hidden">
                         <img
-                            src={data?.data?.data?.host_img}
+                            src={data?.data?.data?.host_image}
                             className='w-full h-full object-cover'
                             alt={data?.data?.data?.presented_by}
                         />
