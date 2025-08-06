@@ -32,6 +32,8 @@ import Article from './components/pages/HelpCenter/Article'
 import Webinars from './components/pages/Webinars/Webinars'
 import Event from './components/pages/Webinars/Event'
 import Video from './components/pages/Webinars/Video'
+import AllEvents from './components/pages/Webinars/AllEvents'
+import AllVideos from './components/pages/Webinars/AllVideos'
 
 function App() {
 
@@ -102,6 +104,8 @@ function App() {
             { index: true, element: <Webinars /> },
             { path: 'event/:slug', element: <Event /> },
             { path: 'video/:slug', element: <Video /> },
+            { path: 'all-events', element: <AllEvents /> },
+            { path: 'all-videos', element: <AllVideos /> },
           ]
         },
         { path: 'privacy-policy', element: <PrivacyPolicy /> },

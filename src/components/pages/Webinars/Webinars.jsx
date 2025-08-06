@@ -40,7 +40,7 @@ export function Events({ data: Events }) {
         <div className="container flex flex-col gap-5" data-aos="fade-up">
             <div className="flex justify-between">
                 <h2 className='font-bold text-2xl lg:text-3xl'>Upcoming events</h2>
-                <NavLink to={"/blog/all-posts"} className="flex gap-2 items-center font-bold text-sm">
+                <NavLink to={"/webinars/all-events"} className="flex gap-2 items-center font-bold text-sm">
                     View all <IoIosArrowRoundForward />
                 </NavLink>
             </div>
@@ -61,7 +61,7 @@ export function Videos({ data: Events }) {
         <div className="container flex flex-col gap-5" data-aos="fade-up">
             <div className="flex justify-between">
                 <h2 className='font-bold text-2xl lg:text-3xl'>On demand-videos </h2>
-                <NavLink to={"/blog/all-posts"} className="flex gap-2 items-center font-bold text-sm">
+                <NavLink to={"/webinars/all-videos"} className="flex gap-2 items-center font-bold text-sm">
                     View all <IoIosArrowRoundForward />
                 </NavLink>
             </div>

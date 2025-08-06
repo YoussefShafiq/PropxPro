@@ -6,13 +6,13 @@ export default function WebinarsCard({ webinar: i, grid = false, category }) {
 
     return <>
         <div className={`w-full lg:w-[calc(33%-10px)]  bg-white border rounded-2xl flex flex-col`} onClick={() => {
-            category == 'videos' ? navigate(`video/${i.slug}`) : navigate(`event/${i.slug}`)
+            category == 'videos' ? navigate(`/webinars/video/${i.slug}`) : navigate(`/webinars/event/${i.slug}`)
         }} >
             <div className="rounded-xl h-full">
                 <div className="bg-black rounded-[13px] h-full flex flex-col">
                     <div className="relative bg-white min-h-96 flex flex-col gap-3 h-full border rounded-xl transition-all cursor-pointer hover:-translate-x-1.5 hover:-translate-y-1.5">
                         <div className="w-full text-hoverText text-2xl h-60 overflow-hidden object-cover">
-                            <img src={'https://api.propxpro.com/storage/'+i.cover_photo} className='rounded-xl rounded-b-none object-cover h-60 m-auto w-full' alt='cover photo' title={i.title} content={i.title} />
+                            <img src={i.cover_photo} className='rounded-xl rounded-b-none object-cover h-60 m-auto w-full' alt='cover photo' title={i.title} content={i.title} />
                         </div>
                         <div className="flex flex-col gap-3 p-5 h-full flex-1">
                             <div className="flex gap-2 items-center font-bold">
