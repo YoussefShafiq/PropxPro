@@ -26,7 +26,7 @@ export default function Video() {
             videoPath = videoPath.substring(1);
         }
 
-        return `https://api.propxpro.com/storage/${videoPath}`;
+        return `${videoPath}`;
     }
 
     return (
