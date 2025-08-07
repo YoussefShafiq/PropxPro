@@ -64,7 +64,7 @@ export function LatestPosts({ data: latestPosts, isLoading }) {
                 {isLoading ?
                     <>
                         <div className="flex gap-5 w-full">
-                            {[1, 2, 3].map((i) => (<>
+                            {[...Array(3)].map((i) => (<>
                                 <div className="w-1/3 h-96 bg-gray-100 animate-pulse rounded-xl"></div>
                             </>))}
                         </div>
@@ -113,10 +113,10 @@ export function TopGuides({ data: TopGuides, isLoading }) {
             </div>
             <div className="flex flex-col lg:flex-row flex-wrap gap-5">
                 {(TopGuides?.length == 0) && <div className='text-center w-full'>No guides found</div>}
-                {isLoading ?
+                {!isLoading ?
                     <>
                         <div className="flex gap-5 w-full">
-                            {[1, 2, 3].map((i) => (<>
+                            {[...Array(3)].map((i) => (<>
                                 <div className="w-1/3 h-96 bg-gray-100 animate-pulse rounded-xl"></div>
                             </>))}
                         </div>

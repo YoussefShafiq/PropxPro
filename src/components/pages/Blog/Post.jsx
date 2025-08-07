@@ -13,6 +13,64 @@ const formatDate = (dateString) => {
   return new Date(dateString).toLocaleDateString(undefined, options);
 };
 
+// Loading Skeleton Components
+const HeroSectionSkeleton = () => (
+  <div className="flex flex-col lg:flex-row gap-8 animate-pulse">
+    <div className="lg:w-1/2 space-y-4">
+      <div className="h-6 w-32 bg-gray-200 rounded"></div>
+      <div className="h-12 w-full bg-gray-200 rounded"></div>
+      <div className="h-6 w-48 bg-gray-200 rounded"></div>
+      <div className="flex gap-4 mt-4">
+        <div className="h-4 w-24 bg-gray-200 rounded"></div>
+        <div className="h-4 w-24 bg-gray-200 rounded"></div>
+        <div className="h-4 w-24 bg-gray-200 rounded"></div>
+      </div>
+    </div>
+    <div className="lg:w-1/2">
+      <div className="w-full h-64 bg-gray-200 rounded-lg"></div>
+    </div>
+  </div>
+);
+
+const ContentSkeleton = () => (
+  <div className="space-y-4 animate-pulse">
+    {[...Array(8)].map((_, i) => (
+      <div key={i} className="h-4 w-full bg-gray-200 rounded" style={{
+        width: `${[100, 95, 90, 85, 80, 75, 70, 65][i]}%`
+      }}></div>
+    ))}
+  </div>
+);
+
+const TableOfContentsSkeleton = () => (
+  <div className="space-y-3 animate-pulse">
+    <div className="h-6 w-32 bg-gray-200 rounded mb-4"></div>
+    {[...Array(5)].map((_, i) => (
+      <div key={i} className="h-4 bg-gray-200 rounded" style={{
+        width: `${80 - i * 10}%`
+      }}></div>
+    ))}
+  </div>
+);
+
+const TagsSkeleton = () => (
+  <div className="flex flex-wrap gap-3 mt-8 animate-pulse">
+    {[...Array(3)].map((_, i) => (
+      <div key={i} className="h-8 w-20 bg-gray-200 rounded-lg"></div>
+    ))}
+  </div>
+);
+
+const AuthorSkeleton = () => (
+  <div className="flex items-center gap-3 animate-pulse">
+    <div className="w-12 h-12 bg-gray-200 rounded-full"></div>
+    <div className="space-y-2">
+      <div className="h-4 w-32 bg-gray-200 rounded"></div>
+      <div className="h-3 w-48 bg-gray-200 rounded"></div>
+    </div>
+  </div>
+);
+
 export function HeroSection({ data, view }) {
   const [readingTime, setReadingTime] = useState(null);
 
@@ -47,40 +105,39 @@ export function HeroSection({ data, view }) {
     }
   }, [view, data]);
 
+  if (!view) return <HeroSectionSkeleton />;
+
   return (
-    <>
-      {view && (
-        <div className="flex flex-col lg:flex-row gap-8">
-          <div className="lg:w-1/2 font-bold">
-            <span className='text-hoverText capitalize'>{data?.category}</span>
-            <h1 className='lg:text-[54px] text-3xl font-extrabold lg:leading-[67px]'>{data?.title}</h1>
-            <p>By {data?.author.name}</p>
-            <div className="flex gap-2 items-center text-sm font-medium mt-3">
-              <p>
-                {readingTime !== null ? `${readingTime} minutes read` : 'Loading...'}
-              </p>
-              <div className="h-full w-[1px] bg-gray-400"></div>
-              <p>Published {formatDate(data?.created_at)}</p>
-              <div className="h-full w-[1px] bg-gray-400"></div>
-              <p>Updated {formatDate(data?.updated_at)}</p>
-            </div>
-          </div>
-          <div className="lg:w-1/2">
-            <div className="flex justify-center">
-              <img
-                src={data?.cover_photo}
-                alt='cover photo'
-                className='w-full max-h-[500px] object-contain'
-              />
-            </div>
-          </div>
+    <div className="flex flex-col lg:flex-row gap-8">
+      <div className="lg:w-1/2 font-bold">
+        <span className='text-hoverText capitalize'>{data?.category}</span>
+        <h1 className='lg:text-[54px] text-3xl font-extrabold lg:leading-[67px]'>{data?.title}</h1>
+        <p>By {data?.author.name}</p>
+        <div className="flex gap-2 items-center text-sm font-medium mt-3">
+          <p>
+            {readingTime !== null ? `${readingTime} minutes read` : 'Calculating...'}
+          </p>
+          <div className="h-full w-[1px] bg-gray-400"></div>
+          <p>Published {formatDate(data?.created_at)}</p>
+          <div className="h-full w-[1px] bg-gray-400"></div>
+          <p>Updated {formatDate(data?.updated_at)}</p>
         </div>
-      )}
-    </>
+      </div>
+      <div className="lg:w-1/2">
+        <div className="flex justify-center">
+          <img
+            src={data?.cover_photo}
+            alt='cover photo'
+            className='w-full max-h-[500px] object-contain'
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
   );
 }
 
-export function FAQs({ faqs }) {
+export function FAQs({ faqs, isLoading }) {
   const [openItems, setOpenItems] = useState(new Set());
 
   const toggleItem = (id) => {
@@ -92,6 +149,26 @@ export function FAQs({ faqs }) {
     }
     setOpenItems(newOpenItems);
   };
+
+  if (isLoading) {
+    return (
+      <div className="max-w-4xl mx-auto p-8 animate-pulse">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-200 rounded-2xl mb-6 mx-auto"></div>
+          <div className="h-8 w-64 bg-gray-200 rounded mx-auto mb-4"></div>
+          <div className="h-4 w-80 bg-gray-200 rounded mx-auto"></div>
+        </div>
+        <div className="space-y-4">
+          {[...Array(3)].map((_, i) => (
+            <div key={i} className="bg-white rounded-2xl border border-gray-200 p-6">
+              <div className="h-6 w-3/4 bg-gray-200 rounded mb-4"></div>
+              <div className="h-4 w-full bg-gray-200 rounded"></div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   if (!faqs || faqs.length === 0) {
     return (
@@ -167,7 +244,8 @@ export default function Post() {
     queryKey: [`post-${id}`],
     queryFn: () => {
       return axios.get(`https://api.propxpro.com/api/landing/blogs/${id}`);
-    }
+    },
+    retry: false
   });
 
   const scrollToHeading = (headingId, event) => {
@@ -207,6 +285,29 @@ export default function Post() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [post?.data?.data]);
 
+  if (isError) {
+    return (
+      <div className="container py-20 text-center">
+        <div className="max-w-2xl mx-auto bg-red-50 border border-red-200 rounded-xl p-8">
+          <h2 className="text-2xl font-bold text-red-600 mb-4">
+            {error.response?.status === 404 ? 'Post Not Found' : 'Error Loading Post'}
+          </h2>
+          <p className="text-gray-600 mb-6">
+            {error.response?.status === 404
+              ? "The blog post you're looking for doesn't exist or may have been removed."
+              : "We encountered an error while loading this post. Please try again later."}
+          </p>
+          <button
+            onClick={() => navigate('/blog')}
+            className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Back to Blog
+          </button>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <>
       <div className="sticky lg:top-[84px] top-[81px] z-10">
@@ -220,32 +321,49 @@ export default function Post() {
 
       <div className="bg-gray-200">
         <div className="container !py-5 flex flex-wrap items-center gap-3">
-          <span
-            className='hover:text-hoverText hover:underline cursor-pointer text-grayText text-opacity-80'
-            onMouseDown={(e) => { e.stopPropagation(); navigate(`/blog`) }}
-          >
-            Blogs
-          </span>
-          <FaChevronRight size={10} />
-          <span
-            className='hover:text-hoverText hover:underline cursor-pointer text-grayText text-opacity-80'
-            onMouseDown={(e) => { e.stopPropagation(); navigate(`/blog/all-posts`) }}
-          >
-            All posts
-          </span>
-          <FaChevronRight size={10} />
-          <span className='cursor-pointer text-grayText text-opacity-100'>
-            {post?.data?.data?.title}
-          </span>
+          {isLoading ? (
+            <>
+              <div className="h-4 w-20 bg-gray-300 rounded"></div>
+              <FaChevronRight size={10} className="text-gray-400" />
+              <div className="h-4 w-24 bg-gray-300 rounded"></div>
+              <FaChevronRight size={10} className="text-gray-400" />
+              <div className="h-4 w-32 bg-gray-300 rounded"></div>
+            </>
+          ) : (
+            <>
+              <span
+                className='hover:text-hoverText hover:underline cursor-pointer text-grayText text-opacity-80'
+                onClick={() => navigate(`/blog`)}
+              >
+                Blogs
+              </span>
+              <FaChevronRight size={10} />
+              <span
+                className='hover:text-hoverText hover:underline cursor-pointer text-grayText text-opacity-80'
+                onClick={() => navigate(`/blog/all-posts`)}
+              >
+                All posts
+              </span>
+              <FaChevronRight size={10} />
+              <span className='cursor-pointer text-grayText text-opacity-100'>
+                {post?.data?.data?.title}
+              </span>
+            </>
+          )}
         </div>
       </div>
 
       <div className="container flex flex-col gap-5">
-        <HeroSection key={post?.data?.data} data={post?.data?.data} view={!isLoading && !isError} />
+        <HeroSection data={post?.data?.data} view={!isLoading} />
 
         <div className="relative w-full overflow-hidden">
           <div className="flex flex-col lg:flex-row justify-between gap-4">
-            {!isLoading && !isError && (
+            {/* Mobile Table of Contents */}
+            {isLoading ? (
+              <div className="lg:hidden">
+                <div className="h-10 w-full bg-gray-200 rounded mb-2"></div>
+              </div>
+            ) : (
               <div className="lg:hidden">
                 <button
                   className="font-semibold text-gray-800 bg-white flex justify-between w-full items-center hover:text-lightBlue"
@@ -281,14 +399,11 @@ export default function Post() {
               </div>
             )}
 
+            {/* Main Content */}
             <div className="lg:w-3/4 w-full">
               <div className="content-container !mx-0 !ps-0" id='blog-content-container'>
                 {isLoading ? (
-                  <div className="flex justify-center py-8">
-                    <div className="animate-spin h-5 w-5 rounded-full border-e-2 border-hoverText" size={18}></div>
-                  </div>
-                ) : error ? (
-                  <div className="error-state">Error loading post: {error.message}</div>
+                  <ContentSkeleton />
                 ) : (
                   <div
                     className="content"
@@ -297,44 +412,60 @@ export default function Post() {
                 )}
               </div>
 
-              <div className="flex flex-wrap gap-3 mt-8">
-                {post?.data?.data?.tags?.map((t, index) => (
-                  <div key={index} className="border rounded-lg py-1 px-2 text-sm">
-                    {t}
-                  </div>
-                ))}
-              </div>
+              {isLoading ? (
+                <TagsSkeleton />
+              ) : (
+                <div className="flex flex-wrap gap-3 mt-8">
+                  {post?.data?.data?.tags?.map((t, index) => (
+                    <div key={index} className="border rounded-lg py-1 px-2 text-sm">
+                      {t}
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
 
-            {!isLoading && !isError && (
+            {/* Desktop Table of Contents */}
+            {isLoading ? (
               <div className="w-1/4 lg:block hidden">
-                <div className="sticky top-[84px]">
-                  <div className="flex flex-col gap-2 max-h-[calc(100vh-150px)] overflow-y-auto">
-                    <h4 className="font-semibold text-gray-800 mb-2 sticky top-0 bg-white pt-5 pb-2">
-                      Table of Contents
-                    </h4>
-                    {post?.data?.data?.headings?.map((h, i) => (
-                      <button
-                        key={i}
-                        onClick={(e) => scrollToHeading(h.id, e)}
-                        className={`${h.level == 1
-                          ? 'ps-0 text-base font-bold text-gray-900 hover:text-hoverText'
-                          : h.level == 2
-                            ? 'ps-3 text-sm font-semibold text-gray-700 hover:text-hoverText'
-                            : 'ps-6 text-sm font-normal text-gray-500 hover:text-gray-700'
-                          } transition-colors duration-200 py-1 block border-l-2 border-transparent hover:border-hoverText pl-2 text-left cursor-pointer bg-transparent border-none`}
-                      >
-                        {h.text}
-                      </button>
-                    ))}
+                <TableOfContentsSkeleton />
+              </div>
+            ) : (
+              post?.data?.data?.headings?.length > 0 && (
+                <div className="w-1/4 lg:block hidden">
+                  <div className="sticky top-[84px]">
+                    <div className="flex flex-col gap-2 max-h-[calc(100vh-150px)] overflow-y-auto">
+                      <h4 className="font-semibold text-gray-800 mb-2 sticky top-0 bg-white pt-5 pb-2">
+                        Table of Contents
+                      </h4>
+                      {post?.data?.data?.headings?.map((h, i) => (
+                        <button
+                          key={i}
+                          onClick={(e) => scrollToHeading(h.id, e)}
+                          className={`${h.level == 1
+                            ? 'ps-0 text-base font-bold text-gray-900 hover:text-hoverText'
+                            : h.level == 2
+                              ? 'ps-3 text-sm font-semibold text-gray-700 hover:text-hoverText'
+                              : 'ps-6 text-sm font-normal text-gray-500 hover:text-gray-700'
+                            } transition-colors duration-200 py-1 block border-l-2 border-transparent hover:border-hoverText pl-2 text-left cursor-pointer bg-transparent border-none`}
+                        >
+                          {h.text}
+                        </button>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
+              )
             )}
           </div>
         </div>
 
-        {!isLoading && !isError && (
+        {isLoading ? (
+          <>
+            <div className="w-full h-[1px] bg-gray-300 mt-10"></div>
+            <AuthorSkeleton />
+          </>
+        ) : (
           <>
             <div className="w-full h-[1px] bg-gray-300 mt-10"></div>
             <div className="flex justify-between items-center">
@@ -345,6 +476,7 @@ export default function Post() {
                       src={post?.data?.data?.author?.profile_photo}
                       alt={post?.data?.data?.author?.name}
                       className="w-full h-full object-cover"
+                      loading="lazy"
                     />
                   </div>
                   <h3 className='font-extrabold'>{post?.data?.data?.author?.name}</h3>
@@ -355,9 +487,9 @@ export default function Post() {
           </>
         )}
 
-        {post?.data?.data?.faqs && <FAQs faqs={post?.data?.data?.faqs} />}
-        {post?.data?.data?.id && <RelatedBlogs id={post?.data?.data?.id} title={'Related blogs'} />}
-        {post?.data?.data?.id && <RecentBlogs id={post?.data?.data?.id} title={'Recent blogs'} />}
+        <FAQs faqs={post?.data?.data?.faqs} isLoading={isLoading} />
+        {!isLoading && post?.data?.data?.id && <RelatedBlogs id={post?.data?.data?.id} title={'Related blogs'} />}
+        {!isLoading && post?.data?.data?.id && <RecentBlogs id={post?.data?.data?.id} title={'Recent blogs'} />}
       </div>
     </>
   );

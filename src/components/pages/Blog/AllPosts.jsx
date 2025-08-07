@@ -84,6 +84,16 @@ export function Blogs() {
 
                 {/* Carousel Container */}
                 <div className="relative overflow-hidden">
+                    {(blogs?.data?.data?.length == 0) && <div className='text-center w-full'>No blogs found</div>}
+                    {isLoading &&
+                        <>
+                            <div className="flex gap-5 w-full">
+                                {[...Array(3)].map((i) => (<>
+                                    <div className="w-1/3 h-96 bg-gray-100 animate-pulse rounded-xl"></div>
+                                </>))}
+                            </div>
+                        </>
+                    }
                     <div
                         ref={carouselRef}
                         className="flex transition-transform duration-300 ease-in-out"

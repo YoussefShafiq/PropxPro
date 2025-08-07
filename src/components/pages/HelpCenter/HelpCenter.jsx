@@ -113,7 +113,11 @@ export function Categories({ searchQuery, setSearchQuery }) {
     const displayData = searchQuery ? searchData?.data?.data : categoriesData?.data?.data;
     const isLoading = searchQuery ? searchLoading : categoriesLoading;
 
-    if (isLoading) return <div className="bg-[#f6f6f9] p-8 text-center">Loading...</div>;
+    if (isLoading) return <div className="container text-center flex flex-col lg:flex-row gap-5">
+        {[...Array(2)].map(() => (<>
+            <div className="w-full lg:w-1/2 h-44 bg-gray-100 animate-pulse rounded-xl"></div>
+        </>))}
+    </div>;
 
     return (
         <div className="bg-[#f6f6f9] py-14">

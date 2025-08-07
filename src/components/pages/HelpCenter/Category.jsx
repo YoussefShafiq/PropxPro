@@ -53,7 +53,20 @@ export default function Category() {
         setSearchTerm(e.target.value);
     };
 
-    if (isLoading) return <div className="container">Loading...</div>;
+    if (isLoading) return <>
+        <div className="h-16 full rounded-lg bg-gray-200 animate-pulse "></div>
+        <div className="container">
+            <div className="flex flex-col gap-3">
+                <div className="h-8 w-1/2 rounded-lg bg-gray-100 animate-pulse "></div>
+                <div className="h-8 w-1/3 rounded-lg bg-gray-100 animate-pulse "></div>
+                <div className="flex gap-8">
+                    {[...Array(2)].map(() => (<>
+                        <div className="w-1/2 h-96 bg-gray-100 animate-pulse rounded-xl"></div>
+                    </>))}
+                </div>
+            </div>
+        </div>
+    </>;
     if (isError) return <div className="container">Error: {error.message}</div>;
 
     return <>

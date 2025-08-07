@@ -49,7 +49,7 @@ export function Events({ data: Events, isLoading }) {
                 {isLoading ?
                     <>
                         <div className="flex gap-5 w-full">
-                            {[1, 2, 3].map((i) => (<>
+                            {[...Array(3)].map((i) => (<>
                                 <div className="w-1/3 h-96 bg-gray-100 animate-pulse rounded-xl"></div>
                             </>))}
                         </div>
@@ -82,7 +82,7 @@ export function Videos({ data: Events, isLoading }) {
                 {isLoading ?
                     <>
                         <div className="flex gap-5 w-full">
-                            {[1, 2, 3].map((i) => (<>
+                            {[...Array(3)].map((i) => (<>
                                 <div className="w-1/3 h-96 bg-gray-100 animate-pulse rounded-xl"></div>
                             </>))}
                         </div>

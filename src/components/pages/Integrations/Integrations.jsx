@@ -44,7 +44,7 @@ export function Applications() {
                     {isLoading ?
                         <>
                             <div className="flex gap-5 w-full">
-                                {[1, 2, 3].map((i) => (<>
+                                {[...Array(3)].map((i) => (<>
                                     <div className="w-1/3 h-96 bg-gray-200 animate-pulse rounded-xl"></div>
                                 </>))}
                             </div>
