@@ -21,7 +21,7 @@ export default function WebinarsCard({ webinar: i, grid = false, category }) {
                                 <p>{i.updated_at?.substring(0, 10)}</p>
                             </div>
                             <div className="text-sm lg:text-xl font-bold">{i.title}</div>
-                            <div className="text-xs">Presented by {i.presented_by}</div>
+                            {category != 'videos' && <div className="text-xs">Presented by {i.presented_by}</div>}
                         </div>
                     </div>
                 </div>
