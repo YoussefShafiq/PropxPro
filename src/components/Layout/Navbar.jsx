@@ -8,7 +8,7 @@ import { HiOutlineInformationCircle, HiOutlineNewspaper, HiOutlineQuestionMarkCi
 import { motion, AnimatePresence } from "framer-motion";
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { IoClose, IoStatsChartOutline } from 'react-icons/io5';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import GetStarted from '../Buttons/GetStarted';
 import RequestDemo from '../Buttons/RequestDemo';
 import { MdOutlineManageAccounts, MdOutlineTrackChanges, MdOutlineCampaign } from "react-icons/md";
@@ -21,6 +21,7 @@ export default function Navbar() {
     const [FeaturesDropdown, setFeaturesDropdown] = useState(false);
     const [ResourcesDropdown, setResourcesDropdown] = useState(false);
     const [phoneNavbar, setphoneNavbar] = useState(false);
+    const navigate = useNavigate()
 
     // Refs for dropdown containers and buttons
     const featuresRef = useRef(null);
@@ -269,8 +270,8 @@ export default function Navbar() {
                 </div>
 
                 <div className="flex items-center gap-x-4 font-semibold">
-                    <button className="hover:scale-[1.002] transition-all">Login</button>
-                    <button className="capitalize bg-lightBlue text-white hover:shadow-lg hover:bg-[#1e4c9d] hover:scale-[1.002] transition-all px-7 py-3 rounded-md">get started</button>
+                    <a href='https://dev.vtech-upgraded.com/' target='_blank' className="hover:scale-[1.002] transition-all">Login</a>
+                    <a href='https://dev.vtech-upgraded.com/signup' target='_blank' className="capitalize bg-lightBlue text-white hover:shadow-lg hover:bg-[#1e4c9d] hover:scale-[1.002] transition-all px-7 py-3 rounded-md">get started</a>
                     <Link to={'/request-demo'} className="box-border border border-black hover:shadow-lg hover:scale-[1.002] transition-all px-7 py-3 rounded-md">Request a Demo</Link>
                 </div>
             </div>

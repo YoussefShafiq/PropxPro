@@ -47,7 +47,7 @@ export function HeroSection({ data: heroBlog }) {
     </>
 }
 
-export function LatestPosts({ data: latestPosts }) {
+export function LatestPosts({ data: latestPosts, isLoading }) {
 
 
     return <>
@@ -60,9 +60,20 @@ export function LatestPosts({ data: latestPosts }) {
                 </NavLink>
             </div>
             <div className="flex flex-col lg:flex-row flex-wrap gap-5 h-full">
-                {latestPosts?.slice(0, 3).map((i, index) => (<>
-                    <BlogCard blog={i} />
-                </>))}
+                {(latestPosts?.length == 0) && <div className='text-center w-full'>No posts found</div>}
+                {isLoading ?
+                    <>
+                        <div className="flex gap-5 w-full">
+                            {[1, 2, 3].map((i) => (<>
+                                <div className="w-1/3 h-96 bg-gray-100 animate-pulse rounded-xl"></div>
+                            </>))}
+                        </div>
+                    </>
+                    :
+                    latestPosts?.slice(0, 3).map((i, index) => (<>
+                        <BlogCard blog={i} />
+                    </>))
+                }
             </div>
         </div>
     </>
@@ -89,7 +100,7 @@ export function PowerUpYourProductivity() {
     </>
 }
 
-export function TopGuides({ data: TopGuides }) {
+export function TopGuides({ data: TopGuides, isLoading }) {
 
     return <>
 
@@ -101,9 +112,20 @@ export function TopGuides({ data: TopGuides }) {
                 </NavLink>
             </div>
             <div className="flex flex-col lg:flex-row flex-wrap gap-5">
-                {TopGuides?.slice(0, 3).map((i, index) => (<>
-                    <BlogCard blog={i} />
-                </>))}
+                {(TopGuides?.length == 0) && <div className='text-center w-full'>No guides found</div>}
+                {isLoading ?
+                    <>
+                        <div className="flex gap-5 w-full">
+                            {[1, 2, 3].map((i) => (<>
+                                <div className="w-1/3 h-96 bg-gray-100 animate-pulse rounded-xl"></div>
+                            </>))}
+                        </div>
+                    </>
+                    :
+                    TopGuides?.slice(0, 3).map((i, index) => (<>
+                        <BlogCard blog={i} />
+                    </>))
+                }
             </div>
         </div>
     </>
@@ -152,18 +174,13 @@ export default function Blog() {
         }
     })
 
-    useEffect(() => {
-        console.log(blogs?.data?.data);
-
-    }, [blogs])
-
 
     return (
         <>
             <HeroSection key={blogs?.data?.data?.hero} data={blogs?.data?.data?.hero} />
-            <LatestPosts key={blogs?.data?.data?.latest} data={blogs?.data?.data?.latest} />
+            <LatestPosts key={blogs?.data?.data?.latest} data={blogs?.data?.data?.latest} isLoading={isLoading} />
             <PowerUpYourProductivity />
-            <TopGuides key={blogs?.data?.data?.guides} data={blogs?.data?.data?.guides} />
+            <TopGuides key={blogs?.data?.data?.guides} data={blogs?.data?.data?.guides} isLoading={isLoading} />
             <TrendingTopics key={blogs?.data?.data?.trending} data={blogs?.data?.data?.trending} />
             <StayConnected />
             <ReadyToTransform />

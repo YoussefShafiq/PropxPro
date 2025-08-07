@@ -134,7 +134,7 @@ export function Categories({ searchQuery, setSearchQuery }) {
                                     </div>
                                 </div>
                             </> : <>
-                                <div key={item.id} onClick={() => navigate(`/help-center/category/${item.id}`)} className="w-[calc(50%-8px)] bg-white flex gap-2 p-5 rounded-lg cursor-pointer">
+                                <div key={item.id} onClick={() => navigate(`/help-center/category/${item.id}`)} className="lg:w-[calc(50%-8px)] w-full bg-white flex gap-2 p-5 rounded-lg cursor-pointer">
                                     <div className="text-hoverText">
                                         <Plane />
                                     </div>

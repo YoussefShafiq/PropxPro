@@ -54,10 +54,10 @@ export default function Footer() {
                         </div>
                         <div className="flex flex-col gap-3 lg:w-1/3">
                             <h4 className="font-bold text-darkText">Resources</h4>
-                            <p>Help center</p>
+                            <Link to={'/help-center'}>Help center</Link>
                             <Link to={'/request-demo'}>Demo</Link>
                             <p>What’s new</p>
-                            <p>Webinars</p>
+                            <Link to={'/webinars'}>Webinars</Link>
                             <Link to={'/blogs'}>Blog</Link>
                             <p>Carrier registration</p>
                         </div>

@@ -25,9 +25,20 @@ export default function RelatedBlogs({ id, title = 'Latest posts' }) {
                 </NavLink>
             </div>
             <div className="flex flex-col lg:flex-row flex-wrap gap-5 h-full">
-                {RelatedBlogsData?.data?.data?.slice(0, 3).map((i, index) => (<>
-                    <BlogCard blog={i} />
-                </>))}
+                {(RelatedBlogsData?.data?.data?.length == 0) && <div className='text-center w-full'>No {title} found</div>}
+                {isLoading ?
+                    <>
+                        <div className="flex gap-5 w-full">
+                            {[1, 2, 3].map((i) => (<>
+                                <div className="w-1/3 h-96 bg-gray-100 animate-pulse rounded-xl"></div>
+                            </>))}
+                        </div>
+                    </>
+                    :
+                    RelatedBlogsData?.data?.data?.slice(0, 3).map((i, index) => (<>
+                        <BlogCard blog={i} />
+                    </>))
+                }
             </div>
         </div>
     </>

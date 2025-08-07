@@ -1,14 +1,12 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
-import { FaBehanceSquare, FaCaretDown, FaChevronRight } from 'react-icons/fa';
-import { FaFacebook, FaPinterest, FaTwitter, FaUser } from 'react-icons/fa6';
+import React, { useEffect, useState } from 'react';
+import { FaCaretDown, FaChevronRight } from 'react-icons/fa';
 import { useNavigate, useParams } from 'react-router-dom';
 import { motion } from "framer-motion";
 import RelatedBlogs from './RelatedBlogs';
 import { ChevronDown, HelpCircle } from 'lucide-react';
 import RecentBlogs from './RecentBlogs';
-
 
 const formatDate = (dateString) => {
   const options = { year: 'numeric', month: 'short', day: 'numeric' };
@@ -18,21 +16,15 @@ const formatDate = (dateString) => {
 export function HeroSection({ data, view }) {
   const [readingTime, setReadingTime] = useState(null);
 
-
-
   function calcTimeToRead(content) {
     if (!content) return 1;
-
-    // Option 1: Calculate from HTML content (strip HTML tags)
     const textContent = content.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
     const wordsCount = textContent.split(' ').filter(word => word.length > 0).length;
-
-    const WPM = 200; // Average reading speed
+    const WPM = 200;
     const readingTime = wordsCount / WPM;
     return Math.max(1, Math.ceil(readingTime));
   }
 
-  // Calculate reading time when data changes
   useEffect(() => {
     if (data?.content) {
       const time = calcTimeToRead(data.content);
@@ -40,7 +32,6 @@ export function HeroSection({ data, view }) {
     }
   }, [data?.content]);
 
-  // Alternative: Calculate from DOM after content is rendered
   useEffect(() => {
     if (view && data) {
       const timer = setTimeout(() => {
@@ -51,37 +42,43 @@ export function HeroSection({ data, view }) {
           const time = Math.max(1, Math.ceil(wordsCount / WPM));
           setReadingTime(time);
         }
-      }, 100); // Small delay to ensure DOM is ready
-
+      }, 100);
       return () => clearTimeout(timer);
     }
   }, [view, data]);
 
-  return <>
-    {view && <div className="flex flex-col lg:flex-row gap-8">
-      <div className="lg:w-1/2 font-bold">
-        <span className='text-hoverText capitalize'>{data?.category}</span>
-        <h1 className='lg:text-[54px] text-3xl font-extrabold lg:leading-[67px] '>{data?.title}</h1>
-        <p>By {data?.author.name}</p>
-        <div className="flex gap-2 items-center text-sm font-medium mt-3">
-          <p className=''>
-            {readingTime !== null ? `${readingTime} minutes read` : 'Loading...'}
-          </p>
-          <div className="h-full w-[1px] bg-gray-400">  <br /> </div>
-          <p>Published {formatDate(data?.created_at)}</p>
-          <div className="h-full w-[1px] bg-gray-400">  <br /> </div>
-          <p>Updated {formatDate(data?.updated_at)}</p>
+  return (
+    <>
+      {view && (
+        <div className="flex flex-col lg:flex-row gap-8">
+          <div className="lg:w-1/2 font-bold">
+            <span className='text-hoverText capitalize'>{data?.category}</span>
+            <h1 className='lg:text-[54px] text-3xl font-extrabold lg:leading-[67px]'>{data?.title}</h1>
+            <p>By {data?.author.name}</p>
+            <div className="flex gap-2 items-center text-sm font-medium mt-3">
+              <p>
+                {readingTime !== null ? `${readingTime} minutes read` : 'Loading...'}
+              </p>
+              <div className="h-full w-[1px] bg-gray-400"></div>
+              <p>Published {formatDate(data?.created_at)}</p>
+              <div className="h-full w-[1px] bg-gray-400"></div>
+              <p>Updated {formatDate(data?.updated_at)}</p>
+            </div>
+          </div>
+          <div className="lg:w-1/2">
+            <div className="flex justify-center">
+              <img
+                src={data?.cover_photo}
+                alt='cover photo'
+                className='w-full max-h-[500px] object-contain'
+              />
+            </div>
+          </div>
         </div>
-      </div>
-      <div className="lg:w-1/2">
-        <div className="flex justify-center">
-          <img src={data?.cover_photo} alt='cover photo' title={data?.title} content={data?.title} className='w-full' />
-        </div>
-      </div>
-    </div>}
-  </>
+      )}
+    </>
+  );
 }
-
 
 export function FAQs({ faqs }) {
   const [openItems, setOpenItems] = useState(new Set());
@@ -112,7 +109,6 @@ export function FAQs({ faqs }) {
 
   return (
     <div className="max-w-4xl mx-auto p-8">
-      {/* Header */}
       <div className="text-center mb-12">
         <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl mb-6">
           <HelpCircle className="w-8 h-8 text-white" />
@@ -123,7 +119,6 @@ export function FAQs({ faqs }) {
         </p>
       </div>
 
-      {/* FAQ Items */}
       <div className="space-y-4">
         {faqs.map((faq, index) => {
           const isOpen = openItems.has(faq.id);
@@ -131,9 +126,6 @@ export function FAQs({ faqs }) {
             <div
               key={faq.id}
               className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden"
-              style={{
-                animationDelay: `${index * 100}ms`
-              }}
             >
               <button
                 onClick={() => toggleItem(faq.id)}
@@ -161,8 +153,6 @@ export function FAQs({ faqs }) {
           );
         })}
       </div>
-
-
     </div>
   );
 }
@@ -171,17 +161,15 @@ export default function Post() {
   const { id } = useParams();
   const [scrollProgress, setScrollProgress] = useState(0);
   const [tableOfContent, setTableOfContent] = useState(false);
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const { data: post, isLoading, isError, error } = useQuery({
     queryKey: [`post-${id}`],
     queryFn: () => {
-      return axios.get(`https://api.propxpro.com/api/landing/blogs/${id}`)
+      return axios.get(`https://api.propxpro.com/api/landing/blogs/${id}`);
     }
-  })
+  });
 
-  // Function to handle smooth scrolling with offset
   const scrollToHeading = (headingId, event) => {
     event.preventDefault();
     const element = document.getElementById(headingId);
@@ -198,10 +186,6 @@ export default function Post() {
   };
 
   useEffect(() => {
-    console.log(post?.data?.data);
-  }, [post])
-
-  useEffect(() => {
     const handleScroll = () => {
       const contentElement = document.getElementById('blog-content-container');
       if (!contentElement) return;
@@ -210,25 +194,22 @@ export default function Post() {
       const windowHeight = window.innerHeight;
       const contentHeight = contentElement.offsetHeight;
 
-      // Calculate how much of the content has been scrolled past
       const scrolled = Math.max(0, -contentRect.top);
       const maxScroll = contentHeight - windowHeight + contentRect.top + window.pageYOffset;
 
-      // Calculate progress as a percentage
       const progress = Math.min(100, Math.max(0, (scrolled / Math.max(1, maxScroll)) * 100));
       setScrollProgress(progress);
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial calculation
+    handleScroll();
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, [post?.data?.data]);
 
-  return <>
-    {/* progress bar */}
-    <div className="sticky lg:top-[84px] top-[81px] z-10">
-      <div className="">
+  return (
+    <>
+      <div className="sticky lg:top-[84px] top-[81px] z-10">
         <div className="w-full bg-gray-200 rounded-full h-2">
           <div
             className="bg-lightBlue h-2 rounded-full transition-all duration-150 ease-out"
@@ -236,138 +217,148 @@ export default function Post() {
           ></div>
         </div>
       </div>
-    </div>
-    {/* breedcrumb */}
-    <div className="bg-gray-200">
-      <div className="container !py-5 flex flex-wrap items-center gap-3">
-        <span className='hover:text-hoverText hover:underline cursor-pointer text-grayText text-opacity-80' onMouseDown={(e) => { e.stopPropagation(); navigate(`/blog`) }}> Blogs</span>
-        <FaChevronRight size={10} />
-        <span className='hover:text-hoverText hover:underline cursor-pointer text-grayText text-opacity-80' onMouseDown={(e) => { e.stopPropagation(); navigate(`/blog/all-posts`) }}> All posts</span>
-        <FaChevronRight size={10} />
-        <span className='cursor-pointer text-grayText text-opacity-100' > {post?.data?.data?.title}</span>
-      </div>
-    </div>
-    <div className="container flex flex-col gap-5">
 
-      <HeroSection key={post?.data?.data} data={post?.data?.data} view={!isLoading && !isError} />
-
-      {/* Main content wrapper with relative positioning */}
-      <div className="relative">
-        {/* progress */}
-        <div className="flex flex-col lg:flex-row justify-between gap-4">
-          {/* table of content */}
-          {!isLoading && !isError && <div className="lg:hidden">
-            <button className="font-semibold text-gray-800  bg-white flex justify-between w-full items-center hover:text-lightBlue" onClick={() => { setTableOfContent(!tableOfContent) }}>
-              Table of Contents
-              <FaCaretDown className={`${tableOfContent ? 'rotate-180' : 'rotate-0'} duration-500`} />
-            </button>
-            <div className="flex flex-col gap-2 max-h-[calc(100vh-150px)] overflow-y-auto">
-              {tableOfContent && (
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: "auto", opacity: 1 }}
-                  transition={{ duration: 0.3, ease: "easeOut" }}
-                >
-                  {post?.data?.data?.headings?.map((h, i) => (
-                    <button
-                      key={i}
-                      onClick={(e) => scrollToHeading(h.id, e)}
-                      className={`${h.level == 1
-                        ? 'ps-0 text-base font-bold text-gray-900 hover:text-hoverText'
-                        : h.level == 2
-                          ? 'ps-3 text-sm font-semibold text-gray-700 hover:text-hoverText'
-                          : 'ps-6 text-sm font-normal text-gray-500 hover:text-gray-700'
-                        } transition-colors duration-200 py-1 block border-l-2 border-transparent hover:border-hoverText pl-2 text-left cursor-pointer bg-transparent border-none`}
-                    >
-                      {h.text}
-                    </button>
-                  ))}
-                </motion.div>
-              )}
-            </div>
-          </div>}
-          {/* content */}
-          <div className="lg:w-3/4">
-            <div className="content-container !ms-0 !ps-0" id='blog-content-container'>
-
-              {isLoading ? (
-                <div className="loading-state"><div className="animate-spin h-5 w-5 rounded-full border-e-2 border-hoverText m-auto" size={18} ></div></div>
-              ) : error ? (
-                <div className="error-state">Error loading post: {error.message}</div>
-              ) : (
-                <div
-                  className="content "
-                  dangerouslySetInnerHTML={{ __html: post?.data?.data?.content || '' }}
-                />
-              )}
-            </div>
-
-            {/* tags */}
-            <div className="flex flex-wrap gap-3 mt-8">
-              {post?.data?.data?.tags?.map((t, index) => (
-                <div key={index} className="border rounded-lg py-1 px-2 text-sm">
-                  {t}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Sticky headings sidebar */}
-          {true && <div className="w-1/4 lg:block hidden">
-            <div className="sticky top-[84px]">
-              {/* Headings navigation */}
-              <div className="flex flex-col gap-2 max-h-[calc(100vh-150px)] overflow-y-auto">
-                <h4 className="font-semibold text-gray-800 mb-2 sticky top-0 bg-white pt-5 pb-2">
-                  Table of Contents
-                </h4>
-                {post?.data?.data?.headings?.map((h, i) => (
-                  <button
-                    key={i}
-                    onClick={(e) => scrollToHeading(h.id, e)}
-                    className={`${h.level == 1
-                      ? 'ps-0 text-base font-bold text-gray-900 hover:text-hoverText'
-                      : h.level == 2
-                        ? 'ps-3 text-sm font-semibold text-gray-700 hover:text-hoverText'
-                        : 'ps-6 text-sm font-normal text-gray-500 hover:text-gray-700'
-                      } transition-colors duration-200 py-1 block border-l-2 border-transparent hover:border-hoverText pl-2 text-left cursor-pointer bg-transparent border-none`}
-                  >
-                    {h.text}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>}
+      <div className="bg-gray-200">
+        <div className="container !py-5 flex flex-wrap items-center gap-3">
+          <span
+            className='hover:text-hoverText hover:underline cursor-pointer text-grayText text-opacity-80'
+            onMouseDown={(e) => { e.stopPropagation(); navigate(`/blog`) }}
+          >
+            Blogs
+          </span>
+          <FaChevronRight size={10} />
+          <span
+            className='hover:text-hoverText hover:underline cursor-pointer text-grayText text-opacity-80'
+            onMouseDown={(e) => { e.stopPropagation(); navigate(`/blog/all-posts`) }}
+          >
+            All posts
+          </span>
+          <FaChevronRight size={10} />
+          <span className='cursor-pointer text-grayText text-opacity-100'>
+            {post?.data?.data?.title}
+          </span>
         </div>
       </div>
 
-      {/* blog footer */}
-      {!isLoading && !isError && <>
-        <div className="w-full h-[1px] bg-gray-300 mt-10"></div>
-        {/* <p className='text-xs font-semibold'>modified at: {formatDate(post?.data?.data?.created_at)}</p> */}
-        <div className="flex justify-between items-center">
-          <div className="flex flex-col gap-3">
-            <div className="flex items-center gap-3">
-              <div className="w-12 aspect-square rounded-full">
-                <img src={post?.data?.data?.author?.profile_photo} alt={post?.data?.data?.author?.name} />
+      <div className="container flex flex-col gap-5">
+        <HeroSection key={post?.data?.data} data={post?.data?.data} view={!isLoading && !isError} />
+
+        <div className="relative w-full overflow-hidden">
+          <div className="flex flex-col lg:flex-row justify-between gap-4">
+            {!isLoading && !isError && (
+              <div className="lg:hidden">
+                <button
+                  className="font-semibold text-gray-800 bg-white flex justify-between w-full items-center hover:text-lightBlue"
+                  onClick={() => { setTableOfContent(!tableOfContent) }}
+                >
+                  Table of Contents
+                  <FaCaretDown className={`${tableOfContent ? 'rotate-180' : 'rotate-0'} duration-500`} />
+                </button>
+                <div className="flex flex-col gap-2 max-h-[calc(100vh-150px)] overflow-y-auto">
+                  {tableOfContent && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      transition={{ duration: 0.3, ease: "easeOut" }}
+                    >
+                      {post?.data?.data?.headings?.map((h, i) => (
+                        <button
+                          key={i}
+                          onClick={(e) => scrollToHeading(h.id, e)}
+                          className={`${h.level == 1
+                            ? 'ps-0 text-base font-bold text-gray-900 hover:text-hoverText'
+                            : h.level == 2
+                              ? 'ps-3 text-sm font-semibold text-gray-700 hover:text-hoverText'
+                              : 'ps-6 text-sm font-normal text-gray-500 hover:text-gray-700'
+                            } transition-colors duration-200 py-1 block border-l-2 border-transparent hover:border-hoverText pl-2 text-left cursor-pointer bg-transparent border-none`}
+                        >
+                          {h.text}
+                        </button>
+                      ))}
+                    </motion.div>
+                  )}
+                </div>
               </div>
-              <h3 className='font-extrabold'>{post?.data?.data?.author?.name}</h3>
+            )}
+
+            <div className="lg:w-3/4 w-full">
+              <div className="content-container !mx-0 !ps-0" id='blog-content-container'>
+                {isLoading ? (
+                  <div className="flex justify-center py-8">
+                    <div className="animate-spin h-5 w-5 rounded-full border-e-2 border-hoverText" size={18}></div>
+                  </div>
+                ) : error ? (
+                  <div className="error-state">Error loading post: {error.message}</div>
+                ) : (
+                  <div
+                    className="content"
+                    dangerouslySetInnerHTML={{ __html: post?.data?.data?.content || '' }}
+                  />
+                )}
+              </div>
+
+              <div className="flex flex-wrap gap-3 mt-8">
+                {post?.data?.data?.tags?.map((t, index) => (
+                  <div key={index} className="border rounded-lg py-1 px-2 text-sm">
+                    {t}
+                  </div>
+                ))}
+              </div>
             </div>
-            <p className='text-xs'> {post?.data?.data?.author?.bio} </p>
+
+            {!isLoading && !isError && (
+              <div className="w-1/4 lg:block hidden">
+                <div className="sticky top-[84px]">
+                  <div className="flex flex-col gap-2 max-h-[calc(100vh-150px)] overflow-y-auto">
+                    <h4 className="font-semibold text-gray-800 mb-2 sticky top-0 bg-white pt-5 pb-2">
+                      Table of Contents
+                    </h4>
+                    {post?.data?.data?.headings?.map((h, i) => (
+                      <button
+                        key={i}
+                        onClick={(e) => scrollToHeading(h.id, e)}
+                        className={`${h.level == 1
+                          ? 'ps-0 text-base font-bold text-gray-900 hover:text-hoverText'
+                          : h.level == 2
+                            ? 'ps-3 text-sm font-semibold text-gray-700 hover:text-hoverText'
+                            : 'ps-6 text-sm font-normal text-gray-500 hover:text-gray-700'
+                          } transition-colors duration-200 py-1 block border-l-2 border-transparent hover:border-hoverText pl-2 text-left cursor-pointer bg-transparent border-none`}
+                      >
+                        {h.text}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
-          {/* <div className="flex items-center gap-4 text-xl text-gray-700">
-            <FaFacebook />
-            <FaTwitter />
-            <FaPinterest />
-            <FaBehanceSquare />
-          </div> */}
-        </div></>}
+        </div>
 
-      {post?.data?.data?.faqs && <FAQs faqs={post?.data?.data?.faqs} />}
-      {post?.data?.data?.id && <RelatedBlogs id={post?.data?.data?.id} title={'Related blogs'} />}
-      {post?.data?.data?.id && <RecentBlogs id={post?.data?.data?.id} title={'Recent blogs'} />}
+        {!isLoading && !isError && (
+          <>
+            <div className="w-full h-[1px] bg-gray-300 mt-10"></div>
+            <div className="flex justify-between items-center">
+              <div className="flex flex-col gap-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 aspect-square rounded-full overflow-hidden">
+                    <img
+                      src={post?.data?.data?.author?.profile_photo}
+                      alt={post?.data?.data?.author?.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 className='font-extrabold'>{post?.data?.data?.author?.name}</h3>
+                </div>
+                <p className='text-xs'>{post?.data?.data?.author?.bio}</p>
+              </div>
+            </div>
+          </>
+        )}
 
-
-    </div>
-
-  </>
+        {post?.data?.data?.faqs && <FAQs faqs={post?.data?.data?.faqs} />}
+        {post?.data?.data?.id && <RelatedBlogs id={post?.data?.data?.id} title={'Related blogs'} />}
+        {post?.data?.data?.id && <RecentBlogs id={post?.data?.data?.id} title={'Recent blogs'} />}
+      </div>
+    </>
+  );
 }

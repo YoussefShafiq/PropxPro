@@ -32,7 +32,7 @@ export function HeroSection() {
     </>
 }
 
-export function Events({ data: Events }) {
+export function Events({ data: Events, isLoading }) {
 
 
     return <>
@@ -45,15 +45,27 @@ export function Events({ data: Events }) {
                 </NavLink>
             </div>
             <div className="flex flex-col lg:flex-row flex-wrap gap-5 h-full">
-                {Events?.slice(0, 3).map((i, index) => (<>
-                    <WebinarsCard webinar={i} category={'events'} />
-                </>))}
+                {(Events?.length == 0) && <div className='text-center w-full'>No events found</div>}
+                {isLoading ?
+                    <>
+                        <div className="flex gap-5 w-full">
+                            {[1, 2, 3].map((i) => (<>
+                                <div className="w-1/3 h-96 bg-gray-100 animate-pulse rounded-xl"></div>
+                            </>))}
+                        </div>
+                    </>
+                    :
+                    Events?.slice(0, 3).map((i, index) => (<>
+                        <WebinarsCard webinar={i} category={'events'} />
+                    </>))
+                }
+
             </div>
         </div>
     </>
 }
 
-export function Videos({ data: Events }) {
+export function Videos({ data: Events, isLoading }) {
 
 
     return <>
@@ -66,9 +78,20 @@ export function Videos({ data: Events }) {
                 </NavLink>
             </div>
             <div className="flex flex-col lg:flex-row flex-wrap gap-5 h-full">
-                {Events?.slice(0, 3).map((i, index) => (<>
-                    <WebinarsCard webinar={i} category={'videos'} />
-                </>))}
+                {(Events?.length == 0) && <div className='text-center w-full'>No videos found</div>}
+                {isLoading ?
+                    <>
+                        <div className="flex gap-5 w-full">
+                            {[1, 2, 3].map((i) => (<>
+                                <div className="w-1/3 h-96 bg-gray-100 animate-pulse rounded-xl"></div>
+                            </>))}
+                        </div>
+                    </>
+                    :
+                    Events?.slice(0, 3).map((i, index) => (<>
+                        <WebinarsCard webinar={i} category={'videos'} />
+                    </>))
+                }
             </div>
         </div>
     </>
@@ -97,8 +120,8 @@ export default function Webinars() {
     return (
         <>
             <HeroSection />
-            <Events key={webnairsevents?.data?.data} data={webnairsevents?.data?.data} />
-            <Videos key={webnairsvideos?.data?.data} data={webnairsvideos?.data?.data} />
+            <Events key={webnairsevents?.data?.data} data={webnairsevents?.data?.data} isLoading={eventsloading} />
+            <Videos key={webnairsvideos?.data?.data} data={webnairsvideos?.data?.data} isLoading={videosloading} />
             <ReadyToTransform />
         </>
     )

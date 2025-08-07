@@ -40,21 +40,33 @@ export function Applications() {
                     </NavLink>
                 </div>
                 <div className="flex flex-col lg:flex-row flex-wrap gap-5">
-                    {integrations?.data?.data?.slice(0, 6).map((i) => (<>
-                        <div className="w-full lg:w-[calc(33%-10px)] bg-white rounded-2xl flex flex-col box-border border " data-aos="fade-up" data-aos-offset="200" data-aos-delay={i.id * 50}>
-                            <div className="border rounded-xl h-full">
-                                <div className="bg-white p-5 flex flex-col h-full border border-transparent box-border rounded-xl border-e-4 border-b-4 border-t-1 border-s-1 hover:border-black  transition-all cursor-pointer">
-                                    <div className="w-24 lg:w-16 text-hoverText text-2xl">
-                                        <img src={i.logo_url} alt={i.name} />
-                                    </div>
-                                    <div className="text-sm lg:text-xl font-bold">{i.name}</div>
-                                    <div className="text-base font-medium mt-2">
-                                        {i.description}
+                    {(integrations?.data?.data?.length == 0) && <div className='text-center w-full'>No Applications found</div>}
+                    {isLoading ?
+                        <>
+                            <div className="flex gap-5 w-full">
+                                {[1, 2, 3].map((i) => (<>
+                                    <div className="w-1/3 h-96 bg-gray-200 animate-pulse rounded-xl"></div>
+                                </>))}
+                            </div>
+                        </>
+                        :
+                        integrations?.data?.data?.slice(0, 6).map((i) => (<>
+                            <div className="w-full lg:w-[calc(33%-10px)] bg-white rounded-2xl flex flex-col box-border border " data-aos="fade-up" data-aos-offset="200" data-aos-delay={i.id * 50}>
+                                <div className="border rounded-xl h-full">
+                                    <div className="bg-white p-5 flex flex-col h-full border border-transparent box-border rounded-xl border-e-4 border-b-4 border-t-1 border-s-1 hover:border-black  transition-all cursor-pointer">
+                                        <div className="w-24 lg:w-16 text-hoverText text-2xl">
+                                            <img src={i.logo_url} alt={i.name} />
+                                        </div>
+                                        <div className="text-sm lg:text-xl font-bold">{i.name}</div>
+                                        <div className="text-base font-medium mt-2">
+                                            {i.description}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </>))}
+                        </>))
+                    }
+
                 </div>
             </div>
         </div >
