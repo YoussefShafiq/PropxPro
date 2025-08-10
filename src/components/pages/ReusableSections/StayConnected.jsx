@@ -50,7 +50,7 @@ export default function StayConnected() {
                     Subscribe to our newsletter to stay updated and secure better deals—never miss an opportunity again!
                 </div>
                 <form onSubmit={handleSubmit} className="flex flex-col gap-5 items-center lg:w-1/2 w-full">
-                    <div className="flex gap-5 w-full">
+                    <div className="flex flex-wrap gap-5 w-full justify-center">
                         <input
                             type="email"
                             placeholder="Email address"

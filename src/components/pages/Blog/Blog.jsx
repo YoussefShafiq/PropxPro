@@ -113,7 +113,7 @@ export function TopGuides({ data: TopGuides, isLoading }) {
             </div>
             <div className="flex flex-col lg:flex-row flex-wrap gap-5">
                 {(TopGuides?.length == 0) && <div className='text-center w-full'>No guides found</div>}
-                {!isLoading ?
+                {isLoading ?
                     <>
                         <div className="flex gap-5 w-full">
                             {[...Array(3)].map((i) => (<>
