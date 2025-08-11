@@ -6,6 +6,7 @@ import { FiSearch } from 'react-icons/fi';
 import { Link, useNavigate } from 'react-router-dom';
 import ReadyToTransform from '../ReusableSections/ReadyToTransform';
 import { FaChevronRight } from 'react-icons/fa';
+import { BiCategory } from 'react-icons/bi';
 
 export function HeroSection({ onSearchSubmit, searchQuery, setSearchQuery }) {
     const [isSearchFocused, setIsSearchFocused] = useState(false);
@@ -139,8 +140,8 @@ export function Categories({ searchQuery, setSearchQuery }) {
                                 </div>
                             </> : <>
                                 <div key={item.id} onClick={() => navigate(`/help-center/category/${item.id}`)} className="lg:w-[calc(50%-8px)] w-full bg-white flex gap-2 p-5 rounded-lg cursor-pointer">
-                                    <div className="text-hoverText">
-                                        <Plane />
+                                    <div className="text-hoverText pt-1.5">
+                                        <BiCategory />
                                     </div>
                                     <div className="flex flex-col gap-2">
                                         <h3 className='font-bold lg:text-xl'>{item.name || item.title}</h3>
