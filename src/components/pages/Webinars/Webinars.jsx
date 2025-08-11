@@ -48,9 +48,9 @@ export function Events({ data: Events, isLoading }) {
                 {(Events?.length == 0) && <div className='text-center w-full'>No events found</div>}
                 {isLoading ?
                     <>
-                        <div className="flex gap-5 w-full">
+                        <div className="flex flex-col lg:flex-row gap-5 w-full">
                             {[...Array(3)].map((i) => (<>
-                                <div className="w-1/3 h-96 bg-gray-100 animate-pulse rounded-xl"></div>
+                                <div className="w-full lg:w-1/3 h-72 lg:h-96 bg-gray-100 animate-pulse rounded-xl"></div>
                             </>))}
                         </div>
                     </>
@@ -81,9 +81,9 @@ export function Videos({ data: Events, isLoading }) {
                 {(Events?.length == 0) && <div className='text-center w-full'>No videos found</div>}
                 {isLoading ?
                     <>
-                        <div className="flex gap-5 w-full">
+                        <div className="flex flex-col lg:flex-row gap-5 w-full">
                             {[...Array(3)].map((i) => (<>
-                                <div className="w-1/3 h-96 bg-gray-100 animate-pulse rounded-xl"></div>
+                                <div className="w-full lg:w-1/3 h-72 lg:h-96 bg-gray-100 animate-pulse rounded-xl"></div>
                             </>))}
                         </div>
                     </>

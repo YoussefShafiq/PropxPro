@@ -17,7 +17,7 @@ export default function RelatedBlogs({ id, title = 'Latest posts' }) {
 
 
     return <>
-        <div className="container flex flex-col gap-5" data-aos="fade-up">
+        <div className="flex flex-col gap-5" data-aos="fade-up">
             <div className="flex justify-between">
                 <h2 className='font-bold text-2xl lg:text-3xl'>{title}</h2>
                 <NavLink to={"/blog/all-posts"} className="flex gap-2 items-center font-bold text-sm">
@@ -28,9 +28,9 @@ export default function RelatedBlogs({ id, title = 'Latest posts' }) {
                 {(RelatedBlogsData?.data?.data?.length == 0) && <div className='text-center w-full'>No {title} found</div>}
                 {isLoading ?
                     <>
-                        <div className="flex gap-5 w-full">
+                        <div className="flex flex-col lg:flex-row gap-5 w-full">
                             {[...Array(3)].map((i) => (<>
-                                <div className="w-1/3 h-96 bg-gray-100 animate-pulse rounded-xl"></div>
+                                <div className="w-full lg:w-1/3 h-72 lg:h-96 bg-gray-100 animate-pulse rounded-xl"></div>
                             </>))}
                         </div>
                     </>

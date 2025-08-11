@@ -58,7 +58,7 @@ export default function Layout() {
 
             {/* Scroll to top button with animated show/hide */}
             <div
-                className={`fixed bottom-2 right-8 z-50 transition-all duration-300 ${showScrollButton ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                className={`fixed bottom-5 lg:bottom-2 right-20 lg:right-8 z-50 transition-all duration-300 ${showScrollButton ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
                 data-aos="fade-up"
                 data-aos-easing="ease-in-out"
                 data-aos-duration="300"
