@@ -194,7 +194,7 @@ export default function Article() {
                             <h1 className='text-3xl font-extrabold lg:text-4xl'>{articleData.data.data.title}</h1>
                             <div className="flex gap-2 items-center text-sm font-medium">
                                 <div className="h-12 aspect-square rounded-full shadow overflow-hidden">
-                                    <img loading='lazy'
+                                    <img
                                         src={articleData?.data?.data?.author?.profile_photo}
                                         alt={articleData?.data?.data?.author?.name}
                                         className="w-full h-full object-cover"
@@ -290,7 +290,7 @@ export default function Article() {
                             <div className="flex flex-col">
                                 <div className="flex items-center gap-2">
                                     <div className="w-12 aspect-square rounded-full overflow-hidden">
-                                        <img loading='lazy'
+                                        <img
                                             src={articleData?.data?.data?.author?.profile_photo}
                                             alt={articleData?.data?.data?.author?.name}
                                             className="w-full h-full object-cover"

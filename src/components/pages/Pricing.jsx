@@ -126,8 +126,8 @@ export function AgentFeedback() {
                 </div>
                 <div className="lg:w-80 flex flex-col justify-center">
                     <div className="relative flex items-center justify-center w-72 h-72 ">
-                        <img loading='lazy' src={agentimg} className='w-52' alt="user-friendly dashboard" loading='lazy' />
-                        <img loading='lazy' src={Quoteimage} className='w-24 absolute top-0 right-0' alt="user-friendly dashboard" loading='lazy' data-aos="zoom-in" />
+                        <img src={agentimg} className='w-52' alt="user-friendly dashboard" />
+                        <img src={Quoteimage} className='w-24 absolute top-0 right-0' alt="user-friendly dashboard" data-aos="zoom-in" />
                     </div>
                     <div className="text-center">
                         <h2 className='text-2xl font-bold'>Michel Johnson</h2>

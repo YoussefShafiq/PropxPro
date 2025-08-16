@@ -33,7 +33,7 @@ export function SubFeatures() {
                         </p>
                     </div>
                     <div className="pe-20" data-aos="slide-right" data-aos-offset="200">
-                        <img loading='lazy' src={campaigns} alt="Streamline your efforts" loading='lazy' />
+                        <img src={campaigns} alt="Streamline your efforts" />
                     </div>
                 </div>
                 <div className="lg:w-5/12 bg-[#f6f5fe] rounded-xl flex flex-col gap-5 pb-10 overflow-hidden">
@@ -42,7 +42,7 @@ export function SubFeatures() {
                         <p className='text-sm lg:text-xl font-medium leading-9 text-opacity-80'>Visualize your campaign's growth with our interactive graph—see potential and performance over time!</p>
                     </div>
                     <div className="ps-12" data-aos="slide-left" data-aos-offset="200">
-                        <img loading='lazy' src={performance} loading='lazy' alt="Explore performance" />
+                        <img src={performance} alt="Explore performance" />
                     </div>
                 </div>
             </div>
@@ -53,7 +53,7 @@ export function SubFeatures() {
                         <p className='text-sm lg:text-xl font-medium leading-9 text-opacity-80'>Easily manage and monitor opportunities—Add, view, edit, and progress through various stages from one place</p>
                     </div>
                     <div className="pe-24" data-aos="slide-right" data-aos-offset="200">
-                        <img loading='lazy' src={opportunitiesManagement} alt="Opportunities management" loading='lazy' />
+                        <img src={opportunitiesManagement} alt="Opportunities management" />
                     </div>
                 </div>
                 <div className="lg:w-5/12 bg-[#eff9f2] rounded-xl flex flex-col justify-between gap-5 overflow-hidden">
@@ -62,7 +62,7 @@ export function SubFeatures() {
                         <p className='text-sm lg:text-xl font-medium leading-9 text-opacity-80'>Access and manage comprehensive opportunity details. Streamline your workflows for successful real estate transactions.</p>
                     </div>
                     <div className="ps-12" data-aos="slide-left" data-aos-offset="200">
-                        <img loading='lazy' src={opportunitiesInsights} loading='lazy' alt="Opportunity insights" />
+                        <img src={opportunitiesInsights} alt="Opportunity insights" />
                     </div>
                 </div>
             </div>

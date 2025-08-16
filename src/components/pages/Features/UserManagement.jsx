@@ -31,7 +31,7 @@ export function SubFeatures() {
                         <p className="text-sm lg:text-xl text-grayText font-medium mt-3 ">Manage users witth ease—and receive nottificattions for all activities—Perfect for your business needs!</p>
                     </div>
                     <div className="pe-14 m-0" data-aos="slide-right">
-                        <img loading='lazy' src={transformTeam} className='w-full' alt="Transform your team" loading='lazy' />
+                        <img src={transformTeam} className='w-full' alt="Transform your team" />
                     </div>
                 </div>
                 <div className="lg:w-1/2 bg-[#f6f5fe] rounded-xl flex flex-col justify-between lg:pt-14 gap-10 overflow-hidden"  >
@@ -40,7 +40,7 @@ export function SubFeatures() {
                         <p className="text-sm lg:text-xl text-grayText font-medium mt-3 ">Add, update, or delete user profiles easily to keep your team organized and efficient with PropXPro!</p>
                     </div>
                     <div className="pe-20 m-0" data-aos="slide-left">
-                        <img loading='lazy' src={manageRoles} className='w-full' alt="Manage user roles" loading='lazy' />
+                        <img src={manageRoles} className='w-full' alt="Manage user roles" />
                     </div>
                 </div>
             </div>
@@ -51,7 +51,7 @@ export function SubFeatures() {
                     <p className="text-sm lg:text-xl text-grayText font-medium mt-3 ">Stay updated with every user action in PropXPro CRM—additions, updates, and deletions—right from your notification icon!</p>
                 </div>
                 <div className="m-auto w-full" data-aos="slide-up" >
-                    <img loading='lazy' src={stayInformed} className='w-full' alt="Stay Informed Instantly" loading='lazy' />
+                    <img src={stayInformed} className='w-full' alt="Stay Informed Instantly" />
                 </div>
             </div>
         </div>

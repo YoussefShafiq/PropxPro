@@ -36,7 +36,7 @@ export function SubFeatures() {
                         </div>
                     </div>
                     <div className=" flex justify-center m-0" data-aos="slide-right">
-                        <img loading='lazy' src={teamsDashboard} className='w-4/5' alt="teams chat" loading='lazy' />
+                        <img src={teamsDashboard} className='w-4/5' alt="teams chat" />
                     </div>
                 </div>
                 <div className="lg:w-1/2 bg-[#f6f5fe] rounded-xl flex flex-col justify-between lg:pt-14 gap-10 overflow-hidden"  >
@@ -45,7 +45,7 @@ export function SubFeatures() {
                         <div className="text-sm lg:text-xl text-grayText font-medium mt-3 ">Track leads with vibrant visuals. Switch between weekly, monthly, or yearly views—spot trends and make smart decisions every time!</div>
                     </div>
                     <div className="ps-14 m-0" data-aos="slide-left">
-                        <img loading='lazy' src={trendTracker} className='w-full' alt="phone numbers" loading='lazy' />
+                        <img src={trendTracker} className='w-full' alt="phone numbers" />
                     </div>
                 </div>
             </div>
@@ -57,7 +57,7 @@ export function SubFeatures() {
                     </div>
                 </div>
                 <div className="m-auto w-full" data-aos="slide-up" >
-                    <img loading='lazy' src={statistics} className='w-full' alt="calling and messaging" loading='lazy' />
+                    <img src={statistics} className='w-full' alt="calling and messaging" />
                 </div>
             </div>
 
@@ -74,7 +74,7 @@ export function ActivityTracking() {
                 </div>
             </div>
             <div className="lg:w-1/2 rounded-xl">
-                <img loading='lazy' src={activityTracking} alt="user-friendly dashboard" className='w-full' loading='lazy' />
+                <img src={activityTracking} alt="user-friendly dashboard" className='w-full' />
             </div>
         </div>
     </>
@@ -89,7 +89,7 @@ export function AssignTask() {
                 </div>
             </div>
             <div className="lg:w-1/2 rounded-xl">
-                <img loading='lazy' src={assignTasks} alt="user-friendly dashboard" className='w-full' loading='lazy' />
+                <img src={assignTasks} alt="user-friendly dashboard" className='w-full' />
             </div>
         </div>
     </>
@@ -105,7 +105,7 @@ export function TwilioIntegration() {
                 </div>
             </div>
             <div className="lg:w-1/2 rounded-xl">
-                <img loading='lazy' src={twilio} alt="user-friendly dashboard" className='w-full' loading='lazy' />
+                <img src={twilio} alt="user-friendly dashboard" className='w-full' />
             </div>
         </div>
     </>
@@ -120,7 +120,7 @@ export function ChatTeamsManagement() {
                 </div>
             </div>
             <div className="lg:w-1/2 rounded-xl">
-                <img loading='lazy' src={chatTeamsManagement} alt="user-friendly dashboard" className='w-full' loading='lazy' />
+                <img src={chatTeamsManagement} alt="user-friendly dashboard" className='w-full' />
             </div>
         </div>
     </>

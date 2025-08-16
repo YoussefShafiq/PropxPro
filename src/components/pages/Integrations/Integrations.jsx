@@ -79,9 +79,9 @@ export function Zapier() {
             <div className="container">
                 <div className=" lg:w-1/2 flex flex-col gap-8">
                     <div className="relative w-[calc(100%-32px)]">
-                        <img loading='lazy' src={zapierlogo} className='w-full' alt="zapierlogo" />
+                        <img src={zapierlogo} className='w-full' alt="zapierlogo" />
                         <div className="absolute top-0 right-0 translate-x-full -translate-y-full w-fit h-fit">
-                            <img loading='lazy' src={highlight} className='lg:w-fit w-10' alt="zapierlogo" />
+                            <img src={highlight} className='lg:w-fit w-10' alt="zapierlogo" />
                         </div>
                     </div>
                     <div className="flex flex-col gap-8 lg:ps-28 text-center lg:text-left">
@@ -112,7 +112,7 @@ export function InstantLeadGeneration() {
                     </div>
                 </div>
                 <div className="lg:w-1/2 rounded-xl overflow-hidden flex justify-center items-end">
-                    <img loading='lazy' src={Frame39772} alt="Close more deals with confidence" className='w-4/5' loading='lazy' />
+                    <img src={Frame39772} alt="Close more deals with confidence" className='w-4/5' />
                 </div>
             </div>
         </div>

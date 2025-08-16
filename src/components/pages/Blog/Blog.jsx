@@ -31,7 +31,7 @@ export function HeroSection({ data: heroBlog }) {
     return <>
         <div className="container flex flex-wrap lg:flex-nowrap gap-10 justify-between ">
             <div className="lg:w-1/2  overflow-hidden">
-                <img loading='lazy' src={data.img} className='rounded-b-xl h-full' alt={data.headline} />
+                <img src={data.img} className='rounded-b-xl h-full' alt={data.headline} />
             </div>
             <div className="lg:w-3/5  lg:ps-10 flex flex-col gap-5 text-center lg:text-left">
                 {/* <div className="flex gap-2 items-center font-bold">
@@ -93,7 +93,7 @@ export function PowerUpYourProductivity() {
                     </div>
                 </div>
                 <div className="lg:w-1/2 lg:ms-16 overflow-hidden flex justify-center items-center p-20 bg-[#ffd7c0] ">
-                    <img loading='lazy' src={startUp} className='rounded-b-xl h-1/2' alt='Power up your productivity' />
+                    <img src={startUp} className='rounded-b-xl h-1/2' alt='Power up your productivity' />
                 </div>
             </div>
         </div>
@@ -143,7 +143,7 @@ export function TrendingTopics({ data: TrendingTopics }) {
                     {TrendingTopics?.slice(0, 2).map((t, i) => (<>
                         <div className="flex gap-5 font-bold">
                             <div className="lg:w-1/2  overflow-hidden">
-                                <img loading='lazy' src={t.cover_photo_url} className='rounded-xl w-full h-40 object-cover' alt={t.title} />
+                                <img src={t.cover_photo_url} className='rounded-xl w-full h-40 object-cover' alt={t.title} />
                             </div>
                             <div className="lg:w-3/5 flex flex-col gap-2 text-left">
                                 <div className="flex gap-2 text-xs">
@@ -157,7 +157,7 @@ export function TrendingTopics({ data: TrendingTopics }) {
                     </>))}
                 </div>
                 <div className="lg:w-1/2 lg:ms-16 overflow-hidden flex justify-center items-end p-20 pb-0 bg-[#c0ddff] ">
-                    <img loading='lazy' src={topTrendingImg} className='rounded-b-xl w-full' alt='Power up your productivity' />
+                    <img src={topTrendingImg} className='rounded-b-xl w-full' alt='Power up your productivity' />
                 </div>
             </div>
         </div>

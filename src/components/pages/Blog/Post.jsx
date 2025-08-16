@@ -125,7 +125,7 @@ export function HeroSection({ data, view }) {
       </div>
       <div className="lg:w-1/2">
         <div className="flex justify-center">
-          <img loading='lazy'
+          <img
             src={data?.cover_photo}
             alt='cover photo'
             className='w-full max-h-[500px] object-contain'
@@ -471,7 +471,7 @@ export default function Post() {
               <div className="flex flex-col gap-3">
                 <div className="flex items-center gap-3">
                   <div className="w-12 aspect-square rounded-full overflow-hidden">
-                    <img loading='lazy'
+                    <img
                       src={post?.data?.data?.author?.profile_photo}
                       alt={post?.data?.data?.author?.name}
                       className="w-full h-full object-cover"
