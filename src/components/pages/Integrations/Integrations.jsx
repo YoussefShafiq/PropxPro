@@ -43,9 +43,9 @@ export function Applications() {
                     {(integrations?.data?.data?.length == 0) && <div className='text-center w-full'>No Integrations found</div>}
                     {isLoading ?
                         <>
-                            <div className="flex gap-5 w-full">
+                            <div className="flex flex-row lg:flex-col gap-5 w-full">
                                 {[...Array(3)].map((i) => (<>
-                                    <div className="w-1/3 h-96 bg-gray-200 animate-pulse rounded-xl"></div>
+                                    <div className="w-full lg:w-1/3 h-96 bg-gray-200 animate-pulse rounded-xl"></div>
                                 </>))}
                             </div>
                         </>
