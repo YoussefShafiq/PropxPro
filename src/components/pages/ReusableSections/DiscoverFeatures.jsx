@@ -75,7 +75,7 @@ export default function DiscoverFeatures() {
                             <div className="bg-white rounded-xl hover:-translate-x-1 hover:-translate-y-1 border-[2px] border-black transition-all p-4">
                                 <NavLink to={feature.link} className={'flex flex-col gap-3'}>
                                     <div className="overflow-hidden rounded-2xl">
-                                        <img src={feature.img} alt={feature.title} className='w-full' loading='lazy' />
+                                        <img loading='lazy' src={feature.img} alt={feature.title} className='w-full' loading='lazy' />
                                     </div>
                                     <p className='text-xl font-semibold text-darkText' >{feature.title}</p>
                                 </NavLink>
@@ -85,7 +85,7 @@ export default function DiscoverFeatures() {
                     // <div key={feature.id} className="w-full lg:w-[calc(25%-12px)] p-4 pb-10 flex flex-col gap-8 border-2 border-black box-border rounded-xl hover:border-e-4 hover:border-b-4 hover:border-t-0 hover:border-s-0 transition-all cursor-pointer ">
                     //     <NavLink to={feature.link}>
                     //         <div className="overflow-hidden rounded-2xl">
-                    //             <img src={feature.img} alt={feature.title} loading='lazy' />
+                    //             <img loading='lazy' src={feature.img} alt={feature.title} loading='lazy' />
                     //         </div>
                     //         <p className='text-xl font-semibold text-darkText' >{feature.title}</p>
                     //     </NavLink>

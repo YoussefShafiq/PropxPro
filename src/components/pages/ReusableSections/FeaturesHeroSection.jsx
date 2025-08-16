@@ -12,7 +12,7 @@ export default function FeaturesHeroSection({ heroImg, headline, description, re
                 {!resources && <GetStarted />}
             </div>
             <div className="lg:w-1/2 lg:ms-16 overflow-hidden">
-                <img src={heroImg} className='rounded-b-xl h-full' alt={headline} />
+                <img loading='lazy' src={heroImg} className='rounded-b-xl lg:h-full' alt={headline} />
             </div>
         </div>
     </>

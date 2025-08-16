@@ -25,7 +25,7 @@ export function HeroSection() {
                     <p className='lg:text-2xl  font-medium leading-9 text-darkText text-opacity-80 lg:pe-16'>{data.description} </p>
                 </div>
                 <div className="lg:w-1/3  overflow-hidden">
-                    <img src={data.img} className='rounded-b-xl h-full' alt={data.headline} />
+                    <img loading='lazy' src={data.img} className='rounded-b-xl h-full' alt={data.headline} />
                 </div>
             </div>
         </div>

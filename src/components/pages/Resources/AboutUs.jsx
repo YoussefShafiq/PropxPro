@@ -29,7 +29,7 @@ export function CloseDealsSection() {
                 </p>
             </div>
             <div className="lg:w-1/2 rounded-xl overflow-hidden flex justify-center items-end">
-                <img src={highFive} alt="Close more deals with confidence" className='w-2/3' loading='lazy' />
+                <img loading='lazy' src={highFive} alt="Close more deals with confidence" className='w-2/3' loading='lazy' />
             </div>
         </div>
     </>
@@ -43,7 +43,7 @@ export function RealstateMadeSimpleSection() {
                 <p className='lg:text-2xl  font-medium leading-9 text-darkText text-opacity-80 lg:pe-16'>At PropXPro, our vision is to simplify real estate CRM systems. We bring clarity and ease to every transaction—letting you Focus on building relationships and closing deals, while our platform handles the rest. Experience a new level of efficiency and success with PropXPro—your perfect partner for transforming real estate operations. Let's make success easy!</p>
             </div>
             <div className="lg:w-1/2 rounded-xl overflow-hidden flex justify-center items-end">
-                <img src={target} alt="Real estate made simple with PropXPro" className='w-2/3' loading='lazy' />
+                <img loading='lazy' src={target} alt="Real estate made simple with PropXPro" className='w-2/3' loading='lazy' />
             </div>
         </div>
     </>
@@ -59,7 +59,7 @@ export function AchieveRealstateExcellence() {
                 </p>
             </div>
             <div className="lg:w-1/2 rounded-xl overflow-hidden flex justify-center items-end">
-                <img src={businessDeal} alt="Achieve your real estate excellence" className='w-2/3' loading='lazy' />
+                <img loading='lazy' src={businessDeal} alt="Achieve your real estate excellence" className='w-2/3' loading='lazy' />
             </div>
         </div>
     </>
@@ -131,7 +131,7 @@ export function UnlockExclusiveInsights() {
                     <SocialMedia size={'text-3xl'} justify='justify-start' />
                 </div>
                 <div className="lg:w-1/2 rounded-xl overflow-hidden flex justify-center items-end">
-                    <img src={frame} alt="Achieve your real estate excellence" className='w-2/3' loading='lazy' />
+                    <img loading='lazy' src={frame} alt="Achieve your real estate excellence" className='w-2/3' loading='lazy' />
                 </div>
             </div>
         </div>

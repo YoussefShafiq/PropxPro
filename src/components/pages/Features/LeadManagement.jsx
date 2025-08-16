@@ -34,7 +34,7 @@ export function SubFeatures() {
                         <p className='text-sm lg:text-xl font-medium leading-9 text-opacity-80'>Assign leads with ease, keeping everyone on track and productive!</p>
                     </div>
                     <div className="ps-10" data-aos="slide-left" data-aos-offset="200">
-                        <img src={lead} alt="Lead your team" loading='lazy' />
+                        <img loading='lazy' src={lead} alt="Lead your team" loading='lazy' />
                     </div>
                 </div>
                 <div className="lg:w-5/12 bg-[#f6f5fe] rounded-xl flex flex-col gap-5 pb-10 overflow-hidden">
@@ -44,10 +44,10 @@ export function SubFeatures() {
                     </div>
                     <div className="flex flex-col gap-5">
                         <div className="ps-28" data-aos="slide-left" data-aos-offset="200">
-                            <img src={centralizedDBImg1} loading='lazy' alt="Centralized database" />
+                            <img loading='lazy' src={centralizedDBImg1} loading='lazy' alt="Centralized database" />
                         </div>
                         <div className="pe-28" data-aos="slide-right" data-aos-offset="200">
-                            <img src={centralizedDBImg2} loading='lazy' alt="Centralized database" />
+                            <img loading='lazy' src={centralizedDBImg2} loading='lazy' alt="Centralized database" />
                         </div>
                     </div>
                 </div>
@@ -61,7 +61,7 @@ export function SubFeatures() {
                         </p>
                     </div>
                     <div className="ps-10" data-aos="slide-left" data-aos-offset="200">
-                        <img src={smartAssignments} alt="Smart assignments" loading='lazy' />
+                        <img loading='lazy' src={smartAssignments} alt="Smart assignments" loading='lazy' />
                     </div>
                 </div>
                 <div className="lg:w-5/12 bg-[#eff9f2] rounded-xl flex flex-col gap-5 pb-10 overflow-hidden">
@@ -71,10 +71,10 @@ export function SubFeatures() {
                     </div>
                     <div className="flex flex-col -space-y-5">
                         <div className="ps-28" data-aos="slide-left" data-aos-offset="200">
-                            <img src={realtimeTracking1} loading='lazy' alt="Real-time tracking" />
+                            <img loading='lazy' src={realtimeTracking1} loading='lazy' alt="Real-time tracking" />
                         </div>
                         <div className="pe-16" data-aos="slide-right" data-aos-offset="200">
-                            <img src={realtimeTracking2} loading='lazy' alt="Real-time tracking" />
+                            <img loading='lazy' src={realtimeTracking2} loading='lazy' alt="Real-time tracking" />
                         </div>
                     </div>
                 </div>

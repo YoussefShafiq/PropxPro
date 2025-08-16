@@ -33,7 +33,7 @@ export function SubFeatures() {
                         <p className="text-sm lg:text-xl text-grayText font-medium mt-3 ">Call and text from one number—ensuring professional, unified team communication always!</p>
                     </div>
                     <div className="pe-14 m-0" data-aos="slide-right">
-                        <img src={unifiedTeamCommunicaiton} className='w-full' alt="Unified team communication" loading='lazy' />
+                        <img loading='lazy' src={unifiedTeamCommunicaiton} className='w-full' alt="Unified team communication" loading='lazy' />
                     </div>
                 </div>
                 <div className="lg:w-1/2 bg-[#f6f5fe] rounded-xl flex flex-col justify-between lg:pt-14 gap-10 overflow-hidden"  >
@@ -42,7 +42,7 @@ export function SubFeatures() {
                         <p className="text-sm lg:text-xl text-grayText font-medium mt-3 ">Get your ideal business number—manage multiple lines, and adjust team size easily!</p>
                     </div>
                     <div className="ps-20 m-0" data-aos="slide-left">
-                        <img src={phoneNumbers} className='w-full' alt="Phone numbers " loading='lazy' />
+                        <img loading='lazy' src={phoneNumbers} className='w-full' alt="Phone numbers " loading='lazy' />
                     </div>
                 </div>
             </div>
@@ -53,7 +53,7 @@ export function SubFeatures() {
                     <p className="text-sm lg:text-xl text-grayText font-medium mt-3 ">Engage your team with group calls, instant messaging, file sharing, and AI-driven call summaries—never miss a detail!</p>
                 </div>
                 <div className="m-auto w-full" data-aos="slide-up" >
-                    <img src={advancedCalls} className='w-full' alt="Advanced calls and messaging" loading='lazy' />
+                    <img loading='lazy' src={advancedCalls} className='w-full' alt="Advanced calls and messaging" loading='lazy' />
                 </div>
             </div>
         </div>

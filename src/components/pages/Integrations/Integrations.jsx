@@ -55,7 +55,7 @@ export function Applications() {
                                 <div className="border rounded-xl h-full">
                                     <div className="bg-white p-5 flex flex-col h-full border border-transparent box-border rounded-xl border-e-4 border-b-4 border-t-1 border-s-1 hover:border-black  transition-all cursor-pointer">
                                         <div className="w-24 lg:w-16 text-hoverText text-2xl">
-                                            <img src={i.logo_url} alt={i.name} />
+                                            <img loading='lazy' src={i.logo_url} alt={i.name} />
                                         </div>
                                         <div className="text-sm lg:text-xl font-bold">{i.name}</div>
                                         <div className="text-base font-medium mt-2">
@@ -79,9 +79,9 @@ export function Zapier() {
             <div className="container">
                 <div className=" lg:w-1/2 flex flex-col gap-8">
                     <div className="relative w-[calc(100%-32px)]">
-                        <img src={zapierlogo} className='w-full' alt="zapierlogo" />
+                        <img loading='lazy' src={zapierlogo} className='w-full' alt="zapierlogo" />
                         <div className="absolute top-0 right-0 translate-x-full -translate-y-full w-fit h-fit">
-                            <img src={highlight} className='lg:w-fit w-10' alt="zapierlogo" />
+                            <img loading='lazy' src={highlight} className='lg:w-fit w-10' alt="zapierlogo" />
                         </div>
                     </div>
                     <div className="flex flex-col gap-8 lg:ps-28 text-center lg:text-left">
@@ -112,7 +112,7 @@ export function InstantLeadGeneration() {
                     </div>
                 </div>
                 <div className="lg:w-1/2 rounded-xl overflow-hidden flex justify-center items-end">
-                    <img src={Frame39772} alt="Close more deals with confidence" className='w-4/5' loading='lazy' />
+                    <img loading='lazy' src={Frame39772} alt="Close more deals with confidence" className='w-4/5' loading='lazy' />
                 </div>
             </div>
         </div>

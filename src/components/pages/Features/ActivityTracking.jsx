@@ -32,7 +32,7 @@ export function SubFeatures() {
                         <p className='text-sm lg:text-xl font-medium leading-9 text-opacity-80'>Keep everyone informed with detailed activity logs and real-time updates—Feel the difference!</p>
                     </div>
                     <div className="pe-24" data-aos="slide-right" data-aos-offset="200">
-                        <img src={engageAndInspire} alt="Engage and inspire" loading='lazy' />
+                        <img loading='lazy' src={engageAndInspire} alt="Engage and inspire" loading='lazy' />
                     </div>
                 </div>
                 <div className="lg:w-5/12 bg-[#f6f5fe] rounded-xl flex flex-col justify-between gap-5 pb-0 overflow-hidden">
@@ -41,7 +41,7 @@ export function SubFeatures() {
                         <p className='text-sm lg:text-xl font-medium leading-9 text-opacity-80'>Track every step from opportunity creation to task completion—See who did what and when, with clear, detailed entries.</p>
                     </div>
                     <div className="ps-12" data-aos="slide-left" data-aos-offset="200">
-                        <img src={activityLogs} loading='lazy' alt="Comprehensive activity Logs" />
+                        <img loading='lazy' src={activityLogs} loading='lazy' alt="Comprehensive activity Logs" />
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@ export function SubFeatures() {
                         <p className='text-sm lg:text-xl font-medium leading-9 text-opacity-80'>Analyze trends and patterns to refine your strategies and boost your success. Stay proactive with data-driven decisions.</p>
                     </div>
                     <div className="px-24" data-aos="slide-right" data-aos-offset="200">
-                        <img src={actionableInsights} alt="Actionable insights" loading='lazy' />
+                        <img loading='lazy' src={actionableInsights} alt="Actionable insights" loading='lazy' />
                     </div>
                 </div>
                 <div className="lg:w-5/12 bg-[#eff9f2] rounded-xl flex flex-col justify-between gap-5 overflow-hidden">
@@ -61,7 +61,7 @@ export function SubFeatures() {
                         <p className='text-sm lg:text-xl font-medium leading-9 text-opacity-80'>Stay updated with real-time notifications. Never miss a crucial action or deadline—stay informed and ahead.</p>
                     </div>
                     <div className="px-20" data-aos="slide-left" data-aos-offset="200">
-                        <img src={realtimeNotifications} loading='lazy' alt="Real-time notifications" />
+                        <img loading='lazy' src={realtimeNotifications} loading='lazy' alt="Real-time notifications" />
                     </div>
                 </div>
             </div>

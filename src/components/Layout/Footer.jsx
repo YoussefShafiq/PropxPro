@@ -41,7 +41,7 @@ export default function Footer() {
             <div className="flex w-full justify-between gap-36">
                 <div className="w-1/4 hidden md:flex flex-col gap-6 ">
                     <div className="w-[170px]">
-                        <img src={logo} alt="logo" loading='lazy' />
+                        <img loading='lazy' src={logo} alt="logo" loading='lazy' />
                     </div>
                     <p className='font-medium text-lightgrayText'>Join the ranks of Top Real Estate Professionals—Start closing more deals with confidence! </p>
                 </div>
@@ -75,7 +75,7 @@ export default function Footer() {
 
             <div className="w-full flex lg:hidden flex-col gap-2 text-center items-center mb-8 ">
                 <div className="w-[170px]">
-                    <img src={logo} alt="logo" loading='lazy' />
+                    <img loading='lazy' src={logo} alt="logo" loading='lazy' />
                 </div>
                 <p className='font-medium text-lightgrayText'>Join the ranks of Top Real Estate Professionals—Start closing more deals with confidence! </p>
             </div>

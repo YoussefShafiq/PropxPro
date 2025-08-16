@@ -35,7 +35,7 @@ export function SubFeatures() {
                         <p className='text-sm lg:text-xl font-medium leading-9 text-opacity-80'>Efficiently distribute tasks to the right team members—PropXPro ensures every action is handled by the best fit!</p>
                     </div>
                     <div className="pe-36 ps-20" data-aos="slide-right" data-aos-offset="200">
-                        <img src={optimizeTeamPotential} alt="Optimize your team potential" loading='lazy' />
+                        <img loading='lazy' src={optimizeTeamPotential} alt="Optimize your team potential" loading='lazy' />
                     </div>
                 </div>
                 <div className="lg:w-5/12 bg-[#f6f5fe] rounded-xl flex flex-col justify-between gap-5 pb-0 overflow-hidden">
@@ -44,7 +44,7 @@ export function SubFeatures() {
                         <p className='text-sm lg:text-xl font-medium leading-9 text-opacity-80'> PropXPro's round-robin system evenly assigns tasks, ensuring no team member is overheaded—Experience productivity like never before! </p>
                     </div>
                     <div className="ps-12" data-aos="slide-left" data-aos-offset="200">
-                        <img src={smartTaskDistribution} loading='lazy' alt="Smart task distribution" />
+                        <img loading='lazy' src={smartTaskDistribution} loading='lazy' alt="Smart task distribution" />
                     </div>
                 </div>
             </div>
@@ -55,7 +55,7 @@ export function SubFeatures() {
                         <p className='text-sm lg:text-xl font-medium leading-9 text-opacity-80'>Assign tasks based on each member’s strengths and expertise. Maximize your team's potential!</p>
                     </div>
                     <div className="px-28" data-aos="slide-right" data-aos-offset="200">
-                        <img src={roleBasedAssignment} alt="Role-based assignments" loading='lazy' />
+                        <img loading='lazy' src={roleBasedAssignment} alt="Role-based assignments" loading='lazy' />
                     </div>
                 </div>
                 <div className="lg:w-5/12 bg-[#eff9f2] rounded-xl flex flex-col gap-5 overflow-hidden">
@@ -65,10 +65,10 @@ export function SubFeatures() {
                     </div>
                     <div className="flex flex-col gap-5">
                         <div className="" data-aos="slide-left" >
-                            <img src={taskTracking1} loading='lazy' alt="Detailed task tracking" />
+                            <img loading='lazy' src={taskTracking1} loading='lazy' alt="Detailed task tracking" />
                         </div>
                         <div className="" data-aos="slide-right" >
-                            <img src={taskTracking2} loading='lazy' alt="Detailed task tracking" />
+                            <img loading='lazy' src={taskTracking2} loading='lazy' alt="Detailed task tracking" />
                         </div>
                     </div>
                 </div>

@@ -57,8 +57,11 @@ function App() {
       disable: function () {
         const lgBreakpoint = 1024; // Tailwind's lg breakpoint
         return window.innerWidth < lgBreakpoint;
-      }
-      // disableMutationObserver: true, // Disable auto-detection
+      },
+      disableMutationObserver: function () {
+        const lgBreakpoint = 1024; // Tailwind's lg breakpoint
+        return window.innerWidth < lgBreakpoint;
+      }, // Disable auto-detection
     });
 
     // Refresh on route changes (if using React Router)

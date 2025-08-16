@@ -29,7 +29,7 @@ export function HeroSection() {
             <GetStarted />
         </div>
         <div className="container m-auto" data-aos="fade-up" >
-            <img src={dashboardImg} className='w-full' alt="user-friendly dashboard" loading='lazy' />
+            <img loading='lazy' src={dashboardImg} className='w-full' alt="user-friendly dashboard" loading='lazy' />
         </div>
     </>
 }
@@ -42,7 +42,7 @@ export function Userfriendly() {
                 <div className="lg:text-2xl text-grayText font-medium mt-6 leading-9">View all your KPIs—track weekly, monthly, and yearly opportunities. Make practical, informed decisions that lead to confident, winning outcomes—let’s achieve success together!</div>
             </div>
             <div className="lg:w-1/2 rounded-xl">
-                <img src={userFriendlyDashboard} alt="user-friendly dashboard" className='w-full' loading='lazy' />
+                <img loading='lazy' src={userFriendlyDashboard} alt="user-friendly dashboard" className='w-full' loading='lazy' />
             </div>
         </div>
     </>
@@ -56,7 +56,7 @@ export function LeadManagement() {
                 <div className="lg:text-2xl text-grayText font-medium mt-6 leading-9">All your leads in one place—PropXPro brings all your lead sources into one platform. Whether via round-robin, individual, or campaign-based strategies, managing and assigning becomes effortless with PropXPro.</div>
             </div>
             <div className="lg:w-1/2 rounded-xl">
-                <img src={LeadManagement12} className='w-full' alt="user-friendly dashboard" loading='lazy' />
+                <img loading='lazy' src={LeadManagement12} className='w-full' alt="user-friendly dashboard" loading='lazy' />
             </div>
         </div>
     </>
@@ -70,7 +70,7 @@ export function RealTimeCommunication() {
                 <div className="lg:text-2xl text-grayText font-medium mt-6 leading-9">With our own integrated communication tool like PropXChat—You stay in constant touch with your team and clients, ensuring no opportunity slips through the cracks.</div>
             </div>
             <div className="lg:w-1/2  rounded-xl">
-                <img src={communication} className='w-full' alt="user-friendly dashboard" loading='lazy' />
+                <img loading='lazy' src={communication} className='w-full' alt="user-friendly dashboard" loading='lazy' />
             </div>
         </div>
     </>
@@ -86,7 +86,7 @@ export function ChatsAndCalling() {
                         <div className="text-xl text-grayText font-medium mt-3 ">PropXPro Team chat enhances your productivity through streamlined communication and collaboration. Discover how easy growth can be—let's get started together!</div>
                     </div>
                     <div className="pe-10" data-aos="slide-right">
-                        <img src={teamsChat} className='w-full' alt="teams chat" loading='lazy' />
+                        <img loading='lazy' src={teamsChat} className='w-full' alt="teams chat" loading='lazy' />
                     </div>
                 </div>
                 <div className="lg:w-2/5 bg-[#f6f5fe] rounded-xl flex flex-col lg:pt-14 gap-10 overflow-hidden"  >
@@ -95,7 +95,7 @@ export function ChatsAndCalling() {
                         <div className="text-xl text-grayText font-medium mt-3 ">Start simplifying your communications with a new work number—perfectly fit for all your business needs!</div>
                     </div>
                     <div className="ps-14" data-aos="slide-left">
-                        <img src={phoneNumbers} className='w-full' alt="phone numbers" loading='lazy' />
+                        <img loading='lazy' src={phoneNumbers} className='w-full' alt="phone numbers" loading='lazy' />
                     </div>
                 </div>
             </div>
@@ -106,7 +106,7 @@ export function ChatsAndCalling() {
                     <div className="text-xl text-grayText font-medium mt-3 ">Transform your team’s connectivity with PropXPro's advanced calls, group chats, real-time messaging with multimedia file-sharing and more—discover communication that truly connects!</div>
                 </div>
                 <div className="m-auto w-full" data-aos="slide-up" >
-                    <img src={calling} className='w-full' alt="calling and messaging" loading='lazy' />
+                    <img loading='lazy' src={calling} className='w-full' alt="calling and messaging" loading='lazy' />
                 </div>
             </div>
 
@@ -144,7 +144,7 @@ export function GettingStarted() {
                         items.map((i) => (
                             <div key={i.id} className="w-full lg:w-1/3 bg-[#1d2861] rounded-2xl p-5 pb-12 flex flex-col" data-aos="fade-up" data-aos-offset="200" data-aos-delay={i.id * 100} >
                                 <div className="w-20">
-                                    <img src={i.img} className='w-full' alt={i.title} loading='lazy' />
+                                    <img loading='lazy' src={i.img} className='w-full' alt={i.title} loading='lazy' />
                                 </div>
                                 <div className="text-xl text-white font-bold mt-5">{i.title}</div>
                                 <div className="text-base text-white font-medium mt-2">{i.description}</div>
@@ -167,7 +167,7 @@ export function EmpowerYourTeamAndActionAssignment() {
                     <div className="text-xl text-grayText font-medium mt-3 ">Assign roles from admins to agents, and track performance with ease—Creating a dynamic and collaborative space for your real estate Excellence.</div>
                 </div>
                 <div className="lg:pe-14 h-full" data-aos="slide-right">
-                    <img src={empowerTeam} className='h-full' alt="teams chat" loading='lazy' />
+                    <img loading='lazy' src={empowerTeam} className='h-full' alt="teams chat" loading='lazy' />
                 </div>
             </div>
             <div className="w-full lg:w-2/5 bg-[#fefaf5] rounded-xl flex flex-col lg:pt-14  gap-10 overflow-hidden"   >
@@ -176,7 +176,7 @@ export function EmpowerYourTeamAndActionAssignment() {
                     <div className="text-xl text-grayText font-medium mt-3 ">Assign tasks based on expertise—PropXPro's smart round-robin system ensures balanced workloads. </div>
                 </div>
                 <div className="ps-14 h-full" data-aos="slide-left">
-                    <img src={actionAssign} className='h-full' alt="phone numbers" loading='lazy' />
+                    <img loading='lazy' src={actionAssign} className='h-full' alt="phone numbers" loading='lazy' />
                 </div>
             </div>
         </div>
@@ -197,8 +197,8 @@ export function StreamlineYourWorkflow() {
                     </button>
                 </div>
                 <div className="w-full lg:w-2/5 lg:min-w-[500px] flex overflow-hidden relative h-full items-end m-auto">
-                    <img src={IntegrationsIcons} className="w-32 lg:w-48 absolute top-0 z-10" alt="phone numbers" loading="lazy" />
-                    <img src={streamlineYourWorkflow} className="w-48 lg:w-72 ms-28 lg:ms-44" alt="phone numbers" loading="lazy" data-aos="slide-up" />
+                    <img loading='lazy' src={IntegrationsIcons} className="w-32 lg:w-48 absolute top-0 z-10" alt="phone numbers" loading="lazy" />
+                    <img loading='lazy' src={streamlineYourWorkflow} className="w-48 lg:w-72 ms-28 lg:ms-44" alt="phone numbers" loading="lazy" data-aos="slide-up" />
                 </div>
             </div>
         </div>
@@ -226,8 +226,8 @@ export function AgentFeedback() {
                 </div>
                 <div className="lg:w-80 flex flex-col justify-center">
                     <div className="relative flex items-center justify-center w-72 h-72 ">
-                        <img src={agentimg} className='w-52' alt="user-friendly dashboard" loading='lazy' />
-                        <img src={Quoteimage} className='w-24 absolute top-0 right-0' alt="user-friendly dashboard" loading='lazy' data-aos="zoom-in" />
+                        <img loading='lazy' src={agentimg} className='w-52' alt="user-friendly dashboard" loading='lazy' />
+                        <img loading='lazy' src={Quoteimage} className='w-24 absolute top-0 right-0' alt="user-friendly dashboard" loading='lazy' data-aos="zoom-in" />
                     </div>
                     <div className="text-center">
                         <h2 className='text-2xl font-bold'>David Thompson</h2>

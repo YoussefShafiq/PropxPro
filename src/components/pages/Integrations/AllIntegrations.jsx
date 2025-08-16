@@ -101,7 +101,7 @@ export function Integrations() {
                                             <div className="border rounded-xl h-full">
                                                 <div className="bg-white p-5 flex flex-col h-full border border-transparent box-border rounded-xl border-e-4 border-b-4 border-t-1 border-s-1 hover:border-black  transition-all cursor-pointer">
                                                     <div className="w-24 lg:w-16 text-hoverText text-2xl">
-                                                        <img src={i.logo_url} alt={i.name} />
+                                                        <img loading='lazy' src={i.logo_url} alt={i.name} />
                                                     </div>
                                                     <div className="text-sm lg:text-xl font-bold">{i.name}</div>
                                                     <div className="text-base font-medium mt-2">
