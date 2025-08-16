@@ -11,18 +11,13 @@ export default function Layout() {
     const [showScrollButton, setShowScrollButton] = useState(false);
     const [isAnimating, setIsAnimating] = useState(false);
 
-    // Initialize AOS
-    useEffect(() => {
-        AOS.init({
-            duration: 300,  // Shorter duration for smoother feel
-            easing: 'ease-in-out',
-            once: false     // Allow animations to trigger multiple times
-        });
-    }, []);
-
     // Handle scroll to top on route change
     useEffect(() => {
         window.scrollTo(0, 0);
+        // Refresh AOS on route change if screen width >= 1024px
+        if (window.innerWidth >= 1024) {
+            AOS.refresh();
+        }
     }, [pathname]);
 
     // Show/hide scroll button based on scroll position

@@ -40,40 +40,45 @@ function App() {
 
 
   useEffect(() => {
-    AOS.init({
-      initClassName: 'aos-init',
-      animatedClassName: 'aos-animate',
+    const initAOS = () => {
+      const isDesktop = window.innerWidth >= 1024;
 
-      // Settings to prevent early triggering
-      offset: 100,    // Trigger point (px from element bottom)
-      delay: 100,       // Delay animation (ms)
-      duration: 500,  // Animation duration (ms)
-      easing: 'ease-in-out', // Easing type
-      once: false,    // Only animate once
-      mirror: false,   // Animate out while scrolling past
-
-      // Important for scroll-only triggering
-      startEvent: 'load', // Wait for full page load
-      disable: function () {
-        const lgBreakpoint = 1024; // Tailwind's lg breakpoint
-        return window.innerWidth < lgBreakpoint;
-      },
-      disableMutationObserver: function () {
-        const lgBreakpoint = 1024; // Tailwind's lg breakpoint
-        return window.innerWidth < lgBreakpoint;
-      }, // Disable auto-detection
-    });
-
-    // Refresh on route changes (if using React Router)
-    return () => {
-      AOS.refresh();
+      if (isDesktop) {
+        AOS.init({
+          initClassName: 'aos-init',
+          animatedClassName: 'aos-animate',
+          offset: 100,
+          delay: 100,
+          duration: 500,
+          easing: 'ease-in-out',
+          once: false,
+          mirror: false,
+          startEvent: 'load',
+          disable: false
+        });
+      } else {
+        // Disable AOS on mobile/tablet
+        AOS.init({
+          disable: true
+        });
+      }
     };
 
+    // Initialize AOS
+    initAOS();
+
+    // Handle window resize
+    const handleResize = () => {
+      initAOS();
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
-  useEffect(() => {
-    AOS.refresh();
-  }, [location.pathname]);
 
   let routers = createBrowserRouter([
     {
