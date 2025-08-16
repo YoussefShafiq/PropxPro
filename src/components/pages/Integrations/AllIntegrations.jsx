@@ -74,7 +74,7 @@ export function Integrations() {
 
     return (
         <div className="bg-[#f6f6f9]">
-            <div className="container flex flex-col gap-5" data-aos="fade-up">
+            <div className="container flex flex-col gap-5" >
                 <div className="flex justify-between">
                     <h2 className='font-bold text-2xl lg:text-5xl'>All integrations</h2>
                 </div>
@@ -94,9 +94,6 @@ export function Integrations() {
                                         <div
                                             key={i.id}
                                             className="w-full lg:w-1/3 px-[5px] "
-                                            data-aos="fade-up"
-                                            data-aos-offset="200"
-                                            data-aos-delay={i.id * 50}
                                         >
                                             <div className="border rounded-xl h-full">
                                                 <div className="bg-white p-5 flex flex-col h-full border border-transparent box-border rounded-xl border-e-4 border-b-4 border-t-1 border-s-1 hover:border-black  transition-all cursor-pointer">

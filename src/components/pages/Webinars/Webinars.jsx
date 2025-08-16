@@ -37,7 +37,7 @@ export function Events({ data: Events, isLoading }) {
 
     return <>
 
-        <div className="container flex flex-col gap-5" data-aos="fade-up">
+        <div className="container flex flex-col gap-5">
             <div className="flex justify-between">
                 <h2 className='font-bold text-2xl lg:text-3xl'>Upcoming events</h2>
                 <NavLink to={"/webinars/all-events"} className="flex gap-2 items-center font-bold text-sm">
@@ -70,7 +70,7 @@ export function Videos({ data: Events, isLoading }) {
 
     return <>
 
-        <div className="container flex flex-col gap-5" data-aos="fade-up">
+        <div className="container flex flex-col gap-5" >
             <div className="flex justify-between">
                 <h2 className='font-bold text-2xl lg:text-3xl'>On demand-videos </h2>
                 <NavLink to={"/webinars/all-videos"} className="flex gap-2 items-center font-bold text-sm">

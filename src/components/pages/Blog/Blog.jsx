@@ -52,7 +52,7 @@ export function LatestPosts({ data: latestPosts, isLoading }) {
 
     return <>
 
-        <div className="container flex flex-col gap-5" data-aos="fade-up">
+        <div className="container flex flex-col gap-5">
             <div className="flex justify-between">
                 <h2 className='font-bold text-2xl lg:text-3xl'>Latest posts</h2>
                 <NavLink to={"/blog/all-posts"} className="flex gap-2 items-center font-bold text-sm">
@@ -104,7 +104,7 @@ export function TopGuides({ data: TopGuides, isLoading }) {
 
     return <>
 
-        <div className="container flex flex-col gap-5" data-aos="fade-up">
+        <div className="container flex flex-col gap-5">
             <div className="flex justify-between">
                 <h2 className='font-bold text-2xl lg:text-3xl'>Top guides</h2>
                 <NavLink to={"/blog/all-posts"} className="flex gap-2 items-center font-bold text-sm">
