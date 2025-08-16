@@ -128,7 +128,7 @@ export function UnlockExclusiveInsights() {
                     <h1 className='text-3xl lg:text-5xl font-extrabold leading-[139%] lg:leading-[117%] text-darkBlue'>Unlock exclusive real estate insights</h1>
                     <p className='lg:text-2xl  font-medium leading-9 text-darkText text-opacity-80 lg:pe-16'>Stay ahead in real estate management. Follow us for expert tips, updates, and exciting opportunities!
                     </p>
-                    <SocialMedia size={'text-3xl'} />
+                    <SocialMedia size={'text-3xl'} justify='justify-start' />
                 </div>
                 <div className="lg:w-1/2 rounded-xl overflow-hidden flex justify-center items-end">
                     <img src={frame} alt="Achieve your real estate excellence" className='w-2/3' loading='lazy' />

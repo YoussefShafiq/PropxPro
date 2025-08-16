@@ -86,6 +86,7 @@ export function Integrations() {
                         className="flex transition-transform duration-300 ease-in-out"
                         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
                     >
+                        {(integrations?.data?.data?.length == 0) && <div className='text-center w-full'>No Integrations found</div>}
                         {groupedItems.map((page, pageIndex) => (
                             <div key={pageIndex} className="w-full flex-shrink-0">
                                 <div className="flex flex-wrap -mx-[5px] mb-5 gap-y-5">

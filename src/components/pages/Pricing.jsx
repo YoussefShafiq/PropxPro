@@ -67,15 +67,15 @@ export function PlansCards({ plans, isAnnual, setIsAnnual }) {
 
 export function PlansTable({ plans, features, additionalUsageCharges, isAnnual, setIsAnnual }) {
     return (
-        <div className="lg:container p-3 overflow-x-hidden">
+        <div className="lg:container p-3 overflow-x-hidden mb-16">
             <table className="w-full border-collapse">
                 <thead >
                     <th></th>
                     {plans?.map((p) => (<>
                         <th>
                             <div className="flex flex-col pb-5 md:items-start text-base items-center">
-                                <h3 className={`${p.isPopular ? 'text-hoverText' : ''} capitalize text-sm lg:text-base`}>{p.name}</h3>
-                                <div className="text-sm lg:text-3xl font-extrabold text-center md:text-left">{isAnnual ? p.annualPrice : p.monthlyPrice}$<span className='text-base font-medium block md:inline text-center md:text-left'>{isAnnual ? '/year' : '/month'}</span></div>
+                                <h3 className={`${p.isPopular ? 'text-hoverText' : ''} capitalize text-xs lg:text-base`}>{p.name}</h3>
+                                <div className="text-xs lg:text-3xl font-extrabold text-center md:text-left">{isAnnual ? p.annualPrice : p.monthlyPrice}$<span className='text-xs lg:text-base font-medium block md:inline text-center md:text-left'>{isAnnual ? '/year' : '/month'}</span></div>
                             </div>
                         </th>
                     </>))}
@@ -88,9 +88,9 @@ export function PlansTable({ plans, features, additionalUsageCharges, isAnnual, 
                     </tr>
                     {features?.map((f, i) => (<>
                         <tr className={`leading-9 ${i % 2 == 0 ? 'bg-[#f5f5f5]' : ''}`}>
-                            <td className='py-3 ps-3 text-sm lg:text-base'>{f.name}</td>
+                            <td className='py-3 ps-3 text-xs lg:text-base'>{f.name}</td>
                             {plans?.map((p) => (<>
-                                <td className='text-black text-sm ltext-center lg:text-left'>
+                                <td className='text-black text-xs lg:text-sm text-center lg:text-left'>
                                     {p.features[f.key]?.type == 'boolean' ? p.features[f.key]?.value ? <IoCheckmark className='text-2xl' /> : <HiXMark className='text-red-500 text-2xl' /> : p.features[f.key]?.value}
                                 </td>
                             </>))}
@@ -103,9 +103,9 @@ export function PlansTable({ plans, features, additionalUsageCharges, isAnnual, 
                     </tr>
                     {additionalUsageCharges?.map((f, i) => (<>
                         <tr className={`leading-9 ${i % 2 == 0 ? 'bg-[#f5f5f5]' : ''}`}>
-                            <td className='py-3 ps-3 text-sm lg:text-base'>{f.name}</td>
+                            <td className='py-3 ps-3 text-xs lg:text-base'>{f.name}</td>
                             {plans?.map((p) => (<>
-                                <td className='text-black text-sm'>
+                                <td className='text-black text-xs lg:text-sm'>
                                     {p.additionalUsageCharges[f.key]?.type == 'boolean' ? p.additionalUsageCharges[f.key]?.value ? <IoCheckmark className='text-2xl' /> : <HiXMark className='text-red-500 text-2xl' /> : p.additionalUsageCharges[f.key]?.value}
                                 </td>
                             </>))}
@@ -119,7 +119,7 @@ export function PlansTable({ plans, features, additionalUsageCharges, isAnnual, 
 
 export function AgentFeedback() {
     return <>
-        <div className=" bg-[#f5f9fe]">
+        <div className=" bg-[#f6f5fe]">
             <div className="container flex flex-col lg:flex-row gap-12 items-center">
                 <div className="lg:w-4/5">
                     <p className='text-xl lg:text-4xl font-extrabold leading-9 lg:leading-[50px] text-darkText' >“ The intuitive interface makes it incredibly easy to use, and we've seen a significant boost in tenant satisfaction since we started using it. I can't imagine managing our properties without PropXPro now ”</p>

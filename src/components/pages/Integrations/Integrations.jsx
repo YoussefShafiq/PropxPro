@@ -40,7 +40,7 @@ export function Applications() {
                     </NavLink>
                 </div>
                 <div className="flex flex-col lg:flex-row flex-wrap gap-5">
-                    {(integrations?.data?.data?.length == 0) && <div className='text-center w-full'>No Applications found</div>}
+                    {(integrations?.data?.data?.length == 0) && <div className='text-center w-full'>No Integrations found</div>}
                     {isLoading ?
                         <>
                             <div className="flex gap-5 w-full">

@@ -34,6 +34,7 @@ import Event from './components/pages/Webinars/Event'
 import Video from './components/pages/Webinars/Video'
 import AllEvents from './components/pages/Webinars/AllEvents'
 import AllVideos from './components/pages/Webinars/AllVideos'
+import ErrorPage from './components/ErrorPage'
 
 function App() {
 
@@ -53,6 +54,10 @@ function App() {
 
       // Important for scroll-only triggering
       startEvent: 'load', // Wait for full page load
+      disable: function () {
+        const lgBreakpoint = 1024; // Tailwind's lg breakpoint
+        return window.innerWidth < lgBreakpoint;
+      }
       // disableMutationObserver: true, // Disable auto-detection
     });
 
@@ -69,7 +74,7 @@ function App() {
 
   let routers = createBrowserRouter([
     {
-      path: '', element: <Layout />, children: [
+      path: '', element: <Layout />, errorElement: <ErrorPage />, children: [
         { index: true, element: <Home /> },
         { path: 'home', element: <Home /> },
         {

@@ -356,7 +356,7 @@ export default function Post() {
       <div className="container flex flex-col gap-5">
         <HeroSection data={post?.data?.data} view={!isLoading} />
 
-        <div className="relative w-full overflow-hidden">
+        <div className="relative w-full">
           <div className="flex flex-col lg:flex-row justify-between gap-4">
             {/* Mobile Table of Contents */}
             {isLoading ? (
