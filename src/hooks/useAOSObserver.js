@@ -26,7 +26,7 @@ export const useAOSObserver = () => {
         });
 
         // In useAOSObserver
-        const images = document.querySelectorAll('img[loading="lazy"]');
+        const images = document.querySelectorAll('img[]');
         images.forEach(img => {
             img.addEventListener('load', () => AOS.refresh());
         });

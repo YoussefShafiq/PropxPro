@@ -60,7 +60,7 @@ export function SubFeatures() {
                         <h2 className='lg:text-3xl font-bold leading-[100%]'>Real-time notifications</h2>
                         <p className='text-sm lg:text-xl font-medium leading-9 text-opacity-80'>Stay updated with real-time notifications. Never miss a crucial action or deadline—stay informed and ahead.</p>
                     </div>
-                    <div className="lg:px-20 px-110" data-aos="slide-left" data-aos-offset="200">
+                    <div className="lg:px-20 px-10" data-aos="slide-left" data-aos-offset="200">
                         <img src={realtimeNotifications} alt="Real-time notifications" />
                     </div>
                 </div>

@@ -197,8 +197,8 @@ export function StreamlineYourWorkflow() {
                     </button>
                 </div>
                 <div className="w-fit lg:w-2/5 lg:min-w-[500px] flex overflow-hidden relative h-full items-end m-auto">
-                    <img src={IntegrationsIcons} className="w-32 lg:w-48 absolute top-0 z-10" alt="phone numbers" loading="lazy" />
-                    <img src={streamlineYourWorkflow} className="w-48 lg:w-72 ms-28 lg:ms-44" alt="phone numbers" loading="lazy" data-aos="slide-up" />
+                    <img src={IntegrationsIcons} className="w-32 lg:w-48 absolute top-0 z-10" alt="phone numbers" />
+                    <img src={streamlineYourWorkflow} className="w-48 lg:w-72 ms-28 lg:ms-44" alt="phone numbers" data-aos="slide-up" />
                 </div>
             </div>
         </div>
