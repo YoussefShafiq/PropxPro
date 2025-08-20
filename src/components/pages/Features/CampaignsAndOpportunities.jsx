@@ -32,7 +32,7 @@ export function SubFeatures() {
                         <p className='text-sm lg:text-xl font-medium leading-9 text-opacity-80'>Manage, track, and improve every aspect of all your active campaigns with ease and confidence
                         </p>
                     </div>
-                    <div className="pe-20" data-aos="slide-right" data-aos-offset="200">
+                    <div className="lg:pe-20 pe-10" data-aos="slide-right" data-aos-offset="200">
                         <img src={campaigns} alt="Streamline your efforts" />
                     </div>
                 </div>
@@ -41,7 +41,7 @@ export function SubFeatures() {
                         <h2 className='lg:text-3xl font-bold leading-[100%]'>Explore performance</h2>
                         <p className='text-sm lg:text-xl font-medium leading-9 text-opacity-80'>Visualize your campaign's growth with our interactive graph—see potential and performance over time!</p>
                     </div>
-                    <div className="ps-12" data-aos="slide-left" data-aos-offset="200">
+                    <div className="lg:ps-12 ps-10" data-aos="slide-left" data-aos-offset="200">
                         <img src={performance} alt="Explore performance" />
                     </div>
                 </div>
@@ -52,7 +52,7 @@ export function SubFeatures() {
                         <h2 className='lg:text-3xl font-bold leading-[100%]'>Opportunities management</h2>
                         <p className='text-sm lg:text-xl font-medium leading-9 text-opacity-80'>Easily manage and monitor opportunities—Add, view, edit, and progress through various stages from one place</p>
                     </div>
-                    <div className="pe-24" data-aos="slide-right" data-aos-offset="200">
+                    <div className="lg:pe-24 pe-10" data-aos="slide-right" data-aos-offset="200">
                         <img src={opportunitiesManagement} alt="Opportunities management" />
                     </div>
                 </div>
@@ -61,7 +61,7 @@ export function SubFeatures() {
                         <h2 className='lg:text-3xl font-bold leading-[100%]'>Opportunity insights</h2>
                         <p className='text-sm lg:text-xl font-medium leading-9 text-opacity-80'>Access and manage comprehensive opportunity details. Streamline your workflows for successful real estate transactions.</p>
                     </div>
-                    <div className="ps-12" data-aos="slide-left" data-aos-offset="200">
+                    <div className="lg:ps-12 ps-10" data-aos="slide-left" data-aos-offset="200">
                         <img src={opportunitiesInsights} alt="Opportunity insights" />
                     </div>
                 </div>

@@ -35,7 +35,7 @@ export function SubFeatures() {
                             View all your performance metrics at a glance—every decision you make with propXpro is informed, strategic, and impactful.
                         </div>
                     </div>
-                    <div className=" flex justify-center m-0" data-aos="slide-right">
+                    <div className="flex justify-center m-0" data-aos="slide-right">
                         <img src={teamsDashboard} className='w-4/5' alt="teams chat" />
                     </div>
                 </div>
@@ -44,7 +44,7 @@ export function SubFeatures() {
                         <div className="lg:text-3xl font-bold text-darkText ">Opportunities — Trent Tracker</div>
                         <div className="text-sm lg:text-xl text-grayText font-medium mt-3 ">Track leads with vibrant visuals. Switch between weekly, monthly, or yearly views—spot trends and make smart decisions every time!</div>
                     </div>
-                    <div className="ps-14 m-0" data-aos="slide-left">
+                    <div className="lg:ps-14 ps-10 m-0" data-aos="slide-left">
                         <img src={trendTracker} className='w-full' alt="phone numbers" />
                     </div>
                 </div>

@@ -30,7 +30,7 @@ export function SubFeatures() {
                         <h2 className="lg:text-3xl font-bold text-darkText ">Transform your team</h2>
                         <p className="text-sm lg:text-xl text-grayText font-medium mt-3 ">Manage users witth ease—and receive nottificattions for all activities—Perfect for your business needs!</p>
                     </div>
-                    <div className="pe-14 m-0" data-aos="slide-right">
+                    <div className="lg:pe-14 pe-10 m-0" data-aos="slide-right">
                         <img src={transformTeam} className='w-full' alt="Transform your team" />
                     </div>
                 </div>
@@ -39,7 +39,7 @@ export function SubFeatures() {
                         <h2 className="lg:text-3xl font-bold text-darkText ">Manage user roles</h2>
                         <p className="text-sm lg:text-xl text-grayText font-medium mt-3 ">Add, update, or delete user profiles easily to keep your team organized and efficient with PropXPro!</p>
                     </div>
-                    <div className="pe-20 m-0" data-aos="slide-left">
+                    <div className="lg:pe-20 pe-10 m-0" data-aos="slide-left">
                         <img src={manageRoles} className='w-full' alt="Manage user roles" />
                     </div>
                 </div>

@@ -35,7 +35,7 @@ export function SubFeatures() {
                             real-time progress of your opportunities—see your growth!
                         </p>
                     </div>
-                    <div className="pe-20" data-aos="slide-right" data-aos-offset="200">
+                    <div className="lg:pe-20 pe-10" data-aos="slide-right" data-aos-offset="200">
                         <img src={dashboard1} alt="Opportunity tracking" />
                     </div>
                 </div>
@@ -45,10 +45,10 @@ export function SubFeatures() {
                         <p className='text-sm lg:text-xl font-medium leading-9 text-opacity-80'>Easily view—weekly, monthly, yearly, or custom data with our exciting filtering data tool!</p>
                     </div>
                     <div className="flex flex-col -space-y-10">
-                        <div className="pe-28 relative z-10" data-aos="slide-right" data-aos-offset="200">
+                        <div className="lg:pe-28 pe-10 relative z-10" data-aos="slide-right" data-aos-offset="200">
                             <img src={personalizedViews} alt="Personalized views" />
                         </div>
-                        <div className="ps-28" data-aos="slide-left" data-aos-offset="200">
+                        <div className="lg:ps-28 ps-10" data-aos="slide-left" data-aos-offset="200">
                             <img src={dashboard2} alt="Personalized views" />
                         </div>
                     </div>
@@ -60,7 +60,7 @@ export function SubFeatures() {
                         <h2 className='lg:text-3xl font-bold leading-[100%]'>Instant view</h2>
                         <p className='text-sm lg:text-xl font-medium leading-9 text-opacity-80'>Hover over any point to see detailed insights instantly—experience real-time data power!</p>
                     </div>
-                    <div className="pe-24" data-aos="slide-right" data-aos-offset="200">
+                    <div className="lg:pe-24 pe-10" data-aos="slide-right" data-aos-offset="200">
                         <img src={operations} alt="Instant view" />
                     </div>
                 </div>
