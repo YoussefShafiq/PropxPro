@@ -90,7 +90,7 @@ export function PlansTable({ plans, features, additionalUsageCharges, isAnnual, 
                         <tr className={`leading-9 ${i % 2 == 0 ? 'bg-[#f5f5f5]' : ''}`}>
                             <td className='py-3 ps-3 text-xs lg:text-base'>{f.name}</td>
                             {plans?.map((p) => (<>
-                                <td className='text-black text-xs lg:text-sm text-center lg:text-left'>
+                                <td className='text-black text-xs lg:text-sm text-start lg:text-left'>
                                     {p.features[f.key]?.type == 'boolean' ? p.features[f.key]?.value ? <IoCheckmark className='text-2xl' /> : <HiXMark className='text-red-500 text-2xl' /> : p.features[f.key]?.value}
                                 </td>
                             </>))}

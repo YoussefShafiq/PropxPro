@@ -34,7 +34,7 @@ export function SubFeatures() {
                         <h2 className='lg:text-3xl font-bold leading-[100%]'>Optimize your team potential</h2>
                         <p className='text-sm lg:text-xl font-medium leading-9 text-opacity-80'>Efficiently distribute tasks to the right team members—PropXPro ensures every action is handled by the best fit!</p>
                     </div>
-                    <div className="pe-36 ps-20" data-aos="slide-right" data-aos-offset="200">
+                    <div className="lg:pe-36 lg:ps-20 px-10" data-aos="slide-right" data-aos-offset="200">
                         <img src={optimizeTeamPotential} alt="Optimize your team potential" />
                     </div>
                 </div>
@@ -43,7 +43,7 @@ export function SubFeatures() {
                         <h2 className='lg:text-3xl font-bold leading-[100%]'>Smart task distribution</h2>
                         <p className='text-sm lg:text-xl font-medium leading-9 text-opacity-80'> PropXPro's round-robin system evenly assigns tasks, ensuring no team member is overheaded—Experience productivity like never before! </p>
                     </div>
-                    <div className="ps-12" data-aos="slide-left" data-aos-offset="200">
+                    <div className="lg:ps-12 ps-10" data-aos="slide-left" data-aos-offset="200">
                         <img src={smartTaskDistribution} alt="Smart task distribution" />
                     </div>
                 </div>
@@ -54,7 +54,7 @@ export function SubFeatures() {
                         <h2 className='lg:text-3xl font-bold leading-[100%]'>Role-based assignments</h2>
                         <p className='text-sm lg:text-xl font-medium leading-9 text-opacity-80'>Assign tasks based on each member’s strengths and expertise. Maximize your team's potential!</p>
                     </div>
-                    <div className="px-28" data-aos="slide-right" data-aos-offset="200">
+                    <div className="lg:px-28 px-10" data-aos="slide-right" data-aos-offset="200">
                         <img src={roleBasedAssignment} alt="Role-based assignments" />
                     </div>
                 </div>
@@ -114,7 +114,7 @@ export default function ActionAssignment() {
         <HeroSection />
         <SubFeatures />
         <LeadSuccessSimplified />
-        <DiscoverFeatures />
+        <DiscoverFeatures CurrentFeatureId={7} />
         <ReadyToTransform />
     </>
 }

@@ -167,7 +167,7 @@ export default function Dashbaord() {
         <TwilioIntegration />
         <ChatTeamsManagement />
         <OptimizedBusinessManagement />
-        <DiscoverFeatures />
+        <DiscoverFeatures CurrentFeatureId={1} />
         <ReadyToTransform />
     </>
 }

@@ -16,7 +16,7 @@ import { LiaCertificateSolid } from 'react-icons/lia'
 
 export function HeroSection() {
     return <>
-        <FeaturesHeroSection heroImg={heroImg} headline={"Effortless team management and operations solution"} description={'With PropXPro, easily manage your leads, enhance team collaboration, and always close more deals with ease and confidence!'} buttonFlag={false} />
+        <FeaturesHeroSection heroImg={heroImg} headline={"Effortless team management and operations solution"} description={'With PropXPro, easily manage your leads, enhance team collaboration, and always close more deals with ease and confidence!'} buttonFlag={false} aboutflag={true} />
     </>
 }
 

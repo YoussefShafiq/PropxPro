@@ -106,7 +106,7 @@ export default function ActivityTracking() {
         <HeroSection />
         <SubFeatures />
         <LeadSuccessSimplified />
-        <DiscoverFeatures />
+        <DiscoverFeatures CurrentFeatureId={6} />
         <ReadyToTransform />
     </>
 }

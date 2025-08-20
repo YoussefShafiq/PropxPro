@@ -118,7 +118,7 @@ export default function RealtimeStatistics() {
         <HeroSection />
         <SubFeatures />
         <LeadSuccessSimplified />
-        <DiscoverFeatures />
+        <DiscoverFeatures CurrentFeatureId={3} />
         <ReadyToTransform />
     </>
 }

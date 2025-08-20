@@ -119,7 +119,7 @@ export default function LeadManagement() {
         <HeroSection />
         <SubFeatures />
         <LeadSuccessSimplified />
-        <DiscoverFeatures />
+        <DiscoverFeatures CurrentFeatureId={2} />
         <ReadyToTransform />
     </>
 }

@@ -97,7 +97,7 @@ export default function RealtimeCommunication() {
         <HeroSection />
         <SubFeatures />
         <LeadSuccessSimplified />
-        <DiscoverFeatures />
+        <DiscoverFeatures CurrentFeatureId={8} />
         <ReadyToTransform />
     </>
 }

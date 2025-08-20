@@ -239,7 +239,7 @@ export default function Navbar() {
     return (
         <>
             {/* Desktop Navbar */}
-            <div className="fixed z-50 top-0 left-0 right-0 bg-white hidden lg:flex justify-between items-center h-[84px] px-28 py-3 shadow">
+            <div className="fixed z-50 top-0 left-0 right-0 bg-white hidden lg:flex justify-between items-center h-[84px] navbarpadding px-28 py-3 shadow">
                 <div className="w-36">
                     <NavLink to={"/"}><img src={logo} className='w-full' alt="logo" /></NavLink>
                 </div>
@@ -271,8 +271,8 @@ export default function Navbar() {
 
                 <div className="flex items-center gap-x-4 font-semibold">
                     <a href='https://dev.vtech-upgraded.com/' target='_blank' className="hover:scale-[1.002] transition-all">Login</a>
-                    <a href='https://dev.vtech-upgraded.com/signup' target='_blank' className="capitalize bg-lightBlue text-white hover:shadow-lg hover:bg-[#1e4c9d] hover:scale-[1.002] transition-all px-7 py-3 rounded-md">get started</a>
-                    <Link to={'/request-demo'} className="box-border border border-black hover:shadow-lg hover:scale-[1.002] transition-all px-7 py-3 rounded-md">Request a Demo</Link>
+                    <a href='https://dev.vtech-upgraded.com/signup' target='_blank' className="capitalize bg-lightBlue text-white hover:shadow-lg hover:bg-[#1e4c9d] hover:scale-[1.002] transition-all px-7 py-3 rounded-md min-w-max">get started</a>
+                    <Link to={'/request-demo'} className="box-border border border-black hover:shadow-lg hover:scale-[1.002] transition-all px-7 py-3 rounded-md min-w-max">Request a Demo</Link>
                 </div>
             </div>
 

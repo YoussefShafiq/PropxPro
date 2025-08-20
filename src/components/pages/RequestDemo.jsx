@@ -344,7 +344,7 @@ export function DemoForm() {
                                     onChange={handleChange}
                                     className={`w-full px-4 py-4 rounded-xl border-2 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.firstName
                                         ? 'border-red-300 focus:border-red-400'
-                                        : 'border-gray-200 focus:border-blue-400'
+                                        : 'border-gray-200 focus:border-lightBlue'
                                         }`}
                                     disabled={loading}
                                 />
@@ -359,7 +359,7 @@ export function DemoForm() {
                                     onChange={handleChange}
                                     className={`w-full px-4 py-4 rounded-xl border-2 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.lastName
                                         ? 'border-red-300 focus:border-red-400'
-                                        : 'border-gray-200 focus:border-blue-400'
+                                        : 'border-gray-200 focus:border-lightBlue'
                                         }`}
                                     disabled={loading}
                                 />
@@ -377,7 +377,7 @@ export function DemoForm() {
                                     name: 'phone',
                                     className: `w-full px-4 py-4 pl-16 rounded-xl border-2 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.phone
                                         ? 'border-red-300 focus:border-red-400'
-                                        : 'border-gray-200 focus:border-blue-400'
+                                        : 'border-gray-200 focus:border-lightBlue'
                                         }`
                                 }}
                                 disabled={loading}
@@ -394,7 +394,7 @@ export function DemoForm() {
                                 onChange={handleChange}
                                 className={`w-full px-4 py-4 rounded-xl border-2 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.email
                                     ? 'border-red-300 focus:border-red-400'
-                                    : 'border-gray-200 focus:border-blue-400'
+                                    : 'border-gray-200 focus:border-lightBlue'
                                     }`}
                                 disabled={loading}
                             />
@@ -409,7 +409,7 @@ export function DemoForm() {
                                     onChange={handleChange}
                                     className={`w-full px-4 py-4 rounded-xl border-2 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.realEstateExperience
                                         ? 'border-red-300 focus:border-red-400'
-                                        : 'border-gray-200 focus:border-blue-400'
+                                        : 'border-gray-200 focus:border-lightBlue'
                                         }`}
                                     disabled={loading}
                                 >
@@ -427,7 +427,7 @@ export function DemoForm() {
                                     onChange={handleChange}
                                     className={`w-full px-4 py-4 rounded-xl border-2 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.monthlyBudget
                                         ? 'border-red-300 focus:border-red-400'
-                                        : 'border-gray-200 focus:border-blue-400'
+                                        : 'border-gray-200 focus:border-lightBlue'
                                         }`}
                                     disabled={loading}
                                 >
@@ -455,7 +455,7 @@ export function DemoForm() {
                                             min={getMinDate()}
                                             className={`w-full px-4 py-4 pl-12 rounded-xl border-2 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-blue-100 ${errors.datetime
                                                 ? 'border-red-300 focus:border-red-400'
-                                                : 'border-gray-200 focus:border-blue-400'
+                                                : 'border-gray-200 focus:border-lightBlue'
                                                 }`}
                                             disabled={loading}
                                         />
@@ -470,7 +470,7 @@ export function DemoForm() {
                                             onChange={handleChange}
                                             className={`w-full px-4 py-4 pl-12 rounded-xl border-2 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-blue-100 appearance-none bg-white ${errors.datetime
                                                 ? 'border-red-300 focus:border-red-400'
-                                                : 'border-gray-200 focus:border-blue-400'
+                                                : 'border-gray-200 focus:border-lightBlue'
                                                 }`}
                                             disabled={loading}
                                         >
@@ -495,7 +495,7 @@ export function DemoForm() {
                         <button
                             type="submit"
                             onClick={handleSubmit}
-                            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold py-4 px-6 rounded-xl hover:from-blue-700 hover:to-indigo-700 transform hover:scale-[1.02] transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg hover:shadow-xl"
+                            className="w-full bg-lightBlue text-white font-bold py-4 px-6 rounded-xl transform hover:scale-[1.02] transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg hover:shadow-xl"
                             disabled={loading}
                         >
                             {loading ? (

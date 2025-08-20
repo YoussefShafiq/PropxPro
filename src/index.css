@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
     scroll-behavior: smooth;
 }
 
-.active{
+.active {
     @apply text-hoverText
 }
 
@@ -24,4 +24,15 @@
 
 ::-webkit-scrollbar-thumb {
     @apply bg-hoverText rounded-full
+}
+
+@media (min-width: 1024px) and (max-width: 1160px) {
+    .container {
+        padding-inline: 80px !important
+    }
+
+
+    .navbarpadding {
+        padding-inline: 30px !important;
+    }
 }

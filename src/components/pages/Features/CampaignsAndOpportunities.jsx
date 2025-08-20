@@ -107,7 +107,7 @@ export default function CampaignsAndOpportunities() {
         <HeroSection />
         <SubFeatures />
         <LeadSuccessSimplified />
-        <DiscoverFeatures />
+        <DiscoverFeatures CurrentFeatureId={4} />
         <ReadyToTransform />
     </>
 }

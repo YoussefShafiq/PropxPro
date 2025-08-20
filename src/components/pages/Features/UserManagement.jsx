@@ -95,7 +95,7 @@ export default function UserManagement() {
         <HeroSection />
         <SubFeatures />
         <LeadSuccessSimplified />
-        <DiscoverFeatures />
+        <DiscoverFeatures CurrentFeatureId={5} />
         <ReadyToTransform />
     </>
 }
