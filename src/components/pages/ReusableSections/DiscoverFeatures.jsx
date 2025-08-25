@@ -7,6 +7,7 @@ import userManagement from '../../../assets/images/home/userManagement.png'
 import activityTracking from '../../../assets/images/home/activityTracking.png'
 import actionAssignment from '../../../assets/images/home/actionAssignment.png'
 import realtimeCommunication from '../../../assets/images/home/realtimeCommunication.png'
+import integrations from '../../../assets/images/integration/cardimg.png'
 import { NavLink } from 'react-router-dom'
 
 export default function DiscoverFeatures({ CurrentFeatureId = null }) {
@@ -69,18 +70,32 @@ export default function DiscoverFeatures({ CurrentFeatureId = null }) {
                 <h3 className='lg:text-2xl font-medium text-darkText leading-9' >Explore in-depth every feature PropXPro offers</h3>
             </div>
             <div className="flex flex-wrap gap-4">
-                {features.filter(f => f.id != CurrentFeatureId).map((feature) => (
+
+                {features.map((feature) => (
                     <>
-                        <div key={feature.id} className="bg-black rounded-xl w-full lg:w-[calc(25%-12px)]">
-                            <div className="bg-white h-full rounded-xl lg:hover:-translate-x-1 lg:hover:-translate-y-1 border-[2px] border-black transition-all p-4">
-                                <NavLink to={feature.link} className={'flex flex-col gap-3'}>
-                                    <div className="overflow-hidden rounded-2xl">
-                                        <img src={feature.img} alt={feature.title} className='w-full' />
-                                    </div>
-                                    <p className='text-xl font-semibold text-darkText' >{feature.title}</p>
-                                </NavLink>
+                        {feature.id == CurrentFeatureId ? <>
+                            <div className="bg-black rounded-xl w-full lg:w-[calc(25%-12px)]">
+                                <div className="bg-white h-full rounded-xl lg:hover:-translate-x-1 lg:hover:-translate-y-1 border-[2px] border-black transition-all p-4">
+                                    <NavLink to={'/integrations'} className={'flex flex-col gap-3'}>
+                                        <div className="overflow-hidden rounded-2xl">
+                                            <img src={integrations} alt={'integrations'} className='w-full' />
+                                        </div>
+                                        <p className='text-xl font-semibold text-darkText' >Integrations</p>
+                                    </NavLink>
+                                </div>
                             </div>
-                        </div>
+                        </> : <>
+                            <div key={feature.id} className="bg-black rounded-xl w-full lg:w-[calc(25%-12px)]">
+                                <div className="bg-white h-full rounded-xl lg:hover:-translate-x-1 lg:hover:-translate-y-1 border-[2px] border-black transition-all p-4">
+                                    <NavLink to={feature.link} className={'flex flex-col gap-3'}>
+                                        <div className="overflow-hidden rounded-2xl">
+                                            <img src={feature.img} alt={feature.title} className='w-full' />
+                                        </div>
+                                        <p className='text-xl font-semibold text-darkText' >{feature.title}</p>
+                                    </NavLink>
+                                </div>
+                            </div>
+                        </>}
                     </>
                 ))}
             </div>
