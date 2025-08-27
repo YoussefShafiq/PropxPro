@@ -405,10 +405,10 @@ export default function Navbar() {
                         >
                             <div className="py-5 px-8 overflow-y-auto max-h-[80vh]">
                                 <div className="flex flex-col gap-y-3 font-semibold">
-                                    <NavLink to="/pricing" onClick={() => setphoneNavbar(false)}>pricing</NavLink>
+                                    <NavLink to="/pricing" onClick={() => setphoneNavbar(false)}>Pricing</NavLink>
 
                                     <div className="flex justify-between items-center">
-                                        <div>features</div>
+                                        <div>Features</div>
                                         <motion.div
                                             className="text-3xl cursor-pointer transition-all"
                                             onClick={(e) => { e.stopPropagation(); setFeaturesDropdown(!FeaturesDropdown); setResourcesDropdown(false) }}
@@ -442,10 +442,10 @@ export default function Navbar() {
                                         )}
                                     </AnimatePresence>
 
-                                    <NavLink to="/integrations" onClick={() => setphoneNavbar(false)}>integrations</NavLink>
+                                    <NavLink to="/integrations" onClick={() => setphoneNavbar(false)}>Integrations</NavLink>
 
                                     <div className="flex justify-between items-center">
-                                        <div>resources</div>
+                                        <div>Resources</div>
                                         <motion.div
                                             className="text-3xl cursor-pointer transition-all"
                                             onClick={(e) => { e.stopPropagation(); setResourcesDropdown(!ResourcesDropdown); setFeaturesDropdown(false) }}
