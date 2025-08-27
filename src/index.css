@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+/* * {
     scroll-behavior: smooth;
-}
+} */
 
 .active {
     @apply text-hoverText
