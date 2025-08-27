@@ -27,8 +27,8 @@ export function SubFeatures() {
             <div className="flex flex-col lg:flex-row gap-10">
                 <div className="lg:w-1/2 bg-[#fefaf5] rounded-xl flex flex-col lg:pt-14 pb-5 gap-10 overflow-hidden" >
                     <div className="p-5 lg:px-14">
-                        <h2 className="lg:text-3xl font-bold text-darkText ">Transform your team</h2>
-                        <p className="text-sm lg:text-xl text-grayText font-medium mt-3 ">Manage users witth ease—and receive nottificattions for all activities—Perfect for your business needs!</p>
+                        <h2 className="lg:text-3xl text-xl font-bold text-darkText ">Transform your team</h2>
+                        <p className="text-md lg:text-xl text-grayText font-medium mt-3 ">Manage users witth ease—and receive nottificattions for all activities—Perfect for your business needs!</p>
                     </div>
                     <div className="lg:pe-14 pe-10 m-0" data-aos="slide-right">
                         <img src={transformTeam} className='w-full' alt="Transform your team" />
@@ -36,8 +36,8 @@ export function SubFeatures() {
                 </div>
                 <div className="lg:w-1/2 bg-[#f6f5fe] rounded-xl flex flex-col justify-between lg:pt-14 gap-10 overflow-hidden"  >
                     <div className="p-5 lg:px-14 ">
-                        <h2 className="lg:text-3xl font-bold text-darkText ">Manage user roles</h2>
-                        <p className="text-sm lg:text-xl text-grayText font-medium mt-3 ">Add, update, or delete user profiles easily to keep your team organized and efficient with PropXPro!</p>
+                        <h2 className="lg:text-3xl text-xl font-bold text-darkText ">Manage user roles</h2>
+                        <p className="text-md lg:text-xl text-grayText font-medium mt-3 ">Add, update, or delete user profiles easily to keep your team organized and efficient with PropXPro!</p>
                     </div>
                     <div className="lg:pe-20 pe-10 m-0" data-aos="slide-left">
                         <img src={manageRoles} className='w-full' alt="Manage user roles" />
@@ -47,8 +47,8 @@ export function SubFeatures() {
 
             <div className="bg-[#fef5f5] rounded-xl flex flex-col lg:pt-14 p-5 pb-0 lg:px-14 gap-10 overflow-hidden" >
                 <div className="lg:w-5/6">
-                    <h2 className="lg:text-3xl font-bold text-darkText ">Stay Informed Instantly</h2>
-                    <p className="text-sm lg:text-xl text-grayText font-medium mt-3 ">Stay updated with every user action in PropXPro CRM—additions, updates, and deletions—right from your notification icon!</p>
+                    <h2 className="lg:text-3xl text-xl font-bold text-darkText ">Stay Informed Instantly</h2>
+                    <p className="text-md lg:text-xl text-grayText font-medium mt-3 ">Stay updated with every user action in PropXPro CRM—additions, updates, and deletions—right from your notification icon!</p>
                 </div>
                 <div className="m-auto w-full" data-aos="slide-up" >
                     <img src={stayInformed} className='w-full' alt="Stay Informed Instantly" />

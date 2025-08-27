@@ -14,7 +14,7 @@ export function HeroSection() {
         <div className="bg-[#fff5c0] py-10 text-darkText">
             <div className="container flex flex-col gap-10 items-center" >
                 <div className="text-center text-4xl lg:text-6xl leading-[133%] font-extrabold lg:px-24">Every plan is a step towards your real estate excellence</div>
-                <div className="text-center lg:text-2xl leading-9 font-medium text-opacity-80 lg:px-80">Choose your perfect plan and begin converting opportunities into closed deals now!
+                <div className="text-center lg:text-2xl lg:leading-9 font-medium text-opacity-80 lg:px-80">Choose your perfect plan and begin converting opportunities into closed deals now!
                 </div>
             </div>
         </div>
@@ -87,7 +87,7 @@ export function PlansTable({ plans, features, additionalUsageCharges, isAnnual, 
                         </td>
                     </tr>
                     {features?.map((f, i) => (<>
-                        <tr className={`leading-9 ${i % 2 == 0 ? 'bg-[#f5f5f5]' : ''}`}>
+                        <tr className={`lg:leading-9 ${i % 2 == 0 ? 'bg-[#f5f5f5]' : ''}`}>
                             <td className='py-3 ps-3 text-xs lg:text-base'>{f.name}</td>
                             {plans?.map((p) => (<>
                                 <td className='text-black text-xs lg:text-sm text-start lg:text-left'>
@@ -102,7 +102,7 @@ export function PlansTable({ plans, features, additionalUsageCharges, isAnnual, 
                         </td>
                     </tr>
                     {additionalUsageCharges?.map((f, i) => (<>
-                        <tr className={`leading-9 ${i % 2 == 0 ? 'bg-[#f5f5f5]' : ''}`}>
+                        <tr className={`lg:leading-9 ${i % 2 == 0 ? 'bg-[#f5f5f5]' : ''}`}>
                             <td className='py-3 ps-3 text-xs lg:text-base'>{f.name}</td>
                             {plans?.map((p) => (<>
                                 <td className='text-black text-xs lg:text-sm'>
@@ -122,7 +122,7 @@ export function AgentFeedback() {
         <div className=" bg-[#f6f5fe]">
             <div className="container flex flex-col lg:flex-row gap-12 items-center">
                 <div className="lg:w-4/5">
-                    <p className='text-xl lg:text-4xl font-extrabold leading-9 lg:leading-[50px] text-darkText' >“ The intuitive interface makes it incredibly easy to use, and we've seen a significant boost in tenant satisfaction since we started using it. I can't imagine managing our properties without PropXPro now ”</p>
+                    <p className='text-xl lg:text-4xl font-extrabold lg:leading-9 lg:leading-[50px] text-darkText' >“ The intuitive interface makes it incredibly easy to use, and we've seen a significant boost in tenant satisfaction since we started using it. I can't imagine managing our properties without PropXPro now ”</p>
                 </div>
                 <div className="lg:w-80 flex flex-col justify-center">
                     <div className="relative flex items-center justify-center w-72 h-72 ">

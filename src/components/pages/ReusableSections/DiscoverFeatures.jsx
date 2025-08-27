@@ -67,7 +67,7 @@ export default function DiscoverFeatures({ CurrentFeatureId = null }) {
         <div className="container flex flex-col text-center gap-14">
             <div className="space-y-5">
                 <h2 className='text-2xl lg:text-5xl font-extrabold text-darkText leading-[133%]'>Discover more</h2>
-                <h3 className='lg:text-2xl font-medium text-darkText leading-9' >Explore in-depth every feature PropXPro offers</h3>
+                <h3 className='lg:text-2xl font-medium text-darkText lg:leading-9' >Explore in-depth every feature PropXPro offers</h3>
             </div>
             <div className="flex flex-wrap gap-4">
 

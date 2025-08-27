@@ -46,7 +46,7 @@ export default function StayConnected() {
                 <div className="text-center text-3xl lg:text-5xl leading-[133%] font-extrabold text-white lg:px-44">
                     Stay connected
                 </div>
-                <div className="text-center lg:text-2xl leading-9 font-medium text-white lg:px-80">
+                <div className="text-center lg:text-2xl lg:leading-9 font-medium text-white lg:px-80">
                     Subscribe to our newsletter to stay updated and secure better deals—never miss an opportunity again!
                 </div>
                 <form onSubmit={handleSubmit} className="flex flex-col gap-5 items-center lg:w-1/2 w-full">

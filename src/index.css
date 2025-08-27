@@ -11,7 +11,7 @@
 }
 
 .container {
-    @apply m-auto py-8 lg:py-16 !px-8 md:!px-0
+    @apply m-auto py-8 lg:py-16 !px-8 md: !px-0
 }
 
 ::-webkit-scrollbar {

@@ -30,8 +30,8 @@ export function SubFeatures() {
             <div className="flex flex-col lg:flex-row gap-10">
                 <div className="lg:w-1/2 bg-[#fefaf5] rounded-xl flex flex-col justify-between lg:pt-14  gap-10 overflow-hidden" >
                     <div className="p-5 lg:px-14">
-                        <div className="lg:text-3xl font-bold text-darkText ">Engage with your data</div>
-                        <div className="text-sm lg:text-xl text-grayText font-medium mt-3 ">Welcome to the heart of all your real estate operations!
+                        <div className="lg:text-3xl text-xl font-bold text-darkText ">Engage with your data</div>
+                        <div className="text-md lg:text-xl text-grayText font-medium mt-3 ">Welcome to the heart of all your real estate operations!
                             View all your performance metrics at a glance—every decision you make with propXpro is informed, strategic, and impactful.
                         </div>
                     </div>
@@ -41,8 +41,8 @@ export function SubFeatures() {
                 </div>
                 <div className="lg:w-1/2 bg-[#f6f5fe] rounded-xl flex flex-col justify-between lg:pt-14 gap-10 overflow-hidden"  >
                     <div className="p-5 lg:px-14 ">
-                        <div className="lg:text-3xl font-bold text-darkText ">Opportunities — Trent Tracker</div>
-                        <div className="text-sm lg:text-xl text-grayText font-medium mt-3 ">Track leads with vibrant visuals. Switch between weekly, monthly, or yearly views—spot trends and make smart decisions every time!</div>
+                        <div className="lg:text-3xl text-xl font-bold text-darkText ">Opportunities — Trent Tracker</div>
+                        <div className="text-md lg:text-xl text-grayText font-medium mt-3 ">Track leads with vibrant visuals. Switch between weekly, monthly, or yearly views—spot trends and make smart decisions every time!</div>
                     </div>
                     <div className="lg:ps-14 ps-10 m-0" data-aos="slide-left">
                         <img src={trendTracker} className='w-full' alt="phone numbers" />
@@ -52,8 +52,8 @@ export function SubFeatures() {
 
             <div className="bg-[#fef5f5] rounded-xl flex flex-col lg:pt-14 p-5 pb-0 lg:px-14 gap-10 overflow-hidden" >
                 <div className="lg:w-5/6">
-                    <div className="lg:text-3xl font-bold text-darkText ">Statistics metrics—Your performance boosters</div>
-                    <div className="text-sm lg:text-xl text-grayText font-medium mt-3 ">Track your victories with Propxpro for unstoppable growth!
+                    <div className="lg:text-3xl text-xl font-bold text-darkText ">Statistics metrics—Your performance boosters</div>
+                    <div className="text-md lg:text-xl text-grayText font-medium mt-3 ">Track your victories with Propxpro for unstoppable growth!
                     </div>
                 </div>
                 <div className="m-auto w-full" data-aos="slide-up" >
@@ -70,7 +70,7 @@ export function ActivityTracking() {
         <div className="container flex lg:flex-row flex-col gap-5 w-full items-center justify-between" data-aos="fade-up" data-aos-offset="200">
             <div className="lg:w-1/2 lg:pe-16">
                 <div className="text-2xl lg:text-5xl font-extrabold text-darkText leading-[133%]">Activity tracking </div>
-                <div className="lg:text-2xl text-grayText font-medium mt-6 leading-9">Monitor each move with precision—Check descriptions, locations, and timings for every action taken and more!
+                <div className="lg:text-2xl text-grayText font-medium mt-6 lg:leading-9">Monitor each move with precision—Check descriptions, locations, and timings for every action taken and more!
                 </div>
             </div>
             <div className="lg:w-1/2 rounded-xl">
@@ -85,7 +85,7 @@ export function AssignTask() {
         <div className="container flex lg:flex-row-reverse flex-col gap-5 lg:gap-32 w-full items-center justify-between" data-aos="fade-up" data-aos-offset="200">
             <div className="lg:w-1/2 ">
                 <div className="text-2xl lg:text-5xl font-extrabold text-darkText leading-[133%]">Assign tasks</div>
-                <div className="lg:text-2xl text-grayText font-medium mt-6 leading-9">Organize tasks effortlessly with Assignments Tab—instantly assign opportunities to the right team members with ease!
+                <div className="lg:text-2xl text-grayText font-medium mt-6 lg:leading-9">Organize tasks effortlessly with Assignments Tab—instantly assign opportunities to the right team members with ease!
                 </div>
             </div>
             <div className="lg:w-1/2 rounded-xl">
@@ -100,7 +100,7 @@ export function TwilioIntegration() {
         <div className="container flex lg:flex-row flex-col gap-5 w-full items-center justify-between" data-aos="fade-up" data-aos-offset="200">
             <div className="lg:w-1/2 lg:pe-16">
                 <div className="text-2xl lg:text-5xl font-extrabold text-darkText leading-[133%]">Twilio integration </div>
-                <div className="lg:text-2xl text-grayText font-medium mt-6 leading-9">Connect with Twilio now for quick, effective CRM messaging—Enhance your client interactions instantly!
+                <div className="lg:text-2xl text-grayText font-medium mt-6 lg:leading-9">Connect with Twilio now for quick, effective CRM messaging—Enhance your client interactions instantly!
 
                 </div>
             </div>
@@ -116,7 +116,7 @@ export function ChatTeamsManagement() {
         <div className="container flex lg:flex-row-reverse flex-col gap-5 lg:gap-32 w-full items-center justify-between" data-aos="fade-up" data-aos-offset="200">
             <div className="lg:w-1/2 ">
                 <div className="text-2xl lg:text-5xl font-extrabold text-darkText leading-[133%]">Chat teams management</div>
-                <div className="lg:text-2xl text-grayText font-medium mt-6 leading-9">Efficiently coordinate your chat teams with streamlined management tools, ensuring seamless communication and collaboration
+                <div className="lg:text-2xl text-grayText font-medium mt-6 lg:leading-9">Efficiently coordinate your chat teams with streamlined management tools, ensuring seamless communication and collaboration
                 </div>
             </div>
             <div className="lg:w-1/2 rounded-xl">

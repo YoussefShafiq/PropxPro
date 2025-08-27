@@ -29,7 +29,7 @@ export function SubFeatures() {
                 <div className="lg:w-7/12 bg-[#fefaf5] rounded-xl flex flex-col gap-5 overflow-hidden">
                     <div className="flex flex-col gap-4 p-10">
                         <h2 className='lg:text-3xl font-bold leading-[100%]'>Streamline your efforts</h2>
-                        <p className='text-sm lg:text-xl font-medium leading-9 text-opacity-80'>Manage, track, and improve every aspect of all your active campaigns with ease and confidence
+                        <p className='text-md lg:text-xl font-medium lg:leading-9 text-opacity-80'>Manage, track, and improve every aspect of all your active campaigns with ease and confidence
                         </p>
                     </div>
                     <div className="lg:pe-20 pe-10" data-aos="slide-right" data-aos-offset="200">
@@ -39,7 +39,7 @@ export function SubFeatures() {
                 <div className="lg:w-5/12 bg-[#f6f5fe] rounded-xl flex flex-col gap-5 pb-10 overflow-hidden">
                     <div className="flex flex-col gap-4 p-10">
                         <h2 className='lg:text-3xl font-bold leading-[100%]'>Explore performance</h2>
-                        <p className='text-sm lg:text-xl font-medium leading-9 text-opacity-80'>Visualize your campaign's growth with our interactive graph—see potential and performance over time!</p>
+                        <p className='text-md lg:text-xl font-medium lg:leading-9 text-opacity-80'>Visualize your campaign's growth with our interactive graph—see potential and performance over time!</p>
                     </div>
                     <div className="lg:ps-12 ps-10" data-aos="slide-left" data-aos-offset="200">
                         <img src={performance} alt="Explore performance" />
@@ -50,7 +50,7 @@ export function SubFeatures() {
                 <div className="lg:w-7/12 bg-[#fef5f5] rounded-xl flex flex-col justify-between gap-5 overflow-hidden">
                     <div className="flex flex-col gap-4 p-10">
                         <h2 className='lg:text-3xl font-bold leading-[100%]'>Opportunities management</h2>
-                        <p className='text-sm lg:text-xl font-medium leading-9 text-opacity-80'>Easily manage and monitor opportunities—Add, view, edit, and progress through various stages from one place</p>
+                        <p className='text-md lg:text-xl font-medium lg:leading-9 text-opacity-80'>Easily manage and monitor opportunities—Add, view, edit, and progress through various stages from one place</p>
                     </div>
                     <div className="lg:pe-24 pe-10" data-aos="slide-right" data-aos-offset="200">
                         <img src={opportunitiesManagement} alt="Opportunities management" />
@@ -59,7 +59,7 @@ export function SubFeatures() {
                 <div className="lg:w-5/12 bg-[#eff9f2] rounded-xl flex flex-col justify-between gap-5 overflow-hidden">
                     <div className="flex flex-col gap-4 p-10">
                         <h2 className='lg:text-3xl font-bold leading-[100%]'>Opportunity insights</h2>
-                        <p className='text-sm lg:text-xl font-medium leading-9 text-opacity-80'>Access and manage comprehensive opportunity details. Streamline your workflows for successful real estate transactions.</p>
+                        <p className='text-md lg:text-xl font-medium lg:leading-9 text-opacity-80'>Access and manage comprehensive opportunity details. Streamline your workflows for successful real estate transactions.</p>
                     </div>
                     <div className="lg:ps-12 ps-10" data-aos="slide-left" data-aos-offset="200">
                         <img src={opportunitiesInsights} alt="Opportunity insights" />

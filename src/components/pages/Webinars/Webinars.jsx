@@ -22,7 +22,7 @@ export function HeroSection() {
             <div className="container flex flex-wrap lg:flex-nowrap lg:items-center gap-10 justify-between ">
                 <div className="lg:w-2/3  lg:ps-10 flex flex-col gap-5 text-center lg:text-left">
                     <h1 className='text-4xl lg:text-6xl font-extrabold leading-[139%] lg:leading-[117%] text-darkBlue'>{data.headline}</h1>
-                    <p className='lg:text-2xl  font-medium leading-9 text-darkText text-opacity-80 lg:pe-16'>{data.description} </p>
+                    <p className='lg:text-2xl  font-medium lg:leading-9 text-darkText text-opacity-80 lg:pe-16'>{data.description} </p>
                 </div>
                 <div className="lg:w-1/3  overflow-hidden">
                     <img src={data.img} className='rounded-b-xl h-full' alt={data.headline} />

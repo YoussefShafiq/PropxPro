@@ -40,7 +40,7 @@ export function HeroSection({ data: heroBlog }) {
                     <p>{heroBlog.updated_at.substring(0, 10)}</p>
                 </div> */}
                 <h1 className='text-4xl lg:text-6xl font-extrabold leading-[139%] lg:leading-[117%] text-darkBlue'>{data.headline}</h1>
-                <p className='lg:text-2xl  font-medium leading-9 text-darkText text-opacity-80 lg:pe-16'>{data.description} </p>
+                <p className='lg:text-2xl  font-medium lg:leading-9 text-darkText text-opacity-80 lg:pe-16'>{data.description} </p>
                 <LearnMore />
             </div>
         </div>
@@ -85,7 +85,7 @@ export function PowerUpYourProductivity() {
             <div className="container !p-0 flex flex-wrap lg:flex-nowrap gap-5 justify-between items-center">
                 <div className="lg:w-3/5 py-8 flex flex-col gap-5 text-left">
                     <h1 className='text-4xl lg:text-6xl font-extrabold leading-[139%] lg:leading-[117%] text-darkBlue'>Power up your productivity</h1>
-                    <p className='lg:text-2xl  font-medium leading-9 text-darkText text-opacity-80 lg:pe-16'>Maximize your efficiency with PropXpro—Discover our expert tips to simplify operations, automate workflows, and secure more deals with ease and confidence.
+                    <p className='lg:text-2xl  font-medium lg:leading-9 text-darkText text-opacity-80 lg:pe-16'>Maximize your efficiency with PropXpro—Discover our expert tips to simplify operations, automate workflows, and secure more deals with ease and confidence.
                     </p>
                     <div className="flex items-center gap-2 font-bold">
                         <Link to="/blog/all-posts">Browse top posts</Link>

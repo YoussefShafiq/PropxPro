@@ -49,7 +49,7 @@ function App() {
           animatedClassName: 'aos-animate',
           offset: 100,
           delay: 100,
-          duration: 500,
+          duration: 700,
           easing: 'ease-in-out',
           once: true,
           mirror: false,
@@ -82,7 +82,7 @@ function App() {
 
   let routers = createBrowserRouter([
     {
-      path: '', element: <Layout />, errorElement: <ErrorPage />, children: [
+      path: '', element: <Layout />, children: [
         { index: true, element: <Home /> },
         { path: 'home', element: <Home /> },
         {

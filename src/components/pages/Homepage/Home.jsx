@@ -39,7 +39,7 @@ export function Userfriendly() {
         <div className="container  flex lg:flex-row flex-col gap-5 w-full items-center justify-between" data-aos="fade-up" data-aos-offset="200">
             <div className="lg:w-1/2 lg:pe-16">
                 <div className="text-2xl lg:text-5xl font-extrabold text-darkText leading-[133%]">User-friendly dashboard</div>
-                <div className="lg:text-2xl text-grayText font-medium mt-6 leading-9">View all your KPIs—track weekly, monthly, and yearly opportunities. Make practical, informed decisions that lead to confident, winning outcomes—let’s achieve success together!</div>
+                <div className="lg:text-2xl text-grayText font-medium mt-6 lg:leading-9">View all your KPIs—track weekly, monthly, and yearly opportunities. Make practical, informed decisions that lead to confident, winning outcomes—let’s achieve success together!</div>
             </div>
             <div className="lg:w-1/2 rounded-xl">
                 <img src={userFriendlyDashboard} alt="user-friendly dashboard" className='w-full' />
@@ -53,7 +53,7 @@ export function LeadManagement() {
         <div className="container flex lg:flex-row flex-col gap-5  w-full items-center justify-between" data-aos="fade-up" data-aos-offset="200">
             <div className="lg:w-1/2 lg:pe-16">
                 <div className="text-2xl lg:text-5xl font-extrabold text-darkText leading-[133%]">Lead management system</div>
-                <div className="lg:text-2xl text-grayText font-medium mt-6 leading-9">All your leads in one place—PropXPro brings all your lead sources into one platform. Whether via round-robin, individual, or campaign-based strategies, managing and assigning becomes effortless with PropXPro.</div>
+                <div className="lg:text-2xl text-grayText font-medium mt-6 lg:leading-9">All your leads in one place—PropXPro brings all your lead sources into one platform. Whether via round-robin, individual, or campaign-based strategies, managing and assigning becomes effortless with PropXPro.</div>
             </div>
             <div className="lg:w-1/2 rounded-xl">
                 <img src={LeadManagement12} className='w-full' alt="user-friendly dashboard" />
@@ -67,7 +67,7 @@ export function RealTimeCommunication() {
         <div className="container flex lg:flex-row flex-col gap-5  w-full items-center justify-between" data-aos="fade-up" data-aos-offset="200" >
             <div className="lg:w-1/2 lg:pe-16">
                 <div className="text-2xl lg:text-5xl font-extrabold text-darkText leading-[133%]">Real time communication</div>
-                <div className="lg:text-2xl text-grayText font-medium mt-6 leading-9">With our own integrated communication tool like PropXChat—You stay in constant touch with your team and clients, ensuring no opportunity slips through the cracks.</div>
+                <div className="lg:text-2xl text-grayText font-medium mt-6 lg:leading-9">With our own integrated communication tool like PropXChat—You stay in constant touch with your team and clients, ensuring no opportunity slips through the cracks.</div>
             </div>
             <div className="lg:w-1/2  rounded-xl">
                 <img src={communication} className='w-full' alt="user-friendly dashboard" />
@@ -82,8 +82,8 @@ export function ChatsAndCalling() {
             <div className="flex flex-col lg:flex-row gap-10">
                 <div className="lg:w-3/5 bg-[#fefaf5] rounded-xl flex flex-col lg:pt-14 lg:pe-14 gap-10 overflow-hidden" >
                     <div className="p-5 lg:px-14">
-                        <div className="text-3xl font-bold text-darkText ">Teams chat</div>
-                        <div className="text-xl text-grayText font-medium mt-3 ">PropXPro Team chat enhances your productivity through streamlined communication and collaboration. Discover how easy growth can be—let's get started together!</div>
+                        <div className="text-2xl lg:text-3xl font-bold text-darkText ">Teams chat</div>
+                        <div className="lg:text-xl text-grayText font-medium mt-3 ">PropXPro Team chat enhances your productivity through streamlined communication and collaboration. Discover how easy growth can be—let's get started together!</div>
                     </div>
                     <div className="pe-10" data-aos="slide-right">
                         <img src={teamsChat} className='w-full' alt="teams chat" />
@@ -91,8 +91,8 @@ export function ChatsAndCalling() {
                 </div>
                 <div className="lg:w-2/5 bg-[#f6f5fe] rounded-xl flex flex-col lg:pt-14 gap-10 overflow-hidden"  >
                     <div className="p-5 lg:px-14 ">
-                        <div className="text-3xl font-bold text-darkText ">Phone numbers</div>
-                        <div className="text-xl text-grayText font-medium mt-3 ">Start simplifying your communications with a new work number—perfectly fit for all your business needs!</div>
+                        <div className="text-2xl lg:text-3xl font-bold text-darkText ">Phone numbers</div>
+                        <div className="lg:text-xl text-grayText font-medium mt-3 ">Start simplifying your communications with a new work number—perfectly fit for all your business needs!</div>
                     </div>
                     <div className="ps-14" data-aos="slide-left">
                         <img src={phoneNumbers} className='w-full' alt="phone numbers" />
@@ -102,8 +102,8 @@ export function ChatsAndCalling() {
 
             <div className="bg-[#fef5f5] rounded-xl flex flex-col lg:pt-14 p-5 pb-0 lg:pb-0 lg:px-14 gap-10 overflow-hidden" >
                 <div className="lg:w-5/6">
-                    <div className="text-3xl font-bold text-darkText ">Calling and messaging</div>
-                    <div className="text-xl text-grayText font-medium mt-3 ">Transform your team’s connectivity with PropXPro's advanced calls, group chats, real-time messaging with multimedia file-sharing and more—discover communication that truly connects!</div>
+                    <div className="text-2xl lg:text-3xl font-bold text-darkText ">Calling and messaging</div>
+                    <div className="lg:text-xl text-grayText font-medium mt-3 ">Transform your team’s connectivity with PropXPro's advanced calls, group chats, real-time messaging with multimedia file-sharing and more—discover communication that truly connects!</div>
                 </div>
                 <div className="m-auto w-full" data-aos="slide-up" >
                     <img src={calling} className='w-full' alt="calling and messaging" />
@@ -163,20 +163,20 @@ export function EmpowerYourTeamAndActionAssignment() {
         <div className="container flex lg:flex-row flex-col gap-10">
             <div className="w-full lg:w-3/5 bg-[#f6f5fe] rounded-xl flex flex-col lg:pt-14  gap-10 overflow-hidden"   >
                 <div className="p-5 lg:px-14">
-                    <div className="text-3xl font-bold text-darkText ">Empower your team</div>
-                    <div className="text-xl text-grayText font-medium mt-3 ">Assign roles from admins to agents, and track performance with ease—Creating a dynamic and collaborative space for your real estate Excellence.</div>
+                    <div className="text-2xl lg:text-5xl font-bold text-darkText ">Empower your team</div>
+                    <div className="lg:text-xl text-grayText font-medium mt-3 ">Assign roles from admins to agents, and track performance with ease—Creating a dynamic and collaborative space for your real estate Excellence.</div>
                 </div>
                 <div className="lg:pe-14 h-full" data-aos="slide-right">
-                    <img src={empowerTeam} className='h-full' alt="teams chat" />
+                    <img src={empowerTeam} className='lg:h-full ' alt="teams chat" />
                 </div>
             </div>
             <div className="w-full lg:w-2/5 bg-[#fefaf5] rounded-xl flex flex-col lg:pt-14  gap-10 overflow-hidden"   >
                 <div className="p-5 lg:px-14 ">
-                    <div className="text-3xl font-bold text-darkText ">Action assignment</div>
-                    <div className="text-xl text-grayText font-medium mt-3 ">Assign tasks based on expertise—PropXPro's smart round-robin system ensures balanced workloads. </div>
+                    <div className="text-2xl lg:text-3xl font-bold text-darkText ">Action assignment</div>
+                    <div className="lg:text-xl text-grayText font-medium mt-3 ">Assign tasks based on expertise—PropXPro's smart round-robin system ensures balanced workloads. </div>
                 </div>
                 <div className="ps-14 h-full" data-aos="slide-left">
-                    <img src={actionAssign} className='h-full' alt="phone numbers" />
+                    <img src={actionAssign} className='lg:h-full' alt="phone numbers" />
                 </div>
             </div>
         </div>
@@ -189,7 +189,7 @@ export function StreamlineYourWorkflow() {
             <div className="container !pb-0 mb-0 flex flex-col lg:flex-row gap-10  justify-between items-end">
                 <div className="w-full lg:w-1/2 lg:max-w-1/2 flex flex-col justify-center gap-10 h-full self-stretch">
                     <h2 className="text-2xl lg:text-5xl font-extrabold text-darkText leading-[133%]">Streamline your workflow</h2>
-                    <p className="lg:text-2xl text-darkText font-medium leading-9">
+                    <p className="lg:text-2xl text-darkText font-medium lg:leading-9">
                         Integrate PropXPro with ease—sync contacts, track conversations, and analyze calls—all in one place. Ready to upgrade?
                     </p>
                     <button className="bg-lightBlue text-white h-[56px] lg:w-[182px] rounded-lg text-xl font-semibold">
@@ -210,7 +210,7 @@ export function SimplifyChallenges() {
         <div className="bg-[#131e57] py-10">
             <div className="container flex flex-col gap-10 items-center">
                 <div className="text-center text-2xl lg:text-5xl leading-[133%] font-extrabold text-white">Simplify your real estate challenges</div>
-                <div className="text-center lg:text-2xl leading-9 font-medium text-white text-opacity-80 lg:px-56">Discover the ease of turning leads into victories with PropXPro. Each click on our platform is a step closer to your next big win in real estate!</div>
+                <div className="text-center lg:text-2xl lg:leading-9 font-medium text-white text-opacity-80 lg:px-56">Discover the ease of turning leads into victories with PropXPro. Each click on our platform is a step closer to your next big win in real estate!</div>
                 <RequestDemo />
             </div>
         </div>
@@ -222,7 +222,7 @@ export function AgentFeedback() {
         <div className=" bg-[#f5f9fe]">
             <div className="container flex flex-col lg:flex-row gap-12 items-center">
                 <div className="lg:w-4/5">
-                    <p className='text-xl lg:text-4xl font-extrabold leading-9 lg:leading-[50px] text-darkText' >“ Using PropXPro CRM  has been a game-changer for our business. It has streamlined our processes, making it easy to track sales and manage leads. The intuitive interface and robust features have significantly improved our efficiency ”</p>
+                    <p className='text-xl lg:text-4xl font-extrabold lg:leading-9 lg:leading-[50px] text-darkText' >“ Using PropXPro CRM  has been a game-changer for our business. It has streamlined our processes, making it easy to track sales and manage leads. The intuitive interface and robust features have significantly improved our efficiency ”</p>
                 </div>
                 <div className="lg:w-80 flex flex-col justify-center">
                     <div className="relative flex items-center justify-center w-72 h-72 ">
@@ -244,7 +244,7 @@ export function InvestmentIntoSuccess() {
         <div className="bg-[#131e57] py-10">
             <div className="container flex flex-col gap-10 items-center" >
                 <div className="text-center text-2xl lg:text-5xl leading-[133%] font-extrabold text-white lg:px-44">Transform your real estate investments into success stories</div>
-                <div className="text-center lg:text-2xl leading-9 font-medium text-white text-opacity-80 lg:px-72">Sign up and explore PropXPro  – Your journey towards confident deal-making begins here!</div>
+                <div className="text-center lg:text-2xl lg:leading-9 font-medium text-white text-opacity-80 lg:px-72">Sign up and explore PropXPro  – Your journey towards confident deal-making begins here!</div>
                 <GetStarted />
             </div>
         </div>
@@ -256,7 +256,7 @@ export default function Home() {
     return <>
         <HeroSection />
         <div className="py-8 lg:py-28 space-y-4 px-6" data-aos="fade-up" data-aos-offset="200">
-            <div className="lg:text-3xl font-medium text-center text-grayText leading-9">Explore performance metric at a glance</div>
+            <div className="lg:text-3xl text-xl font-medium text-center text-grayText lg:leading-9">Explore performance metric at a glance</div>
             <div className="text-4xl lg:text-7xl text-darkText text-center font-extrabold leading-[115%]">Close deals with ease & confidence</div>
         </div>
         <Userfriendly />

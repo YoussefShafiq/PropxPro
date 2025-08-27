@@ -29,8 +29,8 @@ export function SubFeatures() {
             <div className="flex flex-col lg:flex-row gap-10">
                 <div className="lg:w-1/2 bg-[#fefaf5] rounded-xl flex flex-col justify-between lg:pt-14 gap-10 overflow-hidden" >
                     <div className="p-5 lg:px-14">
-                        <h2 className="lg:text-3xl font-bold text-darkText ">Unified team communication</h2>
-                        <p className="text-sm lg:text-xl text-grayText font-medium mt-3 ">Call and text from one number—ensuring professional, unified team communication always!</p>
+                        <h2 className="lg:text-3xl text-xl font-bold text-darkText ">Unified team communication</h2>
+                        <p className="text-md lg:text-xl text-grayText font-medium mt-3 ">Call and text from one number—ensuring professional, unified team communication always!</p>
                     </div>
                     <div className="lg:pe-14 pe-10 m-0" data-aos="slide-right">
                         <img src={unifiedTeamCommunicaiton} className='w-full' alt="Unified team communication" />
@@ -38,8 +38,8 @@ export function SubFeatures() {
                 </div>
                 <div className="lg:w-1/2 bg-[#f6f5fe] rounded-xl flex flex-col justify-between lg:pt-14 gap-10 overflow-hidden"  >
                     <div className="p-5 lg:px-14 ">
-                        <h2 className="lg:text-3xl font-bold text-darkText ">Phone numbers </h2>
-                        <p className="text-sm lg:text-xl text-grayText font-medium mt-3 ">Get your ideal business number—manage multiple lines, and adjust team size easily!</p>
+                        <h2 className="lg:text-3xl text-xl font-bold text-darkText ">Phone numbers </h2>
+                        <p className="text-md lg:text-xl text-grayText font-medium mt-3 ">Get your ideal business number—manage multiple lines, and adjust team size easily!</p>
                     </div>
                     <div className="lg:ps-20 ps-10 m-0" data-aos="slide-left">
                         <img src={phoneNumbers} className='w-full' alt="Phone numbers " />
@@ -49,8 +49,8 @@ export function SubFeatures() {
 
             <div className="bg-[#fef5f5] rounded-xl flex flex-col lg:pt-14 p-5 pb-0 lg:px-14 gap-10 overflow-hidden" >
                 <div className="lg:w-5/6">
-                    <h2 className="lg:text-3xl font-bold text-darkText ">Advanced calls and messaging</h2>
-                    <p className="text-sm lg:text-xl text-grayText font-medium mt-3 ">Engage your team with group calls, instant messaging, file sharing, and AI-driven call summaries—never miss a detail!</p>
+                    <h2 className="lg:text-3xl text-xl font-bold text-darkText ">Advanced calls and messaging</h2>
+                    <p className="text-md lg:text-xl text-grayText font-medium mt-3 ">Engage your team with group calls, instant messaging, file sharing, and AI-driven call summaries—never miss a detail!</p>
                 </div>
                 <div className="m-auto w-full" data-aos="slide-up" >
                     <img src={advancedCalls} className='w-full' alt="Advanced calls and messaging" />

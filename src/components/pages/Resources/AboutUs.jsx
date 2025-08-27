@@ -25,7 +25,7 @@ export function CloseDealsSection() {
         <div className="container flex flex-col lg:flex-row justify-center gap-5" data-aos="fade-up">
             <div className="lg:w-1/2 py-8 flex flex-col gap-5 text-left">
                 <h1 className='text-2xl lg:text-5xl font-extrabold leading-[139%] lg:leading-[117%] text-darkBlue'>Close more deals with confidence</h1>
-                <p className='lg:text-2xl  font-medium leading-9 text-darkText text-opacity-80 lg:pe-16'>This is the motto and heartbeat of PropXPro. Designed to empower real estate professionals with a powerful, super user-friendly system for team management and real-time communication. We are committed to transforming your real estate operations into hassle-free experiences. Every deal, every task—handled with ease. Experience a new level of success with PropXPro!!
+                <p className='lg:text-2xl  font-medium lg:leading-9 text-darkText text-opacity-80 lg:pe-16'>This is the motto and heartbeat of PropXPro. Designed to empower real estate professionals with a powerful, super user-friendly system for team management and real-time communication. We are committed to transforming your real estate operations into hassle-free experiences. Every deal, every task—handled with ease. Experience a new level of success with PropXPro!!
                 </p>
             </div>
             <div className="lg:w-1/2 rounded-xl overflow-hidden flex justify-center items-end">
@@ -40,7 +40,7 @@ export function RealstateMadeSimpleSection() {
         <div className="container flex flex-col lg:flex-row-reverse justify-center gap-5" data-aos="fade-up">
             <div className="lg:w-1/2 py-8 flex flex-col gap-5 text-left">
                 <h1 className='text-2xl lg:text-5xl font-extrabold leading-[139%] lg:leading-[117%] text-darkBlue'>Real estate made simple with PropXPro</h1>
-                <p className='lg:text-2xl  font-medium leading-9 text-darkText text-opacity-80 lg:pe-16'>At PropXPro, our vision is to simplify real estate CRM systems. We bring clarity and ease to every transaction—letting you Focus on building relationships and closing deals, while our platform handles the rest. Experience a new level of efficiency and success with PropXPro—your perfect partner for transforming real estate operations. Let's make success easy!</p>
+                <p className='lg:text-2xl  font-medium lg:leading-9 text-darkText text-opacity-80 lg:pe-16'>At PropXPro, our vision is to simplify real estate CRM systems. We bring clarity and ease to every transaction—letting you Focus on building relationships and closing deals, while our platform handles the rest. Experience a new level of efficiency and success with PropXPro—your perfect partner for transforming real estate operations. Let's make success easy!</p>
             </div>
             <div className="lg:w-1/2 rounded-xl overflow-hidden flex justify-center items-end">
                 <img src={target} alt="Real estate made simple with PropXPro" className='w-2/3' />
@@ -54,7 +54,7 @@ export function AchieveRealstateExcellence() {
         <div className="container flex flex-col lg:flex-row justify-center gap-5" data-aos="fade-up">
             <div className="lg:w-1/2 py-8 flex flex-col gap-5 text-left">
                 <h1 className='text-2xl lg:text-5xl font-extrabold leading-[139%] lg:leading-[117%] text-darkBlue'>Achieve your real estate excellence</h1>
-                <p className='lg:text-2xl  font-medium leading-9 text-darkText text-opacity-80 lg:pe-16'>Our mission is to empower you with a comprehensive CRM that streamlines your workflow, maximizes efficiency, and amplifies your deal-closing potential. We're the driving force behind successful real estate transactions, making PropXPro your perfect business ally. Get ready to change the way you work and achieve more with PropXPro!
+                <p className='lg:text-2xl  font-medium lg:leading-9 text-darkText text-opacity-80 lg:pe-16'>Our mission is to empower you with a comprehensive CRM that streamlines your workflow, maximizes efficiency, and amplifies your deal-closing potential. We're the driving force behind successful real estate transactions, making PropXPro your perfect business ally. Get ready to change the way you work and achieve more with PropXPro!
 
                 </p>
             </div>
@@ -126,7 +126,7 @@ export function UnlockExclusiveInsights() {
             <div className="container flex flex-col lg:flex-row-reverse justify-center gap-5" data-aos="fade-up">
                 <div className="lg:w-1/2 py-8 flex flex-col gap-5 text-center lg:text-left">
                     <h1 className='text-3xl lg:text-5xl font-extrabold leading-[139%] lg:leading-[117%] text-darkBlue'>Unlock exclusive real estate insights</h1>
-                    <p className='lg:text-2xl  font-medium leading-9 text-darkText text-opacity-80 lg:pe-16'>Stay ahead in real estate management. Follow us for expert tips, updates, and exciting opportunities!
+                    <p className='lg:text-2xl  font-medium lg:leading-9 text-darkText text-opacity-80 lg:pe-16'>Stay ahead in real estate management. Follow us for expert tips, updates, and exciting opportunities!
                     </p>
                     <SocialMedia size={'text-3xl'} justify='justify-start' />
                 </div>
