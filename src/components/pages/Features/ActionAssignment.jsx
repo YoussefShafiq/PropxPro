@@ -30,7 +30,7 @@ export function SubFeatures() {
         <div className="container flex flex-col gap-10">
             <div className="flex lg:flex-row flex-col gap-10">
                 <div className="lg:w-7/12 bg-[#fefaf5] rounded-xl flex flex-col gap-5 overflow-hidden">
-                    <div className="flex flex-col gap-4 p-10">
+                    <div className="flex flex-col gap-4 p-5 lg:p-10">
                         <h2 className='lg:text-3xl text-xl font-bold leading-[100%]'>Optimize your team potential</h2>
                         <p className='text-md lg:text-xl font-medium lg:leading-9 text-opacity-80'>Efficiently distribute tasks to the right team members—PropXPro ensures every action is handled by the best fit!</p>
                     </div>
@@ -39,7 +39,7 @@ export function SubFeatures() {
                     </div>
                 </div>
                 <div className="lg:w-5/12 bg-[#f6f5fe] rounded-xl flex flex-col justify-between gap-5 pb-0 overflow-hidden">
-                    <div className="flex flex-col gap-4 p-10">
+                    <div className="flex flex-col gap-4 p-5 lg:p-10">
                         <h2 className='lg:text-3xl text-xl font-bold leading-[100%]'>Smart task distribution</h2>
                         <p className='text-md lg:text-xl font-medium lg:leading-9 text-opacity-80'> PropXPro's round-robin system evenly assigns tasks, ensuring no team member is overheaded—Experience productivity like never before! </p>
                     </div>
@@ -50,7 +50,7 @@ export function SubFeatures() {
             </div>
             <div className="flex lg:flex-row flex-col gap-10">
                 <div className="lg:w-7/12 bg-[#fef5f5] rounded-xl flex flex-col justify-between gap-5 overflow-hidden">
-                    <div className="flex flex-col gap-4 p-10">
+                    <div className="flex flex-col gap-4 p-5 lg:p-10">
                         <h2 className='lg:text-3xl text-xl font-bold leading-[100%]'>Role-based assignments</h2>
                         <p className='text-md lg:text-xl font-medium lg:leading-9 text-opacity-80'>Assign tasks based on each member’s strengths and expertise. Maximize your team's potential!</p>
                     </div>
@@ -59,7 +59,7 @@ export function SubFeatures() {
                     </div>
                 </div>
                 <div className="lg:w-5/12 bg-[#eff9f2] rounded-xl flex flex-col gap-5 overflow-hidden">
-                    <div className="flex flex-col gap-4 p-10">
+                    <div className="flex flex-col gap-4 p-5 lg:p-10">
                         <h2 className='lg:text-3xl text-xl font-bold leading-[100%]'>Detailed task tracking</h2>
                         <p className='text-md lg:text-xl font-medium lg:leading-9 text-opacity-80'>Monitor all assigned tasks and their progress in real-time. Stay on top of every lead!</p>
                     </div>

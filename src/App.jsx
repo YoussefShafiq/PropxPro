@@ -82,7 +82,7 @@ function App() {
 
   let routers = createBrowserRouter([
     {
-      path: '', element: <Layout />, children: [
+      path: '', element: <Layout />, errorElement: <ErrorPage />, children: [
         { index: true, element: <Home /> },
         { path: 'home', element: <Home /> },
         {
