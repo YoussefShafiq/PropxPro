@@ -33,7 +33,7 @@ export function SubFeatures() {
                         <h2 className='lg:text-3xl text-xl font-bold leading-[100%]'>Lead your team</h2>
                         <p className='text-md lg:text-xl font-medium lg:leading-9 text-opacity-80'>Assign leads with ease, keeping everyone on track and productive!</p>
                     </div>
-                    <div className="ps-10" data-aos="slide-left" data-aos-offset="200">
+                    <div className="ps-10" data-aos="fade-left" data-aos-offset="200">
                         <img src={lead} alt="Lead your team" />
                     </div>
                 </div>
@@ -43,10 +43,10 @@ export function SubFeatures() {
                         <p className='text-md lg:text-xl font-medium lg:leading-9 text-opacity-80'>Access and manage all your leads from one place, regardless of the source!</p>
                     </div>
                     <div className="flex flex-col gap-5">
-                        <div className="lg:ps-28 ps-10" data-aos="slide-left" data-aos-offset="200">
+                        <div className="lg:ps-28 ps-10" data-aos="fade-left" data-aos-offset="200">
                             <img src={centralizedDBImg1} alt="Centralized database" />
                         </div>
-                        <div className="lg:pe-28 pe-10" data-aos="slide-right" data-aos-offset="200">
+                        <div className="lg:pe-28 pe-10" data-aos="fade-right" data-aos-offset="200">
                             <img src={centralizedDBImg2} alt="Centralized database" />
                         </div>
                     </div>
@@ -60,7 +60,7 @@ export function SubFeatures() {
 
                         </p>
                     </div>
-                    <div className="ps-10" data-aos="slide-left" data-aos-offset="200">
+                    <div className="ps-10" data-aos="fade-left" data-aos-offset="200">
                         <img src={smartAssignments} alt="Smart assignments" />
                     </div>
                 </div>
@@ -70,10 +70,10 @@ export function SubFeatures() {
                         <p className='text-md lg:text-xl font-medium lg:leading-9 text-opacity-80'>Track lead progress in real-time, from first contact to closing deals!</p>
                     </div>
                     <div className="flex flex-col -space-y-5">
-                        <div className="lg:ps-28 ps-10" data-aos="slide-left" data-aos-offset="200">
+                        <div className="lg:ps-28 ps-10" data-aos="fade-left" data-aos-offset="200">
                             <img src={realtimeTracking1} alt="Real-time tracking" />
                         </div>
-                        <div className="lg:pe-16 pe-10" data-aos="slide-right" data-aos-offset="200">
+                        <div className="lg:pe-16 pe-10" data-aos="fade-right" data-aos-offset="200">
                             <img src={realtimeTracking2} alt="Real-time tracking" />
                         </div>
                     </div>

@@ -30,7 +30,7 @@ export function SubFeatures() {
                         <h2 className="lg:text-3xl text-xl font-bold text-darkText ">Transform your team</h2>
                         <p className="text-md lg:text-xl text-grayText font-medium mt-3 ">Manage users witth ease—and receive nottificattions for all activities—Perfect for your business needs!</p>
                     </div>
-                    <div className="lg:pe-14 pe-10 m-0" data-aos="slide-right">
+                    <div className="lg:pe-14 pe-10 m-0" data-aos="fade-right">
                         <img src={transformTeam} className='w-full' alt="Transform your team" />
                     </div>
                 </div>
@@ -39,7 +39,7 @@ export function SubFeatures() {
                         <h2 className="lg:text-3xl text-xl font-bold text-darkText ">Manage user roles</h2>
                         <p className="text-md lg:text-xl text-grayText font-medium mt-3 ">Add, update, or delete user profiles easily to keep your team organized and efficient with PropXPro!</p>
                     </div>
-                    <div className="lg:pe-20 pe-10 m-0" data-aos="slide-left">
+                    <div className="lg:pe-20 pe-10 m-0" data-aos="fade-left">
                         <img src={manageRoles} className='w-full' alt="Manage user roles" />
                     </div>
                 </div>
@@ -50,7 +50,7 @@ export function SubFeatures() {
                     <h2 className="lg:text-3xl text-xl font-bold text-darkText ">Stay Informed Instantly</h2>
                     <p className="text-md lg:text-xl text-grayText font-medium mt-3 ">Stay updated with every user action in PropXPro CRM—additions, updates, and deletions—right from your notification icon!</p>
                 </div>
-                <div className="m-auto w-full" data-aos="slide-up" >
+                <div className="m-auto w-full" data-aos="fade-up" >
                     <img src={stayInformed} className='w-full' alt="Stay Informed Instantly" />
                 </div>
             </div>

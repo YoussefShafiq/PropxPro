@@ -32,7 +32,7 @@ export function SubFeatures() {
                         <h2 className="lg:text-3xl text-xl font-bold text-darkText ">Unified team communication</h2>
                         <p className="text-md lg:text-xl text-grayText font-medium mt-3 ">Call and text from one number—ensuring professional, unified team communication always!</p>
                     </div>
-                    <div className="lg:pe-14 pe-10 m-0" data-aos="slide-right">
+                    <div className="lg:pe-14 pe-10 m-0" data-aos="fade-right">
                         <img src={unifiedTeamCommunicaiton} className='w-full' alt="Unified team communication" />
                     </div>
                 </div>
@@ -41,7 +41,7 @@ export function SubFeatures() {
                         <h2 className="lg:text-3xl text-xl font-bold text-darkText ">Phone numbers </h2>
                         <p className="text-md lg:text-xl text-grayText font-medium mt-3 ">Get your ideal business number—manage multiple lines, and adjust team size easily!</p>
                     </div>
-                    <div className="lg:ps-20 ps-10 m-0" data-aos="slide-left">
+                    <div className="lg:ps-20 ps-10 m-0" data-aos="fade-left">
                         <img src={phoneNumbers} className='w-full' alt="Phone numbers " />
                     </div>
                 </div>
@@ -52,7 +52,7 @@ export function SubFeatures() {
                     <h2 className="lg:text-3xl text-xl font-bold text-darkText ">Advanced calls and messaging</h2>
                     <p className="text-md lg:text-xl text-grayText font-medium mt-3 ">Engage your team with group calls, instant messaging, file sharing, and AI-driven call summaries—never miss a detail!</p>
                 </div>
-                <div className="m-auto w-full" data-aos="slide-up" >
+                <div className="m-auto w-full" data-aos="fade-up" >
                     <img src={advancedCalls} className='w-full' alt="Advanced calls and messaging" />
                 </div>
             </div>

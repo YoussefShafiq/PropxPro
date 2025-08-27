@@ -36,3 +36,89 @@
         padding-inline: 30px !important;
     }
 }
+
+/* Default AOS sets opacity:0, override it */
+[data-aos="fade-left"] {
+    opacity: 1 !important;
+    /* keep it visible */
+    transform: translateX(-10px);
+    /* start 10px to the left */
+}
+
+[data-aos="fade-left"].aos-animate {
+    transform: translateX(0);
+    /* move back to natural position */
+}
+
+[data-aos="fade-right"] {
+    opacity: 1 !important;
+    transform: translateX(10px);
+}
+
+[data-aos="fade-right"].aos-animate {
+    transform: translateX(0);
+}
+
+[data-aos="fade-up"] {
+    opacity: 1 !important;
+    transform: translateY(10px);
+}
+
+[data-aos="fade-up"].aos-animate {
+    transform: translateY(0);
+}
+
+[data-aos="fade-down"] {
+    opacity: 1 !important;
+    transform: translateY(-10px);
+}
+
+[data-aos="fade-down"].aos-animate {
+    transform: translateY(0);
+}
+
+/* ---- SLIDE LEFT ---- */
+[data-aos="slide-left"] {
+    opacity: 1 !important;
+    /* visible immediately */
+    transform: translateX(-10px);
+    /* start 10px left */
+}
+
+[data-aos="slide-left"].aos-animate {
+    transform: translateX(0);
+    /* slide into place */
+}
+
+/* ---- SLIDE RIGHT ---- */
+[data-aos="slide-right"] {
+    opacity: 1 !important;
+    transform: translateX(10px);
+    /* start 10px right */
+}
+
+[data-aos="slide-right"].aos-animate {
+    transform: translateX(0);
+}
+
+/* ---- SLIDE UP ---- */
+[data-aos="slide-up"] {
+    opacity: 1 !important;
+    transform: translateY(10px);
+    /* start 10px below */
+}
+
+[data-aos="slide-up"].aos-animate {
+    transform: translateY(0);
+}
+
+/* ---- SLIDE DOWN ---- */
+[data-aos="slide-down"] {
+    opacity: 1 !important;
+    transform: translateY(-10px);
+    /* start 10px above */
+}
+
+[data-aos="slide-down"].aos-animate {
+    transform: translateY(0);
+}

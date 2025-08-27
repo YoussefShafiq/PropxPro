@@ -31,7 +31,7 @@ export function SubFeatures() {
                         <h2 className='lg:text-3xl text-xl font-bold leading-[100%]'>Engage and inspire</h2>
                         <p className='text-md lg:text-xl font-medium lg:leading-9 text-opacity-80'>Keep everyone informed with detailed activity logs and real-time updates—Feel the difference!</p>
                     </div>
-                    <div className="lg:pe-24 pe-10" data-aos="slide-right" data-aos-offset="200">
+                    <div className="lg:pe-24 pe-10" data-aos="fade-right" data-aos-offset="200">
                         <img src={engageAndInspire} alt="Engage and inspire" />
                     </div>
                 </div>
@@ -40,7 +40,7 @@ export function SubFeatures() {
                         <h2 className='lg:text-3xl text-xl font-bold leading-[100%]'>Comprehensive activity Logs</h2>
                         <p className='text-md lg:text-xl font-medium lg:leading-9 text-opacity-80'>Track every step from opportunity creation to task completion—See who did what and when, with clear, detailed entries.</p>
                     </div>
-                    <div className="lg:ps-12 ps-10" data-aos="slide-left" data-aos-offset="200">
+                    <div className="lg:ps-12 ps-10" data-aos="fade-left" data-aos-offset="200">
                         <img src={activityLogs} alt="Comprehensive activity Logs" />
                     </div>
                 </div>
@@ -51,7 +51,7 @@ export function SubFeatures() {
                         <h2 className='lg:text-3xl text-xl font-bold leading-[100%]'>Actionable insights</h2>
                         <p className='text-md lg:text-xl font-medium lg:leading-9 text-opacity-80'>Analyze trends and patterns to refine your strategies and boost your success. Stay proactive with data-driven decisions.</p>
                     </div>
-                    <div className="lg:px-24 px-10" data-aos="slide-right" data-aos-offset="200">
+                    <div className="lg:px-24 px-10" data-aos="fade-right" data-aos-offset="200">
                         <img src={actionableInsights} alt="Actionable insights" />
                     </div>
                 </div>
@@ -60,7 +60,7 @@ export function SubFeatures() {
                         <h2 className='lg:text-3xl text-xl font-bold leading-[100%]'>Real-time notifications</h2>
                         <p className='text-md lg:text-xl font-medium lg:leading-9 text-opacity-80'>Stay updated with real-time notifications. Never miss a crucial action or deadline—stay informed and ahead.</p>
                     </div>
-                    <div className="lg:px-20 px-10" data-aos="slide-left" data-aos-offset="200">
+                    <div className="lg:px-20 px-10" data-aos="fade-left" data-aos-offset="200">
                         <img src={realtimeNotifications} alt="Real-time notifications" />
                     </div>
                 </div>

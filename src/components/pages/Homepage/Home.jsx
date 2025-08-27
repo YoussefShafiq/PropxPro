@@ -85,7 +85,7 @@ export function ChatsAndCalling() {
                         <div className="text-2xl lg:text-3xl font-bold text-darkText ">Teams chat</div>
                         <div className="lg:text-xl text-grayText font-medium mt-3 ">PropXPro Team chat enhances your productivity through streamlined communication and collaboration. Discover how easy growth can be—let's get started together!</div>
                     </div>
-                    <div className="pe-10" data-aos="slide-right">
+                    <div className="pe-10" data-aos="fade-right">
                         <img src={teamsChat} className='w-full' alt="teams chat" />
                     </div>
                 </div>
@@ -94,7 +94,7 @@ export function ChatsAndCalling() {
                         <div className="text-2xl lg:text-3xl font-bold text-darkText ">Phone numbers</div>
                         <div className="lg:text-xl text-grayText font-medium mt-3 ">Start simplifying your communications with a new work number—perfectly fit for all your business needs!</div>
                     </div>
-                    <div className="ps-14" data-aos="slide-left">
+                    <div className="ps-14" data-aos="fade-left">
                         <img src={phoneNumbers} className='w-full' alt="phone numbers" />
                     </div>
                 </div>
@@ -105,7 +105,7 @@ export function ChatsAndCalling() {
                     <div className="text-2xl lg:text-3xl font-bold text-darkText ">Calling and messaging</div>
                     <div className="lg:text-xl text-grayText font-medium mt-3 ">Transform your team’s connectivity with PropXPro's advanced calls, group chats, real-time messaging with multimedia file-sharing and more—discover communication that truly connects!</div>
                 </div>
-                <div className="m-auto w-full" data-aos="slide-up" >
+                <div className="m-auto w-full" data-aos="fade-up" >
                     <img src={calling} className='w-full' alt="calling and messaging" />
                 </div>
             </div>
@@ -166,7 +166,7 @@ export function EmpowerYourTeamAndActionAssignment() {
                     <div className="text-2xl lg:text-5xl font-bold text-darkText ">Empower your team</div>
                     <div className="lg:text-xl text-grayText font-medium mt-3 ">Assign roles from admins to agents, and track performance with ease—Creating a dynamic and collaborative space for your real estate Excellence.</div>
                 </div>
-                <div className="lg:pe-14 h-full" data-aos="slide-right">
+                <div className="lg:pe-14 h-full" data-aos="fade-right">
                     <img src={empowerTeam} className='lg:h-full ' alt="teams chat" />
                 </div>
             </div>
@@ -175,7 +175,7 @@ export function EmpowerYourTeamAndActionAssignment() {
                     <div className="text-2xl lg:text-3xl font-bold text-darkText ">Action assignment</div>
                     <div className="lg:text-xl text-grayText font-medium mt-3 ">Assign tasks based on expertise—PropXPro's smart round-robin system ensures balanced workloads. </div>
                 </div>
-                <div className="ps-14 h-full" data-aos="slide-left">
+                <div className="ps-14 h-full flex justify-end" data-aos="fade-left">
                     <img src={actionAssign} className='lg:h-full' alt="phone numbers" />
                 </div>
             </div>
@@ -198,7 +198,7 @@ export function StreamlineYourWorkflow() {
                 </div>
                 <div className="w-fit lg:w-2/5 lg:min-w-[500px] flex overflow-hidden relative h-full items-end m-auto">
                     <img src={IntegrationsIcons} className="w-32 lg:w-48 absolute top-0 z-10" alt="phone numbers" />
-                    <img src={streamlineYourWorkflow} className="w-48 lg:w-72 ms-28 lg:ms-44" alt="phone numbers" data-aos="slide-up" />
+                    <img src={streamlineYourWorkflow} className="w-48 lg:w-72 ms-28 lg:ms-44" alt="phone numbers" data-aos="fade-up" />
                 </div>
             </div>
         </div>

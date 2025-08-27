@@ -51,7 +51,7 @@ function App() {
           delay: 100,
           duration: 700,
           easing: 'ease-in-out',
-          once: true,
+          once: false,
           mirror: false,
           startEvent: 'load',
           disable: false

@@ -121,12 +121,16 @@ export function InstantLeadGeneration() {
                     <h1 className='text-3xl lg:text-5xl font-extrabold leading-[139%] lg:leading-[117%] text-darkBlue'>{integrationBenifits[selectedBenifit].title}</h1>
                     <p className='lg:text-2xl  font-medium lg:leading-9 text-darkText text-opacity-80 lg:pe-16'>{integrationBenifits[selectedBenifit].desc}</p>
                     <div className="flex gap-5 items-center text-2xl">
-                        <button className="w-14 lg:w-16 aspect-square bg-white rounded-xl border-2 border-black flex justify-center items-center " onClick={() => setselectedBenifit((selectedBenifit - 1 + integrationBenifits.length) % integrationBenifits.length)} >
-                            <IoIosArrowBack />
-                        </button>
-                        <button className="w-14 lg:w-16 aspect-square bg-white rounded-xl border-2 border-black flex justify-center items-center" onClick={() => setselectedBenifit((selectedBenifit + 1) % integrationBenifits.length)}>
-                            <IoIosArrowForward />
-                        </button>
+                        <div className="bg-black rounded-xl relative w-14 lg:w-16 aspect-square">
+                            <button className="w-14 lg:w-16 aspect-square bg-white rounded-xl border-2 border-black flex justify-center items-center absolute bottom-0 right-0 hover:bottom-1 hover:right-1 transition-all duration-300" onClick={() => setselectedBenifit((selectedBenifit - 1 + integrationBenifits.length) % integrationBenifits.length)} >
+                                <IoIosArrowBack />
+                            </button>
+                        </div>
+                        <div className="bg-black rounded-xl relative w-14 lg:w-16 aspect-square">
+                            <button className="w-14 lg:w-16 aspect-square bg-white rounded-xl border-2 border-black flex justify-center items-center absolute bottom-0 right-0 hover:bottom-1 hover:right-1 transition-all duration-300" onClick={() => setselectedBenifit((selectedBenifit + 1) % integrationBenifits.length)}>
+                                <IoIosArrowForward />
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <div className="lg:w-1/2 rounded-xl overflow-hidden flex justify-center items-end">
