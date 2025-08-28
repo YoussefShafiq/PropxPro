@@ -64,25 +64,25 @@ export function LeadSuccessSimplified() {
     const items = [
         {
             id: 1,
-            icon: <TbUserSquare />,
+            icon: <TbUserSquare strokeWidth={1.75} />,
             title: "Efficient role assignment",
             description: "Easily assign roles to team members, ensuring everyone knows their responsibilities and can perform at their best."
         },
         {
             id: 2,
-            icon: <IoIosNotificationsOutline />,
+            icon: <IoIosNotificationsOutline strokeWidth={1.75} />,
             title: "Real-time updates",
             description: "Stay informed with real-time notifications for user additions, updates, and deletions, keeping you in control."
         },
         {
             id: 3,
-            icon: <RxDashboard />,
+            icon: <RxDashboard strokeWidth={0.5} />,
             title: "Streamlined operations",
             description: "Manage your team smoothly with a super user-friendly interface, enhancing your business's overall performance."
         },
         {
             id: 4,
-            icon: <LuHandshake />,
+            icon: <LuHandshake strokeWidth={1.75} />,
             title: "Improved collaboration",
             description: "Foster better teamwork with clear roles and real-time updates, ensuring seamless collaboration and productivity."
         }

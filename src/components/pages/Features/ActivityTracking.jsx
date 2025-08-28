@@ -74,25 +74,25 @@ export function LeadSuccessSimplified() {
     const items = [
         {
             id: 1,
-            icon: <LuLayers />,
+            icon: <LuLayers strokeWidth={1.75} />,
             title: "Clear operation overview",
             description: "View all your actions in one place. Understand the workflow and ensure nothing slips through the cracks."
         },
         {
             id: 2,
-            icon: <LuNotepadText />,
+            icon: <LuNotepadText strokeWidth={1.75} />,
             title: "Detailed descriptions",
             description: "Each activity is logged with specific details—who, what, where, and when—giving you a complete picture of your operations."
         },
         {
             id: 3,
-            icon: <PiGpsFixBold />,
+            icon: <PiGpsFixBold strokeWidth={1.75} />,
             title: "Perfect tracking for you",
             description: "Customize your tracking to fit your needs. Focus on the metrics that matter most to your business."
         },
         {
             id: 4,
-            icon: <PiWifiMediumBold className='rotate-45' />,
+            icon: <PiWifiMediumBold className='rotate-45' strokeWidth={1.75} />,
             title: "Real-time updates",
             description: "Receive instant notifications and updates. Stay informed and make timely decisions based on the most current information."
         }

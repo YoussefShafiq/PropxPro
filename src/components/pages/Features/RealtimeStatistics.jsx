@@ -85,25 +85,25 @@ export function LeadSuccessSimplified() {
     const items = [
         {
             id: 1,
-            icon: <LuChartColumnBig />,
+            icon: <LuChartColumnBig strokeWidth={1.75} />,
             title: "Real-time metrics",
             description: "Get detailed insights on completed operations, new opportunities, and more. Stay ahead and be informed with ease!"
         },
         {
             id: 2,
-            icon: <LuChartNoAxesCombined />,
+            icon: <LuChartNoAxesCombined strokeWidth={1.75} />,
             title: "Drive more sales",
             description: "Boost sales with real-time stats —refine strategies, understand clients, & deliver exceptional service to close more deals."
         },
         {
             id: 3,
-            icon: <PiMedalLight />,
+            icon: <PiMedalLight strokeWidth={1.75} />,
             title: "Amplify success",
             description: "Use real-time insights to enhance performance and achieve greater business success."
         },
         {
             id: 4,
-            icon: <LuMessageCircleMore />,
+            icon: <LuMessageCircleMore strokeWidth={1.75} />,
             title: "Stay connected",
             description: "Track real-time stats and KPIs—identify key relationships, and build trust through consistent communication for long-term success!"
         }

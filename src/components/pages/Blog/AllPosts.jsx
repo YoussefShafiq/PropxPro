@@ -83,7 +83,7 @@ export function Blogs() {
                 </div>
 
                 {/* Carousel Container */}
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden py-10">
                     {(blogs?.data?.data?.length == 0) && <div className='text-center w-full'>No blogs found</div>}
                     {isLoading &&
                         <>

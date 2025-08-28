@@ -65,25 +65,25 @@ export function LeadSuccessSimplified() {
     const items = [
         {
             id: 1,
-            icon: <BiNavigation />,
+            icon: <BiNavigation strokeWidth={1} />,
             title: "Team up—Connect instantly",
             description: "Message as one—everyone can text a contact together for unified, powerful communication. Never miss a chance to connect better!"
         },
         {
             id: 2,
-            icon: <LuPhoneCall />,
+            icon: <LuPhoneCall strokeWidth={1.75} />,
             title: "Flexible phone numbers",
             description: "Get your ideal number instantly—local, US, Canadian, or toll-free—start calling with confidence!"
         },
         {
             id: 3,
-            icon: <LuMessageSquareText />,
+            icon: <LuMessageSquareText strokeWidth={1.75} />,
             title: "Quick client chats",
             description: "Connect instantly with clients from opportunity details for fast, efficient communication."
         },
         {
             id: 4,
-            icon: <BsStars size={24} strokeWidth={1} fill='#1d2861' />,
+            icon: <BsStars size={24} fill='#1d2861' strokeWidth={1} />,
             title: "Upgrade your messaging",
             description: "PropXPro AI transforms your communication with professional rephrasing, making every message clear and effective."
         }

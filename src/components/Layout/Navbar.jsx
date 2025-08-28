@@ -153,19 +153,19 @@ export default function Navbar() {
 
     const features = [
         {
-            icon: <LuLayoutDashboard size='24' />,
+            icon: <LuLayoutDashboard size='24' strokeWidth={1.75} />,
             title: "User - friendly dashboard",
             desc: "Experience seamless navigation & intuitive designs",
             link: "/features/dashboard",
         },
         {
-            icon: <HiOutlineViewGridAdd size='24' />,
+            icon: <HiOutlineViewGridAdd size='24' strokeWidth={1.75} />,
             title: "Lead management system",
             desc: "Efficiently track, manage, and nurture your leads",
             link: "/features/lead-management-system",
         },
         {
-            icon: <LuChartColumnBig size='24' />,
+            icon: <LuChartColumnBig size='24' strokeWidth={1.75} />,
             title: "Detailed statistics",
             desc: "Get comprehensive insights and data-driven analysis",
             link: '/features/realtime-statistics',
@@ -177,7 +177,7 @@ export default function Navbar() {
             link: '/features/campaigns-and-opportunities',
         },
         {
-            icon: <LuUserCog size='24' />,
+            icon: <LuUserCog size='24' strokeWidth={1.75} />,
             title: "User management",
             desc: "Seamlessly onboard users with a streamlined registration process",
             link: '/features/user-management',
@@ -189,13 +189,13 @@ export default function Navbar() {
             link: '/features/activity-tracking',
         },
         {
-            icon: <LuLaptopMinimalCheck size='24' />,
+            icon: <LuLaptopMinimalCheck size='24' strokeWidth={1.75} />,
             title: "Action assignment",
             desc: "Efficiently delegate tasks and track progress seamlessly",
             link: '/features/action-assignment',
         },
         {
-            icon: <TbMessages size='24' />,
+            icon: <TbMessages size='24' strokeWidth={1.75} />,
             title: "Real time communication",
             desc: "Instantly connect and collaborate in real-time",
             link: '/features/realtime-communication',
@@ -204,31 +204,31 @@ export default function Navbar() {
 
     const resources = [
         {
-            icon: <LuSquareMousePointer size={24} strokeWidth={1.5} />,
+            icon: <LuSquareMousePointer size={24} strokeWidth={1.75} />,
             title: "About us",
             desc: "Discover our mission and values, driving excellence and innovation",
             link: '/about-us'
         },
         {
-            icon: <PiVideoLight size={24} strokeWidth={1.5} />,
+            icon: <PiVideoLight size={24} strokeWidth={1.75} />,
             title: "Webinars",
             desc: "Learn from experts in our interactive sessions",
             link: '/webinars'
         },
         {
-            icon: <LuBookText size={24} strokeWidth={1.5} />,
+            icon: <LuBookText size={24} strokeWidth={1.75} />,
             title: "Blog",
             desc: "Stay informed with our latest news, tips, and industry insights",
             link: '/blog'
         },
         {
-            icon: <FiEdit size={24} strokeWidth={1.5} />,
+            icon: <FiEdit size={24} strokeWidth={1.75} />,
             title: "Carrier registration",
             desc: "Join our network today to unlock exclusive opportunities",
             link: '/help-center'
         },
         {
-            icon: <LuMessageCircleQuestion size={24} strokeWidth={1.5} />,
+            icon: <LuMessageCircleQuestion size={24} strokeWidth={1.75} />,
             title: "Help center",
             desc: "Access tailored solutions and assistance.",
             link: '/help-center'

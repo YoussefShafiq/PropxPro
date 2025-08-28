@@ -130,25 +130,25 @@ export function OptimizedBusinessManagement() {
     const items = [
         {
             id: 1,
-            icon: <FiWifi />,
+            icon: <FiWifi strokeWidth={1.75} />,
             title: "Track everything",
             description: "Adjust metrics and set timeframes to get precise insights instantly—Make confident decisions every time!"
         },
         {
             id: 2,
-            icon: <LuChartNoAxesCombined />,
+            icon: <LuChartNoAxesCombined strokeWidth={1.75} />,
             title: "Engage with data ",
             description: "Hover over data points for detailed insights—Stay on top with real-time info for your real estate business."
         },
         {
             id: 3,
-            icon: <LuTableProperties />,
+            icon: <LuTableProperties strokeWidth={1.75} />,
             title: "Efficient management",
             description: "Track Every Detail—Use Activities and Assignments tabs to ensure nothing slips through the cracks."
         },
         {
             id: 4,
-            icon: <LuMessageCircleMore />,
+            icon: <LuMessageCircleMore strokeWidth={1.75} />,
             title: "Communicate easily",
             description: "Connect with Twilio for direct messaging from your CRM, keeping interactions organized in one place."
         }

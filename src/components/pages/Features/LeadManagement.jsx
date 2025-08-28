@@ -88,25 +88,25 @@ export function LeadSuccessSimplified() {
     const items = [
         {
             id: 1,
-            icon: <FiWifi />,
+            icon: <FiWifi strokeWidth={1.75} />,
             title: "Detailed tracking",
             description: "Track your leads with precision, ensuring every opportunity is maximized and nothing slips through cracks."
         },
         {
             id: 2,
-            icon: <BsSortUpAlt />,
+            icon: <BsSortUpAlt strokeWidth={0.5} />,
             title: "Effective follow-up",
             description: "Automate follow-up tasks to keep your leads engaged—ensuring smooth movement through the pipeline!"
         },
         {
             id: 3,
-            icon: <CiFilter />,
+            icon: <CiFilter strokeWidth={1.5} />,
             title: "Streamlined lead management",
             description: "Effortlessly assign leads to your team, ensuring that every member stays on track and maximizes productivity."
         },
         {
             id: 4,
-            icon: <LuMessageCircleMore />,
+            icon: <LuMessageCircleMore strokeWidth={1.75} />,
             title: "Easy communication",
             description: "Connect instantly with team members and contacts through real-time messaging and calls, ensuring timely lead management."
         }

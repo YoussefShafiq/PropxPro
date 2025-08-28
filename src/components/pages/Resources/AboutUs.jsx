@@ -93,7 +93,7 @@ export function CoreValues() {
             title: "Collaboration",
             description: "We believe in the power of teamwork, both within our organization and in partnership with our clients."
         },
-        { 
+        {
             id: 3,
             icon: <Trophy />,
             title: "Excellence",
@@ -107,7 +107,7 @@ export function CoreValues() {
                 <div className="flex flex-col lg:flex-row gap-5">
                     {
                         items.map((i) => (
-                            <div key={i.id} className="w-full lg:w-1/5 bg-[#1d2861] rounded-2xl p-5 pb-12 flex flex-col" data-aos="fade-up" data-aos-offset="200" data-aos-delay={i.id * 100} >
+                            <div key={i.id} className="w-full lg:w-1/5 bg-[#1d2861] rounded-2xl p-5 pb-12 flex flex-col"  >
                                 <div className="w-20 text-lightBlue text-3xl">
                                     {i.icon}
                                 </div>
@@ -125,7 +125,7 @@ export function CoreValues() {
 export function UnlockExclusiveInsights() {
     return <>
         <div className="bg-[#f6f5fe] py-3 lg:py-14">
-            <div className="container flex flex-col lg:flex-row-reverse justify-center gap-5" data-aos="fade-up">
+            <div className="container flex flex-col lg:flex-row-reverse justify-center gap-5" >
                 <div className="lg:w-1/2 py-8 flex flex-col gap-5 text-center lg:text-left">
                     <h1 className='text-3xl lg:text-5xl font-extrabold leading-[139%] lg:leading-[117%] text-darkBlue'>Unlock exclusive real estate insights</h1>
                     <p className='lg:text-2xl  font-medium lg:leading-9 text-darkText text-opacity-80 lg:pe-16'>Stay ahead in real estate management. Follow us for expert tips, updates, and exciting opportunities!

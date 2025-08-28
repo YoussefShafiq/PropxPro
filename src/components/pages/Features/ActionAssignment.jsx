@@ -82,25 +82,25 @@ export function LeadSuccessSimplified() {
     const items = [
         {
             id: 1,
-            icon: <AiOutlineLike />,
+            icon: <AiOutlineLike strokeWidth={1.75} />,
             title: "Balanced workloads",
             description: "PropXPro’s system balances workloads, making sure every task is efficiently managed and executed."
         },
         {
             id: 2,
-            icon: <LiaListAltSolid />,
+            icon: <LiaListAltSolid strokeWidth={1} />,
             title: "Expert task allocation",
             description: "Assign tasks to those best suited for them, ensuring high-quality outcomes and improved efficiency."
         },
         {
             id: 3,
-            icon: <LuClipboardList />,
+            icon: <LuClipboardList strokeWidth={1.75} />,
             title: "Comprehensive task overview",
             description: "Track tasks, assignments, and progress with ease. Keep your team organized and productive."
         },
         {
             id: 4,
-            icon: <LuMessageSquareText />,
+            icon: <LuMessageSquareText strokeWidth={1.75} />,
             title: "Enhanced collaboration",
             description: "Integration with communication tools keeps your team connected and informed at all times."
         }

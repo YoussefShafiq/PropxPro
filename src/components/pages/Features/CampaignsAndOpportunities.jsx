@@ -77,25 +77,25 @@ export function LeadSuccessSimplified() {
     const items = [
         {
             id: 1,
-            icon: <LuChartSpline />,
+            icon: <LuChartSpline strokeWidth={1.75} />,
             title: "Track performance instantly",
             description: "Monitor key metrics and adjust strategies in real-time to maximize your ROI."
         },
         {
             id: 2,
-            icon: <Hourglass />,
+            icon: <Hourglass strokeWidth={1.75} />,
             title: "Automate follow-ups",
             description: "Save time with automated follow-ups, ensuring no lead is missed and campaigns run smoothly."
         },
         {
             id: 3,
-            icon: <LuChartCandlestick />,
+            icon: <LuChartCandlestick strokeWidth={1.75} />,
             title: "Visualize data easily",
             description: "Use interactive charts to spot trends and make confident, data-driven decisions."
         },
         {
             id: 4,
-            icon: <BiBarChartSquare />,
+            icon: <BiBarChartSquare strokeWidth={0.5} />,
             title: "Manage deals efficiently",
             description: "From new opportunities to ongoing deals, handle everything in the Opportunity dashboard."
         }
