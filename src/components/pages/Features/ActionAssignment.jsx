@@ -13,10 +13,11 @@ import FeatureBenefits from '../ReusableSections/FeatureBenefits'
 import FeaturesHeroSection from '../ReusableSections/FeaturesHeroSection'
 import { BsFileEarmarkText } from 'react-icons/bs'
 import { CiCompass1 } from 'react-icons/ci'
-import { LuMessageSquareDot } from 'react-icons/lu'
+import { LuClipboardList, LuMessageSquareDot, LuMessageSquareText } from 'react-icons/lu'
 import { AiOutlineLike } from 'react-icons/ai'
 import { FaTasks } from 'react-icons/fa'
 import { TbMessages } from 'react-icons/tb'
+import { LiaListAltSolid } from 'react-icons/lia'
 
 
 export function HeroSection() {
@@ -87,19 +88,19 @@ export function LeadSuccessSimplified() {
         },
         {
             id: 2,
-            icon: <FaTasks />,
+            icon: <LiaListAltSolid />,
             title: "Expert task allocation",
             description: "Assign tasks to those best suited for them, ensuring high-quality outcomes and improved efficiency."
         },
         {
             id: 3,
-            icon: <IoAnalyticsSharp />,
+            icon: <LuClipboardList />,
             title: "Comprehensive task overview",
             description: "Track tasks, assignments, and progress with ease. Keep your team organized and productive."
         },
         {
             id: 4,
-            icon: <TbMessages />,
+            icon: <LuMessageSquareText />,
             title: "Enhanced collaboration",
             description: "Integration with communication tools keeps your team connected and informed at all times."
         }

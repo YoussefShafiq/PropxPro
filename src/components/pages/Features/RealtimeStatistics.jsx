@@ -9,13 +9,14 @@ import operations from '../../../assets/images/Real-time-statistics-&-KPIs-fetau
 import DiscoverFeatures from '../ReusableSections/DiscoverFeatures'
 import ReadyToTransform from '../ReusableSections/ReadyToTransform'
 import { PiMedalLight } from 'react-icons/pi'
-import { LuMessageSquareMore } from 'react-icons/lu'
+import { LuChartColumnBig, LuChartNoAxesCombined, LuMessageCircleMore, LuMessageSquareMore } from 'react-icons/lu'
 import { useAOSObserver } from '../../../hooks/useAOSObserver'
 import { IoStatsChart } from 'react-icons/io5'
 import { TfiStatsUp } from 'react-icons/tfi'
 import FeatureBenefits from '../ReusableSections/FeatureBenefits'
 import FeaturesHeroSection from '../ReusableSections/FeaturesHeroSection'
 import { LiaCertificateSolid } from 'react-icons/lia'
+import { MdOutlineInsights } from 'react-icons/md'
 
 
 export function HeroSection() {
@@ -84,25 +85,25 @@ export function LeadSuccessSimplified() {
     const items = [
         {
             id: 1,
-            icon: <IoStatsChart />,
+            icon: <LuChartColumnBig />,
             title: "Real-time metrics",
             description: "Get detailed insights on completed operations, new opportunities, and more. Stay ahead and be informed with ease!"
         },
         {
             id: 2,
-            icon: <TfiStatsUp />,
+            icon: <LuChartNoAxesCombined />,
             title: "Drive more sales",
             description: "Boost sales with real-time stats —refine strategies, understand clients, & deliver exceptional service to close more deals."
         },
         {
             id: 3,
-            icon: <LiaCertificateSolid />,
+            icon: <PiMedalLight />,
             title: "Amplify success",
             description: "Use real-time insights to enhance performance and achieve greater business success."
         },
         {
             id: 4,
-            icon: <LuMessageSquareMore />,
+            icon: <LuMessageCircleMore />,
             title: "Stay connected",
             description: "Track real-time stats and KPIs—identify key relationships, and build trust through consistent communication for long-term success!"
         }

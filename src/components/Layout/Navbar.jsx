@@ -4,18 +4,23 @@ import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 import requestDemo from '../../assets/images/navbar/requestDemo.png';
 import getHelpimg from '../../assets/images/navbar/help.png';
 import guideimg from '../../assets/images/navbar/guide.png';
-import { HiOutlineInformationCircle, HiOutlineNewspaper, HiOutlineQuestionMarkCircle, HiOutlineSparkles, HiOutlineUserAdd, HiOutlineVideoCamera } from 'react-icons/hi';
+import { HiOutlineInformationCircle, HiOutlineNewspaper, HiOutlineQuestionMarkCircle, HiOutlineSparkles, HiOutlineUserAdd, HiOutlineVideoCamera, HiOutlineViewGridAdd } from 'react-icons/hi';
 import { motion, AnimatePresence } from "framer-motion";
 import { RxHamburgerMenu } from 'react-icons/rx';
-import { IoClose, IoStatsChartOutline } from 'react-icons/io5';
+import { IoClose, IoStatsChartOutline, IoVolumeMediumOutline } from 'react-icons/io5';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import GetStarted from '../Buttons/GetStarted';
 import RequestDemo from '../Buttons/RequestDemo';
 import { MdOutlineManageAccounts, MdOutlineTrackChanges, MdOutlineCampaign } from "react-icons/md";
 import { HiOutlineChatAlt2 } from "react-icons/hi";
 import { AiOutlinePieChart } from "react-icons/ai";
-import { TbHomeStats } from 'react-icons/tb';
+import { TbHomeStats, TbMessages } from 'react-icons/tb';
 import { GoTasklist } from 'react-icons/go';
+import { LuBookText, LuChartColumnBig, LuLaptopMinimalCheck, LuLayoutDashboard, LuMessageCircleQuestion, LuSquareMousePointer, LuUserCog } from 'react-icons/lu';
+import { RiListCheck3 } from 'react-icons/ri';
+import { PiVideoLight } from 'react-icons/pi';
+import { FiEdit } from 'react-icons/fi';
+import { BsStars } from 'react-icons/bs';
 
 export default function Navbar() {
     const [FeaturesDropdown, setFeaturesDropdown] = useState(false);
@@ -148,49 +153,49 @@ export default function Navbar() {
 
     const features = [
         {
-            icon: <TbHomeStats size='24' />,
+            icon: <LuLayoutDashboard size='24' />,
             title: "User - friendly dashboard",
             desc: "Experience seamless navigation & intuitive designs",
             link: "/features/dashboard",
         },
         {
-            icon: <IoStatsChartOutline size='24' />,
+            icon: <HiOutlineViewGridAdd size='24' />,
             title: "Lead management system",
             desc: "Efficiently track, manage, and nurture your leads",
             link: "/features/lead-management-system",
         },
         {
-            icon: <AiOutlinePieChart size='24' />,
+            icon: <LuChartColumnBig size='24' />,
             title: "Detailed statistics",
             desc: "Get comprehensive insights and data-driven analysis",
             link: '/features/realtime-statistics',
         },
         {
-            icon: <MdOutlineCampaign size='24' strokeWidth={0.0} />,
+            icon: <IoVolumeMediumOutline size='24' strokeWidth={0.0} />,
             title: "Campaigns & opportunities",
             desc: "Drive growth with strategic campaigns and new opportunities",
             link: '/features/campaigns-and-opportunities',
         },
         {
-            icon: <MdOutlineManageAccounts size='24' />,
+            icon: <LuUserCog size='24' />,
             title: "User management",
             desc: "Seamlessly onboard users with a streamlined registration process",
             link: '/features/user-management',
         },
         {
-            icon: <MdOutlineTrackChanges size='24' />,
+            icon: <RiListCheck3 size='24' />,
             title: "Activity tracking",
             desc: "Effortlessly monitor and analyze user actions for valuable insights",
             link: '/features/activity-tracking',
         },
         {
-            icon: <GoTasklist size='24' />,
+            icon: <LuLaptopMinimalCheck size='24' />,
             title: "Action assignment",
             desc: "Efficiently delegate tasks and track progress seamlessly",
             link: '/features/action-assignment',
         },
         {
-            icon: <HiOutlineChatAlt2 size='24' />,
+            icon: <TbMessages size='24' />,
             title: "Real time communication",
             desc: "Instantly connect and collaborate in real-time",
             link: '/features/realtime-communication',
@@ -199,37 +204,37 @@ export default function Navbar() {
 
     const resources = [
         {
-            icon: <HiOutlineInformationCircle size={30} strokeWidth={1} />,
+            icon: <LuSquareMousePointer size={24} strokeWidth={1.5} />,
             title: "About us",
             desc: "Discover our mission and values, driving excellence and innovation",
             link: '/about-us'
         },
         {
-            icon: <HiOutlineVideoCamera size={24} strokeWidth={1} />,
+            icon: <PiVideoLight size={24} strokeWidth={1.5} />,
             title: "Webinars",
             desc: "Learn from experts in our interactive sessions",
             link: '/webinars'
         },
         {
-            icon: <HiOutlineNewspaper size={24} strokeWidth={1} />,
+            icon: <LuBookText size={24} strokeWidth={1.5} />,
             title: "Blog",
             desc: "Stay informed with our latest news, tips, and industry insights",
             link: '/blog'
         },
         {
-            icon: <HiOutlineUserAdd size={24} strokeWidth={1} />,
+            icon: <FiEdit size={24} strokeWidth={1.5} />,
             title: "Carrier registration",
             desc: "Join our network today to unlock exclusive opportunities",
             link: '/request-demo'
         },
         {
-            icon: <HiOutlineQuestionMarkCircle size={24} strokeWidth={1} />,
+            icon: <LuMessageCircleQuestion size={24} strokeWidth={1.5} />,
             title: "Help center",
             desc: "Access tailored solutions and assistance.",
             link: '/help-center'
         },
         {
-            icon: <HiOutlineSparkles size={24} strokeWidth={1} />,
+            icon: <BsStars size={24} strokeWidth={1} fill='white' />,
             title: "What's new",
             desc: "Effortlessly monitor and analyze user actions for valuable insights",
             link: '/whats-new'
@@ -295,7 +300,7 @@ export default function Navbar() {
                                         className="px-3 py-2 flex gap-2 w-1/2 h-fit"
                                         variants={featureItemVariants}
                                     >
-                                        <NavLink to={r.link} className={'hover:text-hoverText transition-all'} onClick={() => { setResourcesDropdown(!ResourcesDropdown); }}>
+                                        <NavLink to={r.link} className={'hover:text-hoverText transition-all flex gap-2'} onClick={() => { setResourcesDropdown(!ResourcesDropdown); }}>
                                             <div>{r.icon}</div>
                                             <div>
                                                 <h2 className='font-bold'>{r.title}</h2>
@@ -350,7 +355,7 @@ export default function Navbar() {
                                         className="px-3 py-2 flex gap-2 w-1/3 h-fit"
                                         variants={featureItemVariants}
                                     >
-                                        <NavLink to={f.link} className={'hover:text-hoverText transition-all'} onClick={() => { setFeaturesDropdown(!FeaturesDropdown); }}>
+                                        <NavLink to={f.link} className={'hover:text-hoverText transition-all flex gap-2'} onClick={() => { setFeaturesDropdown(!FeaturesDropdown); }}>
                                             <div>{f.icon}</div>
                                             <div>
                                                 <h2 className='font-bold'>{f.title}</h2>

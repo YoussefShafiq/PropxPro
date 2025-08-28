@@ -13,7 +13,8 @@ import FeatureBenefits from '../ReusableSections/FeatureBenefits'
 import FeaturesHeroSection from '../ReusableSections/FeaturesHeroSection'
 import { BsFileEarmarkText } from 'react-icons/bs'
 import { CiCompass1 } from 'react-icons/ci'
-import { LuMessageSquareDot } from 'react-icons/lu'
+import { LuLayers, LuMessageSquareDot, LuNotepadText } from 'react-icons/lu'
+import { PiGpsFixBold, PiWifiMedium, PiWifiMediumBold } from 'react-icons/pi'
 
 
 export function HeroSection() {
@@ -73,25 +74,25 @@ export function LeadSuccessSimplified() {
     const items = [
         {
             id: 1,
-            icon: <IoLayersOutline />,
+            icon: <LuLayers />,
             title: "Clear operation overview",
             description: "View all your actions in one place. Understand the workflow and ensure nothing slips through the cracks."
         },
         {
             id: 2,
-            icon: <BsFileEarmarkText />,
+            icon: <LuNotepadText />,
             title: "Detailed descriptions",
             description: "Each activity is logged with specific details—who, what, where, and when—giving you a complete picture of your operations."
         },
         {
             id: 3,
-            icon: <CiCompass1 />,
+            icon: <PiGpsFixBold />,
             title: "Perfect tracking for you",
             description: "Customize your tracking to fit your needs. Focus on the metrics that matter most to your business."
         },
         {
             id: 4,
-            icon: <LuMessageSquareDot />,
+            icon: <PiWifiMediumBold className='rotate-45' />,
             title: "Real-time updates",
             description: "Receive instant notifications and updates. Stay informed and make timely decisions based on the most current information."
         }

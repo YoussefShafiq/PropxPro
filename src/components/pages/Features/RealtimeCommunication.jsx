@@ -10,11 +10,12 @@ import { useAOSObserver } from '../../../hooks/useAOSObserver'
 import FeatureBenefits from '../ReusableSections/FeatureBenefits'
 import { RxDashboard } from 'react-icons/rx'
 import FeaturesHeroSection from '../ReusableSections/FeaturesHeroSection'
-import { LuMessageSquareDot, LuPhoneCall } from 'react-icons/lu'
+import { LuMessageSquareDot, LuMessageSquareText, LuPhoneCall } from 'react-icons/lu'
 import { PiListStarLight, PiUsersThree } from 'react-icons/pi'
 import { LiaIdCardSolid } from 'react-icons/lia'
-import { BiMessageSquareCheck } from 'react-icons/bi'
+import { BiMessageSquareCheck, BiNavigation } from 'react-icons/bi'
 import { TbMessage } from 'react-icons/tb'
+import { BsStars } from 'react-icons/bs'
 
 
 export function HeroSection() {
@@ -64,7 +65,7 @@ export function LeadSuccessSimplified() {
     const items = [
         {
             id: 1,
-            icon: <BiMessageSquareCheck />,
+            icon: <BiNavigation />,
             title: "Team up—Connect instantly",
             description: "Message as one—everyone can text a contact together for unified, powerful communication. Never miss a chance to connect better!"
         },
@@ -76,13 +77,13 @@ export function LeadSuccessSimplified() {
         },
         {
             id: 3,
-            icon: <TbMessage />,
+            icon: <LuMessageSquareText />,
             title: "Quick client chats",
             description: "Connect instantly with clients from opportunity details for fast, efficient communication."
         },
         {
             id: 4,
-            icon: <PiListStarLight />,
+            icon: <BsStars size={24} strokeWidth={1} fill='#1d2861' />,
             title: "Upgrade your messaging",
             description: "PropXPro AI transforms your communication with professional rephrasing, making every message clear and effective."
         }

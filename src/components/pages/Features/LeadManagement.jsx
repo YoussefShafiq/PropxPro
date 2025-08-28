@@ -12,10 +12,11 @@ import ReadyToTransform from '../ReusableSections/ReadyToTransform'
 import { FiWifi } from 'react-icons/fi'
 import { PiTagSimpleLight } from 'react-icons/pi'
 import { CiFilter } from 'react-icons/ci'
-import { LuMessageSquareMore } from 'react-icons/lu'
+import { LuMessageCircleMore, LuMessageSquareMore } from 'react-icons/lu'
 import { useAOSObserver } from '../../../hooks/useAOSObserver'
 import FeatureBenefits from '../ReusableSections/FeatureBenefits'
 import FeaturesHeroSection from '../ReusableSections/FeaturesHeroSection'
+import { BsSortUpAlt } from 'react-icons/bs'
 
 
 export function HeroSection() {
@@ -93,8 +94,8 @@ export function LeadSuccessSimplified() {
         },
         {
             id: 2,
-            icon: <PiTagSimpleLight />,
-            title: " Effective follow-up",
+            icon: <BsSortUpAlt />,
+            title: "Effective follow-up",
             description: "Automate follow-up tasks to keep your leads engaged—ensuring smooth movement through the pipeline!"
         },
         {
@@ -105,7 +106,7 @@ export function LeadSuccessSimplified() {
         },
         {
             id: 4,
-            icon: <LuMessageSquareMore />,
+            icon: <LuMessageCircleMore />,
             title: "Easy communication",
             description: "Connect instantly with team members and contacts through real-time messaging and calls, ensuring timely lead management."
         }

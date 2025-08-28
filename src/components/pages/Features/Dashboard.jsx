@@ -13,7 +13,7 @@ import DiscoverFeatures from '../ReusableSections/DiscoverFeatures';
 import { FiWifi } from 'react-icons/fi';
 import { ImStatsDots } from 'react-icons/im';
 import { RxDashboard } from 'react-icons/rx';
-import { LuMessageSquareMore } from 'react-icons/lu';
+import { LuChartNoAxesCombined, LuMessageCircleMore, LuMessageSquareMore, LuTableProperties } from 'react-icons/lu';
 import ReadyToTransform from '../ReusableSections/ReadyToTransform';
 import FeatureBenefits from '../ReusableSections/FeatureBenefits';
 import FeaturesHeroSection from '../ReusableSections/FeaturesHeroSection'
@@ -136,19 +136,19 @@ export function OptimizedBusinessManagement() {
         },
         {
             id: 2,
-            icon: <ImStatsDots />,
+            icon: <LuChartNoAxesCombined />,
             title: "Engage with data ",
             description: "Hover over data points for detailed insights—Stay on top with real-time info for your real estate business."
         },
         {
             id: 3,
-            icon: <RxDashboard />,
+            icon: <LuTableProperties />,
             title: "Efficient management",
             description: "Track Every Detail—Use Activities and Assignments tabs to ensure nothing slips through the cracks."
         },
         {
             id: 4,
-            icon: <LuMessageSquareMore />,
+            icon: <LuMessageCircleMore />,
             title: "Communicate easily",
             description: "Connect with Twilio for direct messaging from your CRM, keeping interactions organized in one place."
         }

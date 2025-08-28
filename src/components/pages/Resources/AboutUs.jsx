@@ -13,6 +13,8 @@ import { RiLightbulbFlashLine } from 'react-icons/ri'
 import { SlLike } from 'react-icons/sl'
 import { PiUsersThree } from 'react-icons/pi'
 import { LiaCertificateSolid } from 'react-icons/lia'
+import { ShieldCheck, ShieldQuestionMark, Star, Trophy } from 'lucide-react'
+import { LuHandshake } from 'react-icons/lu'
 
 export function HeroSection() {
     return <>
@@ -69,31 +71,31 @@ export function CoreValues() {
     const items = [
         {
             id: 1,
-            icon: <FaRegCircleUser />,
+            icon: <ShieldQuestionMark />,
             title: "Customer centricity",
             description: "Your success is our success. We are dedicated to understanding and meeting your needs at every step."
         },
         {
             id: 2,
-            icon: <RiLightbulbFlashLine />,
+            icon: <Star />,
             title: "Innovation",
             description: "Constantly seeking better ways to simplify real estate processes."
         },
         {
             id: 3,
-            icon: <SlLike />,
+            icon: <ShieldCheck />,
             title: "Integrity",
             description: "Transparency and honesty guide every decision we make."
         },
         {
             id: 3,
-            icon: <PiUsersThree />,
+            icon: <LuHandshake />,
             title: "Collaboration",
             description: "We believe in the power of teamwork, both within our organization and in partnership with our clients."
         },
         {
             id: 3,
-            icon: <LiaCertificateSolid />,
+            icon: <Trophy />,
             title: "Excellence",
             description: "Committing to the highest standards in every aspect of our service."
         }

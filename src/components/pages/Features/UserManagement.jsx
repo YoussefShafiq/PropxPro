@@ -10,9 +10,11 @@ import { useAOSObserver } from '../../../hooks/useAOSObserver'
 import FeatureBenefits from '../ReusableSections/FeatureBenefits'
 import { RxDashboard } from 'react-icons/rx'
 import FeaturesHeroSection from '../ReusableSections/FeaturesHeroSection'
-import { LuMessageSquareDot } from 'react-icons/lu'
+import { LuHandshake, LuLayoutDashboard, LuMessageSquareDot } from 'react-icons/lu'
 import { PiUsersThree } from 'react-icons/pi'
 import { LiaIdCardSolid } from 'react-icons/lia'
+import { TbUserSquare } from 'react-icons/tb'
+import { IoIosNotificationsOutline } from 'react-icons/io'
 
 
 export function HeroSection() {
@@ -39,7 +41,7 @@ export function SubFeatures() {
                         <h2 className="lg:text-3xl text-xl font-bold text-darkText ">Manage user roles</h2>
                         <p className="text-md lg:text-xl text-grayText font-medium mt-3 ">Add, update, or delete user profiles easily to keep your team organized and efficient with PropXPro!</p>
                     </div>
-                    <div className="lg:pe-20 pe-10 m-0" data-aos="fade-left">
+                    <div className="lg:pe-20 pe-10 m-0" data-aos="fade-right">
                         <img src={manageRoles} className='w-full' alt="Manage user roles" />
                     </div>
                 </div>
@@ -62,13 +64,13 @@ export function LeadSuccessSimplified() {
     const items = [
         {
             id: 1,
-            icon: <LiaIdCardSolid />,
+            icon: <TbUserSquare />,
             title: "Efficient role assignment",
             description: "Easily assign roles to team members, ensuring everyone knows their responsibilities and can perform at their best."
         },
         {
             id: 2,
-            icon: <LuMessageSquareDot />,
+            icon: <IoIosNotificationsOutline />,
             title: "Real-time updates",
             description: "Stay informed with real-time notifications for user additions, updates, and deletions, keeping you in control."
         },
@@ -80,7 +82,7 @@ export function LeadSuccessSimplified() {
         },
         {
             id: 4,
-            icon: <PiUsersThree />,
+            icon: <LuHandshake />,
             title: "Improved collaboration",
             description: "Foster better teamwork with clear roles and real-time updates, ensuring seamless collaboration and productivity."
         }

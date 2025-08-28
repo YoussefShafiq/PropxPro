@@ -10,10 +10,13 @@ import ReadyToTransform from '../ReusableSections/ReadyToTransform'
 import { useAOSObserver } from '../../../hooks/useAOSObserver'
 import { IoStatsChart } from 'react-icons/io5'
 import FeatureBenefits from '../ReusableSections/FeatureBenefits'
-import { BiTimer } from 'react-icons/bi'
+import { BiBarChartSquare, BiTimer } from 'react-icons/bi'
 import { MdOutlineInsights } from 'react-icons/md'
 import { RxDashboard } from 'react-icons/rx'
 import FeaturesHeroSection from '../ReusableSections/FeaturesHeroSection'
+import { LuChartCandlestick, LuChartNoAxesCombined, LuChartSpline, LuMessageCircleMore } from 'react-icons/lu'
+import { CgSandClock } from 'react-icons/cg'
+import { Hourglass } from 'lucide-react'
 
 
 export function HeroSection() {
@@ -74,31 +77,31 @@ export function LeadSuccessSimplified() {
     const items = [
         {
             id: 1,
-            icon: <MdOutlineInsights />,
+            icon: <LuChartSpline />,
             title: "Track performance instantly",
             description: "Monitor key metrics and adjust strategies in real-time to maximize your ROI."
         },
         {
             id: 2,
-            icon: <BiTimer />,
+            icon: <Hourglass />,
             title: "Automate follow-ups",
             description: "Save time with automated follow-ups, ensuring no lead is missed and campaigns run smoothly."
         },
         {
             id: 3,
-            icon: <IoStatsChart />,
+            icon: <LuChartCandlestick />,
             title: "Visualize data easily",
             description: "Use interactive charts to spot trends and make confident, data-driven decisions."
         },
         {
             id: 4,
-            icon: <RxDashboard />,
+            icon: <BiBarChartSquare />,
             title: "Manage deals efficiently",
             description: "From new opportunities to ongoing deals, handle everything in the Opportunity dashboard."
         }
     ]
 
-    return <FeatureBenefits items={items} title="Maximize success with real-time insights" />
+    return <FeatureBenefits items={items} title="Real-Time business optimization" />
 
 }
 export default function CampaignsAndOpportunities() {
