@@ -225,7 +225,7 @@ export default function Navbar() {
             icon: <FiEdit size={24} strokeWidth={1.5} />,
             title: "Carrier registration",
             desc: "Join our network today to unlock exclusive opportunities",
-            link: '/request-demo'
+            link: '/help-center'
         },
         {
             icon: <LuMessageCircleQuestion size={24} strokeWidth={1.5} />,
@@ -237,7 +237,7 @@ export default function Navbar() {
             icon: <BsStars size={24} strokeWidth={1} fill='white' />,
             title: "What's new",
             desc: "Effortlessly monitor and analyze user actions for valuable insights",
-            link: '/whats-new'
+            link: '/blog'
         }
     ];
 
@@ -324,7 +324,7 @@ export default function Navbar() {
                                         Find comprehensive solutions to your questions and concerns
                                     </p>
                                 </Link>
-                                <Link to={'/blog'} className="flex flex-col gap-y-2 group" onClick={() => { setResourcesDropdown(!ResourcesDropdown); }}>
+                                <Link to={'/help-center'} className="flex flex-col gap-y-2 group" onClick={() => { setResourcesDropdown(!ResourcesDropdown); }}>
                                     <div className="bg-[#ffc0e6] rounded-lg">
                                         <img src={guideimg} className='w-full' alt="requestDemo" />
                                     </div>

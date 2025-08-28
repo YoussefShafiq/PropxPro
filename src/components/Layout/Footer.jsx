@@ -56,10 +56,10 @@ export default function Footer() {
                             <h4 className="font-bold text-darkText">Resources</h4>
                             <Link to={'/help-center'}>Help center</Link>
                             <Link to={'/request-demo'}>Demo</Link>
-                            <p>What’s new</p>
+                            <Link to={'/blog'}>What’s new</Link>
                             <Link to={'/webinars'}>Webinars</Link>
                             <Link to={'/blog'}>Blog</Link>
-                            <p>Carrier registration</p>
+                            <Link to={'/help-center'}>Carrier registration</Link>
                         </div>
                         <div className="flex flex-col gap-3">
                             <h4 className="font-bold text-darkText">Company</h4>

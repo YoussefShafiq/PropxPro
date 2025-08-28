@@ -93,7 +93,7 @@ export function CoreValues() {
             title: "Collaboration",
             description: "We believe in the power of teamwork, both within our organization and in partnership with our clients."
         },
-        {
+        { 
             id: 3,
             icon: <Trophy />,
             title: "Excellence",
