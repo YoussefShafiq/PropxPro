@@ -171,7 +171,7 @@ export default function Navbar() {
             link: '/features/realtime-statistics',
         },
         {
-            icon: <IoVolumeMediumOutline size='24' strokeWidth={0.0} />,
+            icon: <IoVolumeMediumOutline size='24' strokeWidth={1.75} />,
             title: "Campaigns & opportunities",
             desc: "Drive growth with strategic campaigns and new opportunities",
             link: '/features/campaigns-and-opportunities',
@@ -210,7 +210,7 @@ export default function Navbar() {
             link: '/about-us'
         },
         {
-            icon: <PiVideoLight size={24} strokeWidth={1.75} />,
+            icon: <PiVideoLight size={24} strokeWidth={3} />,
             title: "Webinars",
             desc: "Learn from experts in our interactive sessions",
             link: '/webinars'
@@ -237,7 +237,7 @@ export default function Navbar() {
             icon: <BsStars size={24} strokeWidth={1} fill='white' />,
             title: "What's new",
             desc: "Effortlessly monitor and analyze user actions for valuable insights",
-            link: '/blog'
+            link: '/blog/post/whats-new'
         }
     ];
 
