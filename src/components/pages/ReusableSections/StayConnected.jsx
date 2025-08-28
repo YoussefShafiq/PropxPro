@@ -61,7 +61,7 @@ export default function StayConnected() {
                         />
                         <button
                             type="submit"
-                            className="bg-white font-bold py-3 px-5 rounded-lg hover:scale-[1.03] transition-all"
+                            className="bg-white font-bold py-3 px-5 rounded-lg hover:scale-[1.03] transition-all md:w-auto w-full"
                             disabled={loading}
                         >
                             {loading ? 'Submitting...' : 'Submit'}

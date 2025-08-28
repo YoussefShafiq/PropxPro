@@ -137,12 +137,12 @@ export function GettingStarted() {
     ]
     return <>
         <div className="bg-[#131e57] ">
-            <div className="container flex flex-col gap-10 items-center" data-aos="fade-up" data-aos-offset="200">
+            <div className="container flex flex-col gap-10 items-center">
                 <div className="text-center text-2xl lg:text-5xl leading-[133%] font-extrabold text-white">Getting started with PropXPro</div>
                 <div className="flex flex-col lg:flex-row gap-5">
                     {
                         items.map((i) => (
-                            <div key={i.id} className="w-full lg:w-1/3 bg-[#1d2861] rounded-2xl p-5 pb-12 flex flex-col" data-aos="fade-up" data-aos-offset="200" data-aos-delay={i.id * 100} >
+                            <div key={i.id} className="w-full lg:w-1/3 bg-[#1d2861] rounded-2xl p-5 pb-12 flex flex-col" >
                                 <div className="w-20">
                                     <img src={i.img} className='w-full' alt={i.title} />
                                 </div>
@@ -222,7 +222,7 @@ export function AgentFeedback() {
         <div className=" bg-[#f5f9fe]">
             <div className="container flex flex-col lg:flex-row gap-12 items-center">
                 <div className="lg:w-4/5">
-                    <p className='text-xl lg:text-4xl font-extrabold lg:leading-9 lg:leading-[50px] text-darkText' >“ Using PropXPro CRM  has been a game-changer for our business. It has streamlined our processes, making it easy to track sales and manage leads. The intuitive interface and robust features have significantly improved our efficiency ”</p>
+                    <p className='text-xl lg:text-4xl font-extrabold lg:leading-[50px] text-darkText' >“ Using PropXPro CRM  has been a game-changer for our business. It has streamlined our processes, making it easy to track sales and manage leads. The intuitive interface and robust features have significantly improved our efficiency ”</p>
                 </div>
                 <div className="lg:w-80 flex flex-col justify-center">
                     <div className="relative flex items-center justify-center w-72 h-72 ">
@@ -264,7 +264,7 @@ export default function Home() {
         <RealTimeCommunication />
         <ChatsAndCalling />
         <GettingStarted />
-        <div className="p-10 py-20 pb-10 lg:p-28 lg:px-48 space-y-4" data-aos="fade-up" data-aos-offset="200">
+        <div className="p-10 py-20 pb-10 lg:p-28 lg:px-48 space-y-4" >
             <div className="text-2xl lg:text-5xl text-darkText text-center font-extrabold leading-[115%]">Simplify every step of your real estate success with PropXPro</div>
         </div>
         <EmpowerYourTeamAndActionAssignment />

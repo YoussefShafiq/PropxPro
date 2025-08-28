@@ -230,7 +230,7 @@ export function DemoForm() {
     return (
         <div className="container flex flex-col lg:flex-row gap-28 py-12 px-4">
             <div className="space-y-8 lg:w-1/2">
-                <h2 className='text-3xl font-bold text-gray-800'>What to expect in your demo</h2>
+                <h2 className='text-3xl font-bold text-gray-800 text-center lg:text-left'>What to expect in your demo</h2>
                 <div className="space-y-4">
                     {demoExpectations.map((e, i) => (
                         <div key={i} className='text-[18px] font-medium flex items-start text-gray-700'>
@@ -244,7 +244,7 @@ export function DemoForm() {
             </div>
 
             <div className="space-y-8 lg:w-1/2">
-                <h2 className='text-3xl font-bold text-gray-800'>Schedule Your Demo</h2>
+                <h2 className='text-3xl font-bold text-gray-800 text-center lg:text-left'>Schedule Your Demo</h2>
                 {formSuccess ? (
                     <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-8 rounded-2xl border border-green-200">
                         <div className="flex items-center gap-3 mb-6">

@@ -100,7 +100,7 @@ export function CoreValues() {
     ]
     return <>
         <div className="bg-[#131e57] py-16">
-            <div className="container flex flex-col gap-10 items-center" data-aos="fade-up" data-aos-offset="200">
+            <div className="container flex flex-col gap-10 items-center" >
                 <div className="text-center text-3xl lg:text-5xl leading-[133%] font-extrabold text-white">PropXPro core values </div>
                 <div className="flex flex-col lg:flex-row gap-5">
                     {
@@ -128,7 +128,7 @@ export function UnlockExclusiveInsights() {
                     <h1 className='text-3xl lg:text-5xl font-extrabold leading-[139%] lg:leading-[117%] text-darkBlue'>Unlock exclusive real estate insights</h1>
                     <p className='lg:text-2xl  font-medium lg:leading-9 text-darkText text-opacity-80 lg:pe-16'>Stay ahead in real estate management. Follow us for expert tips, updates, and exciting opportunities!
                     </p>
-                    <SocialMedia size={'text-3xl'} justify='justify-start' />
+                    <SocialMedia size={'text-3xl'} justify='lg:justify-start justify-center' />
                 </div>
                 <div className="lg:w-1/2 rounded-xl overflow-hidden flex justify-center items-end">
                     <img src={frame} alt="Achieve your real estate excellence" className='w-2/3' />

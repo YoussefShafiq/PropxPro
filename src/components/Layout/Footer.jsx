@@ -58,7 +58,7 @@ export default function Footer() {
                             <Link to={'/request-demo'}>Demo</Link>
                             <p>What’s new</p>
                             <Link to={'/webinars'}>Webinars</Link>
-                            <Link to={'/blogs'}>Blog</Link>
+                            <Link to={'/blog'}>Blog</Link>
                             <p>Carrier registration</p>
                         </div>
                         <div className="flex flex-col gap-3">

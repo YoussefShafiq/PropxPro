@@ -112,7 +112,7 @@ export function HeroSection({ data, view }) {
       <div className="lg:w-1/2 font-bold">
         <span className='text-hoverText capitalize'>{data?.category}</span>
         <h1 className='lg:text-[54px] text-3xl font-extrabold lg:leading-[67px]'>{data?.title}</h1>
-        <p>By {data?.author.name}</p>
+        <p className='mt-5'>By {data?.author.name}</p>
         <div className="flex gap-2 items-center text-sm font-medium mt-3">
           <p>
             {readingTime !== null ? `${readingTime} minutes read` : 'Calculating...'}

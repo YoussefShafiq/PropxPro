@@ -310,24 +310,24 @@ export default function Navbar() {
                                 className="w-1/2 flex justify-center gap-5"
                                 variants={rightPanelVariants}
                             >
-                                <div className="flex flex-col gap-y-2">
+                                <Link to={'/help-center'} className="flex flex-col gap-y-2 group" onClick={() => { setResourcesDropdown(!ResourcesDropdown); }}>
                                     <div className="bg-[#fff5c0] rounded-lg">
                                         <img src={getHelpimg} className='w-full' alt="requestDemo" />
                                     </div>
-                                    <div className="font-bold">Get help</div>
+                                    <div className="font-bold group-hover:text-hoverText">Get help</div>
                                     <p className="text-grayText text-sm font-medium">
                                         Find comprehensive solutions to your questions and concerns
                                     </p>
-                                </div>
-                                <div className="flex flex-col gap-y-2">
+                                </Link>
+                                <Link to={'/blog'} className="flex flex-col gap-y-2 group" onClick={() => { setResourcesDropdown(!ResourcesDropdown); }}>
                                     <div className="bg-[#ffc0e6] rounded-lg">
                                         <img src={guideimg} className='w-full' alt="requestDemo" />
                                     </div>
-                                    <div className="font-bold">Guide to carrier registration</div>
+                                    <div className="font-bold group-hover:text-hoverText">Guide to carrier registration</div>
                                     <p className="text-grayText text-sm font-medium">
                                         Discover the registration process, Step by Step
                                     </p>
-                                </div>
+                                </Link>
                             </motion.div>
                         </motion.div>
                     )}
@@ -365,13 +365,13 @@ export default function Navbar() {
                                 className="w-1/4 flex justify-center"
                                 variants={rightPanelVariants}
                             >
-                                <div className="flex flex-col gap-y-2">
+                                <Link to={'/request-demo'} className="flex flex-col gap-y-2 group" onClick={() => { setFeaturesDropdown(!FeaturesDropdown); }}>
                                     <img src={requestDemo} className='w-full' alt="requestDemo" />
-                                    <div className="font-bold">Request a Demo</div>
+                                    <div className="font-bold group-hover:text-hoverText">Request a Demo</div>
                                     <p className="text-grayText text-sm font-medium">
                                         Discover our features in action—request your demo now!
                                     </p>
-                                </div>
+                                </Link>
                             </motion.div>
                         </motion.div>
                     )}
@@ -379,7 +379,7 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Navbar */}
-            <div className="w-full h-[81px] fixed top-0 left-0 right-0 z-50 lg:hidden flex items-center justify-between px-8 bg-white select-none">
+            <div className="w-full h-[81px] fixed top-0 left-0 right-0 z-50 lg:hidden flex items-center justify-between px-8 bg-white shadow select-none">
                 <div className="w-36">
                     <NavLink to="/"><img src={logo} className='w-full' alt="logo" /></NavLink>
                 </div>

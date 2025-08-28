@@ -82,7 +82,7 @@ export function ActivityTracking() {
 
 export function AssignTask() {
     return <>
-        <div className="container flex lg:flex-row-reverse flex-col gap-5 lg:gap-32 w-full items-center justify-between" data-aos="fade-up" data-aos-offset="200">
+        <div className="container flex lg:flex-row-reverse flex-col gap-5 lg:gap-32 w-full items-center justify-between" >
             <div className="lg:w-1/2 ">
                 <div className="text-2xl lg:text-5xl font-extrabold text-darkText leading-[133%]">Assign tasks</div>
                 <div className="lg:text-2xl text-grayText font-medium mt-6 lg:leading-9">Organize tasks effortlessly with Assignments Tab—instantly assign opportunities to the right team members with ease!
@@ -97,7 +97,7 @@ export function AssignTask() {
 
 export function TwilioIntegration() {
     return <>
-        <div className="container flex lg:flex-row flex-col gap-5 w-full items-center justify-between" data-aos="fade-up" data-aos-offset="200">
+        <div className="container flex lg:flex-row flex-col gap-5 w-full items-center justify-between" >
             <div className="lg:w-1/2 lg:pe-16">
                 <div className="text-2xl lg:text-5xl font-extrabold text-darkText leading-[133%]">Twilio integration </div>
                 <div className="lg:text-2xl text-grayText font-medium mt-6 lg:leading-9">Connect with Twilio now for quick, effective CRM messaging—Enhance your client interactions instantly!
@@ -113,7 +113,7 @@ export function TwilioIntegration() {
 
 export function ChatTeamsManagement() {
     return <>
-        <div className="container flex lg:flex-row-reverse flex-col gap-5 lg:gap-32 w-full items-center justify-between" data-aos="fade-up" data-aos-offset="200">
+        <div className="container flex lg:flex-row-reverse flex-col gap-5 lg:gap-32 w-full items-center justify-between" >
             <div className="lg:w-1/2 ">
                 <div className="text-2xl lg:text-5xl font-extrabold text-darkText leading-[133%]">Chat teams management</div>
                 <div className="lg:text-2xl text-grayText font-medium mt-6 lg:leading-9">Efficiently coordinate your chat teams with streamlined management tools, ensuring seamless communication and collaboration

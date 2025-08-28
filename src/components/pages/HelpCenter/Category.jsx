@@ -129,5 +129,6 @@ export default function Category() {
                 </div>
             )}
         </div>
+        <div className="h-[2px] w-full bg-black opacity-5 container !p-0"></div>
     </>
 }
