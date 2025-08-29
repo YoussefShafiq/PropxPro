@@ -7,12 +7,14 @@ export default function GetStarted({ mode = 'default', className = '' }) {
 
     if (mode === 'default') {
         return (
-            <button
-                onClick={handleClick}
-                className={`bg-lightBlue text-white h-[56px] w-full lg:w-[182px] rounded-lg lg:text-xl font-semibold hover:shadow-lg hover:bg-[#1e4c9d] hover:scale-[1.005] transition-all ${className}`}
-            >
-                Get Started
-            </button>
+            <div className="relative bg-black h-[56px] w-full lg:w-[182px] rounded-lg">
+                <button
+                    onClick={handleClick}
+                    className={`absolute left-0 hover:-translate-x-1.5 hover:-translate-y-1.5 bg-lightBlue text-white h-[56px] w-full lg:w-[182px] rounded-lg lg:text-xl font-semibold  transition-all duration-300 ${className}`}
+                >
+                    Get Started
+                </button>
+            </div>
         );
     } else {
         return (

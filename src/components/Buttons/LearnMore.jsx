@@ -1,7 +1,13 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
-export default function LearnMore() {
+export default function LearnMore({ path }) {
+
+    const navigate = useNavigate()
+
     return <>
-        <button className="bg-lightBlue text-white h-[56px] w-full lg:w-[182px] rounded-lg lg:text-xl font-semibold hover:shadow-lg hover:bg-[#1e4c9d] transition-all">Learn more</button>
+        <div className="relative bg-black h-[56px] w-full lg:w-[182px] rounded-lg">
+            <button onClick={() => path != null ? navigate(path) : ''} className="absolute left-0 hover:-translate-x-1.5 hover:-translate-y-1.5 bg-lightBlue text-white h-[56px] w-full lg:w-[182px] rounded-lg lg:text-xl font-semibold transition-all duration-300">Learn more</button>
+        </div>
     </>
 }

@@ -8,7 +8,7 @@ export default function FeaturesHeroSection({ heroImg, headline, description, re
                 {resources ? <h1 className='text-4xl lg:text-6xl font-extrabold leading-[139%] lg:leading-[117%] text-darkBlue'>{headline}</h1>
                     : <h1 className={`text-4xl ${aboutflag ? 'lg:text-6xl' : 'lg:text-7xl'} font-extrabold leading-[139%] lg:leading-[117%] text-darkBlue`}>{headline}</h1>}
 
-                <p className={`lg:text-2xl ${aboutflag ? 'lg:font-normal font-medium' : 'font-medium'} lg:leading-9 text-darkText text-opacity-80 lg:pe-16`}>{description} </p>
+                <p className={`lg:text-2xl lg:leading-9 text-darkText text-opacity-80 lg:pe-16`}>{description} </p>
                 {!resources && <GetStarted />}
             </div>
             <div className="lg:w-1/2 lg:ms-16 overflow-hidden">
