@@ -10,7 +10,7 @@ export default function GetStarted({ mode = 'default', className = '' }) {
             <div className="relative bg-black h-[56px] w-full lg:w-[182px] rounded-lg">
                 <button
                     onClick={handleClick}
-                    className={`absolute left-0 hover:-translate-x-1.5 hover:-translate-y-1.5 bg-lightBlue text-white h-[56px] w-full lg:w-[182px] rounded-lg lg:text-xl font-semibold  transition-all duration-300 ${className}`}
+                    className={`absolute left-0 hover:-translate-x-1.5 hover:-translate-y-1.5  hover:border-black border-[2px] border-transparent bg-lightBlue text-white h-[56px] w-full lg:w-[182px] rounded-lg lg:text-xl font-semibold  transition-all duration-300 ${className}`}
                 >
                     Get Started
                 </button>

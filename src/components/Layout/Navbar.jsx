@@ -277,7 +277,7 @@ export default function Navbar() {
                 <div className="flex items-center gap-x-4 font-semibold">
                     <a href='https://dev.vtech-upgraded.com/' target='_blank' className="hover:scale-[1.002] transition-all">Login</a>
                     <div className="relative bg-black w-[145px] h-[50px] rounded-md">
-                        <a href='https://dev.vtech-upgraded.com/signup' target='_blank' className="absolute left-0 hover:-translate-x-1.5 hover:-translate-y-1.5 w-[145px] h-[50px] capitalize bg-lightBlue text-white hover:shadow-lg hover:bg-[#1e4c9d] hover:scale-[1.002] transition-all px-7 py-3 rounded-md min-w-max">get started</a>
+                        <a href='https://dev.vtech-upgraded.com/signup' target='_blank' className="absolute left-0 hover:-translate-x-1.5 hover:-translate-y-1.5  hover:border-black border-[2px] border-transparent w-[145px] h-[50px] capitalize bg-lightBlue text-white hover:shadow-lg hover:bg-[#1e4c9d] hover:scale-[1.002] transition-all px-7 py-3 rounded-md min-w-max">get started</a>
                     </div>
                     <Link to={'/request-demo'} className="box-border border border-black hover:shadow-lg hover:scale-[1.002] transition-all px-7 py-3 rounded-md min-w-max">Request a Demo</Link>
                 </div>
