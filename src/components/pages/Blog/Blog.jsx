@@ -141,9 +141,9 @@ export function TrendingTopics({ data: TrendingTopics }) {
                 <div className="lg:w-3/5 py-16 flex flex-col gap-5 text-left">
                     <h2 className='font-bold text-2xl lg:text-3xl'>Trending topics</h2>
                     {TrendingTopics?.slice(0, 2).map((t, i) => (<>
-                        <div className="flex gap-5 font-bold">
+                        <div className="flex flex-col lg:flex-row gap-5 font-bold">
                             <div className="lg:w-1/2  overflow-hidden">
-                                <img src={t.cover_photo} className='rounded-xl w-full h-40 object-cover' alt={t.title} />
+                                <img src={t.cover_photo} className='rounded-lg w-full h-40 object-cover' alt={t.title} />
                             </div>
                             <div className="lg:w-3/5 flex flex-col gap-2 text-left">
                                 <div className="flex gap-2 text-xs">
