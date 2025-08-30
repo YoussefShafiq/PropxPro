@@ -193,7 +193,7 @@ export function StreamlineYourWorkflow() {
                     <p className="lg:text-2xl text-darkText font-medium lg:leading-9">
                         Integrate PropXPro with ease—sync contacts, track conversations, and analyze calls—all in one place. Ready to upgrade?
                     </p>
-                    <LearnMore />
+                    <LearnMore path={'integrations'} />
                 </div>
                 <div className="w-fit lg:w-2/5 lg:min-w-[500px] flex overflow-hidden relative h-full items-end m-auto">
                     <img src={IntegrationsIcons} className="w-32 lg:w-48 absolute top-0 z-10" alt="phone numbers" />
