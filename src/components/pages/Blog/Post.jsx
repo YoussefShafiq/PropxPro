@@ -1,9 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { FaCaretDown, FaChevronRight } from 'react-icons/fa';
 import { useNavigate, useParams } from 'react-router-dom';
-import { motion } from "framer-motion";
 import RelatedBlogs from './RelatedBlogs';
 import { ChevronDown, HelpCircle } from 'lucide-react';
 import RecentBlogs from './RecentBlogs';
@@ -235,9 +235,14 @@ export function FAQs({ faqs, isLoading }) {
 
 export default function Post() {
   const { id } = useParams();
-  const [scrollProgress, setScrollProgress] = useState(0);
   const [tableOfContent, setTableOfContent] = useState(false);
   const navigate = useNavigate();
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ['start start', 'end end']
+  });
+  const widthPercent = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
 
   const { data: post, isLoading, isError, error } = useQuery({
     queryKey: [`post-${id}`],
@@ -262,27 +267,7 @@ export default function Post() {
     }
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const contentElement = document.getElementById('blog-content-container');
-      if (!contentElement) return;
-
-      const contentRect = contentElement.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      const contentHeight = contentElement.offsetHeight;
-
-      const scrolled = Math.max(0, -contentRect.top);
-      const maxScroll = contentHeight - windowHeight + contentRect.top + window.pageYOffset;
-
-      const progress = Math.min(100, Math.max(0, (scrolled / Math.max(1, maxScroll)) * 100));
-      setScrollProgress(progress);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [post?.data?.data]);
+  // Scroll progress is now handled by Framer Motion's useScroll
 
   if (isError) {
     return (
@@ -311,10 +296,10 @@ export default function Post() {
     <>
       <div className="sticky lg:top-[84px] top-[81px] z-10">
         <div className="w-full bg-gray-200 rounded-full h-2">
-          <div
-            className="bg-lightBlue h-2 rounded-full transition-all duration-150 ease-out"
-            style={{ width: `${scrollProgress}%` }}
-          ></div>
+          <motion.div
+            className="bg-lightBlue h-2 rounded-full"
+            style={{ width: widthPercent }}
+          />
         </div>
       </div>
 
@@ -352,7 +337,7 @@ export default function Post() {
         </div>
       </div>
 
-      <div className="container flex flex-col gap-5">
+      <div ref={containerRef} className="container flex flex-col gap-5">
         <HeroSection data={post?.data?.data} view={!isLoading} />
 
         <div className="relative w-full">
