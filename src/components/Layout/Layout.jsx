@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import { FaArrowUp } from 'react-icons/fa6';
@@ -43,8 +44,60 @@ export default function Layout() {
         });
     }
 
+    const origin = typeof window !== 'undefined' && window.location ? window.location.origin : 'https://propxpro.com';
+    const canonicalUrl = `${origin}${pathname}`;
+
+    const orgJsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: 'PropxPro',
+        url: origin,
+        logo: `${origin}/Logo.png`,
+        sameAs: [
+            // Add social profiles if available
+        ]
+    };
+
+    const webSiteJsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: 'PropxPro',
+        url: origin,
+        potentialAction: {
+            '@type': 'SearchAction',
+            target: `${origin}/search?q={search_term_string}`,
+            'query-input': 'required name=search_term_string'
+        }
+    };
+
     return (
         <>
+            <Helmet>
+                <title>PropxPro</title>
+                <meta name="description" content="PropxPro helps you manage leads, campaigns, real-time communication, and analytics with an all-in-one CRM and marketing platform." />
+                <meta name="robots" content="index, follow" />
+                <meta name="theme-color" content="#0ea5e9" />
+
+                <link rel="canonical" href={canonicalUrl} />
+
+                {/* Open Graph defaults */}
+                <meta property="og:site_name" content="PropxPro" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="PropxPro" />
+                <meta property="og:description" content="PropxPro helps you manage leads, campaigns, real-time communication, and analytics with an all-in-one CRM and marketing platform." />
+                <meta property="og:url" content={canonicalUrl} />
+                <meta property="og:image" content={`${origin}/Logo.png`} />
+
+                {/* Twitter Card defaults */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="PropxPro" />
+                <meta name="twitter:description" content="PropxPro helps you manage leads, campaigns, real-time communication, and analytics with an all-in-one CRM and marketing platform." />
+                <meta name="twitter:image" content={`${origin}/Logo.png`} />
+
+                {/* JSON-LD */}
+                <script type="application/ld+json">{JSON.stringify(orgJsonLd)}</script>
+                <script type="application/ld+json">{JSON.stringify(webSiteJsonLd)}</script>
+            </Helmet>
             <div className="text-darkText lg:pt-[84px] pt-[81px] font-manope">
                 <Navbar></Navbar>
                 <Outlet></Outlet>

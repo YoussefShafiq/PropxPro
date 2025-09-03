@@ -7,6 +7,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import RelatedBlogs from './RelatedBlogs';
 import { ChevronDown, HelpCircle } from 'lucide-react';
 import RecentBlogs from './RecentBlogs';
+import { Helmet } from 'react-helmet';
 
 const formatDate = (dateString) => {
   const options = { year: 'numeric', month: 'short', day: 'numeric' };
@@ -294,6 +295,63 @@ export default function Post() {
 
   return (
     <>
+      {!isLoading && post?.data?.data && (
+        <Helmet>
+          {(() => {
+            const origin = typeof window !== 'undefined' && window.location ? window.location.origin : 'https://propxpro.com';
+            const data = post.data.data;
+            const title = data.seo_title || data.title || 'Blog Post - PropxPro';
+            const description = data.meta_description || data.excerpt || (data.content ? data.content.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 160) : '');
+            const url = `${origin}/blog/post/${data.id}`;
+            const image = data.cover_photo || `${origin}/Logo.png`;
+            const articleJsonLd = {
+              '@context': 'https://schema.org',
+              '@type': 'Article',
+              mainEntityOfPage: {
+                '@type': 'WebPage',
+                '@id': url
+              },
+              headline: title,
+              description: description,
+              image: [image],
+              author: {
+                '@type': 'Person',
+                name: data?.author?.name || 'PropxPro'
+              },
+              publisher: {
+                '@type': 'Organization',
+                name: 'PropxPro',
+                logo: {
+                  '@type': 'ImageObject',
+                  url: `${origin}/Logo.png`
+                }
+              },
+              datePublished: data?.created_at,
+              dateModified: data?.updated_at
+            };
+            return (
+              <>
+                <title>{title}</title>
+                <meta name="description" content={description} />
+                <link rel="canonical" href={url} />
+
+                <meta property="og:type" content="article" />
+                <meta property="og:title" content={title} />
+                <meta property="og:description" content={description} />
+                <meta property="og:url" content={url} />
+                <meta property="og:image" content={image} />
+
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content={title} />
+                <meta name="twitter:description" content={description} />
+                <meta name="twitter:image" content={image} />
+
+                <script type="application/ld+json">{JSON.stringify(articleJsonLd)}</script>
+              </>
+            );
+          })()}
+        </Helmet>
+      )}
       <div className="sticky lg:top-[84px] top-[81px] z-10">
         <div className="w-full bg-gray-200 rounded-full h-2">
           <motion.div
